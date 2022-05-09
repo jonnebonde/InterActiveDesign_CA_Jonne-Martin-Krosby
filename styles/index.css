@@ -6,16 +6,51 @@
     justify-content: space-evenly;
     color: var(--white);
     font-size: 20px;
+    font-weight: var(--bold);
 }
 nav {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .mainlogo {
     display: block;
-    display: flex;
+    margin: 10px 30px;
 }
 
 .mainlogo img {
-    max-width: 177px;
+    max-width: 150px;
 
+}
+
+.nav-links {
+    
+    font-size: 23px;
+    font-family: var(--tahoma);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--darkgreen);
+    font-weight: var(--bold);
+}
+
+.search-field {
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+#search{
+    color: var(--darkgreen);
+    border-bottom: solid 2px var(--darkgreen);
+    height: 28px;   
+}
+
+.submit-btn {
+    color: var(--darkgreen);
+    background-color: var(--white);
+    border: none;
+    height: 28px;
+    width: 28px;
 }

@@ -1,9 +1,17 @@
 :root {
     /** Font-family **/
+    --tahoma: Tahoma, sans-serif;
 
+
+    /** font weight **/
+
+    --bold: bold;
 
     /** Color **/
 
+
+--darkgreen: #0A3641;    
 --lightgreen: #7C9A3C;
 --white: #ffff;
+
 }
