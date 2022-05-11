@@ -12,6 +12,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .mainlogo {
@@ -24,13 +25,28 @@ nav {
 
 }
 
-.active {
+
+
+.active-page {
    border-bottom: 2px solid var(--darkgreen);
 }
 
 .nav-menu {
     font-size: 23px;
     font-family: var(--tahoma);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.nav-menu ul {
+    display: flex;
+
+}
+
+.nav-menu li {
+    list-style-type: none;
 }
 
 .nav-menu a {
@@ -47,11 +63,18 @@ nav {
     border-bottom: solid 2px var(--darkgreen);
 }
 
-
 .cta-icons {
     display: block;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+}
+
+.cta-icons a {
+    text-decoration: none;
+    color: var(--darkgreen);
+    font-size: 23px;
+    font-weight: var(--bold);
+    font-family: var(--tahoma);
 }
 
 #search{
@@ -74,19 +97,6 @@ nav {
 }
 
 
-.cta-icons {
-    margin: 30px;
-    display: block;
-}
-
-.cta-icons a {
-    text-decoration: none;
-    padding: 0;
-    color: var(--darkgreen);
-    font-size: 23px;
-    font-weight: var(--bold);
-    font-family: var(--tahoma);
-}
 
 .main_img {
     display: flex;
@@ -102,8 +112,6 @@ h1 {
     margin-top: 4vh;
 }
 
-
-
 .quotes-container {
     display: flex;
     justify-content: space-evenly;
@@ -112,6 +120,9 @@ h1 {
     
 }
 
-@media  and (max-width: 1000px) {
-    
+@media screen and (max-width: 1000px) {
+
+
+
+
 }

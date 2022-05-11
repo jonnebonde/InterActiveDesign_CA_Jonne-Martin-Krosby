@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/b32e365c8c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
     <div class="top-info">
         <p>LifeTime Warranty</p>
         <p>Free Shipping worldwide</p>
@@ -21,22 +22,33 @@
         <a href="index.html" class="mainlogo">
             <img class="mainlogo_img" src="images/RainyDays_Logo.png" alt="Rainy Days Logo">
         </a>
-        <input type="checkbox" style="display: none;" class="toggle-menu">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <div class="nav-menu">
-            <a class="active" href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-            
+            <ul>
+                <li><a class="active-page" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="cta-icons">
+                <div>
+                    <input id="search" class="fa fa-search" type="text" placeholder="Search">
+                    <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                <div>
+                    <a href="shopping-cart.html">Cart</a>
+                </div>
+            </div>
         </div>
-        <div class="cta-icons">
-            <input id="search" class="fa fa-search" type="text" placeholder="Search">
-            <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
-            <a href="shopping-cart.html">Cart</a>
-        </div>
+        
+    </div>
     </nav>
-    <section>
-       
+</header>
+        <section>
         <div class="main_img">
             <h1>Pushing The Comfort Zone</h1>
             <a class="shop-cta"  href="shop.html">shop</a>
