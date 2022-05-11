@@ -12,20 +12,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    margin: 15px 20px;
 }
 
 .mainlogo {
     display: block;
-    margin: 10px 30px;
+    
 }
 
 .mainlogo img {
-    max-width: 150px;
-
+    max-width: 80px;
 }
 
-
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 .active-page {
    border-bottom: 2px solid var(--darkgreen);
@@ -34,10 +37,7 @@ nav {
 .nav-menu {
     font-size: 23px;
     font-family: var(--tahoma);
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 100%;
+    margin-left: 2rem;
 }
 
 .nav-menu ul {
@@ -80,7 +80,8 @@ nav {
 #search{
     color: var(--darkgreen);
     border: solid 2px var(--darkgreen);
-    height: 28px;   
+    height: 28px;
+    width: 150px;
 }
 
 .submit-btn {
@@ -95,8 +96,6 @@ nav {
 .submit-btn:hover {
     cursor: pointer;
 }
-
-
 
 .main_img {
     display: flex;
@@ -120,9 +119,7 @@ h1 {
     
 }
 
-@media screen and (max-width: 1000px) {
-
-
+@media screen and (min-width: 1900px) {
 
 
 }
