@@ -13,6 +13,7 @@ let cartItems = JSON.parse(localStorage.getItem("cartList"));
 const numberOfItemsInCart = document.querySelector(".show-cart");
 let cartArray = cartItems || [];
 
+
 function cartQuantityTotal() {
     console.log()
     let cartItemsQuantity = 0;

@@ -13,7 +13,7 @@ function messageAddedToCart() {
             messages.innerHTML = ""
             messages.style.display = "none";
             
-        }, 1000)
+        }, 2000)
     }    
 }
 
@@ -26,6 +26,6 @@ function messageincreasedQuantity() {
             messages.innerHTML = ""
             messages.style.display = "none";
             
-        }, 1000)
+        }, 2000)
     }    
 }
