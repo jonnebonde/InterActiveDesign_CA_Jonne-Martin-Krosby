@@ -122,6 +122,7 @@ nav {
     background-image: url(../images/main_img.jpg);
     background-position: center;
     background-repeat: none;
+    background-size: cover;
     height: 700px;
 }
 
