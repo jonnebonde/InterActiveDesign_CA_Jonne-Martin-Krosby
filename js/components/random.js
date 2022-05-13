@@ -4,7 +4,7 @@ import { productArray } from "../products/productlist.js"
 let shuffled = productArray.sort(() => 0.5 - Math.random());
 
 // Get sub-array of first n elements after shuffled
-let selected = shuffled.slice(0, 4);
+let selected = shuffled.slice(0, 3);
 
 const popularProductsContainer = document.querySelector(".random-products-container")
 
