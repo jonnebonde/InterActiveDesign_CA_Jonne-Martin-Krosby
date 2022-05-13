@@ -121,6 +121,7 @@ nav {
     flex-direction: column;
     background-image: url(../images/main_img.jpg);
     background-position: center;
+    background-repeat: none;
     height: 700px;
 }
 
