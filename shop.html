@@ -21,10 +21,9 @@
     <nav>
         <div>
             <a href="index.html" class="mainlogo">
-                <img class="mainlogo_img" src="images/RainyDays_Logo.png" alt="Rainy Days Logo">
+                <img class="mainlogo_img" src="./images/RainyDays_Logo.png" alt="Rainy Days Logo">
             </a>
         </div>
-           
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -33,8 +32,8 @@
             <div class="nav-menu">
                 <ul>
                     <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
-                    <li><a class="active-page" href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a class="active-page" href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
@@ -44,11 +43,18 @@
                     <input id="search" class="fa fa-search" type="text" placeholder="Search">
                     <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
                 </div>
-                <div>
-                    <a href="shopping-cart.html">Cart</a>
+                <div class="cart-link">
+                    <a class="show-cart" href="cart.html">Cart</a>
                 </div>
             </div>
     </nav>
+
+    <main>
+        <div class="messages" style="display: none;"></div>
+        <div class="products"></div>
+    </main>
     <script src="./js/index.js"></script>
+    <script src="./js/components/messages.js"></script>
+    <script src="./js/cart/shop.js" type="module"></script>
 </body>
 </html>

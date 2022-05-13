@@ -32,7 +32,7 @@
             <div class="nav-menu">
                 <ul>
                     <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
-                    <li><a class="active-page" href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
@@ -44,28 +44,19 @@
                     <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
                 </div>
                 <div class="cart-link">
-                    <a class="show-cart" href="cart.html">Cart</a>
+                    <a class="active-page" href="cart.html">Cart</a>
                 </div>
             </div>
     </nav>
     </header>
-        <main>
-        <div class="main_img">
-            <h1>Pushing The Comfort Zone</h1>
-            <a class="shop-cta"  href="shop.html">shop</a>
-        </div>
-    <div class="quotes-container">
-        <div>
-            <p>"Best outdoor jackets"</p>
-            <p>-oliver dipple-</p>
-        </div>
-        <div>
-            <p>"Unmatching comfort"</p>
-            <p>-erik solhaug-</p>
-        </div> 
-    </div>
-    <div class="random products container"></div>
-</main>
-    <script src="./js/index.js"></script>
+
+    <h2 class="empty-cart-msg"></h2>
+        <main class="cart-page">
+            <a class="show-cart" href="../cart.html">Cart</a>
+            <div class="cart-list"></div>
+            <div class="total"></div>
+            <button class="delete-cart">Delete cart</button>
+        </main>
+        <script src="./js/cart/cart.js"></script>
 </body>
 </html>
