@@ -170,7 +170,7 @@ h1 {
     }
 
     .nav-menu{
-        position: absolute;
+        position: fixed;
         right: -100%;
         top: 100px;
         justify-content: center;
