@@ -1,5 +1,9 @@
+
+
+// click event for hamburger menu
 const toggleButton = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const hideMenu = document.querySelector("main");
 
 
 toggleButton.addEventListener("click", () => {
@@ -8,6 +12,15 @@ toggleButton.addEventListener("click", () => {
 
 })
 
+hideMenu.addEventListener("click", () => {
+    toggleButton.classList.remove("active");
+    navMenu.classList.remove("active");
+
+})
+
+
+
+// cart item quantity and total price
 let cartItems = JSON.parse(localStorage.getItem("cartList"));
 const numberOfItemsInCart = document.querySelector(".show-cart");
 let cartArray = cartItems || [];
@@ -27,3 +40,4 @@ function cartQuantityTotal() {
     }
 }
 cartQuantityTotal()
+

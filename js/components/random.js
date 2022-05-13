@@ -1,9 +1,9 @@
 import { productArray } from "../products/productlist.js"
 
-// Shuffle array
+// Shuffle products on productArray
 let shuffled = productArray.sort(() => 0.5 - Math.random());
 
-// Get sub-array of first n elements after shuffled
+// get the 3 random products frpm  ProductArray
 let selected = shuffled.slice(0, 3);
 
 const popularProductsContainer = document.querySelector(".random-products-container")
@@ -22,6 +22,3 @@ selected.forEach(function(random) {
         </div>
         `
 })
-
-
-console.log(selected)
