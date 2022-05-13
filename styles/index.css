@@ -95,7 +95,8 @@ nav {
     font-weight: var(--bold);
 }
 
-#search{
+#search,
+#hamburger-search{
     color: var(--darkgreen);
     border: solid 2px var(--darkgreen);
     height: 28px;
@@ -185,15 +186,20 @@ h1 {
         flex-direction: column;       
     }
 
+    .nav-menu input {
+        margin: 10px;
+        height: 25px;
+    }
+
     .nav-menu ul li {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .nav-menu.active {
         display: block;
         right: 0px;
-        width: 100px;
-        height: 200px;
+        width: 150px;
+        height: 250px;
         top: 100px;
     }
 
