@@ -5,6 +5,7 @@
     color: var(--white);
     font-size: 20px;
     font-weight: var(--bold);
+    width: 100%;
 }
 
 header {
@@ -15,16 +16,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 20px;
     font-family: var(--tahoma);
+    border-bottom: 2px solid var(--darkgreen);
+    width: 100%;
+    padding: 10px 30px;
 }
+
 
 .mainlogo {
     display: block;
     
 }
 
-.mainlogo img {
+.mainlogo_img {
     max-width: 80px;
 }
 
@@ -42,7 +46,6 @@ nav {
     transition: all 0.3s ease-in-out;
     background-color: var(--darkgreen);
 }
-
 
 .active-page {
    border-bottom: 2px solid var(--darkgreen);
@@ -116,6 +119,10 @@ nav {
     cursor: pointer;
 }
 
+main {
+    max-width: 1920px;
+    margin: auto;
+}
 
 .main_img {
     display: flex;
@@ -209,7 +216,8 @@ h2 {
         right: 0px;
         width: 150px;
         height: 250px;
-        top: 100px;
+        top: 90px;
+        border: 2px solid var(--darkgreen);
     }
 
 }
