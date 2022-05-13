@@ -32,9 +32,9 @@
             <div class="nav-menu">
                 <ul>
                     <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
-                    <li><a  href="index.html">Home</a></li>
-                    <li><a class="active-page" href="shop.html">Shop</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a class="active-page"href="contact.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </div>
@@ -48,13 +48,32 @@
                 </div>
             </div>
     </nav>
-
-    <main>
-        <div class="messages" style="display: none;"></div>
-        <div class="products"></div>
-    </main>
+    <div class="form_success"></div>
+<form id="contactForm">
+        <h1>Contact Us</h1>
+            <label class="name">Name(required)
+                <input name="name" id="name" />
+            </label>
+                <div class="input_error" id="nameError">Please write a name</div>
+            <label class="address">Address(required)
+                <input name="address" id="address" />
+            </label>
+                <div class="input_error" id="addressError">Address must be at least 25 characters</div>
+            <label class="email">Email(required)
+                <input name="email" id="email" />
+            </label>
+                <div class="input_error" id="emailError">Email is not in the correct format</div>
+            <label class="subject">Subject(required)
+                <textarea name="subject" id="subject" placeholder="min. 10 characters"></textarea>
+            </label>
+                <div class="input_error" id="subjectError">Please enter atleast 10 characters</div>
+        <div class="submit_btn">
+            <button class="submit">Submit</button>
+        </div>
+</form>
+    <footer>
+    </footer>
     <script src="./js/index.js"></script>
-    <script src="./js/components/messages.js"></script>
-    <script src="./js/cart/shop.js" type="module"></script>
+    <script src="./js/contactform/contactform.js"></script>
 </body>
-</html>
+</html

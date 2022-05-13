@@ -1,0 +1,62 @@
+.form_success {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    width: 800px;
+    margin: 30px auto;
+    border-radius: 5px;
+    animation: blinkingBackground 2s infinite;
+    font-size: 30px;
+}
+
+@keyframes blinkingBackground{
+    0%		{ background-color: #10c018;}
+    25%		{ background-color: #1056c0;}
+    50%		{ background-color: #ef0a1a;}
+    75%		{ background-color: #254878;}
+    100%	        { background-color: #04a1d5;}
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 100px auto;
+    padding: 20px;
+    width: 600px;
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+}
+
+form div {
+    padding: 2px 0px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-top: 2px;
+    padding: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.input_error {
+    display: none;
+    color: red;
+    padding-bottom: 5px;
+}
+
+.submit_btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit {
+    background: white;
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+}
