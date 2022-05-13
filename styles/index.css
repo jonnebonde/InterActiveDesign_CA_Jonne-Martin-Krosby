@@ -171,6 +171,7 @@ h1 {
 
     .nav-menu{
         position: absolute;
+        display: none;
         right: -100%;
         top: 100px;
         overflow: hidden;
@@ -189,6 +190,7 @@ h1 {
     }
 
     .nav-menu.active {
+        display: block;
         right: 0px;
         width: 100px;
         height: 200px;
