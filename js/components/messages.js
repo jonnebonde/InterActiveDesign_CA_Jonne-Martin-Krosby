@@ -1,4 +1,3 @@
-
 const messages = document.querySelector(".messages");
 const addedToCartMessage = "Item has been added to cart";
 const increaseQuantityMessage = "item already in cart, increased quantity";

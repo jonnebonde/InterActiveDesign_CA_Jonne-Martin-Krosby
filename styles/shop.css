@@ -7,7 +7,8 @@
     font-size: 20px;
 }
 
-.products {
+.products,
+.random-products-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -15,7 +16,8 @@
     margin: 0 auto;
 }
 
-.product {
+.product,
+.random-product {
     margin: 20px;
     background: lightgrey;
     padding: 20px;
@@ -25,21 +27,25 @@
     justify-content: space-between;
 }
 
-.product p {
+.product p,
+.random-product p {
     font-size: 20px;
 }
 
-.product-image {
+.product-image,
+.random-product-image {
     background-size: cover;
     height: 150px;
 }
 
-.product-price {
+.product-price,
+.random-product-price {
     font-size: 20px;
     margin: 10px 0;
 }
 
-.product-button {
+.product-button,
+.random-product-button {
     background-color: white;
     border: 0px;
     padding: 10px;

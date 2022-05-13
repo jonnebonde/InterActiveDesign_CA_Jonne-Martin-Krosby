@@ -132,6 +132,11 @@ h1 {
     margin-top: 4vh;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .quotes-container {
     display: flex;
     justify-content: space-evenly;

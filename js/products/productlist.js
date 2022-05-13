@@ -9,8 +9,8 @@ export const productArray = [
     
     },
     {
-        name: "Sweater",
-        description: "Nice warm sweater",
+        name: "Rainy jacket",
+        description: "Nice warm jacket",
         image: "https://images.unsplash.com/photo-1631541911232-72bc7448820a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         price: 300,
         id: "2",
@@ -18,7 +18,7 @@ export const productArray = [
     },
     {
         name: "T-shirt",
-        description: "Nice warm t-shirt",
+        description: "Nice warm jacket",
         image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         price: 150,
         id: "3",
@@ -26,7 +26,7 @@ export const productArray = [
     },
     {
         name: "Pants",
-        description: "Nice warm pants",
+        description: "Nice warm jacket",
         image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=697&q=80",
         price: 400,
         id: "4",
@@ -34,7 +34,7 @@ export const productArray = [
     },
     {
         name: "Socks",
-        description: "Nice warm pants",
+        description: "Nice warm jacket",
         image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=697&q=80",
         price: 400,
         id: "5",
@@ -42,7 +42,7 @@ export const productArray = [
     },
     {
         name: "Hat",
-        description: "Nice warm pants",
+        description: "Nice warm jacket",
         image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=697&q=80",
         price: 400,
         id: "6",
@@ -50,7 +50,7 @@ export const productArray = [
     },
     {
         name: "Boxers",
-        description: "Nice warm pants",
+        description: "Nice warm jacket",
         image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=697&q=80",
         price: 400,
         id: "7",
