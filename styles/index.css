@@ -8,11 +8,17 @@
     font-size: 20px;
     font-weight: var(--bold);
 }
+
+header {
+    width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px 20px;
+    font-family: var(--tahoma);
 }
 
 .mainlogo {
@@ -24,11 +30,21 @@ nav {
     max-width: 80px;
 }
 
-.nav-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--darkgreen);
+}
+
 
 .active-page {
    border-bottom: 2px solid var(--darkgreen);
@@ -36,13 +52,15 @@ nav {
 
 .nav-menu {
     font-size: 23px;
-    font-family: var(--tahoma);
     margin-left: 2rem;
 }
 
 .nav-menu ul {
     display: flex;
+}
 
+#hamburger-search {
+    display: none;
 }
 
 .nav-menu li {
@@ -70,11 +88,11 @@ nav {
 }
 
 .cta-icons a {
+    margin-left: 10px;
     text-decoration: none;
     color: var(--darkgreen);
     font-size: 23px;
     font-weight: var(--bold);
-    font-family: var(--tahoma);
 }
 
 #search{
@@ -102,7 +120,6 @@ nav {
     align-items: center;
     flex-direction: column;
     background-image: url(../images/main_img.jpg);
-    background-size: cover;
     background-position: center;
     height: 700px;
 }
@@ -119,7 +136,71 @@ h1 {
     
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (max-width: 800px) {
+    
+    .credibility {
+        display: none;
+    }
 
+
+
+    .search-input {
+        display: none;
+    }
+
+    #hamburger-search {
+        display: block;
+        width: auto;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: absolute;
+        right: -100%;
+        top: 100px;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--white);
+        transition: 0.3s;
+    }
+
+    .nav-menu ul{
+        flex-direction: column;       
+    }
+
+    .nav-menu ul li {
+        margin-top: 10px;
+    }
+
+    .nav-menu.active {
+        right: 0px;
+        width: 100px;
+        height: 200px;
+        top: 100px;
+    }
 
 }
+
+/* @media screen and (max-width: 00px) {
+
+
+    .nav-menu.active {
+        right: 0px;
+        width: 100px;
+        height: 200px;
+        top: 140px;
+    }
+} */
