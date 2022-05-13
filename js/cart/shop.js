@@ -7,6 +7,7 @@ const productsContainer = document.querySelector(".products");
 
 // Loops productlist.js and creates products HTML
 productArray.forEach(function(product){
+
     productsContainer.innerHTML += 
         `<div class="product" >
         <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
