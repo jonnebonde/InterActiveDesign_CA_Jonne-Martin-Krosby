@@ -173,6 +173,7 @@ h1 {
         position: fixed;
         right: -100%;
         top: 100px;
+        overflow: hidden;
         justify-content: center;
         text-align: center;
         background-color: var(--white);
