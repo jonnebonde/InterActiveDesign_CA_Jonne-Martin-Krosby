@@ -7,7 +7,6 @@ export const productArray = [
         id: "1",
         quantity: 1,
         gender: "man",
-    
     },
     {
         name: "Rainy jacket",
