@@ -14,16 +14,14 @@ productArray.forEach(function(product){
             <p>${product.description}</p>
             <div style="background-image: url(${product.image})" class="product-image"></div>
             <div class="product-price">Price: ${product.price}</div>
-            <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
-            <button class="product-button" >Details</button>
-            </a>
+            <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
         </div>
         `
 })
 
 
 //click event for the add to cart button
-const buttons = document.querySelectorAll(".product-button");
+/* const buttons = document.querySelectorAll(".product-button");
 
 buttons.forEach(item => {
   item.addEventListener("click", event => {
@@ -31,7 +29,7 @@ buttons.forEach(item => {
         cartQuantityTotal()
         
   })
-})
+}) */
 
 
 //click event for the add to cart button
@@ -64,7 +62,7 @@ cartQuantityTotal() */
 
 
 //Function for adding new items to cart.
-function AddToCart() {
+/* function AddToCart() {
     const itemToAdd = productArray.find(item => item.id === event.target.dataset.product)
     cartArray.push(itemToAdd);
     console.log("im adding to cart")
@@ -92,7 +90,7 @@ function increaseQuantityCart() {
 function updateCart() {
     localStorage.setItem("cartList", JSON.stringify(cartArray))
     
-};
+}; */
 
 /* function messageAddedToCart() {
     if(messages.style.display === "none") {

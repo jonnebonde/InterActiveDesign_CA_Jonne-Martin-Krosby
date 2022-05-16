@@ -1,11 +1,11 @@
-const cartItems = JSON.parse(localStorage.getItem("cartList"));
+//const cartItems = JSON.parse(localStorage.getItem("cartList"));
 const cartList = document.querySelector(".cart-list");
 const cartContainer = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
 const deleteCart = document.querySelector(".delete-cart");
 const emptyCartMessage = document.querySelector(".empty-cart-msg");
-const numberOfItemsInCart = document.querySelector(".show-cart");
-let cartArray = cartItems || [];
+//const numberOfItemsInCart = document.querySelector(".show-cart");
+//let cartArray = cartItems || [];
 
 console.log(deleteCart)
 
