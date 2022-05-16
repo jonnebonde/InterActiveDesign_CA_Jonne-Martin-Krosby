@@ -1,11 +1,18 @@
-
-
-
-main ul{
+.shop-cta-shop {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-content: center;
+    gap: 40px;
     list-style: none;
+    border-bottom: 2px solid var(--darkgreen);
+    font-size: 1.3rem;
+    padding: 10px 0px;
+}
+
+.shop-cta-shop a {
+    text-decoration: none;
+    color: var(--darkgreen);
+    font-weight: var(--bold);
 }
 
 .products,
