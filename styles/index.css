@@ -91,7 +91,7 @@ nav {
     align-items: center;
 }
 
-.cta-icons a {
+.cart-link a {
     margin-left: 10px;
     text-decoration: none;
     color: var(--darkgreen);
@@ -122,6 +122,8 @@ nav {
     cursor: pointer;
 }
 
+
+
 main {
     max-width: 2560px;
     margin: auto;
@@ -138,25 +140,40 @@ main {
     height: 500px;
 }
 
-.shop-cta-container {
-    background-color: var(--darkgreen);
-}
-
 .main_img h1{
     margin: 2rem;
     font-size: 2rem;
     color: var(--darkgreen);
 }
 
-
 .shop-cta {
-    text-decoration: none;
-    color: var(--darkgreen);
-    background-color: var(--white);
-    font-weight: bold;
-    margin: 20px;
-    padding: 20px 40px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
+
+.shop-cta a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px ;
+    width: 120px;
+    background-color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--darkgreen);
+    box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
+}
+
+.shop-cta a:hover {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 6px 2px 16px 0px, var(--darkgreen) -6px -2px 16px 0px;
+}
+
+
+
 
 
 .quotes-container {
@@ -182,6 +199,10 @@ footer {
     color: var(--white);
     height: 100px;
     width: 100%;
+}
+
+.contact-info {
+    margin-left: 20px;
 }
 
 footer a {
