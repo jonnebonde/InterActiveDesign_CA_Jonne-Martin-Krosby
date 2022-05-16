@@ -1,10 +1,9 @@
-.messages {
-    position: fixed;
-    text-align: center;
-    color: white;
-    height: 30px;
-    width: 100%;
-    font-size: 20px;
+main ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+
 }
 
 .products,
@@ -13,7 +12,7 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .product,

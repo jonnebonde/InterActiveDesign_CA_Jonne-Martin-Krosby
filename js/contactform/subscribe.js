@@ -2,30 +2,33 @@ const subscribeForm = document.getElementById("subscribe-container");
 const subscribeInput = document.getElementById("email-subscribe");
 const subscribeError = document.querySelector(".input-subscribe-error");
 
-console.log(subscribeError)
+console.log(subscribeInput.value)
 
 
-function validatesubscribe(event) {
+
+function validateSubscribe(event) {
     event.preventDefault();
 
-    const subscribeEmail = validateSubscribe(subscribeInput.value);
+    const subscribeEmail = validateSubscribeEmail(subscribeInput.value);
 
     if(subscribeEmail) {
         subscribeError.textContent = "Thanks for your subscription";
-        subscribeError.style.colore = "green";
-        subscribeError.style.backgroundcolor = "white";
+        subscribeError.style.color = "#7C9A3C";
+        subscribeError.style.backgroundColor = "#ffff";
         setTimeout(function() {
-            subscribeError.textContent = "Sign up";
-            subscribeError.style.color = "white"
-        }, 4000);
+            subscribeError.textContent = "Sign up for our newsletter";
+            subscribeError.style.color = "#ffff";
+            subscribeError.style.backgroundColor = "#0A3641";
+        }, 3000)
     } else {
         subscribeError.textContent = "Not a valid email";
-        subscribeError.style.colore = "red";
-        subscribeError.style.backgroundcolor = "white";
+        subscribeError.style.color = "red";
+        subscribeError.style.backgroundColor = "white";
         setTimeout(function() {
-            subscribeError.textContent = "Sign up";
-            subscribeError.style.color = "white"
-        },4000)
+            subscribeError.textContent = "Sign up for our newsletter";
+            subscribeError.style.color = "#ffff";
+            subscribeError.style.backgroundColor = "#0A3641";
+        }, 3000)
     }
 }
 
@@ -33,7 +36,7 @@ subscribeForm.addEventListener("submit", validateSubscribe);
 
 
 
-function validateSubscribe(email) {
+function validateSubscribeEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
     return patternMatches;

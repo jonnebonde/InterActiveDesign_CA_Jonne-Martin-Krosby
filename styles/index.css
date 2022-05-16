@@ -180,14 +180,15 @@ main {
     
 }
 
-h2 {
+.headline-random-products {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 1.7rem;
     color: var(--darkgreen);
 }
 
 footer {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -195,8 +196,6 @@ footer {
     color: var(--white);
     width: 100%;
 }
-
-
 
 .contact-info {
     margin: 20px;
@@ -228,13 +227,13 @@ footer {
 }
 
 .socialmedia_icons img {
-    height: 40px;
+    height: 30px;
     margin: 10px;
 }
 
 @media screen and (min-height: 1081px) {
 
-    footer {
+    .index-page {
         position: absolute;
         bottom: 0;
     }

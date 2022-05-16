@@ -1,0 +1,8 @@
+.messages {
+    position: fixed;
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+}

@@ -52,12 +52,11 @@
     </header>
 <main>
         <div class="main_img">
-            <h1>Who are u shopping for?</h1>
+            <h1>Who is pushing the limit?</h1>
             <ul class="shop-cta">
-                <li><a href="shop.html">Man</a></li> 
-                <li><a href="shop.html">Woman</a></li>
+                <li><a href="shop.html?gender=man">Man</a></li> 
+                <li><a href="shop.html?gender=woman">Woman</a></li>
             </ul>
-            
         </div>
     <div class="quotes-container">
         <div>
@@ -69,23 +68,22 @@
             <p>-erik solhaug-</p>
         </div> 
     </div>
-    <h2>Our most popular products</h2>
+    <h2 class="headline-random-products">Our most popular products</h2>
     <div class="random-products-container"></div>
 </main>
-<footer>
+<footer class="index-page">
         <div class="contact-info">
             <p>Phone: +47 1234 5678</p>
             <p>Addresse: Here, There and Everywhere</p>
             <a class="email-link" href="mailto:rainydays@rainjackets.com">E-mail:rainydays@rainjackets.com</a>
         </div>
         <form id="subscribe-container">
-            <label for="email" class="input-subscribe-error">Sign up for our newsletter</label>
-        <div class="submit-input-container">
-            <input type="email" id="email-subscribe">
-            <input id="submit-subscribe" type="submit"  value="Sign up" form="subscribe-container">
-        </div>
+                <p  class="input-subscribe-error">Sign up for our newsletter</p>
+            <div class="submit-input-container">
+                <input type="email" id="email-subscribe">
+                <input id="submit-subscribe" type="submit"  value="Sign up" form="subscribe-container">
+            </div>
         </form>
-     
     <div class="socialmedia_icons">
         <a href="http://facebook.com">
             <img src="images/facebook_logo2.png" alt="link to facebook.com"/>
@@ -99,7 +97,7 @@
     </div>
 </footer>
     <script src="./js/index.js"></script>
-    <script src="/js/contactform/subscribe.js"></script>
     <script src="./js/components/random.js" type="module"></script>
+    <script src="./js/contactform/subscribe.js"></script>
 </body>
 </html>
