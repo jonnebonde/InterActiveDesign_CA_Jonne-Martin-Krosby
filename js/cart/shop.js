@@ -10,13 +10,13 @@ productArray.forEach(function(product){
 
     productsContainer.innerHTML += 
         `<div class="product" >
-        <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
             <h2>${product.name}</h2>
-        </a>
             <p>${product.description}</p>
             <div style="background-image: url(${product.image})" class="product-image"></div>
             <div class="product-price">Price: ${product.price}</div>
-            <button class="product-button" data-product="${product.id}">Add to cart</button>
+            <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <button class="product-button" >Details</button>
+            </a>
         </div>
         `
 })

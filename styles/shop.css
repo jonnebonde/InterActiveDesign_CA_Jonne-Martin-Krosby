@@ -19,17 +19,25 @@
 .product,
 .random-product {
     margin: 20px;
-    background: lightgrey;
+    background: var(--white);
     padding: 20px;
     display: flex;
+    flex: 1 1 200px;
+    max-width: 250px;
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.product h3,
+.random-product h3 {
+    font-size: 1.3rem;
 }
 
 .product p,
 .random-product p {
-    font-size: 20px;
+    font-size: 0.8rem;
 }
 
 .product-image,

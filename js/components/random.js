@@ -12,13 +12,10 @@ selected.forEach(function(random) {
 
     popularProductsContainer.innerHTML +=
     `<div class="random-product" >
-        <a href="details.html?id=${random.id}&name=${random.name}" data-product="${random.id}">
-            <h2>${random.name}</h2>
-        </a>
-            <p>${random.description}</p>
+            <h3>${random.name}</h3>
             <div style="background-image: url(${random.image})" class="random-product-image"></div>
-            <div class="product-price">Price: ${random.price}</div>
-            <a href="details.html?id=${random.id}&name=${random.name}" data-product="${random.id}" class="random-product-button">Info</a>
+            <p class="product-price">Price: ${random.price}</p>
+            <a href="details.html?id=${random.id}&name=${random.name}" data-product="${random.id}" class="random-product-button">Details</a>
         </div>
         `
 })

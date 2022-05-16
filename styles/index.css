@@ -143,7 +143,8 @@ main {
 }
 
 .main_img h1{
-    margin: 2vh;
+    margin: 2rem;
+    font-size: 2rem;
     color: var(--darkgreen);
 }
 
@@ -157,10 +158,6 @@ main {
     padding: 20px 40px;
 }
 
-h3 {
-    text-align: center;
-    margin-top: 20px;
-}
 
 .quotes-container {
     display: flex;
@@ -168,6 +165,13 @@ h3 {
     background-color: var(--darkgreen);
     color: var(--white);
     
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.7rem;
+    color: var(--darkgreen);
 }
 
 footer {
@@ -185,8 +189,6 @@ footer a {
     color: var(--white);
 
 }
-
-
 
 
 @media screen and (min-height: 1081px) {
@@ -262,13 +264,18 @@ footer a {
 
 }
 
-/* @media screen and (max-width: 00px) {
+@media screen and (max-width: 600px) {
 
 
-    .nav-menu.active {
-        right: 0px;
-        width: 100px;
-        height: 200px;
-        top: 140px;
-    }
-} */
+.main_img h1{
+    margin: 1.5rem 1rem;
+    font-size: 1.5rem;
+    
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+
+}
