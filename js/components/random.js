@@ -4,7 +4,7 @@ import { productArray } from "../products/productlist.js"
 let shuffled = productArray.sort(() => 0.5 - Math.random());
 
 // get the 3 random products frpm  ProductArray
-let selected = shuffled.slice(0, 3);
+let selected = shuffled.slice(0, 4);
 
 const popularProductsContainer = document.querySelector(".random-products-container")
 

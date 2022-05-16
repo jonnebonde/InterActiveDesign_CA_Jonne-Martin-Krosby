@@ -17,7 +17,7 @@
     100%	        { background-color: #04a1d5;}
 }
 
-form {
+orm {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -28,7 +28,7 @@ form {
     background-color: lightgrey;
 }
 
-form div {
+orm div {
     padding: 2px 0px;
 }
 

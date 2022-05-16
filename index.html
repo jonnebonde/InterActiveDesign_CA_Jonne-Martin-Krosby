@@ -73,18 +73,20 @@
     <div class="random-products-container"></div>
 </main>
 <footer>
-    <div class="contact-info">
-        <p>Phone: +47 1234 5678</p>
-        <p>Addresse: Here, There and Everywhere</p>
-        <a class="email-link" href="mailto:rainydays@rainjackets.com">E-mail:rainydays@rainjackets.com</a>
-    </div>
-    <div>
-        <label class="subscribe-container" for="email">Sign up for our newsletter and receive special offers
-            <input type="email" class="subscribe" id="email">
-        </label>
-        <button class="submit">Submit</button>
-    </div>
-    <div class="socialmedia__icons">
+        <div class="contact-info">
+            <p>Phone: +47 1234 5678</p>
+            <p>Addresse: Here, There and Everywhere</p>
+            <a class="email-link" href="mailto:rainydays@rainjackets.com">E-mail:rainydays@rainjackets.com</a>
+        </div>
+        <form id="subscribe-container">
+            <label for="email" class="input-subscribe-error">Sign up for our newsletter</label>
+        <div class="submit-input-container">
+            <input type="email" id="email-subscribe">
+            <input id="submit-subscribe" type="submit"  value="Sign up" form="subscribe-container">
+        </div>
+        </form>
+     
+    <div class="socialmedia_icons">
         <a href="http://facebook.com">
             <img src="images/facebook_logo2.png" alt="link to facebook.com"/>
         </a>

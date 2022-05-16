@@ -172,10 +172,6 @@ main {
     box-shadow: var(--white) 6px 2px 16px 0px, var(--darkgreen) -6px -2px 16px 0px;
 }
 
-
-
-
-
 .quotes-container {
     display: flex;
     justify-content: space-evenly;
@@ -197,20 +193,44 @@ footer {
     align-items: center;
     background-color: var(--darkgreen);
     color: var(--white);
-    height: 100px;
     width: 100%;
 }
 
+
+
 .contact-info {
-    margin-left: 20px;
+    margin: 20px;
 }
 
-footer a {
+
+.contact-info a,
+.contact-info p {
     text-decoration: none;
     color: var(--white);
-
+    font-size: 0.9rem;
 }
 
+#subscribe-container {
+    width: 250px;
+    text-align: center;
+}
+
+.submit-input-container {
+    display: flex;
+}
+
+#submit-subscribe {
+    width: 40%;
+}
+
+.socialmedia_icons {
+    margin: 20px;
+}
+
+.socialmedia_icons img {
+    height: 40px;
+    margin: 10px;
+}
 
 @media screen and (min-height: 1081px) {
 
@@ -281,6 +301,15 @@ footer a {
         height: 250px;
         top: 93px;
         border: 2px solid var(--darkgreen);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: var(--darkgreen);
+        color: var(--white);
+        width: 100%;
+        
     }
 
 }
