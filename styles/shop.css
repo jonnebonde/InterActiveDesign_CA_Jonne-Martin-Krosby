@@ -22,7 +22,7 @@
     background: var(--white);
     padding: 20px;
     display: flex;
-    flex: 1 1 200px;
+    flex: 1 1 150px;
     max-width: 250px;
     text-align: center;
     flex-direction: column;
