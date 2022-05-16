@@ -236,7 +236,8 @@ footer {
 
 @media screen and (min-height: 1081px) {
 
-    .index-page {
+    .index-page,
+    .footer-shop {
         position: absolute;
         bottom: 0;
     }

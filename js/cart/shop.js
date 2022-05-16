@@ -4,6 +4,7 @@ const productsContainer = document.querySelector(".products");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const details = params.get("gender");
+const backgroundImgShop = document.querySelector(".shop-img");
 
 
 // filterfunction to sort products by gender
@@ -11,20 +12,34 @@ let filteredProductArray = productArray.filter(function(sortedArray) {
 return sortedArray.gender === details;
 });
 
-
+console.log(details)
 //if filterfunction has no value(null) all products are shown
 function productArrayHTML() {
 
     if(details) {
         sortedProductsHTML()
+        setBackgroundImgShop()
     } else {
         allProductsHTML()
         }
 }
 productArrayHTML()
 
+function setBackgroundImgShop() {
+    const womanImg = "url(/images/women_img.jpg)";
+    const manImg = "url(/images/men_img.jpg)";
+
+    if(details === "man") {
+        backgroundImgShop.style.backgroundImage = womanImg;
+    }
+    if(details === "woman") {
+        backgroundImgShop.style.backGroundImage = manImg;
+    }
+}
+
 
 function sortedProductsHTML() {
+
     filteredProductArray.forEach(function(product){
 
         productsContainer.innerHTML += 
