@@ -30,7 +30,6 @@ function sortedProductsHTML() {
         productsContainer.innerHTML += 
             `<div class="product" >
                 <h2>${product.name}</h2>
-                <p>${product.description}</p>
                 <div style="background-image: url(${product.image})" class="product-image"></div>
                 <div class="product-price">Price: ${product.price}</div>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
@@ -45,7 +44,6 @@ function allProductsHTML() {
         productsContainer.innerHTML += 
             `<div class="product" >
                 <h2>${product.name}</h2>
-                <p>${product.description}</p>
                 <div style="background-image: url(${product.image})" class="product-image"></div>
                 <div class="product-price">Price: ${product.price}</div>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>

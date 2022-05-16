@@ -122,8 +122,6 @@ nav {
     cursor: pointer;
 }
 
-
-
 main {
     max-width: 2560px;
     margin: auto;
@@ -224,6 +222,10 @@ footer {
 
 .socialmedia_icons {
     margin: 20px;
+}
+
+.socialmedia_icons a {
+    text-decoration: none;
 }
 
 .socialmedia_icons img {

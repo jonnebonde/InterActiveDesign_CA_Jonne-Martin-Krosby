@@ -1,9 +1,11 @@
+
+
+
 main ul{
     display: flex;
     justify-content: center;
     gap: 30px;
     list-style: none;
-
 }
 
 .products,
@@ -11,15 +13,14 @@ main ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 50px auto;
+    gap: 20px;
 }
 
 .product,
 .random-product {
-    margin: 20px;
     background: var(--white);
-    padding: 20px;
     display: flex;
     flex: 1 1 250px;
     max-width: 300px;
