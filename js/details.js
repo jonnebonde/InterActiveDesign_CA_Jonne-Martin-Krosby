@@ -1,6 +1,6 @@
 import { productArray } from "./products/productlist.js";
 const productDetails = document.querySelector(".products");
-//let cartItems = JSON.parse(localStorage.getItem("cartList"));
+let cartItems = JSON.parse(localStorage.getItem("cartList"));
 //const numberOfItemsInCart = document.querySelector(".show-cart");
 //let cartArray = cartItems || [];
 
