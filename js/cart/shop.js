@@ -18,7 +18,6 @@ function productArrayHTML() {
 
     if(details) {
         sortedProductsHTML()
-        setBackgroundImgShop()
     } else {
         allProductsHTML()
         }
@@ -39,20 +38,6 @@ function toggleActiveLink() {
     }
 }
 toggleActiveLink()
-
-
-
-function setBackgroundImgShop() {
-    const womanImg = "url(/images/women_img.jpg)";
-    const manImg = "url(/images/men_img.jpg)";
-
-    if(details === "man") {
-        backgroundImgShop.style.backgroundImage = womanImg;
-    }
-    if(details === "woman") {
-        backgroundImgShop.style.backGroundImage = manImg;
-    }
-}
 
 
 function sortedProductsHTML() {

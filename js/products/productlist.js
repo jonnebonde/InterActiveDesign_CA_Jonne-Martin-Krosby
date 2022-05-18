@@ -2,7 +2,7 @@ export const productArray = [
     {
         name: "Jacket",
         description: "Nice jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 499,
         id: "1",
         quantity: 1,
@@ -11,7 +11,7 @@ export const productArray = [
     {
         name: "Rainy jacket",
         description: "Nice wet jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 599,
         id: "2",
         quantity: 1,
@@ -20,7 +20,7 @@ export const productArray = [
     {
         name: "Hot jacket",
         description: "Nice warm jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 666,
         id: "3",
         quantity: 1,
@@ -29,7 +29,7 @@ export const productArray = [
     {
         name: "Cool jacket",
         description: "Nice cool jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 299,
         id: "4",
         quantity: 1,
@@ -38,7 +38,7 @@ export const productArray = [
     {
         name: "Dry jacket",
         description: "Nice dry jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 399,
         id: "5",
         quantity: 1,
@@ -47,7 +47,7 @@ export const productArray = [
     {
         name: "The jacket",
         description: "it`s the jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 999,
         id: "6",
         quantity: 1,
@@ -56,7 +56,7 @@ export const productArray = [
     {
         name: "Windy jacket",
         description: "Nice windy jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 799,
         id: "7",
         quantity: 1,
@@ -65,7 +65,7 @@ export const productArray = [
     {
         name: "Cloudy jacket",
         description: "Comfy cloudy jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 899,
         id: "8",
         quantity: 1,
@@ -74,7 +74,7 @@ export const productArray = [
     {
         name: "Shiny jacket",
         description: "Nice shiny jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 499,
         id: "9",
         quantity: 1,
@@ -83,7 +83,7 @@ export const productArray = [
     {
         name: "Noisy jacket",
         description: "Very noisy jacket",
-        image: "",
+        image: "./images/product-man.jpg",
         price: 400,
         id: "10",
         quantity: 1,
@@ -92,7 +92,7 @@ export const productArray = [
     {
         name: "Jacket",
         description: "Nice jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 499,
         id: "11",
         quantity: 1,
@@ -101,7 +101,7 @@ export const productArray = [
     {
         name: "Rainy jacket",
         description: "Nice wet jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 599,
         id: "12",
         quantity: 1,
@@ -110,7 +110,7 @@ export const productArray = [
     {
         name: "Hot jacket",
         description: "Nice warm jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 666,
         id: "13",
         quantity: 1,
@@ -119,7 +119,7 @@ export const productArray = [
     {
         name: "Cool jacket",
         description: "Nice cool jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 299,
         id: "14",
         quantity: 1,
@@ -128,7 +128,7 @@ export const productArray = [
     {
         name: "Dry jacket",
         description: "Nice dry jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 399,
         id: "15",
         quantity: 1,
@@ -137,7 +137,7 @@ export const productArray = [
     {
         name: "The jacket",
         description: "it`s the jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 999,
         id: "16",
         quantity: 1,
@@ -146,7 +146,7 @@ export const productArray = [
     {
         name: "Windy jacket",
         description: "Nice windy jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 799,
         id: "17",
         quantity: 1,
@@ -155,7 +155,7 @@ export const productArray = [
     {
         name: "Cloudy jacket",
         description: "Comfy cloudy jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 899,
         id: "18",
         quantity: 1,
@@ -164,7 +164,7 @@ export const productArray = [
     {
         name: "Shiny jacket",
         description: "Nice shiny jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 499,
         id: "19",
         quantity: 1,
@@ -173,7 +173,7 @@ export const productArray = [
     {
         name: "Noisy jacket",
         description: "Very noisy jacket",
-        image: "",
+        image: "./images/product-woman.jpg",
         price: 400,
         id: "20",
         quantity: 1,
