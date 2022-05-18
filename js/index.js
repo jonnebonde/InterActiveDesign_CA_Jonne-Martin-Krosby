@@ -21,6 +21,7 @@ toggleButton.addEventListener("click", () => {
 })
 
 
+
 hideMenu.addEventListener("click", () => {
     toggleButton.classList.remove("active");
     navMenu.classList.remove("active");
@@ -32,8 +33,8 @@ hideMenu.addEventListener("click", () => {
 //size menu
 const sizeToggle = document.getElementById("size");
 const sizeList = document.querySelector(".size-list");
-const sizeListClose = document.querySelectorAll(".filter-container-all li")
-
+const sizeListClose = document.querySelectorAll(".filter-container-all li");
+const sizeContainer = document.querySelector(".size-container");
 
 
 sizeToggle.addEventListener("click", () => {
@@ -46,11 +47,19 @@ sizeListClose.forEach(function(sizeMenu){
     }
 })
 
+document.addEventListener("click", function(e) {
+    if (!sizeContainer.contains(e.target)) {
+        sizeList.classList.remove("active")
+    }
+});
+
 
 //color menu
 const colorToggle = document.getElementById("color");
 const colorList = document.querySelector(".color-list");
-const colorListClose = document.querySelectorAll(".color-list li")
+const colorListClose = document.querySelectorAll(".color-list li");
+const colorContainer = document.querySelector(".color-container");
+
 
 colorToggle.addEventListener("click", () => {
     colorList.classList.toggle("active")
@@ -62,11 +71,19 @@ colorListClose.forEach(function(colorMenu){
     }
 })
 
+document.addEventListener("click", function(e) {
+    if (!colorContainer.contains(e.target)) {
+        colorList.classList.remove("active")
+    }
+});
+
 
 //activity menu
 const activityToggle = document.getElementById("activity");
 const activityList = document.querySelector(".activity-list");
 const activityListClose = document.querySelectorAll(".activity-list li");
+const activityContainer = document.querySelector(".activity-container");
+
 
 activityToggle.addEventListener("click", () => {
     activityList.classList.toggle("active")
@@ -78,18 +95,35 @@ activityListClose.forEach(function(activityMenu){
     }
 })
 
+document.addEventListener("click", function(e) {
+    if (!activityContainer.contains(e.target)) {
+        activityList.classList.remove("active")
+    }
+});
+
 
 //sortby menu
-const sortbyToggle = document
+const sortbyToggle = document.getElementById("sortby");
+const sortbyList = document.querySelector(".sortby-list");
+const sortbyListClose = document.querySelectorAll(".sortby-list li");
+const sortbyContainer = document.querySelector(".sortby-container");
 
 
+sortbyToggle.addEventListener("click", () => {
+    sortbyList.classList.toggle("active")
+})
 
+sortbyListClose.forEach(function(sortbyMenu){
+    sortbyMenu.onclick = function() {
+        sortbyList.classList.remove("active")
+    }
+})
 
-
-
-
-
-
+document.addEventListener("click", function(e) {
+    if (!sortbyContainer.contains(e.target)) {
+        sortbyList.classList.remove("active")
+    }
+});
 
 
 // cart item quantity and total price

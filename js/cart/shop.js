@@ -4,7 +4,7 @@ const productsContainer = document.querySelector(".products");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const details = params.get("gender");
-const backgroundImgShop = document.querySelector(".shop-img");
+const backgroundImgShop = document.querySelector(".background-image-shop");
 
 
 // filterfunction to sort products by gender
@@ -23,6 +23,48 @@ function productArrayHTML() {
         }
 }
 productArrayHTML()
+
+const backgroundImage = window.matchMedia("(max-width: 800px)");
+
+function toggleBackground(background) {
+    
+
+     if(background.matches) {
+         backgroundImgShop.style.backgroundImage = "none";
+     } else {
+         changeBackground()
+     }
+}
+backgroundImage.addListener(toggleBackground)
+
+toggleBackground(backgroundImage)
+
+
+
+
+
+function changeBackground() {
+    
+    if((details === "man") || (details === "woman") || (!details)) {
+
+        if (details === "man") {
+            backgroundImgShop.style.backgroundImage = "url('./images/men_img.jpg')"
+        }
+
+        if (details === "woman") {
+            backgroundImgShop.style.backgroundImage = "url('./images/women_img.jpg')"
+        }
+
+        if(!details ) {
+            backgroundImgShop.style.backgroundImage = "url('./images/main_img.jpg')"
+        }
+
+    }
+
+}
+
+
+
 
 function toggleActiveLink() {
     const manActive = document.querySelector(".man");

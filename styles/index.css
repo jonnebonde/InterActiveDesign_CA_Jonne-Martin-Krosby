@@ -56,7 +56,6 @@ header {
 
 .nav-menu {
     font-size: 1.4rem;
-    margin-left: 4rem;
 }
 
 .nav-menu ul {
@@ -302,6 +301,8 @@ footer {
 
     .nav-menu.active {
         display: block;
+        position: absolute;
+        z-index: 5;
         right: 0px;
         width: 150px;
         height: 250px;
