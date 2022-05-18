@@ -25,12 +25,30 @@ function productArrayHTML() {
 }
 productArrayHTML()
 
+function toggleActiveLink() {
+    const manActive = document.querySelector(".man");
+    const womanActive = document.querySelector(".woman");
+
+
+    if(details === "man") {
+        manActive.classList.add("active-page");
+    }
+    
+    if(details === "woman") {
+        womanActive.classList.add("active-page");
+    }
+}
+toggleActiveLink()
+
+
+
 function setBackgroundImgShop() {
     const womanImg = "url(/images/women_img.jpg)";
     const manImg = "url(/images/men_img.jpg)";
 
     if(details === "man") {
         backgroundImgShop.style.backgroundImage = womanImg;
+
     }
     if(details === "woman") {
         backgroundImgShop.style.backGroundImage = manImg;

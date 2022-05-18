@@ -29,9 +29,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 50px auto;
-    gap: 20px;
+    gap: 15px;
 }
 
 .product,
@@ -39,7 +39,8 @@
     background: var(--white);
     display: flex;
     flex: 1 1 250px;
-    max-width: 300px;
+    max-width: 250px;
+    min-width: 200px;
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
@@ -94,14 +95,21 @@
 
 @media screen and (max-width: 800px) {
 
-.product,
-.random-product {
-    margin: 5px;
-    padding: 10px;
-    display: flex;
-    flex: 1 1 140px;
-    max-width: 200px;
-}
+    .products,
+    .random-products-container{
+        max-width: 1000px;
+        margin: 30px auto;
+        gap: 10px;
+    }
+
+    .product,
+    .random-product {
+        margin: 0px;
+        padding: 5px;
+        display: flex;
+        flex: 1 1 140px;
+        max-width: 200px;
+    }
 
 }
 
