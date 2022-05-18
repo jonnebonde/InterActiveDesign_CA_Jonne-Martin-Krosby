@@ -1,8 +1,16 @@
-.messages {
-    position: fixed;
+.message-container {
+    background-color: var(--lightgreen);
+}
+
+.messages,
+.message-link {
     text-align: center;
-    color: white;
+    color: black;
     height: 30px;
     width: 100%;
     font-size: 20px;
+}
+
+.message-link a{
+    text-decoration: none;
 }

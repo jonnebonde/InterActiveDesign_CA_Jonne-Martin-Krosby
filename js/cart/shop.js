@@ -48,7 +48,6 @@ function setBackgroundImgShop() {
 
     if(details === "man") {
         backgroundImgShop.style.backgroundImage = womanImg;
-
     }
     if(details === "woman") {
         backgroundImgShop.style.backGroundImage = manImg;

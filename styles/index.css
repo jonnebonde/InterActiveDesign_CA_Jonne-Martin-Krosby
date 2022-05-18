@@ -32,7 +32,7 @@ nav {
 }
 
 .mainlogo_img {
-    max-width: 80px;
+    max-width: 140px;
 }
 
 
@@ -233,13 +233,12 @@ footer {
     margin: 10px;
 }
 
-@media screen and (min-height: 1081px) {
+@media screen and (max-width: 1000px) {
 
-    .index-page,
-    .footer-shop {
-        position: absolute;
-        bottom: 0;
+    .mainlogo_img {
+        max-width: 80px;
     }
+
 }
 
 @media screen and (max-width: 800px) {
