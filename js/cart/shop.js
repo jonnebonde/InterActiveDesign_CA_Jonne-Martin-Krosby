@@ -12,7 +12,7 @@ let filteredProductArray = productArray.filter(function(sortedArray) {
 return sortedArray.gender === details;
 });
 
-console.log(details)
+
 //if filterfunction has no value(null) all products are shown
 function productArrayHTML() {
 
@@ -23,6 +23,9 @@ function productArrayHTML() {
         }
 }
 productArrayHTML()
+
+
+//mediaquerie for backgroundimage on shop.html
 
 const backgroundImage = window.matchMedia("(max-width: 800px)");
 
@@ -40,8 +43,7 @@ backgroundImage.addListener(toggleBackground)
 toggleBackground(backgroundImage)
 
 
-
-
+//change background according to gender or no gender choosen from landingpage
 
 function changeBackground() {
     
