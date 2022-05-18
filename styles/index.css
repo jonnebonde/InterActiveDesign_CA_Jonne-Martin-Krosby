@@ -15,7 +15,7 @@ header {
     background-color: var(--white);
 }
 
-nav {
+.navbar {
     
     display: flex;
     justify-content: space-between;
@@ -67,7 +67,6 @@ nav {
 #hamburger-search {
     display: none;
 }
-
 
 #search.active{
     display: inline;

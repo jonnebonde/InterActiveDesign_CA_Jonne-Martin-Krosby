@@ -6,7 +6,7 @@
     list-style: none;
     border-bottom: 2px solid var(--darkgreen);
     font-size: 1.3rem;
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 
 .shop-cta-shop a {
@@ -15,14 +15,98 @@
     font-weight: var(--bold);
 }
 
+
+.filter-container-all {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    gap: 10px;
+    align-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.filter-container-all button {
+    height: 50px;
+    width: 100%;
+    
+}
+
+.filter-container1,
+.filter-container2 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+}
+
+.size-container,
+.color-container,
+.activity-container,
+.sortby-container {
+   width: 100%;
+}
+
+.size-list,
+.color-list,
+.activity-list,
+.sortby-list {
+    display: none;
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    border-left: 2px solid var(--darkgreen);
+    border-right: 2px solid var(--darkgreen);
+    border-bottom: 2px solid var(--darkgreen);
+}
+
+.size-list li,
+.color-list li,
+.activity-list li,
+.sortby-list li {
+    margin: 10px;
+    border-bottom: 1px solid var(--darkgreen);
+    color: var(--darkgreen);
+}
+
+
+.size-list.active,
+.color-list.active,
+.activity-list.active,
+.sortby-list.active {
+    display: block;
+    position: relative;
+    background-color: var(--white);
+    
+}
+
+.filter-button {
+    background-color: var(--white);
+    font-size: 1.1rem;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.size-list li:hover,
+.color-list li:hover,
+.activity-list li:hover,
+.sortby-list li:hover,
+.filter-button:hover {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    
+}
+
 .products,
 .random-products-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 50px auto;
     gap: 15px;
+    
 }
 
 .product,

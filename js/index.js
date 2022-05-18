@@ -8,8 +8,6 @@ searchToggleBtn.addEventListener("click", () => {
 } )
 
 
-
-
 // click event for hamburger menu
 const toggleButton = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -22,11 +20,75 @@ toggleButton.addEventListener("click", () => {
 
 })
 
+
 hideMenu.addEventListener("click", () => {
     toggleButton.classList.remove("active");
     navMenu.classList.remove("active");
-
 })
+
+
+// toggle filter menus
+
+//size menu
+const sizeToggle = document.getElementById("size");
+const sizeList = document.querySelector(".size-list");
+const sizeListClose = document.querySelectorAll(".size-list li")
+
+
+sizeToggle.addEventListener("click", () => {
+    sizeList.classList.toggle("active")
+})
+
+sizeListClose.forEach(function(sizeMenu){
+    sizeMenu.onclick = function() {
+        sizeList.classList.remove("active")
+    }
+})
+
+
+//color menu
+const colorToggle = document.getElementById("color");
+const colorList = document.querySelector(".color-list");
+const colorListClose = document.querySelectorAll(".color-list li")
+
+colorToggle.addEventListener("click", () => {
+    colorList.classList.toggle("active")
+})
+
+colorListClose.forEach(function(colorMenu){
+    colorMenu.onclick = function() {
+        colorList.classList.remove("active")
+    }
+})
+
+
+//activity menu
+const activityToggle = document.getElementById("activity");
+const activityList = document.querySelector(".activity-list");
+const activityListClose = document.querySelectorAll(".activity-list li");
+
+activityToggle.addEventListener("click", () => {
+    activityList.classList.toggle("active")
+})
+
+activityListClose.forEach(function(activityMenu){
+    activityMenu.onclick = function() {
+        activityList.classList.remove("active")
+    }
+})
+
+
+//sortby menu
+const
+
+
+
+
+
+
+
+
+
 
 
 // cart item quantity and total price

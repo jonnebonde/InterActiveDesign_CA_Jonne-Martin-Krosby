@@ -19,6 +19,7 @@
             <p class="credibility">Trustpilot rating 4.9</p>
         </div>
         <nav>
+            <div class="navbar">
             <div class="logo" class="mainlogo">
                 <a href="index.html" >
                     <img class="mainlogo_img" src="images/RainyDays_Logo.png" alt="Rainy Days Logo">
@@ -34,7 +35,7 @@
                         <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
                         <li><a  href="index.html">Home</a></li>
                         <li><a class="active-page"href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
@@ -47,13 +48,67 @@
                         <a class="show-cart" href="cart.html">Cart</a>
                     </div>
                 </div>
+            </div>
+            <ul class="shop-cta-shop">
+                <li><a class="man" href="shop.html?gender=man">Man</a></li> 
+                <li><a class="woman" href="shop.html?gender=woman">Woman</a></li>
+            </ul>
+        <div class="filter-container-all">
+            <div class="filter-container1">
+                <div class="size-container">
+                    <button id="size" class="filter-button">Size <i class="fa fa-caret-down"></i></button>
+                        <ul class="size-list"> 
+                            <li>XXLarge</li>
+                            <li>XLarge</li>
+                            <li>Large</li>
+                            <li>Medium</li>
+                            <li>Small</li>
+                            <li>Xsmall</li>
+                        </ul>
+                    </div>
+                    <div class="color-container">
+                        <button id="color" class="filter-button">Color <i class="fa fa-caret-down"></i></button>
+                        <ul class="color-list">
+                            <li>Army</li>
+                            <li>Black</li>
+                            <li>Brown</li>
+                            <li>Camo</li>
+                            <li>Grey</li>
+                            <li>Orange</li>
+                            <li>Yellow</li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="filter-container2">
+                <div class="activity-container">
+                    <button id="activity" class="filter-button">Activity <i class="fa fa-caret-down"></i></button>
+                    <ul class="activity-list">
+                        <li>Canoeing</li>
+                        <li>Camping</li>
+                        <li>Exploring</li>
+                        <li>Hiking</li>
+                        <li>Skiing</li>
+                    </ul>
+                </div>
+                <div class="sortby-container">
+                    <button id="sortby" class="filter-button">Sort by <i class="fa fa-caret-down"></i></button>
+                    <ul class="sortby-list">
+                        <li>Popular</li>
+                        <li>Best Selling</li>
+                        <li>Price low/high</li>
+                        <li>Price high/low</li>
+                        <li>From A - Z</li>
+                        <li>From Z - A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
         </nav>
+
         </header>
     <main>
-        <ul class="shop-cta-shop">
-            <li class="man"><a href="shop.html?gender=man">Man</a></li> 
-            <li class="woman"><a href="shop.html?gender=woman">Woman</a></li>
-        </ul>
+        
         <div class="products"></div>
     </main>
     <footer class="footer-shop">
