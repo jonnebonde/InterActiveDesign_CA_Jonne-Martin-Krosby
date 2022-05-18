@@ -32,7 +32,8 @@ hideMenu.addEventListener("click", () => {
 //size menu
 const sizeToggle = document.getElementById("size");
 const sizeList = document.querySelector(".size-list");
-const sizeListClose = document.querySelectorAll(".size-list li")
+const sizeListClose = document.querySelectorAll(".filter-container-all li")
+
 
 
 sizeToggle.addEventListener("click", () => {
@@ -79,7 +80,7 @@ activityListClose.forEach(function(activityMenu){
 
 
 //sortby menu
-const
+const sortbyToggle = document
 
 
 
