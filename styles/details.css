@@ -1,5 +1,6 @@
 .message-container {
     background-color: var(--lightgreen);
+    z-index: 50;
 }
 
 .messages,

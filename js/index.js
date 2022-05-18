@@ -1,3 +1,25 @@
+// cart item quantity and total price
+let cartItems = JSON.parse(localStorage.getItem("cartList"));
+const numberOfItemsInCart = document.querySelector(".show-cart");
+let cartArray = cartItems || [];
+
+
+function cartQuantityTotal() {
+    console.log()
+    let cartItemsQuantity = 0;
+    let total = 0;
+    for(let i = 0; i < cartArray.length; i++) {
+        total += cartArray[i].price * cartArray[i].quantity;
+        cartItemsQuantity += cartArray[i].quantity;
+        numberOfItemsInCart.innerHTML = `<div class="cart-stats">
+                                            <span>Cart: ${cartItemsQuantity}</span>
+                                            <span>Total: ${total}</span>
+                                        </div>`;
+    }
+}
+cartQuantityTotal()
+
+
 //click event for searchfield
 
 const searchInput = document.getElementById("search");
@@ -19,7 +41,6 @@ toggleButton.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 
 })
-
 
 
 hideMenu.addEventListener("click", () => {
@@ -126,24 +147,5 @@ document.addEventListener("click", function(e) {
 });
 
 
-// cart item quantity and total price
-let cartItems = JSON.parse(localStorage.getItem("cartList"));
-const numberOfItemsInCart = document.querySelector(".show-cart");
-let cartArray = cartItems || [];
 
-
-function cartQuantityTotal() {
-    console.log()
-    let cartItemsQuantity = 0;
-    let total = 0;
-    for(let i = 0; i < cartArray.length; i++) {
-        total += cartArray[i].price * cartArray[i].quantity;
-        cartItemsQuantity += cartArray[i].quantity;
-        numberOfItemsInCart.innerHTML = `<div class="cart-stats">
-                                            <span>Cart: ${cartItemsQuantity}</span>
-                                            <span>Total: ${total}</span>
-                                        </div>`;
-    }
-}
-cartQuantityTotal()
 
