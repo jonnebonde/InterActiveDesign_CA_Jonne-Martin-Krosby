@@ -15,15 +15,6 @@
     font-weight: var(--bold);
 }
 
-.shop-img {
-    background-image: url(../images/main_img.jpg);
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-    height: 150px;
-
-}
-
 .products,
 .random-products-container{
     display: flex;
@@ -52,8 +43,8 @@
     font-size: 1.3rem;
 }
 
-.product p,
-.random-product p {
+.product span,
+.random-product span {
     font-size: 0.8rem;
 }
 

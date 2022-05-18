@@ -11,13 +11,16 @@ const popularProductsContainer = document.querySelector(".random-products-contai
 selected.forEach(function(random) {
 
     popularProductsContainer.innerHTML +=
-    `<a href="details.html?id=${random.id}&name=${random.name}&gender=${random.gender}" data-product="${random.id}">
+    `
     <div class="random-product" >
-            <h3>${random.name}</h3>
-            <div style="background-image: url(${random.image})" class="random-product-image"></div>
-            <p class="product-price">Price: ${random.price}</p>
+    <a href="details.html?id=${random.id}&name=${random.name}&gender=${random.gender}" data-product="${random.id}">
+        <h3>${random.name}</h3>
+    
+    <a href="details.html?id=${random.id}&name=${random.name}&gender=${random.gender}" data-product="${random.id}">
+        <div style="background-image: url(${random.image})" class="random-product-image"></div>
+    </a>
+            <span class="product-price">Price: ${random.price}</span>
             <a href="details.html?id=${random.id}&name=${random.name}" data-product="${random.id}" class="random-product-button">Details</a>
         </div>
-        </a>
         `
 })

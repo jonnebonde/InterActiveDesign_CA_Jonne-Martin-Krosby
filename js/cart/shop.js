@@ -41,30 +41,30 @@ toggleActiveLink()
 
 
 function sortedProductsHTML() {
-
     filteredProductArray.forEach(function(product){
-
-        productsContainer.innerHTML += 
-            `<div class="product" >
-                <h2>${product.name}</h2>
-                <div style="background-image: url(${product.image})" class="product-image"></div>
-                <div class="product-price">Price: ${product.price}</div>
-                <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
-            </div>
-            `
+        createProductHtml(product)
     });
 }
 
 function allProductsHTML() {
     productArray.forEach(function(product){
+        createProductHtml(product)
+    });
+}
 
-        productsContainer.innerHTML += 
+
+function createProductHtml(product) {
+
+    productsContainer.innerHTML += 
             `<div class="product" >
+            <a class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <h2>${product.name}</h2>
+            </a>
+            <a class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <div style="background-image: url(${product.image})" class="product-image"></div>
+            </a>
                 <div class="product-price">Price: ${product.price}</div>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
             </div>
             `
-    });
 }
