@@ -10,7 +10,7 @@
 
 header {
     width: 100%;
-    position: sticky;
+    
     top: 0;
     background-color: var(--white);
 }
@@ -51,7 +51,7 @@ nav {
 }
 
 .active-page {
-   border-bottom: 2px solid var(--darkgreen);
+    border-bottom: 2px solid var(--darkgreen);
 }
 
 .nav-menu {
@@ -63,8 +63,14 @@ nav {
     display: flex;
 }
 
+#search,
 #hamburger-search {
     display: none;
+}
+
+
+#search.active{
+    display: inline;
 }
 
 .nav-menu li {

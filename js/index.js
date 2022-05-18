@@ -1,3 +1,13 @@
+//click event for searchfield
+
+const searchInput = document.getElementById("search");
+const searchToggleBtn = document.querySelector(".submit-btn");
+
+searchToggleBtn.addEventListener("click", () => {
+    searchInput.classList.toggle("active")
+} )
+
+
 
 
 // click event for hamburger menu
