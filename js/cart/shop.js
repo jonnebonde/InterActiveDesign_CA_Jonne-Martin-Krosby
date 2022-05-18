@@ -63,7 +63,7 @@ function createProductHtml(product) {
             <a class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <div style="background-image: url(${product.image})" class="product-image"></div>
             </a>
-                <div class="product-price">Price: ${product.price}</div>
+                <span class="product-price">Price: ${product.price}</span>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
             </div>
             `

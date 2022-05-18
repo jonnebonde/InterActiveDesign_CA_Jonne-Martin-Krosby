@@ -44,7 +44,7 @@ function cartQuantityTotal() {
         cartItemsQuantity += cartArray[i].quantity;
         numberOfItemsInCart.innerHTML = `<div class="cart-stats">
                                             <span>Cart: ${cartItemsQuantity}</span>
-                                            <span> total: ${total}</span>
+                                            <span>Total: ${total}</span>
                                         </div>`;
     }
 }
