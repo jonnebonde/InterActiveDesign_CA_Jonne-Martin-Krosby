@@ -150,19 +150,25 @@
 .random-product-image {
     background-size: cover;
     height: 150px;
+    
 }
 
 .product-image:hover,
 .random-product-image:hover {
-    transform: ;
+    transform: translateY(-2px);
     transition: 250ms ease-in-out;
 }
+
+
 
 .product-price,
 .random-product-price {
     font-size: 20px;
     margin: 10px 0;
+    
 }
+
+
 
 .product-button,
 .random-product-button {
