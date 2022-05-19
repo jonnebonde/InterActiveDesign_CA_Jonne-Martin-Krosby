@@ -21,6 +21,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .filter-container-all {
@@ -30,28 +32,21 @@
     gap: 10px;
     padding: 10px;
     align-content: center;
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
     position: relative;
 }
 
+.filter-close-btn,
+.filter-menu-open {
+    display: none;
+    cursor: pointer;
+}
+
 .filter-container-all button {
-    height: 50px;
+    height: 40px;
     width: 100%;    
 }
-
-.filter-container-2 {
-    
-}
-
-.filter-container1,
-.filter-container2 {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    gap: 20px;
-}
-
 
 .size-container,
 .color-container,
@@ -89,8 +84,6 @@
 .sortby-list.active {
     display: block;
     background-color: var(--white);
-
-    
 }
 
 .filter-button {
@@ -192,14 +185,35 @@
 @media screen and (max-width: 800px) {
 
     .filter-container-all {
-        flex-direction: column-reverse;
-        margin: 0 auto;
-        gap: 10px;
-        padding: 10px;
+        display: none;
+        flex-direction: column;
         align-content: center;
+        position: absolute;
+        top: 0;
+        left: -100%;
         max-width: 800px;
-        width: 100%;
         background-color: var(--white);
+        transition: 250ms ease-in-out;
+    }
+
+    .filter-container-all.active {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 128px;
+        left: 0;
+    }
+
+    .filter-close-btn.active {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-menu-open {
+        display: flex;
+        cursor: pointer;
+        padding: 10px;
+        height: 40px;
     }
 
     .products,

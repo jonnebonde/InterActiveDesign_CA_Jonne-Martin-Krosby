@@ -27,7 +27,7 @@ productArrayHTML()
 
 //mediaquerie for backgroundimage on shop.html
 
-const backgroundImage = window.matchMedia("(max-width: 800px)");
+/* const backgroundImage = window.matchMedia("(max-width: 800px)");
 
 function toggleBackground(background) {
     
@@ -40,7 +40,7 @@ function toggleBackground(background) {
 }
 backgroundImage.addListener(toggleBackground)
 
-toggleBackground(backgroundImage)
+toggleBackground(backgroundImage) */
 
 
 //change background according to gender or no gender choosen from landingpage
@@ -64,7 +64,7 @@ function changeBackground() {
     }
 
 }
-
+changeBackground()
 
 
 
@@ -82,6 +82,33 @@ function toggleActiveLink() {
     }
 }
 toggleActiveLink()
+
+
+const filterOpenMenu = document.querySelector(".filter-menu-open");
+const filterCloseMenu = document.querySelector(".filter-close-btn");
+const filterSideMenu = document.querySelector(".filter-container-all");
+const filterContainer = document.querySelector(".background-image-shop")
+
+filterOpenMenu.addEventListener("click", () => {
+    filterSideMenu.classList.toggle("active");
+    filterCloseMenu.classList.toggle("active");
+})
+
+filterCloseMenu.addEventListener("click", () => {
+    filterSideMenu.classList.remove("active");
+    filterCloseMenu.classList.remove("active");
+})
+
+document.addEventListener("click", function(e) {
+    if (!filterContainer.contains(e.target)) {
+        filterSideMenu.classList.remove("active")
+        filterCloseMenu.classList.remove("active");
+    }
+});
+
+
+console.log(filterOpenMenu)
+
 
 
 function sortedProductsHTML() {
@@ -112,3 +139,5 @@ function createProductHtml(product) {
             </div>
             `
 }
+
+

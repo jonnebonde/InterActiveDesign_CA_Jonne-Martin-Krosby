@@ -34,19 +34,24 @@ searchToggleBtn.addEventListener("click", () => {
 const toggleButton = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const hideMenu = document.querySelector("main");
+const navContainer = document.querySelector(".navbar")
 
 
 toggleButton.addEventListener("click", () => {
     toggleButton.classList.toggle("active");
     navMenu.classList.toggle("active");
-
 })
-
 
 hideMenu.addEventListener("click", () => {
     toggleButton.classList.remove("active");
     navMenu.classList.remove("active");
 })
+
+document.addEventListener("click", function(e) {
+    if (!navContainer.contains(e.target)) {
+        navMenu.classList.remove("active")
+    }
+});
 
 
 // toggle filter menus
