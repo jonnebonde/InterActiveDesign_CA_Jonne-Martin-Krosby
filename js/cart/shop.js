@@ -128,10 +128,10 @@ function createProductHtml(product) {
 
     productsContainer.innerHTML += 
             `<div class="product" >
-            <a class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <h2>${product.name}</h2>
             </a>
-            <a class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <div style="background-image: url(${product.image})" class="product-image"></div>
             </a>
                 <span class="product-price">Price: ${product.price}</span>

@@ -152,6 +152,12 @@
     height: 150px;
 }
 
+.product-image:hover,
+.random-product-image:hover {
+    transform: ;
+    transition: 250ms ease-in-out;
+}
+
 .product-price,
 .random-product-price {
     font-size: 20px;
@@ -161,14 +167,18 @@
 .product-button,
 .random-product-button {
     background-color: white;
-    border: 0px;
+    border-top: 1px solid var(--darkgreen);
     padding: 10px;
-    transition: all 1s;
+    transition: 350ms ease-in-out;
     font-weight: bold;
 }
 
-.product-button:hover {
+.product-button:hover,
+.random-product-button:hover {
     cursor: pointer;
+    background-color: var(--darkgreen);
+    color: var(--white);
+    
 }
 
 .cart-link {
