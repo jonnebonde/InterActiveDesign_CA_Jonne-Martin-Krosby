@@ -6,7 +6,7 @@
 .messages,
 .message-link {
     text-align: center;
-    color: black;
+    color: var(--white);
     height: 30px;
     width: 100%;
     font-size: 20px;
@@ -14,4 +14,8 @@
 
 .message-link a{
     text-decoration: none;
+    color: var(--darkgreen);
+    background-color: var(--white);
+    padding: 6px;
+
 }

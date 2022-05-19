@@ -50,10 +50,10 @@ function increaseQuantityCart() {
     if(duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
-        messageincreasedQuantity()
+        messageAddedToCart(itemToShow)
     } else {
         AddToCart()
-        messageAddedToCart()
+        messageAddedToCart(itemToShow)
     }
 }
 
