@@ -5,17 +5,17 @@ const nameValid = document.querySelector(".name");
 const nameInput = document.getElementById("name");
 const nameError = document.getElementById("nameError");
 
-const addressValid = document.querySelector(".address");
-const addressInput = document.getElementById("address");
-const addressError = document.getElementById("addressError");
+const subjectValid = document.querySelector(".subject");
+const subjectInput = document.getElementById("subject");
+const subjectError = document.getElementById("subjectError");
 
 const emailValid = document.querySelector(".email");
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("emailError");
 
-const subjectValid = document.querySelector(".subject");
-const subjectInput = document.getElementById("subject");
-const subjectError = document.getElementById("subjectError");
+const writeValid = document.querySelector(".write-to-us");
+const writeInput = document.getElementById("write-to-us");
+const writeError = document.getElementById("writeToUsError");
 
 let successMessage = false;
 formSuccess.style.visibility = "hidden";
@@ -25,10 +25,12 @@ function validateInputs(event) {
     event.preventDefault();
 
     const name = checkLength(nameInput.value, 0);
-    const address = checkLength(addressInput.value, 25);
+    const subject = checkValue(subjectInput.value);
     const email = validateEmail(emailInput.value);
-    const subject = checkLength(subjectInput.value, 10);
+    const writeToUs = checkLength(writeInput.value, 10);
     
+    console.log(subjectInput.value)
+
     if(name) {
         nameError.style.display = "none";
         nameValid.style.color = "green";   
@@ -37,12 +39,12 @@ function validateInputs(event) {
         nameValid.style.color = "black"; 
     }
 
-    if(address) {
-        addressError.style.display = "none";
-        addressValid.style.color = "green";   
+    if(subject) {
+        subjectError.style.display = "none";
+        subjectValid.style.color = "green";   
     } else {
-        addressError.style.display = "block";
-        addressValid.style.color = "black";  
+        subjectError.style.display = "block";
+        subjectValid.style.color = "black";  
     }
 
     if(email) {
@@ -53,15 +55,15 @@ function validateInputs(event) {
         emailValid.style.color = "black";
     }
 
-    if(subject) {
-        subjectError.style.display = "none";
-        subjectValid.style.color = "green";   
+    if(writeToUs) {
+        writeError.style.display = "none";
+        writeValid.style.color = "green";   
     } else {
-        subjectError.style.display = "block";    
-        subjectValid.style.color = "black";
+        writeError.style.display = "block";    
+        writeValid.style.color = "black";
     }
 
-    if (name && address && email && subject) {
+    if (name && subject && email && writeToUs) {
         successMessage = true;
         formSubmitSuccesfull(successMessage);
     }
@@ -76,6 +78,17 @@ function checkLength(value, len) {
         return true;
     } 
 }
+
+function checkValue(value) {
+    if(!value) {
+        return false
+    } else {
+        return true
+    }
+}
+
+
+
 
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;

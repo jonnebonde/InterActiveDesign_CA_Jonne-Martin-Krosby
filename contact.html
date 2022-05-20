@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="contact-background" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,59 +18,72 @@
             <p>Free Shipping worldwide</p>
             <p class="credibility">Trustpilot rating 4.9</p>
         </div>
-    <nav>
-        <div>
-            <a href="index.html" class="mainlogo">
-                <img class="mainlogo_img" src="./images/RainyDays_Logo.png" alt="Rainy Days Logo">
-            </a>
-        </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <nav>
+            <div class="navbar">
+            <div class="logo" class="mainlogo">
+                <a href="index.html" >
+                    <img class="mainlogo_img" src="images/RainyDays_Logo.png" alt="Rainy Days Logo">
+                </a>
             </div>
-            <div class="nav-menu">
-                <ul>
-                    <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a class="active-page"href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="cta-icons">
-                <div class="search-input">
-                    <input id="search" class="fa fa-search" type="text" placeholder="Search">
-                    <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
-                <div class="cart-link">
-                    <a class="show-cart" href="cart.html">Cart</a>
+                <div class="nav-menu">
+                    <ul>
+                        <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a class="active-page" href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="cta-icons">
+                    <div class="search-input">
+                        <input id="search" class="fa fa-search" type="text" placeholder="Search">
+                        <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="cart-link">
+                        <a class="show-cart" href="cart.html">Cart</a>
+                    </div>
                 </div>
             </div>
-    </nav>
-    <div class="form_success"></div>
-<form id="contactForm">
+        </nav>
+        </header>
+<main >
+<form id="contactForm" class="contact-form">
         <h1>Contact Us</h1>
+        <label class="subject" for="subject">Subject</label>
+            <select name="subject" id="subject" required="required">
+                <option value="">Choose a subject</option>
+                <option value="1">Products</option>
+                <option value="2">Refund</option>
+                <option value="3">Guarantees</option>
+                <option value="4">Payment</option>
+                <option value="5">Order</option>
+                <option value="6">Delivery</option>
+                <option value="7">Other</option>
+              </select>
+              <div class="input_error" id="subjectError">Please choose a subject</div>
             <label class="name">Name(required)
                 <input name="name" id="name" />
             </label>
                 <div class="input_error" id="nameError">Please write a name</div>
-            <label class="address">Address(required)
-                <input name="address" id="address" />
-            </label>
-                <div class="input_error" id="addressError">Address must be at least 25 characters</div>
             <label class="email">Email(required)
                 <input name="email" id="email" />
             </label>
                 <div class="input_error" id="emailError">Email is not in the correct format</div>
-            <label class="subject">Subject(required)
-                <textarea name="subject" id="subject" placeholder="min. 10 characters"></textarea>
+            <label class="write-to-us">Write to us(required)
+                <textarea name="write-to-us" id="write-to-us" placeholder="min. 10 characters"></textarea>
             </label>
-                <div class="input_error" id="subjectError">Please enter atleast 10 characters</div>
+                <div class="input_error" id="writeToUsError">Please enter atleast 10 characters</div>
+                <div class="form_success"></div>
         <div class="submit_btn">
             <button class="submit">Submit</button>
         </div>
 </form>
+</main>
     <footer>
     </footer>
     <script src="./js/index.js"></script>
