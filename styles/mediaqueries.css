@@ -9,7 +9,7 @@
 @media screen and (max-width: 1024px) {
     
     .contact-footer {
-        position: relative;
+        position: absolute;
     }
 }
 
@@ -149,6 +149,10 @@
         flex: 1 1 400px;
         max-width: 400px;
         min-width: 300px;
+    }
+
+    .contact-footer {
+        position: relative;
     }
 
 }
