@@ -1,7 +1,6 @@
 @media screen and (max-width: 1239px) {
 
-    .about-footer,
-    .contact-footer {
+    .about-footer {
         position: relative;
     }
 
@@ -90,6 +89,53 @@
         
     }
 
+    .filter-container-all {
+        display: none;
+        flex-direction: column;
+        align-content: center;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        max-width: 800px;
+        background-color: var(--white);
+        transition: 250ms ease-in-out;
+    }
+
+    .filter-container-all.active {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 128px;
+        left: 0;
+    }
+
+    .filter-close-btn.active {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-menu-open {
+        display: flex;
+        cursor: pointer;
+        padding: 10px;
+        height: 40px;
+    }
+
+    .products,
+    .random-products-container{
+        max-width: 1000px;
+        margin: 30px auto;
+        gap: 10px;
+    }
+
+    .product,
+    .random-product {
+        margin: 0px;
+        padding: 5px;
+        display: flex;
+        flex: 1 1 140px;
+        max-width: 200px;
+    }
 
     .about_section1,
     .about_section2 {
