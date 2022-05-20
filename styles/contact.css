@@ -18,7 +18,7 @@
     background-color: var(--white);
     padding: 20px;
     border: 2px solid var(--darkgreen);
-    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+    
 }
 
 .contact-contactinfo h2,
@@ -76,7 +76,7 @@
     max-width: 600px;
     border: 2px solid var(--darkgreen);
     background-color: var(--white);
-    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+    
 }
 
 .contact-form div {
