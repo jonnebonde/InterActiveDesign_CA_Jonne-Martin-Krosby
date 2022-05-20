@@ -12,19 +12,36 @@ const itemToShow = productArray.find(item => item.id === details)
 
 function detailsHtml() {
     productDetails.innerHTML = 
-    `<div class="detail" href="details.html?${itemToShow.id}">
-        <h2>${itemToShow.name}</h2>
-        <p>${itemToShow.description}</p>
-        <div style="detail-background-image: url(${itemToShow.image})" class="detail-product-image"></div>
-        <div class="detail-product-price">Price: ${itemToShow.price}</div>
-        <button class="detail-product-button" data-product="${itemToShow.id}">Add to cart</button>
+    `<div class="details">
+        <div>
+            <div style="background-image: url(${itemToShow.image})" class="details-product-image"></div>
+        </div>
+        <div>
+            <h2>${itemToShow.name}</h2>
+            <p>${itemToShow.description}</p>
+            <div class="details-product-price">Price: ${itemToShow.price}</div>
+            <div>
+                <form id="size-menu" class="size-form">
+                    <label class="details-select-size-menu" for="select-size">Select Size
+                        <select name="select-size" id="details-select-size" required="required">
+                            <option value="">Choose a size</option>
+                            <option value="XXLarge">XXLarge</option>
+                            <option value="XLarge">XLarge</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Small">Small</option>
+                            <option value="XSmall">XSmall</option>
+                        </select>
+                        <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
+                </form>
+            </div>
+        </div>
     </div>
     `
 }
 detailsHtml()
 
 
-const button = document.querySelector(".detail-product-button");
+const button = document.querySelector(".details-product-button");
 
 button.onclick = function() {
     increaseQuantityCart()
