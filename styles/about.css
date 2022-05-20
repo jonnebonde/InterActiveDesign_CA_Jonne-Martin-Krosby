@@ -1,0 +1,44 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+    gap: 40px;
+}
+
+.about_section1,
+.about_section2 {
+    border: 2px solid var(--darkgreen);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 600px;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+.about_section1 h1,
+.about_section2 h1 {
+    color: var(--darkgreen);
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.about_section1 p,
+.about_section2 p {
+    color: var(--darkgreen);
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .about_section1,
+.about_section2 {
+    flex: 1 1 400px;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+}
+

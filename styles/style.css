@@ -3,6 +3,7 @@
 @import "./shop.css";
 @import "./contact.css";
 @import "./details.css";
+@import "./about.css";
 
 * {
     padding: 0;
