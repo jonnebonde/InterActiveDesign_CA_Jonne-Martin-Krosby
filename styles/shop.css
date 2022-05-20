@@ -250,16 +250,3 @@
 
 }
 
-@media screen and (max-width: 500px) {
-
-    .product,
-    .random-product {
-        margin: 0px;
-        padding: 5px;
-        display: flex;
-        flex: 1 1 10px;
-        
-    }
-    
-    
-    }

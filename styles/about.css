@@ -36,20 +36,3 @@
     bottom: 0;
 }
 
-@media screen and (max-width: 1239px) {
-    
-    .about-footer {
-        position: relative;
-    }
-}
-
-
-@media screen and (max-width: 800px) {
-    
-    .about_section1,
-    .about_section2 {
-        flex: 1 1 400px;
-        max-width: 400px;
-        min-width: 300px;
-    }
-}

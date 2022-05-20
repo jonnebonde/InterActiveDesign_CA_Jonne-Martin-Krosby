@@ -4,6 +4,7 @@
 @import "./contact.css";
 @import "./details.css";
 @import "./about.css";
+@import "./mediaqueries.css";
 
 * {
     padding: 0;
