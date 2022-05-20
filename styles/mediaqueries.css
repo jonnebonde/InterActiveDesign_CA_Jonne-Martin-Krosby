@@ -6,13 +6,12 @@
 
 }
 
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     
-    .contact-footer {
-        position: absolute;
-        bottom: 0;
-    }
-} */
+    /* .contact-footer {
+        position: relative;
+    } */
+}
 
 @media screen and (max-width: 1000px) {
 
