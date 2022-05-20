@@ -31,6 +31,19 @@
     padding: 10px;
 }
 
+.about-footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1239px) {
+    
+    .about-footer {
+        position: relative;
+    }
+}
+
+
 @media screen and (max-width: 800px) {
     
     .about_section1,
@@ -40,4 +53,3 @@
         min-width: 300px;
     }
 }
-
