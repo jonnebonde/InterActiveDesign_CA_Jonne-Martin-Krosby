@@ -6,6 +6,13 @@
 
 }
 
+@media screen and (max-width: 1024px) {
+    
+    .contact-footer {
+        position: relative;
+    }
+}
+
 @media screen and (max-width: 1000px) {
 
     .mainlogo_img {
