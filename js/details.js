@@ -1,5 +1,5 @@
 import { productArray } from "./products/productlist.js";
-const productDetails = document.querySelector(".products");
+const productDetails = document.querySelector(".details-container");
 let cartItems = JSON.parse(localStorage.getItem("cartList"));
 //const numberOfItemsInCart = document.querySelector(".show-cart");
 //let cartArray = cartItems || [];
@@ -12,19 +12,19 @@ const itemToShow = productArray.find(item => item.id === details)
 
 function detailsHtml() {
     productDetails.innerHTML = 
-    `<div class="product" href="details.html?${itemToShow.id}">
+    `<div class="detail" href="details.html?${itemToShow.id}">
         <h2>${itemToShow.name}</h2>
         <p>${itemToShow.description}</p>
-        <div style="background-image: url(${itemToShow.image})" class="product-image"></div>
-        <div class="product-price">Price: ${itemToShow.price}</div>
-        <button class="product-button" data-product="${itemToShow.id}">Add to cart</button>
+        <div style="detail-background-image: url(${itemToShow.image})" class="detail-product-image"></div>
+        <div class="detail-product-price">Price: ${itemToShow.price}</div>
+        <button class="detail-product-button" data-product="${itemToShow.id}">Add to cart</button>
     </div>
     `
 }
 detailsHtml()
 
 
-const button = document.querySelector(".product-button");
+const button = document.querySelector(".detail-product-button");
 
 button.onclick = function() {
     increaseQuantityCart()
