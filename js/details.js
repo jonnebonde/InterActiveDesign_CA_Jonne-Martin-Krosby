@@ -31,8 +31,8 @@ function detailsHtml() {
                             <option value="Small">Small</option>
                             <option value="XSmall">XSmall</option>
                         </select>
-                        <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
                 </form>
+                <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
             </div>
         </div>
     </div>

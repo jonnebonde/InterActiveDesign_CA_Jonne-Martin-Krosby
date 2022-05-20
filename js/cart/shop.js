@@ -51,14 +51,17 @@ function changeBackground() {
 
         if (details === "man") {
             backgroundImgShop.style.backgroundImage = "url('./images/men_img.jpg')"
+            backgroundImgShop.setAttribute("aria-label", "picture of a man on a mountain")
         }
 
         if (details === "woman") {
             backgroundImgShop.style.backgroundImage = "url('./images/women_img.jpg')"
+            backgroundImgShop.setAttribute("aria-label", "picture of a woman on a mountain")
         }
 
         if(!details ) {
             backgroundImgShop.style.backgroundImage = "url('./images/main_img.jpg')"
+            backgroundImgShop.setAttribute("aria-label", "picture of a man on a mountain")
         }
 
     }
@@ -132,7 +135,7 @@ function createProductHtml(product) {
                 <h2>${product.name}</h2>
             </a>
             <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
-                <div style="background-image: url(${product.image})" class="product-image"></div>
+                <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
             </a>
                 <span class="product-price">Price: ${product.price}</span>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
