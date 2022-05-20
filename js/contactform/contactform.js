@@ -18,7 +18,7 @@ const writeInput = document.getElementById("write-to-us");
 const writeError = document.getElementById("writeToUsError");
 
 let successMessage = false;
-formSuccess.style.visibility = "hidden";
+//formSuccess.style.visibility = "hidden";
 
 
 function validateInputs(event) {
@@ -88,8 +88,6 @@ function checkValue(value) {
 }
 
 
-
-
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
@@ -99,7 +97,9 @@ function validateEmail(email) {
 function formSubmitSuccesfull(e) {
     if(e) {
         formSuccess.style.visibility="visible";
-        formSuccess.innerHTML = nameInput.value + " " + "has passed the form validation";
+        formSuccess.innerHTML = `<div>Thank u ${nameInput.value}</div>
+                                <div>We will contact u within 24 hours</div>
+                                <div>on ${emailInput.value}</div>`;
     } else {
         formSuccess.style.visibility="hidden";
         formSuccess.innerHTML = "";
