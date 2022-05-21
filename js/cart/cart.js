@@ -7,19 +7,8 @@ const emptyCartMessage = document.querySelector(".empty-cart-msg");
 //const numberOfItemsInCart = document.querySelector(".show-cart");
 //let cartArray = cartItems || [];
 
-console.log(deleteCart)
+console.log(cartArray)
 
-function cartQuantityTotal() {
-    console.log()
-    let cartItemsQuantity = 0;
-    for(let i = 0; i < cartArray.length; i++) {
-        cartItemsQuantity += cartArray[i].quantity;
-        numberOfItemsInCart.innerHTML = `Cart: ${cartItemsQuantity}`;
-        
-    }
-    
-}
-cartQuantityTotal()
 
 
 function showCart() {
@@ -47,29 +36,32 @@ function CreateCartHtml(cartElement) {
     cartList.innerHTML +=
         `
         <div class="cart-item">
-            <div class="cart-item">
+            <div class="cart-image">
                 <img src="${cartElement.image}">
             </div>
             <div class="cart-name">
-                <h4>${cartElement.name}</h4>
+                <h2>${cartElement.name}</h2>
                 <p>${cartElement.description}</p>
+                <span>Price: ${cartElement.price}</span>
             </div>
+            
             <div class="cart-quantity">
-                <button class="plus-btn" data-product="${cartElement.id}">+</button>
-                <p id="cart-quantity">${cartElement.quantity}</p>
-                <button class="minus-btn" data-product="${cartElement.id}">-</button>
+                <button class="plus-btn" ><i class="fa-solid fa-plus" data-product="${cartElement.id}"></i></button>
+                <span id="cart-quantity">${cartElement.quantity}</span>
+                <button class="minus-btn" ><i class="fa-solid fa-minus" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-total">
-                <p>${cartElement.price * cartElement.quantity}</p>
+                <span>${cartElement.price * cartElement.quantity}</span>
             </div>
-            <div class="cart-delete">
-                <button class="delete-item-btn" data-product="${cartElement.id}">Delete Item</button>
+            <div class="cart-delete-item">
+                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-product="${cartElement.id}"></i></button>
             </div>
         </div>`
 
     const increaseQuantity = document.querySelectorAll(".plus-btn");
     const decreaseQuantity = document.querySelectorAll(".minus-btn");
-    const deleteItemFromCart = document.querySelectorAll(".delete-item-btn");
+    const deleteItemFromCart = document.querySelectorAll(".delete-item-btn i");
+
 
     
     //click event for the + quantity button.
@@ -101,7 +93,6 @@ function CreateCartHtml(cartElement) {
         deleteButton.onclick = function() {
             cartArray.forEach(function(){ 
             })
-            
             removeFromCart()
         }
     })
@@ -112,6 +103,7 @@ function CreateCartHtml(cartElement) {
 function removeFromCart() {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
+
     console.log(duplicateId)
     if(duplicateId !== -1) {
         console.log(duplicateId)
@@ -138,6 +130,7 @@ function increaseQuantityCart() {
         AddToCart()
     }
 }  
+
 
 //Function to decrement quantity of products in the cart.
 function decreaseQuantityCart() {
