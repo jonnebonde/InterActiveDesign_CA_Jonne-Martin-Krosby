@@ -21,31 +21,53 @@ function detailsHtml() {
             <p>${itemToShow.description}</p>
             <div class="details-product-price">Price: ${itemToShow.price}</div>
             <div>
-                <form id="size-menu" class="size-form">
-                    <label class="details-select-size-menu" for="select-size">Select Size
-                        <select name="select-size" id="details-select-size" required="required">
-                            <option value="">Choose a size</option>
-                            <option value="XXLarge">XXLarge</option>
-                            <option value="XLarge">XLarge</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Small">Small</option>
-                            <option value="XSmall">XSmall</option>
-                        </select>
-                </form>
+                <label class="details-select-size-menu" for="select-size">Select Size
+                    <select name="select-size" id="details-select-size" required="required">
+                        <option value="">Choose a size</option>
+                        <option value="XXLarge">XXLarge</option>
+                        <option value="XLarge">XLarge</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Small">Small</option>
+                        <option value="XSmall">XSmall</option>
+                    </select>
                 <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
             </div>
+            
         </div>
     </div>
     `
 }
+
 detailsHtml()
+
+
+
+
+function sizeFormActions() {
+
+    const sizeValue = document.querySelector("select");
+    let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
+
+
+if(selectedSize) {
+    console.log(selectedSize)
+    increaseQuantityCart()
+    cartQuantityTotal()
+    
+} else {
+    console.log("hi")
+    messageChooseSize()
+}
+
+}
+
+
 
 
 const button = document.querySelector(".details-product-button");
 
 button.onclick = function() {
-    increaseQuantityCart()
-    cartQuantityTotal()
+    sizeFormActions()
 }
 
 
