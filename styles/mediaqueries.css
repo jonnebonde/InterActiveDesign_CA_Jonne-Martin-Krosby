@@ -155,6 +155,25 @@
         position: relative;
     }
 
+    .message-container {
+        position: fixed;
+        top: 0 ;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .details-product-image {
+        max-height: 400px;
+        border: none;
+    }
+    
+    .details-info {
+        padding: 0px 30px;
+        flex-direction: column-reverse;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
