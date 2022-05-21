@@ -14,7 +14,7 @@ function detailsHtml() {
     productDetails.innerHTML = 
     `<div class="details">
         <div>
-            <div style="background-image: url(${itemToShow.image})" class="details-product-image"></div>
+            <div aria-label="${itemToShow.name}" style="background-image: url(${itemToShow.big_image})" class="details-product-image"></div>
         </div>
         <div>
             <h2>${itemToShow.name}</h2>
@@ -40,7 +40,11 @@ function detailsHtml() {
 
 detailsHtml()
 
+const button = document.querySelector(".details-product-button");
 
+button.onclick = function() {
+    sizeFormActions()
+}
 
 
 function sizeFormActions() {
@@ -63,12 +67,6 @@ if(selectedSize) {
 
 
 
-
-const button = document.querySelector(".details-product-button");
-
-button.onclick = function() {
-    sizeFormActions()
-}
 
 
 //Function for adding new items to cart.
