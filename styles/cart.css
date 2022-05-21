@@ -1,0 +1,19 @@
+.cart-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    max-width: 600px;
+    border: 1px solid black;
+}
+
+.cart-image img{
+    max-height: 80px;
+    max-width: 80px;
+    padding: 5px;
+}
+

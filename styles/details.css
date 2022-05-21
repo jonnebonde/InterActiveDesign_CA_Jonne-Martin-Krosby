@@ -4,13 +4,14 @@
     width: 100%;
     background-color: var(--lightgreen);
     z-index: 50;
+    padding: 5px;
 }
 
 .messages,
 .message-link {
     text-align: center;
     color: var(--white);
-    height: 30px;
+    padding: 10px;
     width: 100%;
     font-size: 20px;
 }
@@ -19,8 +20,7 @@
     text-decoration: none;
     color: var(--darkgreen);
     background-color: var(--white);
-    padding: 6px;
-
+    padding: 5px;
 }
 
 .details-container {
@@ -33,7 +33,6 @@
     background: var(--white);
     display: flex;
     gap: 30px;
-    
 }
 
 .details-product-image {
@@ -42,7 +41,6 @@
     min-width: 370px;
     padding: 0 30px;
     border-right: 2px solid var(--darkgreen);
-
 }
 
 .details-info {
@@ -51,7 +49,6 @@
     justify-content: center;
     max-width: 400px;
     gap: 30px;
-
 }
 
 .details-info p {
@@ -65,10 +62,4 @@
     color: var(--white);
     border: none;
     height: 40px;
-}
-
-@media screen and (max-width: 800px) {
-
-   
-    
 }

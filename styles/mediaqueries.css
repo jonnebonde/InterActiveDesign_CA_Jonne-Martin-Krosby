@@ -157,7 +157,7 @@
 
     .message-container {
         position: fixed;
-        top: 0 ;
+        top: 50px ;
     }
 
     .details {

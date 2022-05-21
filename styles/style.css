@@ -5,6 +5,8 @@
 @import "./details.css";
 @import "./about.css";
 @import "./mediaqueries.css";
+@import "./cart.css";
+
 
 * {
     padding: 0;

@@ -47,13 +47,24 @@ function CreateCartHtml(cartElement) {
     cartList.innerHTML +=
         `
         <div class="cart-item">
-                <div style="background-image: url(${cartElement.image})" class="cart-image"></div>
+            <div class="cart-item">
+                <img src="${cartElement.image}">
+            </div>
+            <div class="cart-name">
                 <h4>${cartElement.name}</h4>
-            <button class="plus-btn" data-product="${cartElement.id}">+</button>
-            <p id="cart-quantity">${cartElement.quantity}</p>
-            <button class="minus-btn" data-product="${cartElement.id}">-</button>
-            <p>${cartElement.price * cartElement.quantity}</p>
-            <button class="delete-item-btn" data-product="${cartElement.id}">Delete Item</button>
+                <p>${cartElement.description}</p>
+            </div>
+            <div class="cart-quantity">
+                <button class="plus-btn" data-product="${cartElement.id}">+</button>
+                <p id="cart-quantity">${cartElement.quantity}</p>
+                <button class="minus-btn" data-product="${cartElement.id}">-</button>
+            </div>
+            <div class="cart-total">
+                <p>${cartElement.price * cartElement.quantity}</p>
+            </div>
+            <div class="cart-delete">
+                <button class="delete-item-btn" data-product="${cartElement.id}">Delete Item</button>
+            </div>
         </div>`
 
     const increaseQuantity = document.querySelectorAll(".plus-btn");
