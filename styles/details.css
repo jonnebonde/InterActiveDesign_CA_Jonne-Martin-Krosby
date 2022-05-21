@@ -32,28 +32,37 @@
 .details {
     background: var(--white);
     display: flex;
-    padding: 10px;
     gap: 30px;
-    border: 1px solid black;
+    
 }
 
 .details-product-image {
+    display: block;
     max-width: 100%;
+    padding: 0 30px;
+    border-right: 2px solid var(--darkgreen);
 
 }
 
 .details-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     max-width: 400px;
-    gap: 20px;
-}
-
-
-.details-product-price {
+    gap: 40px;
 
 }
+
+.details-info p {
+    padding: 10px 0;
+}
+
 
 .details-product-button {
-
+    cursor: pointer;
+    width: 200px;
+    background-color: var(--darkgreen);
+    color: var(--white);
+    border: none;
+    height: 40px;
 }

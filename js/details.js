@@ -17,8 +17,10 @@ function detailsHtml() {
                 <img src="${itemToShow.big_image}" aria-label="${itemToShow.name}" class="details-product-image">
             </div>
         <div class="details-info">
+            <div>
             <h2>${itemToShow.name}</h2>
             <p>${itemToShow.long_description}</p>
+            </div>
             <div class="details-product-price"><strong>Price:</strong> ${itemToShow.price}</div>
             <div>
                 <label class="details-select-size-menu" for="select-size">Select Size
@@ -30,9 +32,8 @@ function detailsHtml() {
                         <option value="Small">Small</option>
                         <option value="XSmall">XSmall</option>
                     </select>
-                <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
             </div>
-            
+            <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
         </div>
     </div>
     `
