@@ -2,6 +2,7 @@ export const productArray = [
     {
         name: "Jacket",
         description: "Nice jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 499,
@@ -12,6 +13,7 @@ export const productArray = [
     {
         name: "Rainy jacket",
         description: "Nice wet jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 599,
@@ -22,6 +24,7 @@ export const productArray = [
     {
         name: "Hot jacket",
         description: "Nice warm jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 666,
@@ -32,6 +35,7 @@ export const productArray = [
     {
         name: "Cool jacket",
         description: "Nice cool jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 299,
@@ -42,6 +46,7 @@ export const productArray = [
     {
         name: "Dry jacket",
         description: "Nice dry jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 399,
@@ -52,6 +57,7 @@ export const productArray = [
     {
         name: "The jacket",
         description: "it`s the jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 999,
@@ -62,6 +68,7 @@ export const productArray = [
     {
         name: "Windy jacket",
         description: "Nice windy jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 799,
@@ -72,6 +79,7 @@ export const productArray = [
     {
         name: "Cloudy jacket",
         description: "Comfy cloudy jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 899,
@@ -82,6 +90,7 @@ export const productArray = [
     {
         name: "Shiny jacket",
         description: "Nice shiny jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 499,
@@ -92,6 +101,7 @@ export const productArray = [
     {
         name: "Noisy jacket",
         description: "Very noisy jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-man.jpg",
         big_image: "./images/details-man.jpg",
         price: 400,
@@ -102,6 +112,7 @@ export const productArray = [
     {
         name: "Jacket",
         description: "Nice jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 499,
@@ -112,6 +123,7 @@ export const productArray = [
     {
         name: "Rainy jacket",
         description: "Nice wet jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 599,
@@ -122,6 +134,7 @@ export const productArray = [
     {
         name: "Hot jacket",
         description: "Nice warm jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 666,
@@ -132,6 +145,7 @@ export const productArray = [
     {
         name: "Cool jacket",
         description: "Nice cool jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 299,
@@ -142,6 +156,7 @@ export const productArray = [
     {
         name: "Dry jacket",
         description: "Nice dry jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 399,
@@ -152,6 +167,7 @@ export const productArray = [
     {
         name: "The jacket",
         description: "it`s the jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 999,
@@ -162,6 +178,7 @@ export const productArray = [
     {
         name: "Windy jacket",
         description: "Nice windy jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 799,
@@ -172,6 +189,7 @@ export const productArray = [
     {
         name: "Cloudy jacket",
         description: "Comfy cloudy jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 899,
@@ -182,6 +200,7 @@ export const productArray = [
     {
         name: "Shiny jacket",
         description: "Nice shiny jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 499,
@@ -192,6 +211,7 @@ export const productArray = [
     {
         name: "Noisy jacket",
         description: "Very noisy jacket",
+        long_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image: "./images/product-woman.jpg",
         big_image: "./images/details-woman.jpg",
         price: 400,

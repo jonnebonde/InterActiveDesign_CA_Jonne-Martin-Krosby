@@ -16,10 +16,10 @@ function detailsHtml() {
             <div>
                 <img src="${itemToShow.big_image}" aria-label="${itemToShow.name}" class="details-product-image">
             </div>
-        <div>
+        <div class="details-info">
             <h2>${itemToShow.name}</h2>
-            <p>${itemToShow.description}</p>
-            <div class="details-product-price">Price: ${itemToShow.price}</div>
+            <p>${itemToShow.long_description}</p>
+            <div class="details-product-price"><strong>Price:</strong> ${itemToShow.price}</div>
             <div>
                 <label class="details-select-size-menu" for="select-size">Select Size
                     <select name="select-size" id="details-select-size" required="required">

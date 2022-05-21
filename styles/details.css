@@ -32,15 +32,23 @@
 .details {
     background: var(--white);
     display: flex;
-    
-    
-    
+    padding: 10px;
+    gap: 30px;
+    border: 1px solid black;
 }
 
 .details-product-image {
-    background-size: cover;
-    height: 150px;
+    max-width: 100%;
+
 }
+
+.details-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 20px;
+}
+
 
 .details-product-price {
 
