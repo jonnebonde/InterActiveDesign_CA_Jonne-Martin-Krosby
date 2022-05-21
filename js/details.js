@@ -13,9 +13,9 @@ const itemToShow = productArray.find(item => item.id === details)
 function detailsHtml() {
     productDetails.innerHTML = 
     `<div class="details">
-        <div>
-            <div aria-label="${itemToShow.name}" style="background-image: url(${itemToShow.big_image})" class="details-product-image"></div>
-        </div>
+            <div>
+                <img src="${itemToShow.big_image}" aria-label="${itemToShow.name}" class="details-product-image">
+            </div>
         <div>
             <h2>${itemToShow.name}</h2>
             <p>${itemToShow.description}</p>
