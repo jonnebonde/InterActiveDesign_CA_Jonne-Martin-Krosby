@@ -16,7 +16,7 @@
 
 .cart-item {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid var(--darkgreen);
 }
@@ -48,6 +48,10 @@
     align-items: center;
 }
 
+.cart-delete-item {
+    max-width: 40px;
+}
+
 .cart-quantity button,
 .cart-delete-item button {
     background-color: var(--darkgreen);
@@ -66,3 +70,22 @@
     justify-content: center;
     align-items: center;
 }
+
+.cart-container1 {
+    display: flex;
+    max-width: 700px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.delete-cart {
+    border: none;
+    background-color: var(--darkgreen);
+    color: var(--white);
+    padding: 5px 10px;
+}
+
+.total {
+    border-bottom: 4px double var(--darkgreen);
+}
+

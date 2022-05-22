@@ -29,6 +29,9 @@ function CreateCartHtml(cartElement) {
     cartList.innerHTML +=
         `
         <div class="cart-item">
+            <div class="cart-delete-item">
+                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-product="${cartElement.id}"></i></button>
+            </div>
             <div class="cart-image">
                 <img src="${cartElement.image}">
             </div>
@@ -46,9 +49,7 @@ function CreateCartHtml(cartElement) {
             <div class="cart-total">
                 <span>${cartElement.price * cartElement.quantity}</span>
             </div>
-            <div class="cart-delete-item">
-                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-product="${cartElement.id}"></i></button>
-            </div>
+            
         </div>`
 
     const increaseQuantity = document.querySelectorAll(".plus-btn");
