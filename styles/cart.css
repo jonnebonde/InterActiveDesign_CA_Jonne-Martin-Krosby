@@ -106,8 +106,13 @@ cart-name {
     box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
+.cart-cta-container {
+    display: flex;
+    gap: 30px;
+}
+
 .cart-checkout {
-    width: 200px;
+    width: 180px;
     height: 40px;
     border: none;
     background-color: var(--darkgreen);

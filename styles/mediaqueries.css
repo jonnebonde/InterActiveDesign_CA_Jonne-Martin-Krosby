@@ -189,7 +189,12 @@
     .cart-item {
         width: 100%;
         gap: 10px;
-      
+    }
+
+    .cart-cta-container {
+        gap: 30px;
+        margin-top: 30px;
+       
     }
 
 }
