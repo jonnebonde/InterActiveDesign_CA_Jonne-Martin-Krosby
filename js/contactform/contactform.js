@@ -18,8 +18,6 @@ const writeInput = document.getElementById("write-to-us");
 const writeError = document.getElementById("writeToUsError");
 
 let successMessage = false;
-//formSuccess.style.visibility = "hidden";
-
 
 function validateInputs(event) {
     event.preventDefault();

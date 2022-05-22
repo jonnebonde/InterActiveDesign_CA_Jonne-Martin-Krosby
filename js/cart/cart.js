@@ -1,21 +1,14 @@
-//const cartItems = JSON.parse(localStorage.getItem("cartList"));
 const cartList = document.querySelector(".cart-list");
 const cartContainer = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
 const deleteCart = document.querySelector(".delete-cart");
 const emptyCartMessage = document.querySelector(".empty-cart-msg");
-//const numberOfItemsInCart = document.querySelector(".show-cart");
-//let cartArray = cartItems || [];
-
-console.log(cartArray)
-
 
 
 function showCart() {
     if(cartArray.length === 0) {
         emptyCartMessage.innerHTML = "Your cart is empty"
     } else {
-        //cart.style.display = "block";
     emptyCartMessage.innerHTML = ""
     cartList.innerHTML = "";
     let total = 0;

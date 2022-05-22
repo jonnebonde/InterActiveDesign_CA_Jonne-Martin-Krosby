@@ -25,24 +25,6 @@ function productArrayHTML() {
 productArrayHTML()
 
 
-//mediaquerie for backgroundimage on shop.html
-
-/* const backgroundImage = window.matchMedia("(max-width: 800px)");
-
-function toggleBackground(background) {
-    
-
-     if(background.matches) {
-         backgroundImgShop.style.backgroundImage = "none";
-     } else {
-         changeBackground()
-     }
-}
-backgroundImage.addListener(toggleBackground)
-
-toggleBackground(backgroundImage) */
-
-
 //change background according to gender or no gender choosen from landingpage
 
 function changeBackground() {
@@ -97,10 +79,12 @@ filterOpenMenu.addEventListener("click", () => {
     filterCloseMenu.classList.toggle("active");
 })
 
+
 filterCloseMenu.addEventListener("click", () => {
     filterSideMenu.classList.remove("active");
     filterCloseMenu.classList.remove("active");
 })
+
 
 document.addEventListener("click", function(e) {
     if (!filterContainer.contains(e.target)) {
@@ -108,10 +92,6 @@ document.addEventListener("click", function(e) {
         filterCloseMenu.classList.remove("active");
     }
 });
-
-
-console.log(filterOpenMenu)
-
 
 
 function sortedProductsHTML() {

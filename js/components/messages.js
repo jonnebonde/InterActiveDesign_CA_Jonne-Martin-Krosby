@@ -7,7 +7,7 @@ const viewCartNow = `<a href="cart.html">View cart now</a>`;
 
 
 function messageAddedToCart(itemToShow) {
-   
+
     console.log(itemToShow.name)
     const addedToCartMessage = `${itemToShow.name} has been added to cart`;
     if(messageContainer.style.display === "none") {

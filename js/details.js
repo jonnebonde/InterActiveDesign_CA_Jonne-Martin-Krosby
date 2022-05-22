@@ -54,20 +54,17 @@ function sizeFormActions() {
     let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
 
 
-if(selectedSize) {
-    console.log(selectedSize)
-    increaseQuantityCart()
-    cartQuantityTotal()
-    
-} else {
-    console.log("hi")
-    messageChooseSize()
-}
+    if(selectedSize) {
+        console.log(selectedSize)
+        increaseQuantityCart()
+        cartQuantityTotal()
+        
+    } else {
+        console.log("hi")
+        messageChooseSize()
+    }
 
 }
-
-
-
 
 
 //Function for adding new items to cart.
