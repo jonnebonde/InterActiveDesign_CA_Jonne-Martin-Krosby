@@ -144,12 +144,19 @@
         max-width: 200px;
     }
 
-    
+    .about-container img{
+        height: fit-content;
+
+    }
+
+    .about-container {
+        padding: 5px;
+    }
     .about_section1,
     .about_section2 {
         flex: 1 1 400px;
         max-width: 400px;
-
+        min-width: 200px;
     }
 
     .contact-footer {
