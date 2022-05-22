@@ -45,7 +45,7 @@ function CreateCartHtml(cartElement) {
                 <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-image">
-                <img src="${cartElement.image}">
+                <img src="${cartElement.image}" alt="a ${cartElement.gender} wearing a ${cartElement.name}">
             </div>
             <div class="cart-name">
                 <h2>${cartElement.name}</h2>
