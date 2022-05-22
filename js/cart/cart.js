@@ -101,7 +101,6 @@ function removeFromCart() {
     if(duplicateId !== -1) {
         console.log(duplicateId)
         cartArray.splice(duplicateId ,1);
-        console.log(cartArray)
         updateCart(cartArray)
         showCart(cartArray)
         location.reload()
@@ -120,7 +119,7 @@ function increaseQuantityCart() {
         updateCart(cartArray);
         showCart(cartArray);
     } else {
-        AddToCart()
+        //AddToCart()
     }
 }  
 
@@ -137,7 +136,6 @@ function decreaseQuantityCart() {
         showCart(cartArray);
         
     } else {
-        //removeFromCart()
         alert("Press the delete item button to remove it from your cart")
         console.log("deleting item")
     }
