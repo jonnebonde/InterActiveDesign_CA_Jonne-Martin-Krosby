@@ -144,16 +144,12 @@
         max-width: 200px;
     }
 
-    .about-container img{
-        min-width: 350px;
-
-    }
-
+    
     .about_section1,
     .about_section2 {
         flex: 1 1 400px;
         max-width: 400px;
-        min-width: 300px;
+
     }
 
     .contact-footer {
