@@ -126,10 +126,6 @@ header {
     cursor: pointer;
 }
 
-main {
-    max-width: 2560px;
-    margin: auto;
-}
 
 .main_img {
     display: flex;
@@ -191,15 +187,6 @@ main {
     border-bottom: 2px solid var(--darkgreen);
 }
 
-footer {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--darkgreen);
-    color: var(--white);
-    width: 100%;
-}
 
 .contact-info {
     margin: 20px;
