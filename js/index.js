@@ -12,8 +12,8 @@ function cartQuantityTotal() {
         total += cartArray[i].price * cartArray[i].quantity;
         cartItemsQuantity += cartArray[i].quantity;
         numberOfItemsInCart.innerHTML = `<div class="cart-stats">
-                                            <span>Cart: ${cartItemsQuantity}</span>
-                                            <span>Total: ${total}</span>
+                                            <span aria-label="Cart total item quantity">Cart: ${cartItemsQuantity}</span>
+                                            <span aria-label="Cart total price">Total: ${total}</span>
                                         </div>`;
     }
 }
