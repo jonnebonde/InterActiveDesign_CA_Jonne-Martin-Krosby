@@ -1,22 +1,27 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cart-header {
-    max-width: 700px;
+    width: 700px;
     display: flex;
     justify-content: center;
     border-bottom: 2px solid var(--darkgreen);
-    
 }
 
 .cart-list {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    max-width: 700px;
+    width: 700px;
     padding-top: 5px;
 }
 
 .cart-item {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--darkgreen);
 }
@@ -54,8 +59,8 @@
 
 .cart-quantity button,
 .cart-delete-item button {
-    background-color: var(--darkgreen);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--darkgreen);
     height: 25px;
     width: 25px;
     font-size: 1rem;
@@ -69,23 +74,61 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 2px 1px 4px 0px, var(--white) -2px -1px 4px 0px;
 }
 
 .cart-container1 {
+    width: 700px;
     display: flex;
-    max-width: 700px;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .delete-cart {
     border: none;
-    background-color: var(--darkgreen);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--darkgreen);
     padding: 5px 10px;
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.cart-checkout {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: var(--darkgreen);
+    border: none;
+    color: var(--white);
+    font-size: 1rem;
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
 .total {
     border-bottom: 4px double var(--darkgreen);
 }
+
+.cart-checkout:hover {
+    transition: 250ms ease-in-out;
+    color: var(--darkgreen);
+    border: 2px solid var(--darkgreen);
+    background-color: var(--white);
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
+}
+
+.cart-quantity i:hover,
+.cart-delete-item i:hover,
+.delete-cart:hover {
+    transition: 250ms ease-in-out;
+    color: var(--white);
+    background-color: var(--darkgreen);
+    box-shadow: var(--white) 2px 1px 4px 0px, var(--darkgreen) -2px -1px 4px 0px;
+}
+
+
+
+
+
 
