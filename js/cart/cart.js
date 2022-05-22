@@ -3,12 +3,14 @@ const cartContainer = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
 const deleteCart = document.querySelector(".delete-cart");
 const emptyCartMessage = document.querySelector(".empty-cart-msg");
+const hideCart = document.querySelector(".cart-container");
 
 
 function showCart() {
     if(cartArray.length === 0) {
-        emptyCartMessage.innerHTML = "Your cart is empty"
+        emptyCartHtml()
     } else {
+    hideCart.style.display = "flex"
     emptyCartMessage.innerHTML = ""
     cartList.innerHTML = "";
     let total = 0;
@@ -22,6 +24,16 @@ function showCart() {
     
 }
 showCart()
+
+
+function emptyCartHtml() {
+
+    hideCart.style.display = "none"
+    
+    emptyCartMessage.innerHTML = 
+    `<span>Your cart is empty</span>
+    <a href="shop.html">Go back to shop</a>`
+}
 
 
 // creates HTML for cart content.
