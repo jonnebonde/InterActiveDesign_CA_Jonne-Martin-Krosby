@@ -62,4 +62,13 @@
     color: var(--white);
     border: none;
     height: 40px;
+    font-size: 1rem;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.details-product-button:hover {
+    background-color: var(--white);
+    color: var(--darkgreen);
+    border: 2px solid var(--darkgreen);
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
 }

@@ -77,6 +77,7 @@ header {
 .nav-menu a {
     margin: 5px;
     text-decoration: none;
+    transition: 50ms linear;
     color: var(--darkgreen);
     font-weight: var(--bold);
 }
@@ -93,6 +94,7 @@ header {
     display: block;
     display: flex;
     align-items: center;
+    transition: 50ms linear;
 }
 
 .cart-link a {
@@ -102,6 +104,7 @@ header {
     font-size: 23px;
     font-weight: var(--bold);
     align-items: flex-start;
+    transition: 50ms linear;
 }
 
 
@@ -111,6 +114,7 @@ header {
     border: solid 2px var(--darkgreen);
     height: 28px;
     width: 150px;
+    transition: 50ms linear;
 }
 
 .submit-btn {
@@ -125,7 +129,6 @@ header {
 .submit-btn:hover {
     cursor: pointer;
 }
-
 
 .main_img {
     display: flex;
@@ -161,6 +164,7 @@ header {
     font-weight: bold;
     color: var(--darkgreen);
     border: 2px solid var(--darkgreen);
+    transition: 250ms ease-in-out;
     box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
 }
 

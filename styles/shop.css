@@ -7,12 +7,14 @@
     border-bottom: 2px solid var(--darkgreen);
     font-size: 1.3rem;
     padding: 5px 0px;
+    transition: 50ms linear;
 }
 
 .shop-cta-shop a {
     text-decoration: none;
     color: var(--darkgreen);
     font-weight: var(--bold);
+  
 }
 
 .background-image-shop {
@@ -45,7 +47,8 @@
 
 .filter-container-all button {
     height: 40px;
-    width: 100%;    
+    width: 100%;
+    transition: 250ms ease-in-out;
 }
 
 .size-container,
@@ -72,6 +75,7 @@
 .color-list li,
 .activity-list li,
 .sortby-list li {
+    transition: 250ms ease-in-out;
     margin: 10px;
     border-bottom: 1px solid var(--darkgreen);
     color: var(--darkgreen);
@@ -150,6 +154,7 @@
 .random-product-image {
     background-size: cover;
     height: 150px;
+    transition: 250ms ease-in-out;
     
 }
 
