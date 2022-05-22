@@ -11,7 +11,7 @@
     <link href="./styles/Style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b32e365c8c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="cart-body">
     <header>
         <div class="top-info">
             <p class="credibility">LifeTime Warranty</p>
@@ -52,7 +52,7 @@
         </nav>
         </header>
     <h2 class="empty-cart-msg"></h2>
-        <main>
+        <main class="cart-main">
     <div class="cart-container">
         <div class="cart-header">
             <h1>Shopping Cart</h1>
@@ -63,11 +63,35 @@
             <div class="total"></div>
         </div>
         <div>
-            <button class="cart-checkout">Checkout</button>
+            <a href="checkout.html"><button class="cart-checkout">Checkout</button></a>
         </div>
-
     </div>           
         </main>
+        <footer>
+            <div class="contact-info">
+                <p>Phone: +47 1234 5678</p>
+                <p>Addresse: Here, There and Everywhere</p>
+                <a class="email-link" href="contact.html">E-mail:rainydays@rainjackets.com</a>
+            </div>
+            <form id="subscribe-container">
+                    <p  class="input-subscribe-error">Sign up for our newsletter</p>
+                <div class="submit-input-container">
+                    <input type="email" id="email-subscribe">
+                    <input id="submit-subscribe" type="submit"  value="Sign up" form="subscribe-container">
+                </div>
+            </form>
+        <div class="socialmedia_icons">
+            <a href="http://facebook.com">
+                <img src="images/facebook_logo2.png" alt="link to facebook.com"/>
+            </a>
+            <a href="http://twitter.com">
+                <img src="images/twitter_logo2.png" alt="link to twitter.com"/>
+            </a>
+            <a href="http://instagram.com">
+                <img src="images/instagram_logo2.png" alt="link to instagram.com"/>
+            </a>
+        </div>
+        </footer>
         <script src="./js/index.js"></script>
         <script src="./js/cart/cart.js"></script>
         <script src="./js/contactform/subscribe.js"></script>

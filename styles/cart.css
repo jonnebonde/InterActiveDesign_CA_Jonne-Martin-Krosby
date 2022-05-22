@@ -127,6 +127,21 @@
     box-shadow: var(--white) 2px 1px 4px 0px, var(--darkgreen) -2px -1px 4px 0px;
 }
 
+.cart-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cart-main {
+    flex: 1;
+}
+
+@media screen and (max-width: 800px){
+    
+
+}
+
 
 
 
