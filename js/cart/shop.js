@@ -101,7 +101,10 @@ function sortedProductsHTML() {
 }
 
 function allProductsHTML() {
-    productArray.forEach(function(product){
+
+    let shuffledShop = productArray.sort(() => 0.5 - Math.random());
+
+    shuffledShop.forEach(function(product){
         createProductHtml(product)
     });
 }
