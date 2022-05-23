@@ -33,11 +33,17 @@ checkout()
 const submitOrder = document.querySelector(".checkout-submit button");
 const submitModal = document.querySelector(".checkout-modal");
 const submitModalContent = document.querySelector(".checkout-modal-content")
-const inputVauleEmail = document.getElementById("email")
+const submitOrderForm = document.getElementById("checkout-form");
+const inputVauleEmail = document.getElementById("email");
 
-console.log(inputVauleEmail.value)
+console.log(submitOrder.value)
+
+
 
 submitOrder.addEventListener("click", function(e) {
+   
+    
+   
     submitModal.style.display = "flex";
     submitOrderModalContent()
     
