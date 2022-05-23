@@ -64,8 +64,11 @@
     </nav>
     </header>
 <main>
-    <div class="form-container">
-        <form id="checkout-form" >
+    <div class="checkout-cart-items"></div>
+
+        <form id="checkout-form" class="form-container" >
+            
+        <div class="checkout-input-container">
             <div class="checkout-address-container">
                 <div>
                     <h2>Shipping address</h2>
@@ -114,20 +117,25 @@
                     </select>
                 </div>
                 <div class="checkout-cvv">
-                    <label for="exp-year">Exp. Year</label>
-                    <input type="number" id="exp-year" name="exp year" required="required">
-                    <label for="cvv">CVV</label>
-                    <input type="number" id="cvv" name="cvv" required="required">
+                    <div>
+                        <label for="exp-year">Exp. Year</label>
+                        <input type="number" id="exp-year" name="exp year" required="required">
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="number" id="cvv" name="cvv" required="required">
+                    </div>
+                   
                 </div>
             </div>
             
             </div>
-            <input type="submit" value="Complete your order">
+        </div>
+            <button>Finish your order</button>
         </form>
-
-    </div>
+        
 </main>
-<footer>
+<footer class="checkout-footer">
         <div class="contact-info">
             <p>Phone: +47 1234 5678</p>
             <p>Addresse: Here, There and Everywhere</p>
