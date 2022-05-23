@@ -18,7 +18,6 @@
     background-color: var(--white);
     padding: 20px;
     border: 2px solid var(--darkgreen);
-    
 }
 
 .contact-contactinfo h2,
@@ -74,7 +73,6 @@
     max-width: 600px;
     border: 2px solid var(--darkgreen);
     background-color: var(--white);
-    
 }
 
 .contact-form div {
@@ -109,44 +107,25 @@
 }
 
 .submit {
-    color: var(--darkgreen);
-    background: var(--white);
+    color: var(--white);
+    background: var(--darkgreen);
     text-align: center;
     width: 100px;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
+    border: none;
     transition: 250ms ease-in-out;
-    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
 }
 
 .submit:hover {
-    color: var(--white);
+    color: var(--darkgreen);
     transition: 250ms ease-in-out;
-    background: var(--darkgreen);
-    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
+    background: var(--white);
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
 .contact-footer {
     position: absolute;
     bottom: 0;
-}
-
-
-@media screen and (max-width: 800px) {
-
-    .contact-footer {
-        position: relative;
-    }
-
-    .contact-main {
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        max-width: 400px;
-    }
-
-    .contact_social_media {
-        gap: 10px;
-        margin: 0 auto;
-    }
-
 }
