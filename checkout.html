@@ -64,7 +64,68 @@
     </nav>
     </header>
 <main>
-       <p>not done yet, coming soon...</p> 
+    <div class="form-container">
+        <form id="checkout-form" >
+            <div class="checkout-address-container">
+                <div>
+                    <h2>Shipping address</h2>
+                    <label for="full-name">Full Name</label>
+                    <input required="required" type="text" id="full-name" name="fullname">
+                    <label for="email">Email</label>
+                    <input required="required" type="text" id="email" name="email">
+                    <label for="address">Street Adress</label>
+                    <input required="required" type="text" id="address" name="address">
+                    <label for="City">City</label>
+                    <input required="required" type="text" id="city" name="city">
+                </div>
+                <div>
+                    <label for="county">County</label>
+                    <input required="required" type="text" id="county" name="county">
+                    <label for="zip-code">ZIP Code</label>
+                    <input required="required" type="number" id="zip-code" name="zip code">
+                </div>
+            </div>
+            <div class="checkout-billing-container">
+                <h2>Payment method</h2>
+            <div class="checkout-card-logo-container">
+
+            </div>
+            <div class="checkout-cardinfo-container">
+                <div>
+                    <label for="card">Name on card</label>
+                    <input type="" id="card" name="card" required="required">
+                    <label for="card-number">Card number</label>
+                    <input type="number" id="card-number" name="card number" required="required">
+                    <label for="exp-date">Exp. Month</label>
+                    <select id="exp-date" name="exp date" required="required">
+                        <option value="">Choose month</option>
+                        <option value="1">January/ 01</option>
+                        <option value="2">February/ 02</option>
+                        <option value="3">March/ 03</option>
+                        <option value="4">April/ 04</option>
+                        <option value="5">May/ 05</option>
+                        <option value="6">June/ 06</option>
+                        <option value="7">July/ 07</option>
+                        <option value="8">August/ 08</option>
+                        <option value="9">September/ 09</option>
+                        <option value="10">October/ 10</option>
+                        <option value="11">November/ 11</option>
+                        <option value="12">December/ 12</option>
+                    </select>
+                </div>
+                <div class="checkout-cvv">
+                    <label for="exp-year">Exp. Year</label>
+                    <input type="number" id="exp-year" name="exp year" required="required">
+                    <label for="cvv">CVV</label>
+                    <input type="number" id="cvv" name="cvv" required="required">
+                </div>
+            </div>
+            
+            </div>
+            <input type="submit" value="Complete your order">
+        </form>
+
+    </div>
 </main>
 <footer>
         <div class="contact-info">
