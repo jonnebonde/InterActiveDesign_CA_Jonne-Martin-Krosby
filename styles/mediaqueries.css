@@ -8,9 +8,17 @@
 
 @media screen and (max-width: 1130px) {
     
-   /*  .contact-footer {
+    .contact-footer {
         position: relative;
-    } */
+    }
+}
+
+@media screen and (min-height: 1080px) {
+    .checkout-footer,
+    .contact-footer {
+        position: absolute;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -194,7 +202,28 @@
     .cart-cta-container {
         gap: 30px;
         margin-top: 30px;
-       
+    }
+
+    .checkout-form-container {
+        max-width: 350px;
+        width: 90%;
+    }
+
+    .checkout-input-container {
+        flex-direction: column;
+    }
+
+    .checkout-cvv {
+        flex-direction: column;
+    }
+
+    .checkout-year{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .checkout-footer {
+        position: relative;
     }
 
 }
