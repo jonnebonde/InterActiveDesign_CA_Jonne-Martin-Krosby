@@ -14,7 +14,6 @@
     text-decoration: none;
     color: var(--darkgreen);
     font-weight: var(--bold);
-  
 }
 
 .background-image-shop {
@@ -106,7 +105,11 @@
     color: var(--white);
     transition: 250ms ease-in-out;
     cursor: pointer;
-    
+}
+
+.shop-title {
+    text-align: center;
+    color: var(--darkgreen);
 }
 
 .products,
@@ -118,7 +121,6 @@
     margin: 50px auto;
     gap: 15px;
     padding-bottom: 40px;
-    
 }
 
 .products a,
@@ -156,7 +158,6 @@
     background-size: cover;
     height: 150px;
     transition: 250ms ease-in-out;
-    
 }
 
 .product-image:hover,
@@ -165,16 +166,11 @@
     transition: 250ms ease-in-out;
 }
 
-
-
 .product-price,
 .random-product-price {
     font-size: 20px;
     margin: 10px 0;
-    
 }
-
-
 
 .product-button,
 .random-product-button {
@@ -190,12 +186,10 @@
     cursor: pointer;
     background-color: var(--darkgreen);
     color: var(--white);
-    
 }
 
 .cart-link {
     display: flex;
-
 }
 
 .cart-stats {

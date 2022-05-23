@@ -25,9 +25,9 @@
 <body>
     <header>
         <div class="top-info">
-            <p class="credibility">LifeTime Warranty</p>
-            <p>Free Shipping worldwide</p>
-            <p class="credibility">Trustpilot rating 4.9</p>
+            <span class="credibility">LifeTime Warranty</span>
+            <span>Free Shipping worldwide</span>
+            <span class="credibility">Trustpilot rating 4.9</span>
         </div>
         <nav>
             <div class="navbar">
@@ -116,7 +116,11 @@
                     </div>
             </div>
             <button id="color" class="filter-button filter-menu-open">Filter <i class="fa fa-caret-down"></i></button>
-        </div>    
+        </div>
+        <div class="shop-title">
+            <h1>SHOP</h1>
+        </div>
+
         <div class="products"></div>
     </main>
     <footer class="footer-shop">
@@ -128,7 +132,7 @@
         <form id="subscribe-container">
                 <p  class="input-subscribe-error">Sign up for our newsletter</p>
             <div class="submit-input-container">
-                <input type="email" id="email-subscribe">
+                <input type="email" id="email-subscribe" aria-label="Enter email for subscription">
                 <input id="submit-subscribe" type="submit"  value="Sign up" form="subscribe-container">
             </div>
         </form>

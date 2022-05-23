@@ -26,9 +26,9 @@
 <body>
     <header>
     <div class="top-info">
-        <p class="credibility">LifeTime Warranty</p>
-        <p>Free Shipping worldwide</p>
-        <p class="credibility">Trustpilot rating 4.9</p>
+        <span class="credibility">LifeTime Warranty</span>
+        <span>Free Shipping worldwide</span>
+        <span class="credibility">Trustpilot rating 4.9</span>
     </div>
     <nav>
         <div class="navbar">
@@ -44,7 +44,7 @@
             </div>
             <div class="nav-menu">
                 <ul>
-                    <label aria-label="searchfield" for="hamburger-search"></label>
+                    <label aria-label="searchfield in hamburgermenu" for="hamburger-search"></label>
                     <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
                     <li><a class="active-page" href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
@@ -95,8 +95,7 @@
         <form id="subscribe-container">
                 <p class="input-subscribe-error">Sign up for our newsletter</p>
             <div class="submit-input-container">
-                <label aria-label="Enter email for subscription" for="email-subscribe"></label>
-                <input type="email" id="email-subscribe">
+                <input type="email" id="email-subscribe" aria-label="Enter email for subscription">
                 <input id="submit-subscribe" type="submit"  value="Sign up" form="subscribe-container">
             </div>
         </form>
