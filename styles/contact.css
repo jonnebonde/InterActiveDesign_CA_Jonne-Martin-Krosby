@@ -115,6 +115,7 @@
     width: 100px;
     padding: 5px;
     cursor: pointer;
+    transition: 250ms ease-in-out;
     box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
