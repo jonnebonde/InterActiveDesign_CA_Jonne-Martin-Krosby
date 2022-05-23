@@ -1,13 +1,18 @@
 import { productArray } from "./products/productlist.js";
 const productDetails = document.querySelector(".details-container");
 let cartItems = JSON.parse(localStorage.getItem("cartList"));
-//const numberOfItemsInCart = document.querySelector(".show-cart");
-//let cartArray = cartItems || [];
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const details = params.get("id");
 const itemToShow = productArray.find(item => item.id === details)
+
+function pageTitle() {
+    const pageTitleDetails = document.querySelector("title");
+
+    pageTitleDetails.innerHTML = `Rainy Days | ${itemToShow.name}`
+}
+pageTitle()
 
 
 function detailsHtml() {
