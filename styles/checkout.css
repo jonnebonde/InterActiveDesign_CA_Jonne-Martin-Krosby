@@ -1,7 +1,7 @@
 .checkout-main {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    margin: 10% 0;
 }
 
 .checkout-form-container {
@@ -91,9 +91,11 @@
 }
 
 
-.checkout-footer {
-    position: absolute;
-    bottom: 0;
+@media screen and (min-height: 1080px) {
+    .checkout-footer {
+        position: absolute;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -114,12 +116,10 @@
     .checkout-year{
         display: flex;
         flex-direction: column;
-     
     }
 
     .checkout-footer {
         position: relative;
-        bottom: 0;
     }
 
 }
