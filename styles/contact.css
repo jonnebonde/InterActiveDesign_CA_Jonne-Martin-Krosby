@@ -53,8 +53,6 @@
     font-size: 20px;
 }
 
-
-
 .contact-background {
     background-image: url(../images/contact_img.jpg);
     background-size: cover;
@@ -88,13 +86,14 @@
     color: var(--darkgreen);
 }
 
-input, textarea{
+.contact-form input, 
+.contact-form textarea{
     width: 100%;
     margin-top: 2px;
     padding: 5px;
 }
 
-textarea {
+.contact-form textarea {
     height: 100px;
 }
 
@@ -130,8 +129,6 @@ textarea {
     position: absolute;
     bottom: 0;
 }
-
-
 
 
 @media screen and (max-width: 800px) {

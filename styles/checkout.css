@@ -1,36 +1,99 @@
-.form-container {
+.checkout-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.checkout-form-container {
     max-width: 800px;
-    margin: 10% auto;
-    padding: 10px;
-}
-
-.form-container h2 {
     color: var(--darkgreen);
-    padding: 20px 0;
+    margin: 0 auto;
 }
 
-.form-container label {
-    padding: 10px 0;
+.checkout-form-container h2 {
+    color: var(--darkgreen);
+    
+}
+
+.checkout-form-container label {
     color: var(--darkgreen);
     font-size: 1.1rem;
 }
 
-.form-container input {
-    color: var(--darkgreen);
-    margin-bottom: 20px;
-    padding: 5px;
-    height: 30px;
+.checkout-form-container input {
+    height: 33px;
     border: 2px solid var(--darkgreen);
 }
 
+.checkout-form-container button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+}
+
+
 .checkout-input-container {
     display: flex;
-    gap: 10px;
+    gap: 40px;
+}
+
+.checkout-address-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.checkout-billing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.checkout-cardinfo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-cardinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .checkout-cvv {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     margin-top: 30px;
+}
+
+.checkout-footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .checkout-form-container {
+        max-width: 350px;
+        width: 90%;
+    }
+
+    .checkout-input-container {
+        flex-direction: column;
+    }
+
+    .checkout-cvv {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .checkout-footer {
+        position: relative;
+        bottom: 0;
+    }
+
 }
 
