@@ -162,8 +162,7 @@ header {
     background-color: var(--white);
     text-decoration: none;
     font-weight: bold;
-    color: var(--darkgreen);
-    border: 2px solid var(--darkgreen);
+    color: var(--darkgreen);    
     transition: 250ms ease-in-out;
     box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
 }
