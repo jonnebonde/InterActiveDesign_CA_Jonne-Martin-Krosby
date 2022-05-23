@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: var(--bold);
     width: 100%;
 }
@@ -54,7 +54,7 @@ header {
 }
 
 .nav-menu {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .nav-menu ul {
@@ -83,7 +83,6 @@ header {
 }
 
 .nav-menu a:hover,
-.cta-icons a:hover,
 .submit-btn:hover,
 .shop-cta-shop a:hover {
     transition: 50ms linear;
@@ -101,12 +100,15 @@ header {
     margin-left: 10px;
     text-decoration: none;
     color: var(--darkgreen);
-    font-size: 23px;
+    font-size: 1rem;
     font-weight: var(--bold);
     align-items: flex-start;
     transition: 50ms linear;
 }
 
+.cart-link a:hover {
+    text-decoration: underline 2px var(--darkgreen);
+}
 
 #search,
 #hamburger-search{
@@ -123,7 +125,7 @@ header {
     border: none;
     height: 28px;
     width: 28px;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .submit-btn:hover {
@@ -143,21 +145,21 @@ header {
 
 .main_img h1{
     margin: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--darkgreen);
 }
 
 .shop-cta {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 60px;
 }
 
 .shop-cta a{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px ;
+    height: 50px ;
     width: 120px;
     background-color: var(--white);
     text-decoration: none;
@@ -179,17 +181,20 @@ header {
     justify-content: space-evenly;
     background-color: var(--darkgreen);
     color: var(--white);
-    
+    padding: 5px;
+}
+
+.quotes-container p {
+    text-align: center;
 }
 
 .headline-random-products {
     text-align: center;
-    margin-top: 50px;
-    font-size: 1.7rem;
+    margin-top: 40px;
+    font-size: 1.4rem;
     color: var(--darkgreen);
     border-bottom: 2px solid var(--darkgreen);
 }
-
 
 .contact-info {
     margin: 20px;
