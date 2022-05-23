@@ -1,7 +1,41 @@
-.checkout-main {
+.checkout-main h2 {
+    padding-bottom: 10px ;
+}
+
+.checkout-cart {
     display: flex;
-    justify-content: center;
-    margin: 10% 0;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid var(--darkgreen);
+    margin: 20px auto;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid var(--darkgreen);
+    padding: 3px 0;
+}
+
+.checkout-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.checkout-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.checkout-total {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 2px solid var(--darkgreen);
+    width: 100%;
 }
 
 .checkout-form-container {

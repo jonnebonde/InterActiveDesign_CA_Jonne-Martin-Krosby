@@ -24,6 +24,103 @@ function productArrayHTML() {
 }
 productArrayHTML()
 
+// toggle filter menus
+
+//size menu
+const sizeToggle = document.getElementById("size");
+const sizeList = document.querySelector(".size-list");
+const sizeListClose = document.querySelectorAll(".filter-container-all li");
+const sizeContainer = document.querySelector(".size-container");
+
+
+sizeToggle.addEventListener("click", () => {
+    sizeList.classList.toggle("active")
+})
+
+sizeListClose.forEach(function(sizeMenu){
+    sizeMenu.onclick = function() {
+        sizeList.classList.remove("active")
+    }
+})
+
+document.addEventListener("click", function(e) {
+    if (!sizeContainer.contains(e.target)) {
+        sizeList.classList.remove("active")
+    }
+});
+
+
+//color menu
+const colorToggle = document.getElementById("color");
+const colorList = document.querySelector(".color-list");
+const colorListClose = document.querySelectorAll(".color-list li");
+const colorContainer = document.querySelector(".color-container");
+
+
+colorToggle.addEventListener("click", () => {
+    colorList.classList.toggle("active")
+})
+
+colorListClose.forEach(function(colorMenu){
+    colorMenu.onclick = function() {
+        colorList.classList.remove("active")
+    }
+})
+
+document.addEventListener("click", function(e) {
+    if (!colorContainer.contains(e.target)) {
+        colorList.classList.remove("active")
+    }
+});
+
+
+//activity menu
+const activityToggle = document.getElementById("activity");
+const activityList = document.querySelector(".activity-list");
+const activityListClose = document.querySelectorAll(".activity-list li");
+const activityContainer = document.querySelector(".activity-container");
+
+
+activityToggle.addEventListener("click", () => {
+    activityList.classList.toggle("active")
+})
+
+activityListClose.forEach(function(activityMenu){
+    activityMenu.onclick = function() {
+        activityList.classList.remove("active")
+    }
+})
+
+document.addEventListener("click", function(e) {
+    if (!activityContainer.contains(e.target)) {
+        activityList.classList.remove("active")
+    }
+});
+
+
+//sortby menu
+const sortbyToggle = document.getElementById("sortby");
+const sortbyList = document.querySelector(".sortby-list");
+const sortbyListClose = document.querySelectorAll(".sortby-list li");
+const sortbyContainer = document.querySelector(".sortby-container");
+
+
+sortbyToggle.addEventListener("click", () => {
+    sortbyList.classList.toggle("active")
+})
+
+sortbyListClose.forEach(function(sortbyMenu){
+    sortbyMenu.onclick = function() {
+        sortbyList.classList.remove("active")
+    }
+})
+
+document.addEventListener("click", function(e) {
+    if (!sortbyContainer.contains(e.target)) {
+        sortbyList.classList.remove("active")
+    }
+});
+
 
 //change background according to gender or no gender choosen from landingpage
 
@@ -124,7 +221,7 @@ function createProductHtml(product) {
                 <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
             </a>
                 <span>${product.description}</span>
-                <span class="product-price">Price: ${product.price}</span>
+                <span class="product-price">Price: ${product.price} £</span>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
             </div>
             `
