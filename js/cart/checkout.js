@@ -50,7 +50,32 @@ const cityError = document.getElementById("cityError");
 
 const countyValid = document.querySelector(".county");
 const countyInput = document.getElementById("county");
-const countyError = document.getElementById("")
+const countyError = document.getElementById("countyError");
+
+const zipValid = document.querySelector(".zip-code");
+const zipInput = document.getElementById("zip-code");
+const zipError = document.getElementById("zipError");
+
+const cardNameValid = document.querySelector(".card-name");
+const cardNameInput = document.getElementById("card-name");
+const cardNameError = document.getElementById("card-nameError");
+
+const cardNumberValid = document.querySelector(".card-number");
+const cardNumberInput = document.getElementById("card-number");
+const cardNumberError = document.getElementById("card-numberError");
+
+const expDateValid = document.querySelector(".exp-date");
+const expDateInput = document.getElementById("exp-date");
+const expDateError = document.getElementById("expdateError");
+
+const expYearValid = document.querySelector(".exp-year");
+const expYearInput = document.getElementById("exp-year");
+const expYearError = document.getElementById("expyearError");
+
+const cvvValid = document.querySelector(".cvv");
+const cvvInput = document.getElementById("cvv");
+const cvvError = document.getElementById("cvvError");
+
 
 
 
@@ -60,10 +85,74 @@ function ValidateOrderInputs(event) {
 
     const fullName = checkLength(fullNameInput.value, 1);
     const email = validateEmail(emailInput.value);
-    const address = checkLength(addressInput.value, 1)
-    const city = checkLength(cityInput.value, 1)
+    const address = checkLength(addressInput.value, 1);
+    const city = checkLength(cityInput.value, 1);
+    const county = checkLength(countyInput.value, 1);
+    const zip = checkLength(zipInput.value, 1);
+    const cardName = checkLength(cardNameInput.value, 1);
+    const cardNumber = checkLength(cardNumberInput.value, 1);
+    const expDate = checkLength(expDateInput.value, 1);
+    const expYear = checkLength(expYearInput.value, 1);
+    const cvv = checkLength(cvvInput.value, 1);
+
+    let submitSucces = false;
 
 
+    if(cvv) {
+        cvvError.style.display = "none";
+        cvvValid.style.color = "#7C9A3C";   
+    } else {
+        cvvError.style.display = "block";
+        cvvValid.style.color = "black"; 
+    }
+
+    if(expYear) {
+        expYearError.style.display = "none";
+        expYearValid.style.color = "#7C9A3C";   
+    } else {
+        expYearError.style.display = "block";
+        expYearValid.style.color = "black"; 
+    }
+
+    if(expDate) {
+        expDateError.style.display = "none";
+        expDateValid.style.color = "#7C9A3C";   
+    } else {
+        expDateError.style.display = "block";
+        expDateValid.style.color = "black"; 
+    }
+
+    if(cardNumber) {
+        cardNumberError.style.display = "none";
+        cardNumberValid.style.color = "#7C9A3C";   
+    } else {
+        cardNumberError.style.display = "block";
+        cardNumberValid.style.color = "black"; 
+    }
+
+    if(cardName) {
+        cardNameError.style.display = "none";
+        cardNameValid.style.color = "#7C9A3C";   
+    } else {
+        cardNameError.style.display = "block";
+        cardNameValid.style.color = "black"; 
+    }
+
+    if(zip) {
+        zipError.style.display = "none";
+        zipValid.style.color = "#7C9A3C";   
+    } else {
+        zipError.style.display = "block";
+        zipValid.style.color = "black"; 
+    }
+
+    if(county) {
+        countyError.style.display = "none";
+        countyValid.style.color = "#7C9A3C";   
+    } else {
+        countyError.style.display = "block";
+        countyValid.style.color = "black"; 
+    }
 
     if(fullName) {
         nameError.style.display = "none";
@@ -97,6 +186,12 @@ function ValidateOrderInputs(event) {
         cityValid.style.color = "black";
     }
 
+
+    if(fullName && email && address &&city && county && zip && cardName && cardNumber && expDate && expYear && cvv) {
+        submitSucces = true;
+        submitOrderModalContent(submitSucces);
+    }
+    
 
 
 
@@ -132,19 +227,25 @@ console.log(submitOrder.value)
 
 
 /* submitOrder.addEventListener("click", function(e) {
-   
+
+    
     submitModal.style.display = "flex";
     submitOrderModalContent()
     
 }) */
 
 
-function submitOrderModalContent () {
+function submitOrderModalContent() {
     
+    const footer = document.querySelector("footer");
+    localStorage.clear()
+    footer.style.display = "none"
+
+    submitModal.style.display = "flex";
     submitModalContent.innerHTML = 
     `<h1>Thanks for your purchase</h1>
     <p>A confirmation of your order is sent to your email</p>
-    <span>${inputVauleEmail.value}</span>
+    <span>${emailInput.value}</span>
     <a class="modal-link" href="shop.html">Back to shop</a>`
 
 }

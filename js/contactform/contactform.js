@@ -27,6 +27,7 @@ function validateInputs(event) {
     const email = validateEmail(emailInput.value);
     const writeToUs = checkLength(writeInput.value, 10);
     
+    
     console.log(subjectInput.value)
 
     if(name) {

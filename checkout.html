@@ -45,7 +45,7 @@
                 <div class="nav-menu">
                     <ul>
                         <input id="hamburger-search" class="fa fa-search" type="text" placeholder="Search">
-                        <li><a class="active-page" href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="shop.html">Shop</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="about.html">About</a></li>
@@ -57,7 +57,7 @@
                         <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
                     </div>
                     <div class="cart-link">
-                        <a class="show-cart" href="cart.html">Cart</a>
+                        <a  class="show-cart" href="cart.html">Cart</a>
                     </div>
                 </div>
             </div>
@@ -97,43 +97,50 @@
                         <label class="county" for="county">County (required)</label>
                         <input  type="text" id="county" name="county">
                         <div class="input_error" id="countyError">Please write your county</div>
-                    <label for="zip-code">ZIP Code (required)</label>
+                    <label class="zip-code" for="zip-code">ZIP Code (required)</label>
                     <input type="number" id="zip-code" name="zip code">
+                    <div class="input_error" id="zipError">Please write your ZIP-code</div>
                 </div>
                 <div class="checkout-billing-container">
                     <h2>Payment method</h2>
                     <div class="checkout-card-logo-container"></div>
                     <div class="checkout-cardinfo-container">
                         <div class="checkout-cardinfo">
-                            <label for="card">Name on card (required)</label>
-                            <input type="" id="card" name="card" >
-                            <label for="card-number">Card number (required)</label>
-                            <input type="number" id="card-number" name="card number" >
-                            <label for="exp-date">Exp. Month (required)</label>
+                            <label class="card-name" for="card-name">Name on card (required)</label>
+                            <input type="text" id="card-name" name="card name">
+                            <div class="input_error" id="card-nameError">Please write the name on your card</div>
+                                <label class="card-number" for="card-number">Card number (required)</label>
+                                <input type="number" id="card-number" name="card number">
+                                <div class="input_error" id="card-numberError">Please write your card number</div>
+                            <label  class="exp-date" for="exp-date">Exp. Month (required)</label>
                             <select id="exp-date" name="exp date" >
                                 <option value="">Choose month</option>
-                                <option value="1">January/ 01</option>
-                                <option value="2">February/ 02</option>
-                                <option value="3">March/ 03</option>
-                                <option value="4">April/ 04</option>
-                                <option value="5">May/ 05</option>
-                                <option value="6">June/ 06</option>
-                                <option value="7">July/ 07</option>
-                                <option value="8">August/ 08</option>
-                                <option value="9">September/ 09</option>
-                                <option value="10">October/ 10</option>
-                                <option value="11">November/ 11</option>
-                                <option value="12">December/ 12</option>
+                                <option value="januar">January/ 01</option>
+                                <option value="february">February/ 02</option>
+                                <option value="march">March/ 03</option>
+                                <option value="april">April/ 04</option>
+                                <option value="may">May/ 05</option>
+                                <option value="june">June/ 06</option>
+                                <option value="july">July/ 07</option>
+                                <option value="august">August/ 08</option>
+                                <option value="september">September/ 09</option>
+                                <option value="october">October/ 10</option>
+                                <option value="november">November/ 11</option>
+                                <option value="december">December/ 12</option>
                             </select>
+                            <div class="input_error" id="expdateError">Please choose your exp. month</div>
                         </div>
                         <div class="checkout-cvv">
                             <div class="checkout-year">
-                                <label for="exp-year">Exp. Year (required)</label>
-                                <input type="number" id="exp-year" name="exp year" >
+                                <label class="exp-year" for="exp-year">Exp. Year (required)</label>
+                                <input type="number" id="exp-year" name="exp year">
+                                <div class="input_error" id="expyearError">Please write your exp. year</div>
                             </div>
                             <div class="checkout-year">
-                                <label for="cvv">CVV (required)</label>
-                                <input type="number" id="cvv" name="cvv" >
+                                <label class="cvv" for="cvv">CVV (required)</label>
+                                <input type="number" id="cvv" name="cvv">
+                                <div class="input_error" id="cvvError">Please write your cvv</div>
+                                <div class=""></div>
                             </div>
                         </div>
                     </div>
