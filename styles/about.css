@@ -1,25 +1,21 @@
-.about-background {
-    background-image: url(../images/main_img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--white);
 
+.about-heading {
+    text-align: center;
+    padding: 10px;
 }
-
 
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     margin: 5rem auto;
     gap: 40px;
-    
 }
 
 .about_section1,
 .about_section2 {
+    border: 2px solid var(--darkgreen);
     padding: 10px;
     display: flex;
     flex-direction: column;
