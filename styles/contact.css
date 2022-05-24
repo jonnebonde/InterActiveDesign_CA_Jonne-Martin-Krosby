@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.contact_social_media {
+.contact_social_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,16 +23,74 @@
 
 .contact-contactinfo h2,
 .contact-contactinfo p,
-.contact-social_media h2,
-.contact-contactinfo a,
-.contact-social_media a {
+.contact-contactinfo a {
     color: var(--darkgreen);
     margin: 5px;
     text-decoration: none;
 }
 
-.contact-contactinfo a:hover,
-.contact-social_media a:hover {
+.contact-social_media_links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-social_media_links h2 {
+    text-align: center;
+}
+
+.contact-social_media_links a {
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    
+}
+
+.fa-facebook {
+    color: var(--white);
+    background-color: #3B5998;
+    transition: 250ms ease-in-out;
+    box-shadow: #3B5998 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.fa-twitter {
+    color: var(--white);
+    background-color: #55ACEE;
+    transition: 250ms ease-in-out;
+    box-shadow: #55ACEE 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.fa-instagram {
+    color: var(--white);
+    background-color: #833AB4;
+    transition: 250ms ease-in-out;
+    box-shadow: #833AB4 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.fa-facebook:hover {
+    color: #3B5998;
+    background-color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 3px 1px 8px 0px, #3B5998 -3px -1px 8px 0px;
+}
+
+.fa-twitter:hover {
+    color: #55ACEE;
+    background-color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 3px 1px 8px 0px, #55ACEE -3px -1px 8px 0px;
+}
+
+.fa-instagram:hover {
+    color: #833AB4;
+    background-color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 3px 1px 8px 0px, #833AB4 -3px -1px 8px 0px;
+}
+
+.contact-contactinfo a:hover {
     border-bottom: 2px solid var(--darkgreen);
 }
 
