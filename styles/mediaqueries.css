@@ -1,27 +1,3 @@
-@media screen and (max-width: 1239px) {
-
-    .about-footer {
-        position: relative;
-    }
-
-}
-
-@media screen and (max-width: 1130px) {
-    
-    .contact-footer {
-        position: relative;
-    }
-}
-
-@media screen and (min-height: 1080px) {
-    
-    .checkout-footer,
-    .contact-footer {
-        position: absolute;
-    }
-
-}
-
 @media screen and (max-width: 1000px) {
 
     .mainlogo_img {
@@ -247,10 +223,6 @@
     .checkout-year{
         display: flex;
         flex-direction: column;
-    }
-
-    .checkout-footer {
-        position: relative;
     }
 
 }

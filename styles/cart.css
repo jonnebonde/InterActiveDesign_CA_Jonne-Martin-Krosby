@@ -1,10 +1,3 @@
-.fix-footer {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: auto;
-    min-height: 100vh;
-}
-
 .cart-container {
     display: flex;
     flex-direction: column;

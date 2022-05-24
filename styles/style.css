@@ -51,6 +51,12 @@ footer {
     height: 100%;
 }
 
+.fix-footer {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto;
+    min-height: 100vh;
+}
 
 
 
