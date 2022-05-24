@@ -1,8 +1,9 @@
 
 .contact-main {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
 }
 
 .contact_social_media {

@@ -42,8 +42,6 @@ console.log(submitOrder.value)
 
 submitOrder.addEventListener("click", function(e) {
    
-    
-   
     submitModal.style.display = "flex";
     submitOrderModalContent()
     
