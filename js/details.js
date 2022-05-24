@@ -33,6 +33,7 @@ function detailsHtml() {
                         <option value="">Choose a size</option>
                         <option value="XXLarge">XXLarge</option>
                         <option value="XLarge">XLarge</option>
+                        <option value="Large">Large</option>
                         <option value="Medium">Medium</option>
                         <option value="Small">Small</option>
                         <option value="XSmall">XSmall</option>

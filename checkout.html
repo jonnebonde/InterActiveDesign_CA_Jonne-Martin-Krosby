@@ -82,30 +82,35 @@
             <div class="checkout-input-container">
                 <div class="checkout-address-container">
                     <h2>Shipping address</h2>
-                    <label for="full-name">Full Name</label>
-                    <input required="required" type="text" id="full-name" name="fullname">
-                    <label for="email">Email</label>
-                    <input required="required" type="text" id="email" name="email">
-                    <label for="address">Street Adress</label>
-                    <input required="required" type="text" id="address" name="address">
-                    <label for="City">City</label>
-                    <input required="required" type="text" id="city" name="city">
-                    <label for="county">County</label>
-                    <input required="required" type="text" id="county" name="county">
-                    <label for="zip-code">ZIP Code</label>
-                    <input required="required" type="number" id="zip-code" name="zip code">
+                            <label class="full-name" for="full-name">Full Name (required)</label>
+                            <input  type="text" id="full-name" name="fullname">
+                            <div class="input_error" id="nameError">Please write a name</div>
+                    <label class="email" for="email">Email (required)</label>
+                    <input  type="text" id="email" name="email">
+                    <div class="input_error" id="emailError">Email is not in the correct format</div>
+                        <label class="address" for="address">Street Adress (required)</label>
+                        <input  type="text" id="address" name="address">
+                        <div class="input_error" id="addressError">Please write your address</div>
+                    <label class="city" for="City">City (required)</label>
+                    <input  type="text" id="city" name="city">
+                    <div class="input_error" id="cityError">Please write your city</div>
+                        <label class="county" for="county">County (required)</label>
+                        <input  type="text" id="county" name="county">
+                        <div class="input_error" id="countyError">Please write your county</div>
+                    <label for="zip-code">ZIP Code (required)</label>
+                    <input type="number" id="zip-code" name="zip code">
                 </div>
                 <div class="checkout-billing-container">
                     <h2>Payment method</h2>
                     <div class="checkout-card-logo-container"></div>
                     <div class="checkout-cardinfo-container">
                         <div class="checkout-cardinfo">
-                            <label for="card">Name on card</label>
-                            <input type="" id="card" name="card" required="required">
-                            <label for="card-number">Card number</label>
-                            <input type="number" id="card-number" name="card number" required="required">
-                            <label for="exp-date">Exp. Month</label>
-                            <select id="exp-date" name="exp date" required="required">
+                            <label for="card">Name on card (required)</label>
+                            <input type="" id="card" name="card" >
+                            <label for="card-number">Card number (required)</label>
+                            <input type="number" id="card-number" name="card number" >
+                            <label for="exp-date">Exp. Month (required)</label>
+                            <select id="exp-date" name="exp date" >
                                 <option value="">Choose month</option>
                                 <option value="1">January/ 01</option>
                                 <option value="2">February/ 02</option>
@@ -123,21 +128,22 @@
                         </div>
                         <div class="checkout-cvv">
                             <div class="checkout-year">
-                                <label for="exp-year">Exp. Year</label>
-                                <input type="number" id="exp-year" name="exp year" required="required">
+                                <label for="exp-year">Exp. Year (required)</label>
+                                <input type="number" id="exp-year" name="exp year" >
                             </div>
                             <div class="checkout-year">
-                                <label for="cvv">CVV</label>
-                                <input type="number" id="cvv" name="cvv" required="required">
+                                <label for="cvv">CVV (required)</label>
+                                <input type="number" id="cvv" name="cvv" >
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="checkout-submit">
+                <button class="submit">SUBMIT YOUR ORDER</button>
+            </div>
         </form>
-        <div class="checkout-submit">
-            <button>SUBMIT YOUR ORDER</button>
-        </div>
+       
     </div>   
 </main>
 <footer class="checkout-footer">
