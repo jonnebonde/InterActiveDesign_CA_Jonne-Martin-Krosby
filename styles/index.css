@@ -82,8 +82,7 @@ header {
 }
 
 .nav-menu a:hover,
-.submit-btn:hover,
-.shop-cta-shop a:hover {
+.submit-btn:hover {
     transition: 50ms linear;
     border-bottom: solid 2px var(--darkgreen);
 }
@@ -148,13 +147,15 @@ header {
     color: var(--darkgreen);
 }
 
-.shop-cta {
+.shop-cta,
+.shop-cta-shop {
     list-style: none;
     display: flex;
     gap: 60px;
 }
 
-.shop-cta a {
+.shop-cta a,
+.shop-cta-shop a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,7 +169,8 @@ header {
     box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
 }
 
-.shop-cta a:hover {
+.shop-cta a:hover,
+.shop-cta-shop a:hover {
     background-color: var(--darkgreen);
     color: var(--white);
     transition: 250ms ease-in-out;

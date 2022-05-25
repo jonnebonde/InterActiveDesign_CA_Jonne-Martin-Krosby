@@ -156,11 +156,11 @@ function toggleActiveLink() {
 
 
     if(details === "man") {
-        manActive.classList.add("active-page");
+        manActive.classList.add("active");
     }
     
     if(details === "woman") {
-        womanActive.classList.add("active-page");
+        womanActive.classList.add("active");
     }
 }
 toggleActiveLink()
@@ -169,7 +169,9 @@ toggleActiveLink()
 const filterOpenMenu = document.querySelector(".filter-menu-open");
 const filterCloseMenu = document.querySelector(".filter-close-btn");
 const filterSideMenu = document.querySelector(".filter-container-all");
-const filterContainer = document.querySelector(".background-image-shop")
+const filterContainer = document.querySelector(".filter-main-container");
+
+console.log(filterOpenMenu)
 
 filterOpenMenu.addEventListener("click", () => {
     filterSideMenu.classList.toggle("active");

@@ -1,22 +1,3 @@
-.shop-cta-shop {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 40px;
-    list-style: none;
-    border-bottom: 2px solid var(--darkgreen);
-    font-size: 1.3rem;
-    padding: 5px 0px;
-    transition: 50ms linear;
-}
-
-.shop-cta-shop a {
-    text-decoration: none;
-    color: var(--darkgreen);
-    font-weight: var(--bold);
-    font-size: 1.2rem;
-}
-
 .background-image-shop {
     width: 100%;
     height: 150px;
@@ -25,6 +6,23 @@
     background-image: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.shop-cta a.active,
+.shop-cta-shop a.active {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 6px 2px 16px 0px, var(--darkgreen) -6px -2px 16px 0px;
+}
+
+.shop-cta a.active:hover,
+.shop-cta-shop a.active:hover {
+    background-color: var(--white);
+    color: var(--darkgreen);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
 }
 
 .filter-container-all {
@@ -37,6 +35,13 @@
     max-width: 600px;
     width: 100%;
     position: relative;
+}
+
+.shop-title {
+    text-align: center;
+    color: var(--darkgreen);
+    font-size: 1rem;
+    margin: 20px auto;
 }
 
 .filter-close-btn,
@@ -67,9 +72,9 @@
     list-style: none;
     padding: 10px;
     width: 100%;
-    border-left: 2px solid var(--darkgreen);
-    border-right: 2px solid var(--darkgreen);
-    border-bottom: 2px solid var(--darkgreen);
+    border: 2px solid var(--darkgreen);    
+    position: absolute;
+    z-index: 2;
 }
 
 .size-list li,
@@ -80,8 +85,9 @@
     margin: 10px;
     border-bottom: 1px solid var(--darkgreen);
     color: var(--darkgreen);
+    position: relative;
+    z-index: 2;
 }
-
 
 .size-list.active,
 .color-list.active,
@@ -89,6 +95,8 @@
 .sortby-list.active {
     display: block;
     background-color: var(--white);
+    position: absolute;
+    width: 137.5px ;
 }
 
 .filter-button {
@@ -108,11 +116,7 @@
     cursor: pointer;
 }
 
-.shop-title {
-    text-align: center;
-    color: var(--darkgreen);
-    font-size: 1rem;
-}
+
 
 .products,
 .random-products-container {
@@ -123,6 +127,9 @@
     margin: 50px auto;
     gap: 15px;
     padding-bottom: 40px;
+    position: relative;
+    z-index: -1;
+    
 }
 
 .products a,
