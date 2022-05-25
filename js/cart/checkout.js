@@ -17,6 +17,7 @@ function checkout() {
                 <span>${checkout.price * checkout.quantity} </span>
             </div>`
 
+
         checkoutCartTotal.innerHTML = 
             `<div>
                 <span>Total</span>
@@ -77,9 +78,6 @@ const cvvInput = document.getElementById("cvv");
 const cvvError = document.getElementById("cvvError");
 
 
-
-
-
 function ValidateOrderInputs(event) {
     event.preventDefault();
 
@@ -96,7 +94,6 @@ function ValidateOrderInputs(event) {
     const cvv = checkLength(cvvInput.value, 1);
 
     let submitSucces = false;
-
 
     if(cvv) {
         cvvError.style.display = "none";
@@ -186,15 +183,11 @@ function ValidateOrderInputs(event) {
         cityValid.style.color = "black";
     }
 
-
     if(fullName && email && address &&city && county && zip && cardName && cardNumber && expDate && expYear && cvv) {
         submitSucces = true;
         submitOrderModalContent(submitSucces);
     }
     
-
-
-
 }
 
 submitForm.addEventListener("submit", ValidateOrderInputs);
@@ -206,12 +199,12 @@ function checkLength(value, len) {
     } 
 }
 
+
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
-
 
 
 //modal event for submitted form
@@ -220,19 +213,6 @@ const submitOrder = document.querySelector(".checkout-submit button");
 const submitModal = document.querySelector(".checkout-modal");
 const submitModalContent = document.querySelector(".checkout-modal-content")
 const submitOrderForm = document.getElementById("checkout-form");
-
-
-console.log(submitOrder.value)
-
-
-
-/* submitOrder.addEventListener("click", function(e) {
-
-    
-    submitModal.style.display = "flex";
-    submitOrderModalContent()
-    
-}) */
 
 
 function submitOrderModalContent() {

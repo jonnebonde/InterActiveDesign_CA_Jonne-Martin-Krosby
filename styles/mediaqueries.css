@@ -4,6 +4,10 @@
         max-width: 80px;
     }
 
+    .message-container {
+        top: 90px;
+    }
+
 }
 
 
@@ -176,7 +180,7 @@
 
     .message-container {
         position: fixed;
-        top: 50px ;
+        top: 90px ;
     }
 
     .details {
