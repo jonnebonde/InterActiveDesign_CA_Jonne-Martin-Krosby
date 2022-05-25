@@ -287,12 +287,6 @@
         font-size: 1.1rem;
     }
 
-    .shop-cta a,
-    .shop-cta-shop a {
-        height: 40px;
-        width: 90px;
-    }
-
     .shop-title h1{
         font-size: 1.5rem;
     }
@@ -312,6 +306,12 @@
 
     .shop-title h1{
         font-size: 1.1rem;
+    }
+
+    .shop-cta a,
+    .shop-cta-shop a {
+        height: 40px;
+        width: 90px;
     }
 
 }
