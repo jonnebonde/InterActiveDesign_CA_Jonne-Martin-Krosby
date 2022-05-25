@@ -1,5 +1,5 @@
 .message-container {
-    position: absolute;
+    position: fixed;
     top: 122.44px;
     left: 0;
     right: 0;

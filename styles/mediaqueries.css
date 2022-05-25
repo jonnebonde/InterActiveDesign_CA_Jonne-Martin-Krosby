@@ -91,12 +91,6 @@
     gap: 30px;
     }
 
-    .shop-cta a,
-    .shop-cta-shop a {
-        height: 30px;
-        width: 90px;
-    }
-
     .filter-main-container {
         display: flex;
         justify-content: center;
@@ -229,8 +223,11 @@
     }
 
     .checkout-form-container {
-        max-width: 350px;
-        width: 90%;
+        width: 100%;
+    }
+
+    .checkout-billing-container {
+        border: none;
     }
 
     .checkout-input-container {
@@ -288,6 +285,12 @@
 
     .main_img h1 {
         font-size: 1.1rem;
+    }
+
+    .shop-cta a,
+    .shop-cta-shop a {
+        height: 40px;
+        width: 90px;
     }
 
 

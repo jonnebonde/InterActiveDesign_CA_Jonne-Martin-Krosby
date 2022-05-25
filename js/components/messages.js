@@ -17,7 +17,7 @@ function messageAddedToCart(itemToShow) {
         messageLink.innerHTML = viewCartNow;
         setTimeout(function() {
             messageContainer.style.display = "none";
-        }, 3000)
+        }, 4000)
     }    
 }
 
