@@ -1,5 +1,6 @@
 .message-container {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     background-color: var(--lightgreen);
@@ -26,6 +27,7 @@
     display: flex;
     justify-content: center;
     padding: 60px;
+    width: 100%;
 }
 
 .details {
@@ -36,8 +38,8 @@
 
 .details-product-image {
     display: block;
-    max-width: 100%;
-    min-width: 370px;
+    width: 100%;
+    min-width: 240px;
     padding: 0 30px;
     border-right: 2px solid var(--darkgreen);
 }

@@ -4,10 +4,6 @@
         max-width: 80px;
     }
 
-    .message-container {
-        top: 90px;
-    }
-
 }
 
 
@@ -187,11 +183,6 @@
 
     .contact-footer {
         position: relative;
-    }
-
-    .message-container {
-        position: fixed;
-        top: 90px ;
     }
 
     .details {
