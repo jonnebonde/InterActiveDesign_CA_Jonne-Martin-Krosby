@@ -206,7 +206,7 @@
     }
 
     .details-product-image {
-        max-height: 400px;
+        max-height: fit-content;
         border: none;
     }
     

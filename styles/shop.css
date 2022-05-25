@@ -72,7 +72,7 @@
     list-style: none;
     padding: 10px;
     width: 100%;
-    border: 2px solid var(--darkgreen);    
+    border: 2px solid var(--darkgreen);
     position: absolute;
     z-index: 2;
 }
@@ -96,7 +96,7 @@
     display: block;
     background-color: var(--white);
     position: absolute;
-    width: 137.5px ;
+    width: 137.5px;
 }
 
 .filter-button {
@@ -116,8 +116,6 @@
     cursor: pointer;
 }
 
-
-
 .products,
 .random-products-container {
     display: flex;
@@ -127,9 +125,6 @@
     margin: 50px auto;
     gap: 15px;
     padding-bottom: 40px;
-    position: relative;
-    z-index: -1;
-    
 }
 
 .products a,
@@ -186,7 +181,7 @@
     background-color: white;
     border-top: 1px solid var(--darkgreen);
     padding: 10px;
-    transition: 350ms ease-in-out;
+    transition: 250ms ease-in-out;
     font-weight: bold;
     font: 1rem;
 }
@@ -194,6 +189,7 @@
 .product-button:hover,
 .random-product-button:hover {
     cursor: pointer;
+    transition: 250ms ease-in-out;
     background-color: var(--darkgreen);
     color: var(--white);
 }
