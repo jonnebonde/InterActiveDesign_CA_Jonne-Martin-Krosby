@@ -216,10 +216,10 @@ function createProductHtml(product) {
 
     productsContainer.innerHTML += 
             `<div class="product" >
-            <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <h2>${product.name}</h2>
             </a>
-            <a href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
             </a>
                 <span>${product.description}</span>

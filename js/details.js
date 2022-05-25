@@ -48,8 +48,10 @@ function detailsHtml() {
 detailsHtml()
 
 const button = document.querySelector(".details-product-button");
+const messageContainer = document.querySelector(".message-container");
 
 button.onclick = function() {
+    messageContainer.style.top = "0px";
     sizeFormActions()
 }
 
