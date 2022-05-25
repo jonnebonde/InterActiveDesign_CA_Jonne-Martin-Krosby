@@ -209,12 +209,11 @@
     }
 
     .cart-container {
-        max-width: 800px;
         width: 90%;
+        margin: 0 auto;
     }
 
     .cart-item {
-        width: 100%;
         gap: 10px;
     }
 
@@ -257,10 +256,6 @@
         font-size: 1rem;
     }
     
-    .cart-item {
-        max-width: 370px;
-    }
-
     .quotes-container {
         flex-direction: column;
         gap: 20px;
