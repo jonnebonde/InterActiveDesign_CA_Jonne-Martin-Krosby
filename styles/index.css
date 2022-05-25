@@ -3,9 +3,10 @@
     display: flex;
     justify-content: space-evenly;
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: var(--bold);
     width: 100%;
+    padding: 10px;
 }
 
 header {
@@ -112,7 +113,7 @@ header {
 #hamburger-search {
     color: var(--darkgreen);
     border: solid 2px var(--darkgreen);
-    height: 28px;
+    height: 35px;
     width: 150px;
     transition: 50ms linear;
 }
@@ -187,6 +188,8 @@ header {
 
 .quotes-container p {
     text-align: center;
+    font-family: "quote";  
+    font-size: 1.1rem;
 }
 
 .headline-random-products {
@@ -211,10 +214,12 @@ header {
 #subscribe-container {
     width: 230px;
     text-align: center;
+    
 }
 
 .submit-input-container {
     display: flex;
+    height: 35px;
 }
 
 #submit-subscribe {

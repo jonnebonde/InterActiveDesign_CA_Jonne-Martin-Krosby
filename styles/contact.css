@@ -99,6 +99,7 @@
 }
 
 .form_success {
+    display: none;
     text-align: center;
     color: var(--darkgreen);
     padding: 10px;
@@ -131,18 +132,23 @@
 
 .contact-form div {
     padding: 2px 0px;
+    margin-bottom: 10px;
 }
 
 #subject {
     padding: 5px;
     color: var(--darkgreen);
+    margin-bottom: 1px;
 }
 
 .contact-form input, 
 .contact-form textarea{
     width: 100%;
-    margin-top: 2px;
     padding: 5px;
+}
+
+.contact-form label {
+    margin-top: 15px;
 }
 
 .contact-form textarea {
@@ -152,7 +158,7 @@
 .input_error {
     display: none;
     color: red;
-    padding-bottom: 5px;
+    
 }
 
 .submit_btn {
@@ -177,9 +183,4 @@
     transition: 250ms ease-in-out;
     background: var(--white);
     box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
-}
-
-.contact-footer {
-    position: absolute;
-    bottom: 0;
 }

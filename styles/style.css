@@ -9,6 +9,11 @@
 @import "./mediaqueries.css";
 
 
+@font-face {
+    font-family: "quote";
+    src: url("../fonts/Lobster-Regular.ttf") format("truetype");
+}
+
 
 html {
     height: 100%;

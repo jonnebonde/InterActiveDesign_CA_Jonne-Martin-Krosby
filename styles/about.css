@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     margin: 5rem auto;
     gap: 40px;
+    width: 100%;
 }
 
 .about_section1,
@@ -23,6 +24,7 @@
     max-width: 600px;
     min-width: 240px;
     background-color: var(--white);
+    
 }
 
 .about_section1 h1,
@@ -31,6 +33,7 @@
     font-size: 2rem;
     text-align: center;
     padding: 10px;
+    
 }
 
 .about_section1 p,

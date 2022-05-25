@@ -94,7 +94,7 @@ function validateEmail(email) {
 
 function formSubmitSuccesfull(e) {
     if(e) {
-        formSuccess.style.visibility="visible";
+        formSuccess.style.display = "block"
         formSuccess.innerHTML = `<div>Thank u ${nameInput.value}</div>
                                 <div>We will contact u within 24 hours</div>
                                 <div>on ${emailInput.value}</div>`;
