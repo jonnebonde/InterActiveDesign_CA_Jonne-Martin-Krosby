@@ -209,6 +209,7 @@
     }
 
     .cart-container {
+        max-width: 800px;
         width: 100%;
     }
 
@@ -283,6 +284,19 @@
 
 @media screen and (max-width: 500px) {
 
+    .navbar {
+        padding: 5px;
+    }
+
+    .cart-link span{
+        font-size: 0.8rem;
+    }
+
+    .contact-info a,
+    .contact-info p {
+        font-size: 0.8rem;
+    }
+
     .main_img h1 {
         font-size: 1.1rem;
     }
@@ -293,6 +307,9 @@
         width: 90px;
     }
 
+    .shop-title h1{
+        font-size: 1.5rem;
+    }
 
     .product,
     .random-product {
@@ -303,4 +320,12 @@
         
     }
     
+}
+
+@media screen and (max-width: 300px) {
+
+    .shop-title h1{
+        font-size: 1.1rem;
+    }
+
 }
