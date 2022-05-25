@@ -129,6 +129,7 @@
 .checkout-form-container label {
     color: var(--darkgreen);
     font-size: 1.1rem;
+    margin-top: 17px;
 }
 
 .checkout-form-container input {
@@ -172,6 +173,10 @@
     display: flex;
     gap: 5px;
     margin-top: 30px;
+}
+
+.checkout-year input{
+    width: 50%;
 }
 
 .checkout-submit {
