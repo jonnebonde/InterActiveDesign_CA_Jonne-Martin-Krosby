@@ -21,6 +21,7 @@ let successMessage = false;
 
 function validateInputs(event) {
     event.preventDefault();
+    
 
     const name = checkLength(nameInput.value, 0);
     const subject = checkValue(subjectInput.value);
@@ -70,6 +71,7 @@ function validateInputs(event) {
 }
 
 form.addEventListener("submit", validateInputs);
+
 
 
 function checkLength(value, len) {

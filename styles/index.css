@@ -68,6 +68,8 @@ header {
 
 #search.active {
     display: inline;
+    position: absolute;
+    right: 180px;
 }
 
 .nav-menu li {
@@ -89,19 +91,17 @@ header {
 }
 
 .cta-icons {
-    display: block;
     display: flex;
     align-items: center;
+    gap: 10px;
     transition: 50ms linear;
 }
 
 .cart-link a {
-    margin-left: 10px;
     text-decoration: none;
     color: var(--darkgreen);
     font-size: 1rem;
     font-weight: var(--bold);
-    align-items: flex-start;
     transition: 50ms linear;
 }
 
@@ -122,13 +122,25 @@ header {
     color: var(--darkgreen);
     background-color: var(--white);
     border: none;
-    height: 28px;
-    width: 28px;
-    font-size: 20px;
+    height: 30px;
+    width: 26px;
+}
+
+.submit-btn i {
+    font-size: 26px ;
 }
 
 .submit-btn:hover {
     cursor: pointer;
+}
+
+.account-link a {
+    color: var(--darkgreen);
+    font-size: 26px;
+}
+
+.account-link a:hover {
+    border-bottom: 2px solid var(--darkgreen);
 }
 
 .main_img {
