@@ -1,8 +1,23 @@
+
+.account-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid var(--darkgreen);
+    max-width: 500px;
+    width: 100%;
+}
+
+.signup-container,
+.login-container {
+    flex-direction: column;
+}
+
+
 .signup-container {
     display: none;
-    flex-direction: column;
-    background-color: aqua;
-    padding: 20px;
 }
 
 .signup-container.active {
@@ -11,14 +26,12 @@
 
 .login-container {
     display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    padding: 20px;
 }
 
 .login-container.active {
     display: none;
 }
+
 
 #account-signup {
     display: flex;
@@ -29,7 +42,6 @@
 #account-login {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .account-info {
