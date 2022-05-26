@@ -148,9 +148,6 @@ header {
     align-items: center;
     flex-direction: column;
     background-image: url(../images/main_img.jpg);
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
     height: 500px;
 }
 

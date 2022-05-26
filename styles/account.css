@@ -1,3 +1,8 @@
+.account-header {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
 
 .account-form-container {
     display: flex;
@@ -7,7 +12,7 @@
     padding: 20px;
     border: 2px solid var(--darkgreen);
     max-width: 500px;
-    width: 100%;
+
 }
 
 .signup-container,

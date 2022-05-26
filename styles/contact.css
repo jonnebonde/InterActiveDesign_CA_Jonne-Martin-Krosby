@@ -110,10 +110,6 @@
 
 .contact-background {
     background-image: url(../images/contact_img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--white);
     width: 100%;
     height: 100%;
 }
