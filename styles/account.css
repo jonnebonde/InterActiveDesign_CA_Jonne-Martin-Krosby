@@ -162,7 +162,8 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid var(--darkgreen);
-    padding: 10px 0;
+    padding-top: 20px ;
+    font-weight: 600;
 }
 
 .account-orders {
@@ -191,12 +192,54 @@
 }
 
 .account-profile-container {
-    border: 2px solid var(--darkgreen);
+    border-left: 2px solid var(--darkgreen);
+    padding-left: 30px;
     width: 40%;
 }
 
+.profile-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
 
+.profile-form-container label {
+    font-weight: 600;
+}
 
+.profile-form-container p {
+    border: 1px solid var(--darkgreen);
+    padding: 10px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.log-out {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.log-out button {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    background-color: var(--white);
+    border: 2px solid var(--darkgreen);
+    color: var(--darkgreen);
+    font-size: 0.9rem;
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.log-out button:hover {
+    color: var(--white);
+    background-color: var(--darkgreen);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
+}
 
 
 @media screen and (max-width: 600px) {

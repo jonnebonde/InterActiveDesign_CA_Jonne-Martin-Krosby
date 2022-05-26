@@ -106,21 +106,43 @@
         <div class="account-info-header">
             <h1>My Account</h1>
         </div>
-        <div class="account-info-details">
-            <div class="account-orders-container">
-                <h2>My orders</h2>
-                <div class="order-header">
-                    <p>Product</p>
-                    <p>Price</p>
+            <div class="account-info-details">
+                <div class="account-orders-container">
+                    <h2>My orders</h2>
+                    <div class="order-header">
+                        <p>Product</p>
+                        <p>Price</p>
+                    </div>
+                    
+                    <div class="account-orders">
+                    </div>
                 </div>
-                
-                <div class="account-orders">
+                <div class="account-profile-container">
+                    <h2>My Profile</h2>
+                    <div class="profile-form-container">
+                        <div>
+                            <label for="name">Full name</label>
+                            <p contenteditable="true" onkeypress="return (this.innerText.length <= 20)">John Smith</p>
+                        </div>
+                        <div>
+                            <label for="Addresse">Adresse</label>
+                            <p contenteditable="true" onkeypress="return (this.innerText.length <= 20)">Smiths Street 66</p>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <p contenteditable="true" onkeypress="return (this.innerText.length <= 20)">John@smith.neo</p>
+                        </div>
+                        <div>
+                            <label for="Addresse">Phone number</label>
+                            <p contenteditable="true" onkeypress="return (this.innerText.length <= 20)">123 456 789</p>
+                        </div>
+                        <div>
+                            <label for="Addresse">Password</label>
+                            <p contenteditable="true" onkeypress="return (this.innerText.length <= 20)">Secret password</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="account-profile-container">
-                <h2>My Profile</h2>
-            </div>
-        </div>
         <div class="log-out">
             <button>log out</button>
         </div>
