@@ -1,6 +1,6 @@
 import { productArray } from "./products/productlist.js";
 const productDetails = document.querySelector(".details-container");
-let cartItems = JSON.parse(localStorage.getItem("cartList"));
+
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

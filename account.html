@@ -68,22 +68,40 @@
     <div>
         <h1>Account</h1>
     </div>
-    <div class="login-container">
-            <form id="account">
+    <div class="account-form-container">
+        <div class="signup-container">
+            <form id="account-signup">
                 <label class="email" for="email">Email</label>
                 <input  type="text" id="email" name="email">
                 <div class="input_error" id="emailError">Email is not in the correct format</div>
                     <label class="password" for="password">Password</label>
                     <input  type="text" id="password" name="password">
                     <div class="input_error" id="passwordError">Password must be more than 8 characters</div>
-                        <label class="confirm-password" for="confirm_password"> Confirm Password</label>
-                        <input  type="text" id="confirm-password" name="confirm password">
-                        <div class="input_error" id="confirmpasswordError">Password must be more than 8 characters</div>
+                <label class="confirm-password" for="confirm_password"> Confirm Password</label>
+                <input  type="text" id="confirm-password" name="confirm password">
+                <div class="input_error" id="confirmpasswordError">Password dont match</div>
+                    <input type="submit" value="Sign Up" id="submit-signup">
+            </form>
+        </div>
+        <div class="login-container">
+            <form id="account-login">
+                <label class="login-email" for="login-email">Email</label>
+                <input  type="text" id="login-email" name="login-email">
+                <div class="input_error" id="login-emailError">Email is not in the correct format</div>
+                    <label class="login-password" for="login-password">Password</label>
+                    <input  type="text" id="login-password" name="login password">
+                    <div class="input_error" id="login-passwordError">Password must be more than 8 characters</div>
                     <input type="submit" value="Login" id="submit-signup">
-                    <p>Already have an account?</p>
-                    <button class="account-login">Sign up</button>
-        </form>
+            </form>
+        </div>
+        <div class="toggle-form">
+            <button>toggle form</button>
+        </div>
     </div>
+    <div class="account-info">
+        <div>account info</div>
+    </div>
+
 
 
 </main>
@@ -113,7 +131,7 @@
     </div>
 </footer>
     <script src="./js/index.js"></script>
-    <script src="./js/components/random.js" type="module"></script>
     <script src="./js/contactform/subscribe.js"></script>
+    <script src="/js/account/account.js"></script>
 </body>
 </html>

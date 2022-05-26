@@ -1,0 +1,37 @@
+.signup-container {
+    display: none;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.signup-container.active {
+    display: flex;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.login-container.active {
+    display: none;
+}
+
+#account-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#account-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account-info {
+    display: none;
+}
