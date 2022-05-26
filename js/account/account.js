@@ -66,6 +66,10 @@ function validateSignUp(event) {
 
     if(email && password && confirmPassword) {
         console.log("success")
+        account.push("logged in")
+        localStorage.setItem("account", JSON.stringify(account))
+        formPage.style.display = "none"
+        accountPage.style.display = "flex"
     }
 
 }
@@ -109,6 +113,8 @@ function validateLogin(event) {
     if(loginEmail && loginPassword) {
         account.push("logged in")
         localStorage.setItem("account", JSON.stringify(account))
+        formPage.style.display = "none"
+        accountPage.style.display = "flex"
     }
 
 }
@@ -138,19 +144,32 @@ function checkLength(value, len) {
     } 
 }
 
-//
+// validate log status and actions accordingly
 
-
-
-const formPage = document.querySelector(".account-form.container");
+const formPage = document.querySelector(".account-form-container");
 const accountPage = document.querySelector(".account-info");
+const accountLogOut = document.querySelector(".log-out");
 
 
-console.log(account)
-console.log(cartArray)
-function hippi() {
-    if(accountStatus[0] === 'logged in') {
-        console.log("i did it")
+function checkAccountStatus() {
+    if(accountStatus) {
+        formPage.style.display = "none"
+        accountPage.style.display = "flex"
+
+    } else {
+        formPage.style.display = "flex";
     }
 }
-hippi()
+checkAccountStatus()
+
+
+function logOutOfAccount() {
+    console.log("logged out")
+    localStorage.removeItem("account");
+    location.reload()
+
+}
+
+
+accountLogOut.addEventListener("click", logOutOfAccount)
+

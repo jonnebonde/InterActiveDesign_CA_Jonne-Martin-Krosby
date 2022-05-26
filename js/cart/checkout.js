@@ -218,8 +218,8 @@ const submitOrderForm = document.getElementById("checkout-form");
 function submitOrderModalContent() {
     
     const footer = document.querySelector("footer");
-    localStorage.clear()
-    footer.style.display = "none"
+    localStorage.removeItem("cartList");
+    footer.style.display = "none";
 
     submitModal.style.display = "flex";
     submitModalContent.innerHTML = 
@@ -228,7 +228,7 @@ function submitOrderModalContent() {
     <span>${emailInput.value}</span>
     <a class="modal-link" href="shop.html">Back to shop</a>`
 
-}
+};
 
 
 
