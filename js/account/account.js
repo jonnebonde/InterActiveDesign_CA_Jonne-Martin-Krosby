@@ -13,6 +13,7 @@ const confirmPasswordValid = document.querySelector(".confirm-password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 const confirmPasswordError = document.getElementById("confirmpasswordError");
 
+const toggleFormText = document.querySelector(".toggle-form p");
 const toggleFormButton = document.querySelector(".toggle-form button");
 
 const signUpContainer = document.querySelector(".signup-container");
@@ -27,6 +28,15 @@ let account = accountStatus || []
 toggleFormButton.addEventListener("click", () => {
     signUpContainer.classList.toggle("active");
     loginContainer.classList.toggle("active")
+
+
+    if(signUpContainer.classList.contains("active")) {
+        toggleFormButton.innerText = "Login";
+        toggleFormText.innerText = "Have an account already?";
+    } else {
+        toggleFormButton.innerText = "Sign Up";
+        toggleFormText.innerText = "Dont have a account yet?"
+    } 
     
 }) 
 
@@ -77,7 +87,6 @@ function validateSignUp(event) {
 accountSignUp.addEventListener("submit", validateSignUp)
 
 
-
 //validate login form
 const loginEmailValid = document.querySelector(".login-email");
 const loginEmailInput = document.getElementById("login-email");
@@ -120,7 +129,6 @@ function validateLogin(event) {
 }
 
 accountLogin.addEventListener("submit", validateLogin)
-
 
 
 // validation functions for forms
@@ -167,9 +175,7 @@ function logOutOfAccount() {
     console.log("logged out")
     localStorage.removeItem("account");
     location.reload()
-
 }
-
 
 accountLogOut.addEventListener("click", logOutOfAccount)
 
