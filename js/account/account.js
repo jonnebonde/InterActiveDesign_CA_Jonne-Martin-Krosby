@@ -1,3 +1,5 @@
+import { productArray } from "../products/productlist.js";
+
 const accountSignUp = document.getElementById("account-signup");
 const accountLogin = document.getElementById("account-login");
 
@@ -80,6 +82,8 @@ function validateSignUp(event) {
         localStorage.setItem("account", JSON.stringify(account))
         formPage.style.display = "none"
         accountPage.style.display = "flex"
+        location.reload()
+        
     }
 
 }
@@ -124,6 +128,7 @@ function validateLogin(event) {
         localStorage.setItem("account", JSON.stringify(account))
         formPage.style.display = "none"
         accountPage.style.display = "flex"
+        location.reload()
     }
 
 }
@@ -132,8 +137,8 @@ accountLogin.addEventListener("submit", validateLogin)
 
 
 // validation functions for forms
-function comparePasswords(value, value) {
-    if(value === value && value.length > 7) {
+function comparePasswords(value, value1) {
+    if(value === value1 && value1.length > 7) {
         return true
     }
 }
@@ -155,17 +160,21 @@ function checkLength(value, len) {
 // validate log status and actions accordingly
 
 const formPage = document.querySelector(".account-form-container");
-const accountPage = document.querySelector(".account-info");
+const accountPage = document.querySelector(".account-info-container");
 const accountLogOut = document.querySelector(".log-out");
+const accountMain = document.querySelector("main");
 
 
 function checkAccountStatus() {
     if(accountStatus) {
-        formPage.style.display = "none"
-        accountPage.style.display = "flex"
+        formPage.style.display = "none";
+        accountPage.style.display = "flex";
+        accountMain.classList.remove("account-main");    
+    }
 
-    } else {
+    if(!accountStatus) {
         formPage.style.display = "flex";
+        accountPage.style.display = "none";
     }
 }
 checkAccountStatus()
@@ -179,3 +188,29 @@ function logOutOfAccount() {
 
 accountLogOut.addEventListener("click", logOutOfAccount)
 
+
+// Shuffle products on productArray
+let shuffled = productArray.sort(() => 0.5 - Math.random());
+
+const myordersList = document.querySelector(".account-orders");
+
+let myorders = shuffled.slice(0, 4);
+
+myorders.forEach(function(myorder) {
+
+    myordersList.innerHTML += `
+        <div class="order-item">
+        <a href="details.html?id=${myorder.id}&name=${myorder.name}&gender=${myorder.gender}" data-product="${myorder.id}">
+        <img src="${myorder.image}">
+        <span>${myorder.name}</span>
+        <span>${myorder.price}</span>
+        
+        </a>
+        </div>
+    `
+
+})
+
+console.log(productArray
+    
+    )

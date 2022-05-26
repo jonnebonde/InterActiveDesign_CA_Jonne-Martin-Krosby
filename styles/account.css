@@ -120,9 +120,68 @@
     box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
-.account-info {
+.account-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--white);
+    padding: 30px;
+    width: 800px;
+    border: 2px solid var(--darkgreen);
+    margin-top: 10%;
 }
+
+.account-info-header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid var(--darkgreen);
+    width: 100%;
+}
+
+.account-info-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+    padding: 10px;
+}
+
+.account-orders-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.account-orders-container h2 {
+    border-bottom: 2px solid var(--darkgreen);
+    width: 50%;
+}
+
+.account-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-item {
+    margin-top: 10px;
+    border-bottom: 2px solid var(--darkgreen);
+}
+
+.order-item a {
+    display: flex;
+    text-decoration: none;
+    color: var(--darkgreen);
+    font-weight: 600;
+}
+
+.order-item img {
+    max-height: 80px;
+}
+
+
+
+
 
 
 @media screen and (max-width: 600px) {
