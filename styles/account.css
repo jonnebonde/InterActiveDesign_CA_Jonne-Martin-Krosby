@@ -130,8 +130,14 @@
 
 @media screen and (max-width: 600px) {
 
+    .account-header {
+        padding: 10px;
+    }
+
     .account-form-container {
         width: 100%;
+        gap: 10px;
+        margin-top: 20px;
     }
 
     #account-signup,
@@ -140,7 +146,7 @@
     }
 
     .toggle-form button {
-        max-width: 100%;
+        max-width: 90%;
     }
 
 }
