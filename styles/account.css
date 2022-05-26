@@ -126,7 +126,7 @@
     align-items: center;
     background-color: var(--white);
     padding: 30px;
-    width: 800px;
+    width: 1000px;
     border: 2px solid var(--darkgreen);
     margin-top: 10%;
 }
@@ -149,12 +149,20 @@
 .account-orders-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-content: flex-start;
+    width: 40%;
 }
 
 .account-orders-container h2 {
     border-bottom: 2px solid var(--darkgreen);
     width: 50%;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--darkgreen);
+    padding: 10px 0;
 }
 
 .account-orders {
@@ -164,21 +172,28 @@
 }
 
 .order-item {
-    margin-top: 10px;
+    margin: 2px 0;
     border-bottom: 2px solid var(--darkgreen);
 }
 
 .order-item a {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-decoration: none;
     color: var(--darkgreen);
     font-weight: 600;
 }
 
 .order-item img {
-    max-height: 80px;
+    max-height: 100px;
+    padding: 2px;
 }
 
+.account-profile-container {
+    border: 2px solid var(--darkgreen);
+    width: 40%;
+}
 
 
 
