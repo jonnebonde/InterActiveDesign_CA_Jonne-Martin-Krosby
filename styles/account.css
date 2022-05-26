@@ -121,11 +121,8 @@
 }
 
 .account-info {
-    
+    background-color: var(--white);
 }
-
-
-
 
 
 @media screen and (max-width: 600px) {
