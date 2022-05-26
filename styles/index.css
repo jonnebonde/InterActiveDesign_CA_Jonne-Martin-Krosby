@@ -134,11 +134,6 @@ header {
     cursor: pointer;
 }
 
-.account-link a {
-    color: var(--darkgreen);
-    font-size: 26px;
-}
-
 .account-link a:hover {
     border-bottom: 2px solid var(--darkgreen);
 }
