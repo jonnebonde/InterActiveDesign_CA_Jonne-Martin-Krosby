@@ -1,7 +1,15 @@
-.account-header {
+.account-background {
+    background-image: url("../images/account_img.jpg");
+}
+
+.account-main {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    flex-direction: column;
+}
+
+.account-header {
+    padding: 20px;
 }
 
 .account-form-container {
@@ -11,13 +19,25 @@
     gap: 20px;
     padding: 20px;
     border: 2px solid var(--darkgreen);
-    max-width: 500px;
-
+    background-color: var(--white);
+    width: 500px;
 }
 
 .signup-container,
 .login-container {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-container label,
+.login-container label {
+    margin-top: 25px ;
+}
+
+.signup-container input,
+.login-container input {
+    padding: 10px ;
 }
 
 
@@ -37,18 +57,90 @@
     display: none;
 }
 
-
-#account-signup {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+#account-signup,
 #account-login {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    width: 300px;
+}
+
+#submit-signup {
+    margin-top: 30px;
+    background-color: var(--darkgreen);
+    color: var(--white);
+    font-size: 1.2rem;
+    border: 2px solid var(--darkgreen);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
 .account-info {
     display: none;
+}
+
+.toggle-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    border-top: 2px solid var(--darkgreen);
+    width: 100%;
+}
+
+.toggle-form p {
+    margin: 10px;
+    font-size: 1.1rem
+}
+
+.toggle-form button {
+    background-color: var(--white);
+    color: var(--darkgreen);
+    font-size: 1.2rem;
+    border: 2px solid var(--darkgreen);
+    width: 300px;
+    padding: 10px;
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+#submit-signup:hover {
+    background-color: var(--white);
+    color: var(--darkgreen);
+    transition: 250ms ease-in-out;
+    border: 2px solid var(--darkgreen);
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
+}
+
+.toggle-form button:hover {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.account-info {
+    
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .account-form-container {
+        width: 100%;
+    }
+
+    #account-signup,
+    #account-login {
+    width: 90%;
+    }
+
+    .toggle-form button {
+        max-width: 100%;
+    }
+
 }
