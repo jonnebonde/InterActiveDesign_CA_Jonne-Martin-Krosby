@@ -111,7 +111,7 @@ header {
 }
 
 .cart-stats span:hover {
-    border-bottom: 2px solid var(--darkgreen) ;
+    border-bottom: 2px solid var(--darkgreen);
 }
 
 #search,
@@ -201,7 +201,7 @@ header {
 
 .quotes-container p {
     text-align: center;
-    font-family: "quote";  
+    font-family: "quote";
     font-size: 1.1rem;
 }
 
@@ -227,7 +227,7 @@ header {
 #subscribe-container {
     width: 230px;
     text-align: center;
-    
+
 }
 
 .submit-input-container {
@@ -238,7 +238,7 @@ header {
 #submit-subscribe {
     background-color: var(--darkgreen);
     color: var(--white);
-    border: 2px solid var(--white) ;
+    border: 2px solid var(--white);
     height: 35px;
     width: 40%;
     transition: 250ms ease-in-out;

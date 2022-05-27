@@ -19,7 +19,7 @@
 html {
     height: 100%;
     box-sizing: inherit;
-    font-family: Helvetica, Arial,  sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -71,5 +71,3 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-

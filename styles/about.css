@@ -1,8 +1,6 @@
-
 .about-background {
     background-image: url(../images/about_main_img.jpg);
 }
-
 
 .about-heading {
     text-align: center;
@@ -30,7 +28,6 @@
     min-width: 240px;
     margin: 20px 0;
     background-color: var(--white);
-    
 }
 
 .about_section1 h1,
@@ -39,7 +36,6 @@
     font-size: 2rem;
     text-align: center;
     padding: 10px;
-    
 }
 
 .about_section1 p,
@@ -47,4 +43,3 @@
     color: var(--darkgreen);
     padding: 10px;
 }
-
