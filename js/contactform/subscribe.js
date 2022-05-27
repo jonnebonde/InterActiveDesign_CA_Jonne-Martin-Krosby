@@ -11,11 +11,11 @@ function validateSubscribe(event) {
 
     const subscribeEmail = validateSubscribeEmail(subscribeInput.value);
 
-    if(subscribeEmail) {
+    if (subscribeEmail) {
         subscribeError.textContent = "Thanks for your subscription";
         subscribeError.style.color = "#7C9A3C";
         subscribeError.style.backgroundColor = "#ffff";
-        setTimeout(function() {
+        setTimeout(function () {
             subscribeError.textContent = "Sign up for our newsletter";
             subscribeError.style.color = "#ffff";
             subscribeError.style.backgroundColor = "#0A3641";
@@ -24,7 +24,7 @@ function validateSubscribe(event) {
         subscribeError.textContent = "Not a valid email";
         subscribeError.style.color = "red";
         subscribeError.style.backgroundColor = "white";
-        setTimeout(function() {
+        setTimeout(function () {
             subscribeError.textContent = "Sign up for our newsletter";
             subscribeError.style.color = "#ffff";
             subscribeError.style.backgroundColor = "#0A3641";

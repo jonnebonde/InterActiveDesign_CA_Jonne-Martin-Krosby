@@ -21,45 +21,45 @@ let successMessage = false;
 
 function validateInputs(event) {
     event.preventDefault();
-    
+
 
     const name = checkLength(nameInput.value, 0);
     const subject = checkValue(subjectInput.value);
     const email = validateEmail(emailInput.value);
     const writeToUs = checkLength(writeInput.value, 10);
-    
-    
+
+
     console.log(subjectInput.value)
 
-    if(name) {
+    if (name) {
         nameError.style.display = "none";
-        nameValid.style.color = "green";   
+        nameValid.style.color = "green";
     } else {
         nameError.style.display = "block";
-        nameValid.style.color = "black"; 
+        nameValid.style.color = "black";
     }
 
-    if(subject) {
+    if (subject) {
         subjectError.style.display = "none";
-        subjectValid.style.color = "green";   
+        subjectValid.style.color = "green";
     } else {
         subjectError.style.display = "block";
-        subjectValid.style.color = "black";  
+        subjectValid.style.color = "black";
     }
 
-    if(email) {
+    if (email) {
         emailError.style.display = "none";
-        emailValid.style.color = "green";  
+        emailValid.style.color = "green";
     } else {
         emailError.style.display = "block";
         emailValid.style.color = "black";
     }
 
-    if(writeToUs) {
+    if (writeToUs) {
         writeError.style.display = "none";
-        writeValid.style.color = "green";   
+        writeValid.style.color = "green";
     } else {
-        writeError.style.display = "block";    
+        writeError.style.display = "block";
         writeValid.style.color = "black";
     }
 
@@ -67,7 +67,7 @@ function validateInputs(event) {
         successMessage = true;
         formSubmitSuccesfull(successMessage);
     }
-    
+
 }
 
 form.addEventListener("submit", validateInputs);
@@ -77,11 +77,11 @@ form.addEventListener("submit", validateInputs);
 function checkLength(value, len) {
     if (value.trim().length > len) {
         return true;
-    } 
+    }
 }
 
 function checkValue(value) {
-    if(!value) {
+    if (!value) {
         return false
     } else {
         return true
@@ -95,13 +95,13 @@ function validateEmail(email) {
 }
 
 function formSubmitSuccesfull(e) {
-    if(e) {
+    if (e) {
         formSuccess.style.display = "block"
         formSuccess.innerHTML = `<div>Thank u ${nameInput.value}</div>
                                 <div>We will contact u within 24 hours</div>
                                 <div>on ${emailInput.value}</div>`;
     } else {
-        formSuccess.style.visibility="hidden";
+        formSuccess.style.visibility = "hidden";
         formSuccess.innerHTML = "";
     }
 }

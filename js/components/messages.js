@@ -10,25 +10,25 @@ function messageAddedToCart(itemToShow) {
 
     console.log(itemToShow.name)
     const addedToCartMessage = `${itemToShow.name} has been added to cart`;
-    if(messageContainer.style.display === "none") {
+    if (messageContainer.style.display === "none") {
         messageContainer.style.display = "block";
         messageContainer.style.backgroundColor = "#7C9A3C";
         messages.innerHTML = addedToCartMessage;
         messageLink.innerHTML = viewCartNow;
-        setTimeout(function() {
+        setTimeout(function () {
             messageContainer.style.display = "none";
         }, 4000)
-    }    
+    }
 }
 
 function messageChooseSize() {
 
-    if(messageContainer.style.display === "none") {
+    if (messageContainer.style.display === "none") {
         messageContainer.style.display = "block";
         messageContainer.style.backgroundColor = "#D96C75";
         messages.innerHTML = `Please choose a size`;
-        setTimeout(function() {
+        setTimeout(function () {
             messageContainer.style.display = "none";
         }, 3000)
-    }    
+    }
 }

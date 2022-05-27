@@ -8,21 +8,21 @@ const hideCart = document.querySelector(".cart-container");
 
 
 function showCart() {
-    if(cartArray.length === 0) {
+    if (cartArray.length === 0) {
         emptyCartHtml()
     } else {
-    hideCart.style.display = "flex"
-    emptyCartMessage.innerHTML = ""
-    cartList.innerHTML = "";
-    let total = 0;
-    cartItems.forEach(function(cartElement) {
-        total += cartElement.price * cartElement.quantity;
-        
-        CreateCartHtml(cartElement)
-    })
-    totalContainer.innerHTML = `Total: ${total}`
+        hideCart.style.display = "flex"
+        emptyCartMessage.innerHTML = ""
+        cartList.innerHTML = "";
+        let total = 0;
+        cartItems.forEach(function (cartElement) {
+            total += cartElement.price * cartElement.quantity;
+
+            CreateCartHtml(cartElement)
+        })
+        totalContainer.innerHTML = `Total: ${total}`
     }
-    
+
 }
 showCart()
 
@@ -30,9 +30,9 @@ showCart()
 function emptyCartHtml() {
 
     hideCart.style.display = "none"
-    
-    emptyCartMessage.innerHTML = 
-    `<span>Your cart is empty</span>
+
+    emptyCartMessage.innerHTML =
+        `<span>Your cart is empty</span>
     <a href="shop.html">Go back to shop</a>`
 }
 
@@ -70,13 +70,13 @@ function CreateCartHtml(cartElement) {
     const deleteItemFromCart = document.querySelectorAll(".delete-item-btn i");
 
 
-    
+
     //click event for the + quantity button.
-    increaseQuantity.forEach(function(plusButton){
-        plusButton.onclick = function() {
-            cartArray.forEach(function(){ 
+    increaseQuantity.forEach(function (plusButton) {
+        plusButton.onclick = function () {
+            cartArray.forEach(function () {
             })
-            
+
             increaseQuantityCart()
             cartQuantityTotal()
         }
@@ -84,11 +84,11 @@ function CreateCartHtml(cartElement) {
 
 
     //click event for the - quantity button.
-    decreaseQuantity.forEach(function(minusButton){
-        minusButton.onclick = function() {
-            cartArray.forEach(function(){ 
+    decreaseQuantity.forEach(function (minusButton) {
+        minusButton.onclick = function () {
+            cartArray.forEach(function () {
             })
-            
+
             decreaseQuantityCart()
             cartQuantityTotal()
         }
@@ -96,9 +96,9 @@ function CreateCartHtml(cartElement) {
 
 
     //click event for the delete item button
-    deleteItemFromCart.forEach(function(deleteButton){
-        deleteButton.onclick = function() {
-            cartArray.forEach(function(){ 
+    deleteItemFromCart.forEach(function (deleteButton) {
+        deleteButton.onclick = function () {
+            cartArray.forEach(function () {
             })
             removeFromCart()
         }
@@ -112,15 +112,15 @@ function removeFromCart() {
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
 
     console.log(duplicateId)
-    if(duplicateId !== -1) {
+    if (duplicateId !== -1) {
         console.log(duplicateId)
-        cartArray.splice(duplicateId ,1);
+        cartArray.splice(duplicateId, 1);
         updateCart(cartArray)
         showCart(cartArray)
         location.reload()
-    } 
+    }
 
-} 
+}
 
 
 //add to cart function that checks the content of array, if duplicate add quantity.
@@ -128,27 +128,27 @@ function increaseQuantityCart() {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
 
-    if(duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
         showCart(cartArray);
     } else {
         //AddToCart()
     }
-}  
+}
 
 
 //Function to decrement quantity of products in the cart.
 function decreaseQuantityCart() {
-    
+
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
-    
-    if(duplicateId !== -1 && cartArray[duplicateId].quantity !== 1) {
+
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 1) {
         console.log(cartArray[duplicateId].quantity)
         cartArray[duplicateId].quantity--;
         updateCart(cartArray);
         showCart(cartArray);
-        
+
     } else {
         alert("Press the delete item button to remove it from your cart")
         console.log("deleting item")

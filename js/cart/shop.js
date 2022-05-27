@@ -8,19 +8,19 @@ const backgroundImgShop = document.querySelector(".background-image-shop");
 
 
 // filterfunction to sort products by gender
-let filteredProductArray = productArray.filter(function(sortedArray) {
-return sortedArray.gender === details;
+let filteredProductArray = productArray.filter(function (sortedArray) {
+    return sortedArray.gender === details;
 });
 
 
 //if filterfunction has no value(null) all products are shown
 function productArrayHTML() {
 
-    if(details) {
+    if (details) {
         sortedProductsHTML()
     } else {
         allProductsHTML()
-        }
+    }
 }
 productArrayHTML()
 
@@ -37,13 +37,13 @@ sizeToggle.addEventListener("click", () => {
     sizeList.classList.toggle("active")
 })
 
-sizeListClose.forEach(function(sizeMenu){
-    sizeMenu.onclick = function() {
+sizeListClose.forEach(function (sizeMenu) {
+    sizeMenu.onclick = function () {
         sizeList.classList.remove("active")
     }
 })
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (!sizeContainer.contains(e.target)) {
         sizeList.classList.remove("active")
     }
@@ -61,13 +61,13 @@ colorToggle.addEventListener("click", () => {
     colorList.classList.toggle("active")
 })
 
-colorListClose.forEach(function(colorMenu){
-    colorMenu.onclick = function() {
+colorListClose.forEach(function (colorMenu) {
+    colorMenu.onclick = function () {
         colorList.classList.remove("active")
     }
 })
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (!colorContainer.contains(e.target)) {
         colorList.classList.remove("active")
     }
@@ -85,13 +85,13 @@ activityToggle.addEventListener("click", () => {
     activityList.classList.toggle("active")
 })
 
-activityListClose.forEach(function(activityMenu){
-    activityMenu.onclick = function() {
+activityListClose.forEach(function (activityMenu) {
+    activityMenu.onclick = function () {
         activityList.classList.remove("active")
     }
 })
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (!activityContainer.contains(e.target)) {
         activityList.classList.remove("active")
     }
@@ -109,13 +109,13 @@ sortbyToggle.addEventListener("click", () => {
     sortbyList.classList.toggle("active")
 })
 
-sortbyListClose.forEach(function(sortbyMenu){
-    sortbyMenu.onclick = function() {
+sortbyListClose.forEach(function (sortbyMenu) {
+    sortbyMenu.onclick = function () {
         sortbyList.classList.remove("active")
     }
 })
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (!sortbyContainer.contains(e.target)) {
         sortbyList.classList.remove("active")
     }
@@ -125,8 +125,8 @@ document.addEventListener("click", function(e) {
 //change background according to gender or no gender choosen from landingpage
 
 function changeBackground() {
-    
-    if((details === "man") || (details === "woman") || (!details)) {
+
+    if ((details === "man") || (details === "woman") || (!details)) {
 
         if (details === "man") {
             backgroundImgShop.style.backgroundImage = "url('./images/men_img.jpg')"
@@ -138,7 +138,7 @@ function changeBackground() {
             backgroundImgShop.setAttribute("aria-label", "picture of a woman on a mountain")
         }
 
-        if(!details ) {
+        if (!details) {
             backgroundImgShop.style.backgroundImage = "url('./images/main_img.jpg')"
             backgroundImgShop.setAttribute("aria-label", "picture of a man on a mountain")
         }
@@ -155,11 +155,11 @@ function toggleActiveLink() {
     const womanActive = document.querySelector(".woman");
 
 
-    if(details === "man") {
+    if (details === "man") {
         manActive.classList.add("active");
     }
-    
-    if(details === "woman") {
+
+    if (details === "woman") {
         womanActive.classList.add("active");
     }
 }
@@ -185,7 +185,7 @@ filterCloseMenu.addEventListener("click", () => {
 })
 
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (!filterContainer.contains(e.target)) {
         filterSideMenu.classList.remove("active")
         filterCloseMenu.classList.remove("active");
@@ -194,7 +194,7 @@ document.addEventListener("click", function(e) {
 
 
 function sortedProductsHTML() {
-    filteredProductArray.forEach(function(product){
+    filteredProductArray.forEach(function (product) {
         createProductHtml(product)
     });
 }
@@ -203,10 +203,10 @@ function allProductsHTML() {
 
 
     let shuffledShop = productArray.sort(() => 0.5 - Math.random());
-    
+
     console.log()
 
-    shuffledShop.forEach(function(product){
+    shuffledShop.forEach(function (product) {
         createProductHtml(product)
     });
 }
@@ -214,8 +214,8 @@ function allProductsHTML() {
 
 function createProductHtml(product) {
 
-    productsContainer.innerHTML += 
-            `<div class="product" >
+    productsContainer.innerHTML +=
+        `<div class="product" >
             <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <h2>${product.name}</h2>
             </a>

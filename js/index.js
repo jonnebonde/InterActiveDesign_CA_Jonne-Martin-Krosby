@@ -8,7 +8,7 @@ function cartQuantityTotal() {
     console.log()
     let cartItemsQuantity = 0;
     let total = 0;
-    for(let i = 0; i < cartArray.length; i++) {
+    for (let i = 0; i < cartArray.length; i++) {
         total += cartArray[i].price * cartArray[i].quantity;
         cartItemsQuantity += cartArray[i].quantity;
         numberOfItemsInCart.innerHTML = `<div class="cart-stats">
@@ -26,7 +26,7 @@ const searchToggleBtn = document.querySelector(".submit-btn");
 
 searchToggleBtn.addEventListener("click", () => {
     searchInput.classList.toggle("active")
-} )
+})
 
 
 // click event for hamburger menu
@@ -46,7 +46,7 @@ hideMenu.addEventListener("click", () => {
     navMenu.classList.remove("active");
 })
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (!navContainer.contains(e.target)) {
         navMenu.classList.remove("active")
     }

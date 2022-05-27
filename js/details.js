@@ -16,8 +16,8 @@ pageTitle()
 
 
 function detailsHtml() {
-    productDetails.innerHTML = 
-    `<div class="details">
+    productDetails.innerHTML =
+        `<div class="details">
             <div>
                 <img src="${itemToShow.big_image}" aria-label="${itemToShow.name}" class="details-product-image">
             </div>
@@ -49,7 +49,7 @@ detailsHtml()
 
 const button = document.querySelector(".details-product-button");
 
-button.onclick = function() {
+button.onclick = function () {
     sizeFormActions()
 }
 
@@ -60,11 +60,11 @@ function sizeFormActions() {
     let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
 
 
-    if(selectedSize) {
+    if (selectedSize) {
         console.log(selectedSize)
         increaseQuantityCart()
         cartQuantityTotal()
-        
+
     } else {
         console.log("hi")
         messageChooseSize()
@@ -88,7 +88,7 @@ function increaseQuantityCart() {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
 
-    if(duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
         messageAddedToCart(itemToShow)
@@ -101,5 +101,5 @@ function increaseQuantityCart() {
 //updates items in cart/ local storage
 function updateCart() {
     localStorage.setItem("cartList", JSON.stringify(cartArray))
-    
+
 };

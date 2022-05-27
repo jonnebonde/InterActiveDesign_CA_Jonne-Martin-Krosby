@@ -219,5 +219,5 @@ export const productArray = [
         quantity: 1,
         gender: "woman",
     },
-    
+
 ];

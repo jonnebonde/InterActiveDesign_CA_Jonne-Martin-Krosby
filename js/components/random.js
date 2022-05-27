@@ -8,12 +8,12 @@ let selected = shuffled.slice(0, 6);
 
 
 
-    const popularProductsContainer = document.querySelector(".random-products-container")
+const popularProductsContainer = document.querySelector(".random-products-container")
 
-selected.forEach(function(random) {
+selected.forEach(function (random) {
 
     popularProductsContainer.innerHTML +=
-    `
+        `
     <div class="random-product" >
     <a href="details.html?id=${random.id}&name=${random.name}&gender=${random.gender}" data-product="${random.id}">
         <h3>${random.name}</h3>
