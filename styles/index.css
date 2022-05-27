@@ -232,7 +232,19 @@ header {
 }
 
 #submit-subscribe {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    border: 2px solid var(--white) ;
+    height: 35px;
     width: 40%;
+    transition: 250ms ease-in-out;
+}
+
+#submit-subscribe:hover {
+    background-color: var(--white);
+    color: var(--darkgreen);
+    border: 2px solid var(--darkgreen);
+    transition: 250ms ease-in-out;
 }
 
 .socialmedia_icons {

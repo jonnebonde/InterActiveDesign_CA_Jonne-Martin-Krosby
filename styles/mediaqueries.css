@@ -202,6 +202,11 @@
         flex-direction: column-reverse;
     }
 
+    .cart-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
     .cart-container {
         width: 90%;
         margin: 0 auto;

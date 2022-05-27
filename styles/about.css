@@ -21,7 +21,7 @@
 
 .about_section1,
 .about_section2 {
-  
+    border: 2px solid var(--darkgreen);
     padding: 10px;
     display: flex;
     flex-direction: column;
