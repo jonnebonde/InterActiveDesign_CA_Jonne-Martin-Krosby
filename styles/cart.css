@@ -9,6 +9,37 @@
     margin: 0 auto;
 }
 
+.empty-cart-msg {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--white);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.empty-cart-msg span {
+    font-size: 1.3rem;
+}
+
+.empty-cart-msg a {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--darkgreen);
+    color: var(--white);
+    text-decoration: none;
+    width: 200px;
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
+}
+
+.empty-cart-msg a:hover {
+    background-color: var(--white);
+    color: var(--darkgreen);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
 .cart-container {
     display: flex;
     flex-direction: column;
