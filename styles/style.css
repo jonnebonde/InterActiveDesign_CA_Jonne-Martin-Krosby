@@ -37,6 +37,7 @@ body {
 
 main {
     max-width: 2560px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -62,6 +63,7 @@ footer {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: auto;
     min-height: 100vh;
+    width: 100%;
 }
 
 .background {

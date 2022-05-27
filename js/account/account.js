@@ -169,7 +169,6 @@ function checkAccountStatus() {
     if(accountStatus) {
         formPage.style.display = "none";
         accountPage.style.display = "flex";
-        accountMain.classList.remove("account-main");    
     }
 
     if(!accountStatus) {

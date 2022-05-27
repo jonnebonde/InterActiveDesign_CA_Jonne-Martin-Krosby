@@ -60,7 +60,7 @@ function CreateCartHtml(cartElement) {
                 <button class="minus-btn" ><i class="fa-solid fa-minus" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-total">
-                <span>${cartElement.price * cartElement.quantity} £</span>
+                <span>${cartElement.price * cartElement.quantity}</span>
             </div>
             
         </div>`

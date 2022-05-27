@@ -6,7 +6,6 @@
 
 }
 
-
 @media screen and (max-width: 800px) {
     
     .credibility {
@@ -276,8 +275,48 @@
         padding: 5px;
     }
 
+    .cart-container {
+        width: 100%;
+        padding: 2px;
+    }
+
     .cart-link span{
         font-size: 0.8rem;
+    }
+
+    .cart-item {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 1%;
+    }
+
+    .cart-cta-container {
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .cart-cta-container button {
+        width: 100px;
+    }
+    
+    .cart-quantity button,
+    .cart-delete-item button {
+    height: 20px;
+    width: 20px;
+    font-size: 0.6rem;
+    }
+
+    .cart-image img {
+        max-width: 40px;
+    }
+
+    .cart-name p {
+        display: none;
+    }
+
+    .cart-name h2 {
+        font-size: 0.7rem;
     }
 
     .contact-info a,
@@ -308,6 +347,11 @@
     .shop-title h1{
         font-size: 1.1rem;
     }
+
+    .cart-image img {
+        max-width: 10px;
+    }
+
 
     .shop-cta a,
     .shop-cta-shop a {
