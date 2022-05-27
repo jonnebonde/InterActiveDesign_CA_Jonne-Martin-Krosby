@@ -27,13 +27,11 @@ header {
 
 .mainlogo {
     display: block;
-
 }
 
 .mainlogo_img {
     max-width: 140px;
 }
-
 
 .hamburger {
     display: none;
@@ -69,7 +67,7 @@ header {
 #search.active {
     display: inline;
     position: absolute;
-    right: 200px;
+    right: 160px;
 }
 
 .nav-menu li {
@@ -84,8 +82,7 @@ header {
     font-weight: var(--bold);
 }
 
-.nav-menu a:hover,
-.submit-btn:hover {
+.nav-menu a:hover {
     transition: 50ms linear;
     border-bottom: solid 2px var(--darkgreen);
 }
@@ -100,13 +97,21 @@ header {
 .cart-link a {
     text-decoration: none;
     color: var(--darkgreen);
-    font-size: 1rem;
+    font-size: 25px;
     font-weight: var(--bold);
     transition: 50ms linear;
 }
 
 .cart-link a:hover {
-    text-decoration: underline 2px var(--darkgreen);
+    border-bottom: 2px solid var(--darkgreen);
+}
+
+.cart-stats span {
+    font-size: 25px;
+}
+
+.cart-stats span:hover {
+    border-bottom: 2px solid var(--darkgreen) ;
 }
 
 #search,
@@ -118,25 +123,24 @@ header {
     transition: 50ms linear;
 }
 
-.submit-btn {
+.search-input button {
     color: var(--darkgreen);
     background-color: var(--white);
-    border: none;
-    height: 30px;
-    width: 26px;
+    padding: 1px;
+    border: 2px solid var(--white);
 }
 
 .submit-btn i {
-    font-size: 26px ;
+    font-size: 25px;
 }
 
 .submit-btn:hover {
-    cursor: pointer;
+    border-bottom: 2px solid var(--darkgreen);
 }
 
 .account-link a {
     color: var(--darkgreen);
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .account-link a:hover {
