@@ -412,6 +412,10 @@
         flex: 1 1 10px;
     }
 
+    .about-container img {
+        max-width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 300px) {

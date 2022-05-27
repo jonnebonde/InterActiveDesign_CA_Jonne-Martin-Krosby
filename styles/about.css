@@ -1,4 +1,9 @@
 
+.about-background {
+    background-image: url(../images/about_main_img.jpg);
+}
+
+
 .about-heading {
     text-align: center;
     padding: 10px;
@@ -10,19 +15,20 @@
     align-content: center;
     flex-wrap: wrap;
     margin: 5rem auto;
-    gap: 40px;
+    gap: 10%;
     width: 100%;
 }
 
 .about_section1,
 .about_section2 {
-    border: 2px solid var(--darkgreen);
+  
     padding: 10px;
     display: flex;
     flex-direction: column;
     flex: 1 1 600px;
     max-width: 600px;
     min-width: 240px;
+    margin: 20px 0;
     background-color: var(--white);
     
 }
