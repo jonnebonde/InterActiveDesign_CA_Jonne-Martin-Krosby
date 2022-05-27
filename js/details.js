@@ -26,7 +26,7 @@ function detailsHtml() {
             <h2>${itemToShow.name}</h2>
             <p>${itemToShow.long_description}</p>
             </div>
-            <div class="details-product-price"><strong>Price:</strong> ${itemToShow.price} £</div>
+            <div class="details-product-price"><strong>Price:</strong> ${itemToShow.price}</div>
             <div>
                 <label class="details-select-size-menu" for="select-size">Select Size
                     <select name="select-size" id="details-select-size" required="required">

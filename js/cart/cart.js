@@ -20,7 +20,7 @@ function showCart() {
         
         CreateCartHtml(cartElement)
     })
-    totalContainer.innerHTML = `Total: ${total} £`
+    totalContainer.innerHTML = `Total: ${total}`
     }
     
 }
@@ -51,7 +51,7 @@ function CreateCartHtml(cartElement) {
             <div class="cart-name">
                 <h2>${cartElement.name}</h2>
                 <p>${cartElement.description}</p>
-                <span>Price: ${cartElement.price} £</span>
+                <span>Price: ${cartElement.price}</span>
             </div>
             
             <div class="cart-quantity">

@@ -14,7 +14,7 @@ function checkout() {
             `<div class="checkout-info">
                 <span>${checkout.quantity}</span>
                 <span>${checkout.name}</span>
-                <span>${checkout.price * checkout.quantity} </span>
+                <span>${checkout.price * checkout.quantity}</span>
             </div>`
 
 

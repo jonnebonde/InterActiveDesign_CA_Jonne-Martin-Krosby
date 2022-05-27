@@ -203,7 +203,7 @@ myorders.forEach(function(myorder) {
         <a href="details.html?id=${myorder.id}&name=${myorder.name}&gender=${myorder.gender}" data-product="${myorder.id}">
         <img src="${myorder.image}">
         <span>${myorder.name}</span>
-        <span>${myorder.price} £</span>
+        <span>${myorder.price}</span>
         </a>
         </div>
     `

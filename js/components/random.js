@@ -22,7 +22,7 @@ selected.forEach(function(random) {
         <div style="background-image: url(${random.image})" aria-label="a ${random.gender} is wearing a ${random.name}" class="random-product-image"></div>
     </a>
              <span>${random.description}</span>
-            <span class="product-price">Price: ${random.price} £</span>
+            <span class="product-price">Price: ${random.price}</span>
            
             <a href="details.html?id=${random.id}&name=${random.name}" data-product="${random.id}" class="random-product-button">Details</a>
         </div>

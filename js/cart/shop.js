@@ -223,7 +223,7 @@ function createProductHtml(product) {
                 <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
             </a>
                 <span>${product.description}</span>
-                <span class="product-price">Price: ${product.price} £</span>
+                <span class="product-price">Price: ${product.price}</span>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
             </div>
             `
