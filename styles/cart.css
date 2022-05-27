@@ -113,9 +113,14 @@
 .cart-cta-container {
     display: flex;
     gap: 30px;
+    margin-top: 10px;
 }
 
 .cart-checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 180px;
     height: 40px;
     border: none;
