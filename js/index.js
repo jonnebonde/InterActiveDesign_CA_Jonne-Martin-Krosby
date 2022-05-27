@@ -29,6 +29,17 @@ searchToggleBtn.addEventListener("click", () => {
 })
 
 
+// Go back in history button
+
+const backButton = document.querySelectorAll(".back-button");
+
+backButton.forEach(function (back) {
+  back.addEventListener("click", () => {
+    history.back();
+  });
+});
+
+
 // click event for hamburger menu
 const toggleButton = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -51,22 +62,3 @@ document.addEventListener("click", function (e) {
         navMenu.classList.remove("active")
     }
 });
-
-
-// Go back in history button
-
-const backButton = document.querySelectorAll(".back-button");
-
-backButton.forEach(function (back) {
-  back.addEventListener("click", () => {
-    history.back();
-  });
-});
-
-
-
-
-
-
-
-
