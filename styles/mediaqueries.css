@@ -4,10 +4,14 @@
         max-width: 80px;
     }
 
+    .account-info-container {
+        padding: 20px;
+        width: 700px;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    
+
     .credibility {
         display: none;
     }
@@ -20,24 +24,24 @@
         display: block;
         width: auto;
     }
-    
+
     .hamburger {
         display: block;
     }
 
-    .hamburger.active .bar:nth-child(2){
+    .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(1){
+    .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3){
+    .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .nav-menu{
+    .nav-menu {
         position: absolute;
         display: none;
         right: -100%;
@@ -49,8 +53,8 @@
         transition: 0.4s ease-in-out;
     }
 
-    .nav-menu ul{
-        flex-direction: column;       
+    .nav-menu ul {
+        flex-direction: column;
     }
 
     .nav-menu input {
@@ -83,7 +87,7 @@
 
     .shop-cta,
     .shop-cta-shop {
-    gap: 30px;
+        gap: 30px;
     }
 
     .filter-main-container {
@@ -125,7 +129,7 @@
     }
 
     .products,
-    .random-products-container{
+    .random-products-container {
         max-width: 1000px;
         margin: 30px auto;
         gap: 20px;
@@ -155,7 +159,7 @@
         margin: 0 auto;
     }
 
-    .about-container img{
+    .about-container img {
         height: fit-content;
     }
 
@@ -172,12 +176,12 @@
 
     .about_section1 h1,
     .about_section2 h1 {
-    font-size: 1.3rem;
+        font-size: 1.3rem;
     }
 
     .about_section1 p,
     .about_section2 p {
-    font-size: 0.8rem;
+        font-size: 0.8rem;
     }
 
     .contact-footer {
@@ -192,7 +196,7 @@
         max-height: fit-content;
         border: none;
     }
-    
+
     .details-info {
         padding: 0px 30px;
         flex-direction: column-reverse;
@@ -228,24 +232,73 @@
         flex-direction: column;
     }
 
-    .checkout-year{
+    .checkout-year {
         display: flex;
         flex-direction: column;
+    }
+
+
+    .account-info-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .account-info-container {
+        width: 80%;
+    }
+
+    .account-info-container h2 {
+        font-size: 1rem;
+    }
+
+    .profile-form-container label {
+        font-size: 0.8rem;
+    }
+
+    .account-profile-container {
+        border: none;
+        padding-left: 5px;
+        width: 100%;
+    }
+
+    .account-info-details {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        gap: 50px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .account-orders-container {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        width: 100%;
+    }
+
+    .order-item a {
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .order-item img {
+        max-height: 50px;
+        padding: 2px;
     }
 
 }
 
 @media screen and (max-width: 600px) {
-    
-    .main_img h1{
+
+    .main_img h1 {
         margin: 1.5rem 1rem;
         font-size: 1.4rem;
     }
-    
+
     h2 {
         font-size: 1rem;
     }
-    
+
     .quotes-container {
         flex-direction: column;
         gap: 20px;
@@ -265,7 +318,26 @@
         margin: auto 20px;
     }
 
-    
+    .account-header {
+        padding: 10px;
+    }
+
+    .account-form-container {
+        width: 90%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #account-signup,
+    #account-login {
+        width: 80%;
+    }
+
+    .toggle-form button {
+        max-width: 90%;
+    }
+
+
 
 }
 
@@ -280,7 +352,7 @@
         padding: 2px;
     }
 
-    .cart-link span{
+    .cart-link span {
         font-size: 0.8rem;
     }
 
@@ -299,12 +371,12 @@
     .cart-cta-container button {
         width: 100px;
     }
-    
+
     .cart-quantity button,
     .cart-delete-item button {
-    height: 20px;
-    width: 20px;
-    font-size: 0.6rem;
+        height: 20px;
+        width: 20px;
+        font-size: 0.6rem;
     }
 
     .cart-image img {
@@ -328,7 +400,7 @@
         font-size: 1.1rem;
     }
 
-    .shop-title h1{
+    .shop-title h1 {
         font-size: 1.5rem;
     }
 
@@ -339,12 +411,12 @@
         display: flex;
         flex: 1 1 10px;
     }
-    
+
 }
 
 @media screen and (max-width: 300px) {
 
-    .shop-title h1{
+    .shop-title h1 {
         font-size: 1.1rem;
     }
 
