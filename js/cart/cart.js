@@ -1,6 +1,7 @@
 const cartList = document.querySelector(".cart-list");
 const cartContainer = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
+
 const deleteCart = document.querySelector(".delete-cart");
 const emptyCartMessage = document.querySelector(".empty-cart-msg");
 const hideCart = document.querySelector(".cart-container");
@@ -12,6 +13,7 @@ function showCart() {
         emptyCartHtml()
     } else {
         hideCart.style.display = "flex"
+        emptyCartMessage.style.display = "none"
         emptyCartMessage.innerHTML = ""
         cartList.innerHTML = "";
         let total = 0;
