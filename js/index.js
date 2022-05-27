@@ -53,6 +53,19 @@ document.addEventListener("click", function (e) {
 });
 
 
+// Go back in history button
+
+const backButton = document.querySelectorAll(".back-button");
+
+backButton.forEach(function (back) {
+  back.addEventListener("click", () => {
+    history.back();
+  });
+});
+
+
+
+
 
 
 

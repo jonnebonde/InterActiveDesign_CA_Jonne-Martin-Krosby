@@ -22,6 +22,17 @@
     box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
 }
 
+.back-button {
+    margin: 10px 30px;
+}
+
+.back-button button {
+    padding: 5px;
+    background-color: var(--white);
+    border: 2px solid var(--darkgreen);
+    color: var(--darkgreen);
+}
+
 .filter-container-all {
     display: flex;
     justify-content: center;
