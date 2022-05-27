@@ -29,18 +29,18 @@ let account = accountStatus || []
 
 toggleFormButton.addEventListener("click", () => {
     signUpContainer.classList.toggle("active");
-    loginContainer.classList.toggle("active")
+    loginContainer.classList.toggle("active");
 
 
-    if(signUpContainer.classList.contains("active")) {
+    if (signUpContainer.classList.contains("active")) {
         toggleFormButton.innerText = "Login";
         toggleFormText.innerText = "Have an account already?";
     } else {
         toggleFormButton.innerText = "Sign Up";
-        toggleFormText.innerText = "Dont have a account yet?"
-    } 
-    
-}) 
+        toggleFormText.innerText = "Dont have a account yet?";
+    }
+
+})
 
 
 //validate signup form
@@ -49,46 +49,45 @@ function validateSignUp(event) {
 
     const email = validateEmail(emailInput.value);
     const password = checkLength(passwordInput.value, 7);
-    const confirmPassword = comparePasswords(passwordInput.value, confirmPasswordInput.value)
+    const confirmPassword = comparePasswords(passwordInput.value, confirmPasswordInput.value);
 
 
-    if(email) {
+    if (email) {
         emailError.style.display = "none";
-        emailValid.style.color = "green";  
+        emailValid.style.color = "green";
     } else {
         emailError.style.display = "block";
         emailValid.style.color = "black";
     }
 
-    if(password) {
+    if (password) {
         passwordError.style.display = "none";
-        passwordValid.style.color = "green";  
+        passwordValid.style.color = "green";
     } else {
         passwordError.style.display = "block";
         passwordValid.style.color = "black";
     }
 
-    if(confirmPassword) {
+    if (confirmPassword) {
         confirmPasswordError.style.display = "none";
-        confirmPasswordValid.style.color = "green";  
+        confirmPasswordValid.style.color = "green";
     } else {
         confirmPasswordError.style.display = "block";
         confirmPasswordValid.style.color = "black";
     }
 
-    if(email && password && confirmPassword) {
-        console.log("success")
-        account.push("logged in")
-        localStorage.setItem("account", JSON.stringify(account))
-        formPage.style.display = "none"
-        accountPage.style.display = "flex"
-        location.reload()
-        
+    if (email && password && confirmPassword) {
+        account.push("logged in");
+        localStorage.setItem("account", JSON.stringify(account));
+        formPage.style.display = "none";
+        accountPage.style.display = "flex";
+        location.reload();
+
     }
 
 }
 
-accountSignUp.addEventListener("submit", validateSignUp)
+accountSignUp.addEventListener("submit", validateSignUp);
 
 
 //validate login form
@@ -107,39 +106,39 @@ function validateLogin(event) {
     const loginEmail = validateEmail(loginEmailInput.value);
     const loginPassword = checkLength(loginPasswordInput.value, 7);
 
-    if(loginEmail) {
+    if (loginEmail) {
         loginEmailError.style.display = "none";
-        loginEmailValid.style.color = "green";  
+        loginEmailValid.style.color = "green";
     } else {
         loginEmailError.style.display = "block";
         loginEmailValid.style.color = "black";
     }
 
-    if(loginPassword) {
+    if (loginPassword) {
         loginPasswordError.style.display = "none";
-        loginPasswordValid.style.color = "green";  
+        loginPasswordValid.style.color = "green";
     } else {
         loginPasswordError.style.display = "block";
         loginPasswordValid.style.color = "black";
     }
 
-    if(loginEmail && loginPassword) {
-        account.push("logged in")
-        localStorage.setItem("account", JSON.stringify(account))
-        formPage.style.display = "none"
-        accountPage.style.display = "flex"
-        location.reload()
+    if (loginEmail && loginPassword) {
+        account.push("logged in");
+        localStorage.setItem("account", JSON.stringify(account));
+        formPage.style.display = "none";
+        accountPage.style.display = "flex";
+        location.reload();
     }
 
 }
 
-accountLogin.addEventListener("submit", validateLogin)
+accountLogin.addEventListener("submit", validateLogin);
 
 
 // validation functions for forms
 function comparePasswords(value, value1) {
-    if(value === value1 && value1.length > 7) {
-        return true
+    if (value === value1 && value1.length > 7) {
+        return true;
     }
 }
 
@@ -154,7 +153,7 @@ function validateEmail(email) {
 function checkLength(value, len) {
     if (value.trim().length > len) {
         return true;
-    } 
+    }
 }
 
 // validate log status and actions accordingly
@@ -166,12 +165,12 @@ const accountMain = document.querySelector("main");
 
 
 function checkAccountStatus() {
-    if(accountStatus) {
+    if (accountStatus) {
         formPage.style.display = "none";
         accountPage.style.display = "flex";
     }
 
-    if(!accountStatus) {
+    if (!accountStatus) {
         formPage.style.display = "flex";
         accountPage.style.display = "none";
     }
@@ -185,17 +184,18 @@ function logOutOfAccount() {
     location.reload()
 }
 
-accountLogOut.addEventListener("click", logOutOfAccount)
+accountLogOut.addEventListener("click", logOutOfAccount);
 
 
 // Shuffle products on productArray
+
 let shuffled = productArray.sort(() => 0.5 - Math.random());
 
 const myordersList = document.querySelector(".account-orders");
 
 let myorders = shuffled.slice(0, 4);
 
-myorders.forEach(function(myorder) {
+myorders.forEach(function (myorder) {
 
     myordersList.innerHTML += `
         <div class="order-item">
@@ -207,8 +207,3 @@ myorders.forEach(function(myorder) {
         </div>
     `
 })
-
-
-console.log(productArray
-    
-    )

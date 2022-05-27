@@ -144,10 +144,6 @@
         max-width: 200px;
     }
 
-    .contact-footer {
-        position: relative;
-    }
-
     .contact-main {
         justify-content: space-between;
         flex-direction: column-reverse;
@@ -184,9 +180,6 @@
         font-size: 0.8rem;
     }
 
-    .contact-footer {
-        position: relative;
-    }
 
     .details {
         flex-direction: column;

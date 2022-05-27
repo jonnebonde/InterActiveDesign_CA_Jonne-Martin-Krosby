@@ -1,13 +1,11 @@
-
-
 // Checkout cart content loop, total counter and html
 const checkoutCart = document.querySelector(".checkout-items");
 const checkoutCartTotal = document.querySelector(".checkout-total");
 
-function checkout() {
+function checkoutCartItems() {
     let total = 0;
 
-    cartArray.forEach(function(checkout) {
+    cartArray.forEach(function (checkout) {
         total += checkout.price * checkout.quantity;
 
         checkoutCart.innerHTML +=
@@ -18,7 +16,7 @@ function checkout() {
             </div>`
 
 
-        checkoutCartTotal.innerHTML = 
+        checkoutCartTotal.innerHTML =
             `<div>
                 <span>Total</span>
                 <span>${total}</span>
@@ -26,7 +24,7 @@ function checkout() {
 
     })
 }
-checkout()
+checkoutCartItems()
 
 
 // click event for submit order button
@@ -93,81 +91,79 @@ function ValidateOrderInputs(event) {
     const expYear = checkLength(expYearInput.value, 1);
     const cvv = checkLength(cvvInput.value, 1);
 
-    let submitSucces = false;
-
-    if(cvv) {
+    if (cvv) {
         cvvError.style.display = "none";
-        cvvValid.style.color = "#7C9A3C";   
+        cvvValid.style.color = "#7C9A3C";
     } else {
         cvvError.style.display = "block";
-        cvvValid.style.color = "black"; 
+        cvvValid.style.color = "black";
     }
 
-    if(expYear) {
+    if (expYear) {
         expYearError.style.display = "none";
-        expYearValid.style.color = "#7C9A3C";   
+        expYearValid.style.color = "#7C9A3C";
     } else {
         expYearError.style.display = "block";
-        expYearValid.style.color = "black"; 
+        expYearValid.style.color = "black";
     }
 
-    if(expDate) {
+    if (expDate) {
         expDateError.style.display = "none";
-        expDateValid.style.color = "#7C9A3C";   
+        expDateValid.style.color = "#7C9A3C";
     } else {
         expDateError.style.display = "block";
-        expDateValid.style.color = "black"; 
+        expDateValid.style.color = "black";
     }
 
-    if(cardNumber) {
+    if (cardNumber) {
         cardNumberError.style.display = "none";
-        cardNumberValid.style.color = "#7C9A3C";   
+        cardNumberValid.style.color = "#7C9A3C";
     } else {
         cardNumberError.style.display = "block";
-        cardNumberValid.style.color = "black"; 
+        cardNumberValid.style.color = "black";
     }
 
-    if(cardName) {
+    if (cardName) {
         cardNameError.style.display = "none";
-        cardNameValid.style.color = "#7C9A3C";   
+        cardNameValid.style.color = "#7C9A3C";
     } else {
         cardNameError.style.display = "block";
-        cardNameValid.style.color = "black"; 
+        cardNameValid.style.color = "black";
     }
 
-    if(zip) {
+    if (zip) {
         zipError.style.display = "none";
-        zipValid.style.color = "#7C9A3C";   
+        zipValid.style.color = "#7C9A3C";
     } else {
         zipError.style.display = "block";
-        zipValid.style.color = "black"; 
+        zipValid.style.color = "black";
     }
 
-    if(county) {
+    if (county) {
         countyError.style.display = "none";
-        countyValid.style.color = "#7C9A3C";   
+        countyValid.style.color = "#7C9A3C";
     } else {
         countyError.style.display = "block";
-        countyValid.style.color = "black"; 
+        countyValid.style.color = "black";
     }
 
-    if(fullName) {
+    if (fullName) {
         nameError.style.display = "none";
-        fullNameValid.style.color = "#7C9A3C";   
+        fullNameValid.style.color = "#7C9A3C";
     } else {
         nameError.style.display = "block";
-        fullNameValid.style.color = "black"; 
+        fullNameValid.style.color = "black";
     }
 
-    if(email) {
+    if (email) {
         emailError.style.display = "none";
-        emailValid.style.color = "#7C9A3C";  
+        emailValid.style.color = "#7C9A3C";
     } else {
         emailError.style.display = "block";
         emailValid.style.color = "black";
     }
 
-    if(address) {
+    if (address) {
         addressError.style.display = "none";
         addressValid.style.color = "#7C9A3C";
     } else {
@@ -175,19 +171,18 @@ function ValidateOrderInputs(event) {
         addressValid.style.color = "black";
     }
 
-    if(city) {
+    if (city) {
         cityError.style.display = "none";
-        cityValid.style.color = "#7C9A3C";  
+        cityValid.style.color = "#7C9A3C";
     } else {
         cityError.style.display = "block";
         cityValid.style.color = "black";
     }
 
-    if(fullName && email && address &&city && county && zip && cardName && cardNumber && expDate && expYear && cvv) {
-        submitSucces = true;
-        submitOrderModalContent(submitSucces);
+    if (fullName && email && address && city && county && zip && cardName && cardNumber && expDate && expYear && cvv) {
+        submitOrderModalContent();
     }
-    
+
 }
 
 submitForm.addEventListener("submit", ValidateOrderInputs);
@@ -196,7 +191,7 @@ submitForm.addEventListener("submit", ValidateOrderInputs);
 function checkLength(value, len) {
     if (value.trim().length > len) {
         return true;
-    } 
+    }
 }
 
 
@@ -204,32 +199,28 @@ function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
     return patternMatches;
-} 
+}
 
 
 //modal event for submitted form
 
 const submitOrder = document.querySelector(".checkout-submit button");
 const submitModal = document.querySelector(".checkout-modal");
-const submitModalContent = document.querySelector(".checkout-modal-content")
+const submitModalContent = document.querySelector(".checkout-modal-content");
 const submitOrderForm = document.getElementById("checkout-form");
 
 
 function submitOrderModalContent() {
-    
+
     const footer = document.querySelector("footer");
     localStorage.removeItem("cartList");
     footer.style.display = "none";
 
     submitModal.style.display = "flex";
-    submitModalContent.innerHTML = 
-    `<h1>Thanks for your purchase</h1>
+    submitModalContent.innerHTML =
+        `<h1>Thanks for your purchase</h1>
     <p>A confirmation of your order is sent to your email</p>
     <span>${emailInput.value}</span>
     <a class="modal-link" href="shop.html">Back to shop</a>`
 
-};
-
-
-
-
+}
