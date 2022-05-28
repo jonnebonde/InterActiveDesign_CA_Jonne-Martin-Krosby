@@ -170,6 +170,28 @@
     border-left: 2px solid var(--darkgreen);
 }
 
+.fa-cc-visa,
+.fa-cc-mastercard,
+.fa-cc-amex  {
+    font-size: 32px;
+    margin: 5px;
+}
+
+.fa-cc-visa {
+    color: #1A1F71;
+}
+
+.fa-cc-mastercard {
+    color: #EB001B;
+}
+
+.fa-cc-amex {
+    color: #016FD0;
+}
+
+
+
+
 .checkout-cardinfo-container {
     display: flex;
     flex-direction: column;

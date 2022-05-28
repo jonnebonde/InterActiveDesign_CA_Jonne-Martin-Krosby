@@ -47,9 +47,9 @@ const cityValid = document.querySelector(".city");
 const cityInput = document.getElementById("city");
 const cityError = document.getElementById("cityError");
 
-const countyValid = document.querySelector(".county");
-const countyInput = document.getElementById("county");
-const countyError = document.getElementById("countyError");
+const countryValid = document.querySelector(".country");
+const countryInput = document.getElementById("country");
+const countryError = document.getElementById("countryError");
 
 const zipValid = document.querySelector(".zip-code");
 const zipInput = document.getElementById("zip-code");
@@ -75,21 +75,86 @@ const cvvValid = document.querySelector(".cvv");
 const cvvInput = document.getElementById("cvv");
 const cvvError = document.getElementById("cvvError");
 
+let personalInfo = false;
+let cardInfo = false
 
-function ValidateOrderInputs(event) {
+function ValidatePersonal(event) {
     event.preventDefault();
 
-    const fullName = checkLength(fullNameInput.value, 1);
+    const fullName = checkLength(fullNameInput.value, 7);
     const email = validateEmail(emailInput.value);
-    const address = checkLength(addressInput.value, 1);
+    const address = checkLength(addressInput.value, 9);
     const city = checkLength(cityInput.value, 1);
-    const county = checkLength(countyInput.value, 1);
+    const country = checkLength(countryInput.value, 1);
     const zip = checkLength(zipInput.value, 1);
-    const cardName = checkLength(cardNameInput.value, 1);
+
+
+    if (zip) {
+        zipError.style.display = "none";
+        zipValid.style.color = "#7C9A3C";
+    } else {
+        zipError.style.display = "block";
+        zipValid.style.color = "black";
+    }
+
+    if (country) {
+        countryError.style.display = "none";
+        countryValid.style.color = "#7C9A3C";
+    } else {
+        countryError.style.display = "block";
+        countryValid.style.color = "black";
+    }
+
+    if (fullName) {
+        nameError.style.display = "none";
+        fullNameValid.style.color = "#7C9A3C";
+    } else {
+        nameError.style.display = "block";
+        fullNameValid.style.color = "black";
+    }
+
+    if (email) {
+        emailError.style.display = "none";
+        emailValid.style.color = "#7C9A3C";
+    } else {
+        emailError.style.display = "block";
+        emailValid.style.color = "black";
+    }
+
+    if (address) {
+        addressError.style.display = "none";
+        addressValid.style.color = "#7C9A3C";
+    } else {
+        addressError.style.display = "block";
+        addressValid.style.color = "black";
+    }
+
+    if (city) {
+        cityError.style.display = "none";
+        cityValid.style.color = "#7C9A3C";
+    } else {
+        cityError.style.display = "block";
+        cityValid.style.color = "black";
+    }
+
+    if (fullName && email && address && city && county && zip) {
+        personalInfo = true
+        checkOrderForm(personalInfo)
+    }
+
+}
+
+
+
+function validateCardInfo(event) {
+    event.preventDefault();
+
+    const cardName = checkLength(cardNameInput.value, 7);
     const cardNumber = checkLength(cardNumberInput.value, 1);
     const expDate = checkLength(expDateInput.value, 1);
     const expYear = checkLength(expYearInput.value, 1);
     const cvv = checkLength(cvvInput.value, 1);
+
 
     if (cvv) {
         cvvError.style.display = "none";
@@ -131,61 +196,25 @@ function ValidateOrderInputs(event) {
         cardNameValid.style.color = "black";
     }
 
-    if (zip) {
-        zipError.style.display = "none";
-        zipValid.style.color = "#7C9A3C";
-    } else {
-        zipError.style.display = "block";
-        zipValid.style.color = "black";
-    }
+    if(cardName && cardNumber && expDate && expYear && cvv) {
+        cardInfo = true
+        checkOrderForm(cardInfo)
 
-    if (county) {
-        countyError.style.display = "none";
-        countyValid.style.color = "#7C9A3C";
-    } else {
-        countyError.style.display = "block";
-        countyValid.style.color = "black";
     }
-
-    if (fullName) {
-        nameError.style.display = "none";
-        fullNameValid.style.color = "#7C9A3C";
-    } else {
-        nameError.style.display = "block";
-        fullNameValid.style.color = "black";
-    }
-
-    if (email) {
-        emailError.style.display = "none";
-        emailValid.style.color = "#7C9A3C";
-    } else {
-        emailError.style.display = "block";
-        emailValid.style.color = "black";
-    }
-
-    if (address) {
-        addressError.style.display = "none";
-        addressValid.style.color = "#7C9A3C";
-    } else {
-        addressError.style.display = "block";
-        addressValid.style.color = "black";
-    }
-
-    if (city) {
-        cityError.style.display = "none";
-        cityValid.style.color = "#7C9A3C";
-    } else {
-        cityError.style.display = "block";
-        cityValid.style.color = "black";
-    }
-
-    if (fullName && email && address && city && county && zip && cardName && cardNumber && expDate && expYear && cvv) {
-        submitOrderModalContent();
-    }
-
 }
 
-submitForm.addEventListener("submit", ValidateOrderInputs);
+
+function checkOrderForm() {
+
+    if(personalInfo === true && cardInfo === true) {
+        submitOrderModalContent()
+    }
+}
+
+
+submitForm.addEventListener("submit", ValidatePersonal);
+submitForm.addEventListener("submit", validateCardInfo);
+
 
 
 function checkLength(value, len) {

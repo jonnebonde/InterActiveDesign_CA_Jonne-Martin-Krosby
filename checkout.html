@@ -101,7 +101,7 @@
             <h2>Shipping address</h2>
             <label class="full-name" for="full-name">Full Name (required)</label>
             <input type="text" id="full-name" name="fullname" />
-            <div class="input_error" id="nameError">Please write a name</div>
+            <div class="input_error" id="nameError">Please write a name (min. 8 characters)</div>
             <label class="email" for="email">Email (required)</label>
             <input type="text" id="email" name="email" />
             <div class="input_error" id="emailError">
@@ -110,7 +110,7 @@
             <label class="address" for="address">Street Adress (required)</label>
             <input type="text" id="address" name="address" />
             <div class="input_error" id="addressError">
-              Please write your address
+              Please write your address (min. 10 characters)
             </div>
             <label class="city" for="city">City (required)</label>
             <input type="text" id="city" name="city" />
@@ -381,11 +381,15 @@
             <div class="input_error" id="countryError">
               Please choose your country
             </div>
-           
           </div>
           <div class="checkout-billing-container">
             <h2>Payment method</h2>
-            <div class="checkout-card-logo-container"></div>
+            <div class="checkout-card-logo-container">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-amex"></i>
+            </div>
+
             <div class="checkout-cardinfo-container">
               <div class="checkout-cardinfo">
                 <label class="card-name" for="card-name">Name on card (required)</label>
@@ -396,7 +400,7 @@
                 <label class="card-number" for="card-number">Card number (required)</label>
                 <input type="number" id="card-number" name="card number" />
                 <div class="input_error" id="card-numberError">
-                  Please write your card number
+                  Please write the number on your card (min. 16 characters)
                 </div>
                 <label class="exp-date" for="exp-date">Exp. Month (required)</label>
                 <select id="exp-date" name="exp date">
@@ -470,7 +474,7 @@
     </div>
   </footer>
   <script src="./js/index.js"></script>
-  <script src="./js/cart/checkoutTest.js"></script>
+  <script src="./js/cart/checkout.js"></script>
 </body>
 
 </html>

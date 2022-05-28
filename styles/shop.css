@@ -31,6 +31,15 @@
     background-color: var(--white);
     border: 2px solid var(--darkgreen);
     color: var(--darkgreen);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 6px 2px 16px 0px, var(--white) -6px -2px 16px 0px;
+}
+
+.back-button button:hover {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 6px 2px 16px 0px, var(--darkgreen) -6px -2px 16px 0px;
 }
 
 .filter-container-all {
