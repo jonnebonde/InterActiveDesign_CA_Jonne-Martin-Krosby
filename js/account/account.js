@@ -240,4 +240,3 @@ function ToTopOffPage() {
 termsModalCloseButton.addEventListener("click", closeTermsModule)
 termsButton.addEventListener("click", termsAndPivacy)
 toTopPageTerms.addEventListener("click", ToTopOffPage);
-
