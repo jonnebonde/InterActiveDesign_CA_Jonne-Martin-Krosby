@@ -62,9 +62,23 @@
 
 .terms-container p {
     max-width: 70%;
-    
 }
 
+.terms-totop-button {
+    padding: 10px;
+    border: 2px solid var(--darkgreen);
+    color: var(--white);
+    background-color: var(--darkgreen);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
+}
+
+.terms-totop-button:hover {
+    color: var(--darkgreen);
+    background-color: var(--white);
+    transition: 250ms ease-in-out;
+    box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
+}
 
 .account-header {
     padding: 20px;
