@@ -1,12 +1,5 @@
 @media screen and (max-width: 1000px) {
 
-    .background {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto;
-
-    }
-
     .mainlogo_img {
         max-width: 80px;
     }
@@ -19,11 +12,9 @@
 
 @media screen and (max-width: 800px) {
 
-    /* .background {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto;
-    } */
+    .background {
+        background-attachment: fixed;
+    }
 
     .credibility {
         display: none;
@@ -161,6 +152,7 @@
         justify-content: space-between;
         flex-direction: column-reverse;
         max-width: 400px;
+        align-items: center
     }
 
     .contact_social_media {

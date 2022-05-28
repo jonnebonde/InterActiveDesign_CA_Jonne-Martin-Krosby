@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .shop-cta a.active,
@@ -24,7 +27,6 @@
 
 .back-button {
     margin: 10px 30px;
-    width: 20%;
 }
 
 .back-button button {
