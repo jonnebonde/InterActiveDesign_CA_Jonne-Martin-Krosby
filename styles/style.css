@@ -71,14 +71,6 @@ main {
     background-size: cover;
 }
 
-input,
-button,
-form {
-    border-radius: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    }
 
 .made-by-me-container {
     background-color: var(--darkgreen);
