@@ -70,6 +70,13 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
 }
+
+input,
+button,
+form {
+    border-radius: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }

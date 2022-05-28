@@ -1,4 +1,17 @@
+
+@media screen and (max-height: 800px ) {
+    
+    .background {
+        background-attachment: fixed;
+    }
+}
+
+
 @media screen and (max-width: 1000px) {
+
+    .background {
+        background-attachment: fixed;
+    }
 
     .mainlogo_img {
         max-width: 80px;
@@ -12,9 +25,7 @@
 
 @media screen and (max-width: 800px) {
 
-    .background {
-        background-attachment: fixed;
-    }
+  
 
     .credibility {
         display: none;
@@ -414,6 +425,7 @@
 
     .about-container img {
         max-width: 100%;
+        max-height: 50%;
     }
 
 }

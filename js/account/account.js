@@ -207,3 +207,9 @@ myorders.forEach(function (myorder) {
         </div>
     `
 })
+
+
+// Terms and privacy event
+
+const termsButton = document.getElementById("terms");
+
