@@ -137,7 +137,7 @@ function ValidatePersonal(event) {
         cityValid.style.color = "black";
     }
 
-    if (fullName && email && address && city && county && zip) {
+    if (fullName && email && address && city && country && zip) {
         personalInfo = true
         checkOrderForm(personalInfo)
     }
