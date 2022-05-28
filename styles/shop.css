@@ -30,7 +30,8 @@
 }
 
 .back-button button {
-    padding: 5px;
+    padding: 10px;
+    width: 90px;
     background-color: var(--white);
     border: 2px solid var(--darkgreen);
     color: var(--darkgreen);
@@ -120,6 +121,7 @@
 }
 
 .filter-button {
+    
     background-color: var(--white);
     font-size: 1.1rem;
     box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
