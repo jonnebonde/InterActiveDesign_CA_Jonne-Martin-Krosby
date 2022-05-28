@@ -183,12 +183,13 @@
 .random-product-image {
     background-size: cover;
     height: 150px;
+    opacity: 0.8;
     transition: 250ms ease-in-out;
 }
 
 .product-image:hover,
 .random-product-image:hover {
-    transform: translateY(-2px);
+    opacity: 1;
     transition: 250ms ease-in-out;
 }
 
