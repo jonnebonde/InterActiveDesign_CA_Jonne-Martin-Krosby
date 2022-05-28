@@ -209,7 +209,35 @@ myorders.forEach(function (myorder) {
 })
 
 
-// Terms and privacy event
+// Terms and privacy events
 
 const termsButton = document.getElementById("terms");
+const termsModal = document.querySelector(".terms-modal")
+const termsModalContent = document.querySelector(".terms-modal-content");
+const termsModalCloseButton = document.querySelector(".terms-modal-close")
+const footer = document.querySelector("footer");
+const toTopPageTerms = document.querySelector(".terms-totop-button");
+const termsContainer = document.querySelector(".terms-container");
+
+
+function termsAndPivacy() {
+    termsModal.style.display = "flex";
+    footer.style.display = "none"
+}
+
+
+function closeTermsModule() {
+    termsModal.style.display = "none"
+    footer.style.display = "flex"
+}
+
+
+function ToTopOffPage() {
+    termsContainer.scroll(0,0)
+}
+
+
+termsModalCloseButton.addEventListener("click", closeTermsModule)
+termsButton.addEventListener("click", termsAndPivacy)
+toTopPageTerms.addEventListener("click", ToTopOffPage);
 

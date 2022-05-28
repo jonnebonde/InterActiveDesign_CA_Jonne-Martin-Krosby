@@ -145,7 +145,6 @@ function ValidatePersonal(event) {
 }
 
 
-
 function validateCardInfo(event) {
     event.preventDefault();
 
