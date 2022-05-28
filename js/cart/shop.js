@@ -139,7 +139,7 @@ function changeBackground() {
         }
 
         if (!details) {
-            backgroundImgShop.style.backgroundImage = "url('./images/main_img.jpg')"
+            backgroundImgShop.style.backgroundImage = "url('./images/shop_main_img.jpg')"
             backgroundImgShop.setAttribute("aria-label", "picture of a man on a mountain")
         }
 
