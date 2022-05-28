@@ -15,6 +15,7 @@
     src: url("../fonts/Kalam-Regular.ttf") format("truetype");
 }
 
+
 html {
     height: 100%;
     box-sizing: inherit;
@@ -71,6 +72,14 @@ main {
     background-size: cover;
 }
 
+input,
+button,
+form {
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 .made-by-me-container {
     background-color: var(--darkgreen);

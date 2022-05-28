@@ -230,7 +230,10 @@ header {
 #subscribe-container {
     width: 230px;
     text-align: center;
+}
 
+#email-subscribe {
+    border: none;
 }
 
 .submit-input-container {
