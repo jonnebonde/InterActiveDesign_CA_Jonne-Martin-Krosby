@@ -11,7 +11,7 @@
 }
 
 .terms-modal {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     justify-items: center ;
