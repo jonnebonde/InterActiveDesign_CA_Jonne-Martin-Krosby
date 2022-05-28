@@ -90,7 +90,7 @@ header {
 .cta-icons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     transition: 50ms linear;
 }
 
