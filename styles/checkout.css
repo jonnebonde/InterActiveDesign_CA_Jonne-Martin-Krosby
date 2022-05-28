@@ -60,30 +60,6 @@
     box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
 }
 
-/* @-webkit-keyframes animatetop {
-    from {
-        right: 0px;
-        opacity: 0
-    }
-
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-@keyframes animatetop {
-    from {
-        right: 0px;
-        opacity: 0
-    }
-
-    to {
-        right: 0;
-        opacity: 1
-    }
-} */
-
 .checkout-cart {
     display: flex;
     flex-direction: column;
