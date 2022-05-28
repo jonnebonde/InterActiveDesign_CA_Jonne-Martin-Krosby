@@ -182,15 +182,13 @@
 .product-image,
 .random-product-image {
     background-size: cover;
-    height: 150px;
-    opacity: 0.8;
+    height: 250px;
     transition: 250ms ease-in-out;
 }
 
 .product-image:hover,
 .random-product-image:hover {
-    opacity: 1;
-    transition: 250ms ease-in-out;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
 }
 
 .product-price,

@@ -321,6 +321,13 @@
         max-height: 50px;
         padding: 2px;
     }
+    
+    .product-image,
+    .random-product-image {
+    background-size: cover;
+    height: 150px;
+    transition: 250ms ease-in-out;
+}
 
 }
 

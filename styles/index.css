@@ -227,6 +227,18 @@ header {
     font-size: 0.9rem;
 }
 
+.contact-info a {
+    background-image: linear-gradient(var(--white), var(--white));
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 200ms ease-in-out;
+}
+
+.contact-info a:hover {
+    background-size: 100% 2px;
+}
+
 #subscribe-container {
     width: 230px;
     text-align: center;
@@ -262,10 +274,18 @@ header {
 }
 
 .socialmedia_icons a {
+    font-size: 32px;
     text-decoration: none;
+    transition: 250ms ease-in-out;
+}
+
+.socialmedia_icons img:hover {
+    transition: 250ms ease-in-out;
+    transform: scale(1.4);
 }
 
 .socialmedia_icons img {
+    transition: 250ms ease-in-out;
     height: 30px;
     margin: 10px;
 }
