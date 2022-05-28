@@ -25,7 +25,9 @@
 
 @media screen and (max-width: 800px) {
 
-  
+    .checkout-cart {
+        max-width: 800px;
+    }
 
     .credibility {
         display: none;
@@ -351,6 +353,15 @@
         max-width: 90%;
     }
 
+    .checkout-cart {
+        padding: 5px;
+        margin: 10px auto;
+    }
+
+    .checkout-main {
+        width: 95%;
+    }
+
 
 
 }
@@ -460,7 +471,18 @@
 
     .cart-cta-container a {
         width: 150px;
-        
     }
+
+    .account-main {
+        max-width: 280px;
+    }
+
+    .account-form-container {
+        max-width: 280px;
+        gap: 10px;
+    }
+
+
+    
 
 }
