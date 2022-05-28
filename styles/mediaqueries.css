@@ -92,7 +92,7 @@
         border: 2px solid var(--darkgreen);
     }
 
-    footer {
+    .footer-container {
         display: flex;
         flex-direction: column-reverse;
         background-color: var(--darkgreen);

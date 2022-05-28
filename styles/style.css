@@ -41,7 +41,7 @@ main {
     margin: 0 auto;
 }
 
-footer {
+.footer-container {
     position: relative;
     bottom: 0;
     margin-top: 1rem;
@@ -80,3 +80,10 @@ form {
     -moz-appearance: none;
     appearance: none;
     }
+
+.made-by-me-container {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.9rem;
+}
