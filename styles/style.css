@@ -85,3 +85,7 @@ form {
     text-align: center;
     font-size: 0.9rem;
 }
+
+.account-background {
+    background-position: left center;
+}
