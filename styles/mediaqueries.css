@@ -224,6 +224,7 @@
     .details-product-image {
         max-height: fit-content;
         border: none;
+        padding: 0;
     }
 
     .details-info {

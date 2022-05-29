@@ -111,19 +111,19 @@ let shuffled = productArray.sort(() => 0.5 - Math.random());
 let selected = shuffled.slice(0, 4);
 const popularProductsContainer = document.querySelector(".random-products-container")
 
-selected.forEach(function (random) {
+selected.forEach(function (product) {
 
     popularProductsContainer.innerHTML +=
-        `
-    <div class="product" >
-        <a tabindex="-1" href="details.html?id=${random.id}&name=${random.name}&gender=${random.gender}" data-product="${random.id}">
-            <h3>${random.name}</h3>
-        <a tabindex="-1" href="details.html?id=${random.id}&name=${random.name}&gender=${random.gender}" data-product="${random.id}">
-            <div style="background-image: url(${random.image})" aria-label="a ${random.gender} is wearing a ${random.name}" class="product-image"></div>
-        </a>
-            <span>${random.description}</span>
-            <span class="product-price">Price: ${random.price}</span>
-            <a href="details.html?id=${random.id}&name=${random.name}" data-product="${random.id}" class="product-button">Details</a>
-    </div>
-        `
+    `<div class="product" >
+            <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+                <h2>${product.name}</h2>
+                <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
+                <div class="product-info-text">
+                    <span>${product.description}</span>
+                    <span class="product-price">Price: ${product.price}</span>
+                </div>
+            </a>
+                <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
+            </div>
+            `
 })

@@ -218,12 +218,12 @@ function createProductHtml(product) {
         `<div class="product" >
             <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <h2>${product.name}</h2>
-            </a>
-            <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
                 <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
+                <div class="product-info-text">
+                    <span>${product.description}</span>
+                    <span class="product-price">Price: ${product.price}</span>
+                </div>
             </a>
-                <span>${product.description}</span>
-                <span class="product-price">Price: ${product.price}</span>
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
             </div>
             `
