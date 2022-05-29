@@ -67,7 +67,7 @@ header {
 #search.active {
     display: inline;
     position: absolute;
-    right: 160px;
+    right: 165px;
 }
 
 .nav-menu li {
@@ -120,7 +120,7 @@ header {
     border: solid 2px var(--darkgreen);
     height: 35px;
     width: 150px;
-    transition: 50ms linear;
+    transition: 250ms ease-in-out;
 }
 
 .search-input button {
