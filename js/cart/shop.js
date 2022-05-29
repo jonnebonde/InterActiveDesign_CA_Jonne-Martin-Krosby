@@ -8,11 +8,10 @@ const backgroundImgShop = document.querySelector(".background-image-shop");
 
 
 // filterfunction to sort products by gender
+
 let filteredProductArray = productArray.filter(function (sortedArray) {
     return sortedArray.gender === details;
 });
-
-
 
 
 //if filterfunction has no value(null) all products are shown
@@ -77,6 +76,7 @@ document.addEventListener("click", function (e) {
 
 
 //activity menu
+
 const activityToggle = document.getElementById("activity");
 const activityList = document.querySelector(".activity-list");
 const activityListClose = document.querySelectorAll(".activity-list li");
@@ -101,6 +101,7 @@ document.addEventListener("click", function (e) {
 
 
 //sortby menu
+
 const sortbyToggle = document.getElementById("sortby");
 const sortbyList = document.querySelector(".sortby-list");
 const sortbyListClose = document.querySelectorAll(".sortby-list li");
@@ -151,11 +152,9 @@ function changeBackground() {
 changeBackground()
 
 
-
 function toggleActiveLink() {
     const manActive = document.querySelector(".man");
     const womanActive = document.querySelector(".woman");
-
 
     if (details === "man") {
         manActive.classList.add("active");
@@ -173,7 +172,6 @@ const filterCloseMenu = document.querySelector(".filter-close-btn");
 const filterSideMenu = document.querySelector(".filter-container-all");
 const filterContainer = document.querySelector(".filter-main-container");
 
-console.log(filterOpenMenu)
 
 filterOpenMenu.addEventListener("click", () => {
     filterSideMenu.classList.toggle("active");

@@ -40,13 +40,14 @@ document.addEventListener("click", function (e) {
 const backButton = document.querySelectorAll(".back-button");
 
 backButton.forEach(function (back) {
-  back.addEventListener("click", () => {
-    history.back();
-  });
+    back.addEventListener("click", () => {
+        history.back();
+    });
 });
 
 
 // click event for hamburger menu
+
 const toggleButton = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const hideMenu = document.querySelector("main");

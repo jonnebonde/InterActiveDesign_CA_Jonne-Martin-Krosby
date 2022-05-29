@@ -15,13 +15,11 @@ function checkoutCartItems() {
                 <span>${checkout.price * checkout.quantity}</span>
             </div>`
 
-
         checkoutCartTotal.innerHTML =
             `<div>
                 <span>Total</span>
                 <span>${total}</span>
             </div>`
-
     })
 }
 checkoutCartItems()
@@ -154,7 +152,6 @@ function validateCardInfo(event) {
     const expYear = checkLength(expYearInput.value, 1);
     const cvv = checkLength(cvvInput.value, 1);
 
-
     if (cvv) {
         cvvError.style.display = "none";
         cvvValid.style.color = "#7C9A3C";
@@ -198,7 +195,6 @@ function validateCardInfo(event) {
     if(cardName && cardNumber && expDate && expYear && cvv) {
         cardInfo = true
         checkOrderForm(cardInfo)
-
     }
 }
 
@@ -213,7 +209,6 @@ function checkOrderForm() {
 
 submitForm.addEventListener("submit", ValidatePersonal);
 submitForm.addEventListener("submit", validateCardInfo);
-
 
 
 function checkLength(value, len) {
@@ -243,12 +238,11 @@ function submitOrderModalContent() {
     const footer = document.querySelector("footer");
     localStorage.removeItem("cartList");
     footer.style.display = "none";
-
     submitModal.style.display = "flex";
     submitModalContent.innerHTML =
         `<h1>Thanks for your purchase</h1>
-    <p>A confirmation of your order is sent to your email</p>
-    <span>${emailInput.value}</span>
-    <a class="modal-link" href="shop.html">Back to shop</a>`
+        <p>A confirmation of your order is sent to your email</p>
+        <span>${emailInput.value}</span>
+        <a class="modal-link" href="shop.html">Back to shop</a>`
 
 }

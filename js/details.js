@@ -1,13 +1,15 @@
 import { productArray } from "./products/productlist.js";
+
 const productDetails = document.querySelector(".details-container");
-
-
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
+
 const details = params.get("id");
 const itemToShow = productArray.find(item => item.id === details)
 
+
 function pageTitle() {
+
     const pageTitleDetails = document.querySelector("title");
 
     pageTitleDetails.innerHTML = `Rainy Days | ${itemToShow.name}`
@@ -59,14 +61,12 @@ function sizeFormActions() {
     const sizeValue = document.querySelector("select");
     let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
 
-
     if (selectedSize) {
         console.log(selectedSize)
         increaseQuantityCart()
         cartQuantityTotal()
 
     } else {
-        console.log("hi")
         messageChooseSize()
     }
 
@@ -74,16 +74,16 @@ function sizeFormActions() {
 
 
 //Function for adding new items to cart.
+
 function AddToCart() {
     const itemToAdd = productArray.find(item => item.id === event.target.dataset.product)
     cartArray.push(itemToAdd);
-    console.log("im adding to cart")
     updateCart(cartArray)
-    //showCart(cartArray);
 }
 
 
 //add to cart function that checks the content of array, if duplicate add quantity.
+
 function increaseQuantityCart() {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
@@ -99,15 +99,18 @@ function increaseQuantityCart() {
 }
 
 //updates items in cart/ local storage
+
 function updateCart() {
     localStorage.setItem("cartList", JSON.stringify(cartArray))
 
 };
 
 // Shuffle products on productArray
+
 let shuffled = productArray.sort(() => 0.5 - Math.random());
 
 // get the random products frpm  ProductArray
+
 let selected = shuffled.slice(0, 4);
 const popularProductsContainer = document.querySelector(".random-products-container")
 

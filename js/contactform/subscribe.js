@@ -2,9 +2,6 @@ const subscribeForm = document.getElementById("subscribe-container");
 const subscribeInput = document.getElementById("email-subscribe");
 const subscribeError = document.querySelector(".input-subscribe-error");
 
-console.log(subscribeInput.value)
-
-
 
 function validateSubscribe(event) {
     event.preventDefault();
@@ -33,7 +30,6 @@ function validateSubscribe(event) {
 }
 
 subscribeForm.addEventListener("submit", validateSubscribe);
-
 
 
 function validateSubscribeEmail(email) {

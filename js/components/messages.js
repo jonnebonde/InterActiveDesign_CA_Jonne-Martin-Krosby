@@ -1,8 +1,6 @@
 const messageContainer = document.querySelector(".message-container")
 const messages = document.querySelector(".messages");
 const messageLink = document.querySelector(".message-link");
-
-
 const viewCartNow = `<a href="cart.html">View cart now</a>`;
 
 

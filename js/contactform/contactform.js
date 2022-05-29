@@ -22,14 +22,10 @@ let successMessage = false;
 function validateInputs(event) {
     event.preventDefault();
 
-
     const name = checkLength(nameInput.value, 0);
     const subject = checkValue(subjectInput.value);
     const email = validateEmail(emailInput.value);
     const writeToUs = checkLength(writeInput.value, 10);
-
-
-    console.log(subjectInput.value)
 
     if (name) {
         nameError.style.display = "none";
@@ -71,7 +67,6 @@ function validateInputs(event) {
 }
 
 form.addEventListener("submit", validateInputs);
-
 
 
 function checkLength(value, len) {

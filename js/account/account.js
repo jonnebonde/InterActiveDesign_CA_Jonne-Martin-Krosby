@@ -21,7 +21,6 @@ const toggleFormButton = document.querySelector(".toggle-form button");
 const signUpContainer = document.querySelector(".signup-container");
 const loginContainer = document.querySelector(".login-container");
 
-
 let accountStatus = JSON.parse(localStorage.getItem("account"))
 let account = accountStatus || []
 
@@ -50,7 +49,6 @@ function validateSignUp(event) {
     const email = validateEmail(emailInput.value);
     const password = checkLength(passwordInput.value, 7);
     const confirmPassword = comparePasswords(passwordInput.value, confirmPasswordInput.value);
-
 
     if (email) {
         emailError.style.display = "none";
@@ -136,6 +134,7 @@ accountLogin.addEventListener("submit", validateLogin);
 
 
 // validation functions for forms
+
 function comparePasswords(value, value1) {
     if (value === value1 && value1.length > 7) {
         return true;
@@ -161,8 +160,6 @@ function checkLength(value, len) {
 const formPage = document.querySelector(".account-form-container");
 const accountPage = document.querySelector(".account-info-container");
 const accountLogOut = document.querySelector(".log-out");
-const accountMain = document.querySelector("main");
-
 
 function checkAccountStatus() {
     if (accountStatus) {
@@ -190,9 +187,7 @@ accountLogOut.addEventListener("click", logOutOfAccount);
 // Shuffle products on productArray
 
 let shuffled = productArray.sort(() => 0.5 - Math.random());
-
 const myordersList = document.querySelector(".account-orders");
-
 let myorders = shuffled.slice(0, 4);
 
 myorders.forEach(function (myorder) {
@@ -213,7 +208,6 @@ myorders.forEach(function (myorder) {
 
 const termsButton = document.getElementById("terms");
 const termsModal = document.querySelector(".terms-modal")
-const termsModalContent = document.querySelector(".terms-modal-content");
 const termsModalCloseButton = document.querySelector(".terms-modal-close")
 const footer = document.querySelector("footer");
 const toTopPageTerms = document.querySelector(".terms-totop-button");

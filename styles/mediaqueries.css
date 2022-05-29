@@ -1,6 +1,5 @@
+@media screen and (max-height: 800px) {
 
-@media screen and (max-height: 800px ) {
-    
     .background {
         background-attachment: fixed;
     }
@@ -162,7 +161,7 @@
         position: relative;
         width: 100%;
         text-align: center;
-}
+    }
 
     .products,
     .random-products-container {
@@ -319,7 +318,7 @@
         max-height: 50px;
         padding: 2px;
     }
-    
+
     .product-image,
     .random-product-image {
         background-size: cover;

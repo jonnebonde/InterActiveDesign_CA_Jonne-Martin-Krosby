@@ -9,12 +9,10 @@
 @import "./account.css";
 @import "./mediaqueries.css";
 
-
 @font-face {
     font-family: "quote";
     src: url("../fonts/Kalam-Regular.ttf") format("truetype");
 }
-
 
 html {
     height: 100%;

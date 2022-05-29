@@ -7,7 +7,6 @@ const emptyCartMessage = document.querySelector(".empty-cart-msg");
 const hideCart = document.querySelector(".cart-container");
 
 
-
 function showCart() {
     if (cartArray.length === 0) {
         emptyCartHtml()
@@ -19,7 +18,6 @@ function showCart() {
         let total = 0;
         cartItems.forEach(function (cartElement) {
             total += cartElement.price * cartElement.quantity;
-
             CreateCartHtml(cartElement)
         })
         totalContainer.innerHTML = `Total: ${total}`
@@ -40,10 +38,10 @@ function emptyCartHtml() {
 
 
 // creates HTML for cart content.
+
 function CreateCartHtml(cartElement) {
     cartList.innerHTML +=
-        `
-        <div class="cart-item">
+        `<div class="cart-item">
             <div class="cart-delete-item">
                 <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-product="${cartElement.id}"></i></button>
             </div>
@@ -55,7 +53,6 @@ function CreateCartHtml(cartElement) {
                 <p>${cartElement.description}</p>
                 <span>Price: ${cartElement.price}</span>
             </div>
-            
             <div class="cart-quantity">
                 <button class="plus-btn" ><i class="fa-solid fa-plus" data-product="${cartElement.id}"></i></button>
                 <span id="cart-quantity">${cartElement.quantity}</span>
@@ -64,7 +61,6 @@ function CreateCartHtml(cartElement) {
             <div class="cart-total">
                 <span>${cartElement.price * cartElement.quantity}</span>
             </div>
-            
         </div>`
 
     const increaseQuantity = document.querySelectorAll(".plus-btn");
@@ -72,8 +68,8 @@ function CreateCartHtml(cartElement) {
     const deleteItemFromCart = document.querySelectorAll(".delete-item-btn i");
 
 
-
     //click event for the + quantity button.
+
     increaseQuantity.forEach(function (plusButton) {
         plusButton.onclick = function () {
             cartArray.forEach(function () {
@@ -105,10 +101,11 @@ function CreateCartHtml(cartElement) {
             removeFromCart()
         }
     })
-
 }
 
+
 //function to remove items from cart.
+
 function removeFromCart() {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
@@ -121,11 +118,11 @@ function removeFromCart() {
         showCart(cartArray)
         location.reload()
     }
-
 }
 
 
 //add to cart function that checks the content of array, if duplicate add quantity.
+
 function increaseQuantityCart() {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
@@ -134,8 +131,6 @@ function increaseQuantityCart() {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
         showCart(cartArray);
-    } else {
-        //AddToCart()
     }
 }
 
@@ -150,10 +145,8 @@ function decreaseQuantityCart() {
         cartArray[duplicateId].quantity--;
         updateCart(cartArray);
         showCart(cartArray);
-
     } else {
         alert("Press the delete item button to remove it from your cart")
-        console.log("deleting item")
     }
 };
 
@@ -161,8 +154,8 @@ function decreaseQuantityCart() {
 deleteCart.onclick = function deleteCart() {
     localStorage.clear()
     location.reload()
-    console.log("im deleting local storage")
 }
+
 
 function updateCart() {
     localStorage.setItem("cartList", JSON.stringify(cartArray))
