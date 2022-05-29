@@ -228,5 +228,3 @@ function createProductHtml(product) {
             </div>
             `
 }
-
-
