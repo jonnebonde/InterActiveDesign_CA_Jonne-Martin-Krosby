@@ -131,6 +131,8 @@ function increaseQuantityCart() {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
         showCart(cartArray);
+    } else {
+        alert("No more in stock, contact support")
     }
 }
 

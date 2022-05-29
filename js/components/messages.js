@@ -15,7 +15,8 @@ function messageAddedToCart(itemToShow) {
         messageLink.innerHTML = viewCartNow;
         setTimeout(function () {
             messageContainer.style.display = "none";
-        }, 4000)
+            messages.innerHTML = ""
+        }, 3000)
     }
 }
 
@@ -27,6 +28,7 @@ function messageChooseSize() {
         messages.innerHTML = `Please choose a size`;
         setTimeout(function () {
             messageContainer.style.display = "none";
+            messages.innerHTML = ""
         }, 3000)
     }
 }
