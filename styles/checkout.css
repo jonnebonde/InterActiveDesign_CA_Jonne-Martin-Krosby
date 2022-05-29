@@ -6,7 +6,7 @@
 }
 
 .checkout-main {
-    width: 80%;
+    width: 100%;
 }
 
 .checkout-main h2 {
@@ -69,6 +69,7 @@
     margin: 20px auto;
     background-color: var(--white);
     gap: 5px;
+    width: 80%;
 }
 
 .checkout-header {
