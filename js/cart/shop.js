@@ -13,9 +13,11 @@ let filteredProductArray = productArray.filter(function (sortedArray) {
 });
 
 
-//if filterfunction has no value(null) all products are shown
-function productArrayHTML() {
 
+
+//if filterfunction has no value(null) all products are shown
+
+function productArrayHTML() {
     if (details) {
         sortedProductsHTML()
     } else {
@@ -199,18 +201,107 @@ function sortedProductsHTML() {
     });
 }
 
+
 function allProductsHTML() {
 
-
     let shuffledShop = productArray.sort(() => 0.5 - Math.random());
-
-    console.log()
 
     shuffledShop.forEach(function (product) {
         createProductHtml(product)
     });
 }
 
+
+// sort array low to high according to gender or not chosen
+
+function priceSortGenderLowFilter() {
+
+    if (details) {
+        SortPriceLowGender()
+    } else {
+        SortPriceNoLowGender()
+    }
+}
+
+function SortPriceLowGender() {
+
+    let sortedPrice = filteredProductArray.sort(function (x, y) {
+        return x.price - y.price;
+    });
+
+    productsContainer.innerHTML = ""
+
+    sortedPrice.forEach(function (product) {
+        createProductHtml(product)
+        console.log("sort")
+    })
+}
+
+
+function SortPriceNoLowGender() {
+
+    let sortedPrice = productArray.sort(function (x, y) {
+        return x.price - y.price;
+    });
+
+    productsContainer.innerHTML = ""
+
+    sortedPrice.forEach(function (product) {
+        createProductHtml(product)
+        console.log("sort")
+    })
+}
+
+
+const filterLowPrice = document.getElementById("low-price")
+
+filterLowPrice.addEventListener("click", priceSortGenderLowFilter)
+
+
+// high to low according to gender or not chosen
+
+function priceSortGenderHighFilter() {
+
+    if (details) {
+        SortPriceHighGender()
+    } else {
+        SortPriceNoHighGender()
+    }
+}
+
+function SortPriceHighGender() {
+
+    let sortedPrice = filteredProductArray.sort(function (x, y) {
+        return y.price - x.price;
+    });
+
+    productsContainer.innerHTML = ""
+
+    sortedPrice.forEach(function (product) {
+        createProductHtml(product)
+
+    })
+}
+
+function SortPriceNoHighGender() {
+
+    let sortedPrice = productArray.sort(function (x, y) {
+        return y.price - x.price;
+    });
+
+    productsContainer.innerHTML = ""
+
+    sortedPrice.forEach(function (product) {
+        createProductHtml(product)
+    })
+}
+
+const filterHighPrice = document.getElementById("high-price")
+
+filterHighPrice.addEventListener("click", priceSortGenderHighFilter)
+
+
+// creating HTML from product array
 
 function createProductHtml(product) {
 
@@ -228,3 +319,4 @@ function createProductHtml(product) {
             </div>
             `
 }
+
