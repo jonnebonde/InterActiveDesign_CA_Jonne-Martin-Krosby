@@ -215,6 +215,15 @@
     padding: 15px;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    border-top: 2px solid var(--darkgreen);
+    border-bottom: 2px solid var(--darkgreen);
+}
+
+.support-btn h2 {
+    
 }
 
 .support-btn a {
@@ -224,6 +233,7 @@
     width: 110px;
     height: 40px;
     display: flex;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     color: var(--white);
