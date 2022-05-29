@@ -34,8 +34,8 @@ searchInput.addEventListener("click", () => {
 })
 
 
-    document.addEventListener("click", function (e) {
-    if (!searchContainer.contains(e.target)) {
+document.addEventListener("click", function (e) {
+        if (!searchContainer.contains(e.target)) {
         searchInput.classList.remove("active")
     }
 });
