@@ -28,12 +28,6 @@ searchToggleBtn.addEventListener("click", () => {
     searchInput.classList.toggle("active")
 })
 
-document.addEventListener("click", function (e) {
-    if (!searchToggleBtn.contains(e.target)) {
-        searchInput.classList.remove("active")
-    }
-});
-
 
 // Go back in history button
 
