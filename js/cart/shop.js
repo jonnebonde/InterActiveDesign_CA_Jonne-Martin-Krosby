@@ -208,33 +208,56 @@ function allProductsHTML() {
     });
 }
 
+
+function randomGender() {
+
+    let shuffledShop = filteredProductArray.sort(() => 0.5 - Math.random());
+
+    productsContainer.innerHTML = ""
+    shuffledShop.forEach(function (product) {
+        createProductHtml(product)
+    });
+}
+
 // click event for dummy filter
+
+function sortByGender() {
+
+    if (details) {
+        randomGender()
+    } else {
+        allProductsHTML()
+    }
+}
 
 
 sizeListClose.forEach(size => {
     size.addEventListener("click", event => {
-        allProductsHTML()
+        sortByGender()
     })
 })
+
 
 colorListClose.forEach(color => {
     color.addEventListener("click", event => {
-        allProductsHTML()
+        sortByGender()
     })
 })
 
+
 activityListClose.forEach(activity => {
     activity.addEventListener("click", event => {
-        allProductsHTML()
+        sortByGender()
     })
 })
+
 
 const filterPopular = document.getElementById("popular");
 const filterBestSelling = document.getElementById("best-selling");
 
-filterPopular.addEventListener("click", allProductsHTML);
-filterBestSelling.addEventListener("click", allProductsHTML)
 
+filterPopular.addEventListener("click", sortByGender);
+filterBestSelling.addEventListener("click", sortByGender)
 
 
 // sort array low to high according to gender or not chosen
@@ -247,6 +270,7 @@ function priceSortGenderLowFilter() {
         SortPriceNoLowGender()
     }
 }
+
 
 function SortPriceLowGender() {
 
@@ -294,6 +318,7 @@ function priceSortGenderHighFilter() {
     }
 }
 
+
 function SortPriceHighGender() {
 
     let sortedPrice = filteredProductArray.sort(function (x, y) {
@@ -308,6 +333,7 @@ function SortPriceHighGender() {
     })
 }
 
+
 function SortPriceNoHighGender() {
 
     let sortedPrice = productArray.sort(function (x, y) {
@@ -320,6 +346,7 @@ function SortPriceNoHighGender() {
         createProductHtml(product)
     })
 }
+
 
 const filterHighPrice = document.getElementById("high-price")
 
@@ -336,6 +363,7 @@ function priceSortGenderAzFilter() {
         SortAzNoGender()
     }
 }
+
 
 function SortAzGender() {
 
@@ -357,6 +385,7 @@ function SortAzGender() {
     })
 }
 
+
 function SortAzNoGender() {
 
     let sortedAz = productArray.sort(function (x, y) {
@@ -377,6 +406,7 @@ function SortAzNoGender() {
     })
 }
 
+
 const filterAz = document.getElementById("a-z")
 
 filterAz.addEventListener("click", priceSortGenderAzFilter)
@@ -392,6 +422,7 @@ function priceSortGenderZaFilter() {
         SortZaNoGender()
     }
 }
+
 
 function SortZaGender() {
 
@@ -413,6 +444,7 @@ function SortZaGender() {
     })
 }
 
+
 function SortZaNoGender() {
 
     let sortedZa = productArray.sort(function (x, y) {
@@ -432,6 +464,7 @@ function SortZaNoGender() {
         createProductHtml(product)
     })
 }
+
 
 const filterZa = document.getElementById("z-a")
 
