@@ -177,7 +177,8 @@
 }
 
 #submit-signup:hover,
-#submit-login:hover {
+#submit-login:hover,
+.support-btn a:hover {
     background-color: var(--white);
     color: var(--darkgreen);
     transition: 250ms ease-in-out;
@@ -207,6 +208,28 @@
     padding: 10px;
     border-bottom: 2px solid var(--darkgreen);
     width: 100%;
+}
+
+.support-btn {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.support-btn a {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--darkgreen);
+    width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: 250ms ease-in-out;
+    border: 2px solid var(--darkgreen);
+    box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
 
 .account-info-details {
@@ -295,12 +318,12 @@
 
 .log-out button {
     cursor: pointer;
-    width: 100px;
-    height: 30px;
+    width: 110px;
+    height: 40px;
     background-color: var(--white);
     border: 2px solid var(--darkgreen);
     color: var(--darkgreen);
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: 250ms ease-in-out;
     box-shadow: var(--darkgreen) 3px 1px 8px 0px, var(--white) -3px -1px 8px 0px;
 }
