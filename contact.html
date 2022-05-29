@@ -74,16 +74,16 @@
             <div class="contact_social_container">
                 <div class="contact-contactinfo">
                     <h2>Contact us</h2>
-                    <p>Phone: +47 1234 5678</p>
-                    <p>Address: Here, there and everywhere</p>
+                    <p aria-label="Phone number +47 1234 5678">Phone: +47 1234 5678</p>
+                    <p aria-label="Address: Here, there and everywhere">Address: Here, there and everywhere</p>
                     <a class="email-link" href="mailto:rainydays@rainjackets.com">E-mail:rainydays@rainjackets.com</a>
                 </div>
                 <div class="contact-social_media">
                     <h2>Social Media</h2>
                     <div class="contact-social_media_links">
-                        <a href="http://facebook.com" class="fa fa-facebook"></a>
-                        <a href="http://twitter.com" class="fa fa-twitter"></a>
-                        <a href="http://instagram.com" class="fa fa-instagram"></a>
+                        <a href="http://facebook.com" class="fa fa-facebook" aria-label="link to facebook"></a>
+                        <a href="http://twitter.com" class="fa fa-twitter" aria-label="link to twitter"></a>
+                        <a href="http://instagram.com" class="fa fa-instagram" aria-label="link to instagram"></a>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,9 @@
                         <option value="7">Other</option>
                     </select>
                     <div class="input_error" id="subjectError">Please choose a subject</div>
-                    <label class="name">Name(required)</label>
+                    <label class="name">Name(required)
                     <input name="name" id="name" />
+                    </label>
                     <div class="input_error" id="nameError">Please write a name</div>
                     <label class="email">Email(required)
                         <input name="email" id="email" />
