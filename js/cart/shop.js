@@ -145,9 +145,7 @@ function changeBackground() {
             backgroundImgShop.style.backgroundImage = "url('./images/shop_main_img.jpg')"
             backgroundImgShop.setAttribute("aria-label", "picture of a man on a mountain")
         }
-
     }
-
 }
 changeBackground()
 
@@ -442,7 +440,6 @@ filterZa.addEventListener("click", priceSortGenderZaFilter)
 
 // creating HTML from product array
 
-
 function createProductHtml(product) {
 
     productsContainer.innerHTML +=
@@ -459,4 +456,3 @@ function createProductHtml(product) {
             </div>
             `
 }
-
