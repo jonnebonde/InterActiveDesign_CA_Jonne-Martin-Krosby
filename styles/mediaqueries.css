@@ -342,6 +342,10 @@
         font-size: 1rem;
     }
 
+    .details-random-products-header h2 {
+        font-size: 1.2rem;
+    }
+
     .quotes-container {
         flex-direction: column;
         gap: 20px;
