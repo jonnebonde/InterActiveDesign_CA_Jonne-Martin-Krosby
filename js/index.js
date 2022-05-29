@@ -23,10 +23,22 @@ cartQuantityTotal()
 
 const searchInput = document.getElementById("search");
 const searchToggleBtn = document.querySelector(".submit-btn");
+const searchContainer = document.querySelector(".search-input")
 
 searchToggleBtn.addEventListener("click", () => {
     searchInput.classList.toggle("active")
 })
+
+searchInput.addEventListener("click", () => {
+    searchInput.classList.add("active")
+})
+
+
+    document.addEventListener("click", function (e) {
+    if (!searchContainer.contains(e.target)) {
+        searchInput.classList.remove("active")
+    }
+});
 
 
 // Go back in history button
