@@ -6,7 +6,6 @@
     }
 }
 
-
 @media screen and (max-width: 1000px) {
 
     .background {
@@ -218,7 +217,6 @@
         font-size: 0.8rem;
     }
 
-
     .details {
         flex-direction: column;
     }
@@ -273,7 +271,6 @@
         flex-direction: column;
     }
 
-
     .account-info-header h1 {
         font-size: 1.4rem;
     }
@@ -324,10 +321,10 @@
     
     .product-image,
     .random-product-image {
-    background-size: cover;
-    height: 150px;
-    transition: 250ms ease-in-out;
-}
+        background-size: cover;
+        height: 150px;
+        transition: 250ms ease-in-out;
+    }
 
 }
 
@@ -395,7 +392,6 @@
 
 }
 
-
 @media screen and (max-width: 500px) {
 
     .navbar {
@@ -407,7 +403,6 @@
         padding: 2px;
     }
 
-    
     .cart-item {
         width: 100%;
         justify-content: space-evenly;
@@ -474,12 +469,12 @@
     }
 
     .product-image,
-.random-product-image {
-    background-size: cover;
-    height: 100px;
-    width: auto;
-    transition: 250ms ease-in-out;
-}
+    .random-product-image {
+        background-size: cover;
+        height: 100px;
+        width: auto;
+        transition: 250ms ease-in-out;
+    }
 
 }
 
