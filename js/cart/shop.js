@@ -219,7 +219,7 @@ function randomGender() {
     });
 }
 
-// click event for dummy filter
+// click event for dummy filters
 
 function sortByGender() {
 
@@ -237,20 +237,17 @@ sizeListClose.forEach(size => {
     })
 })
 
-
 colorListClose.forEach(color => {
     color.addEventListener("click", event => {
         sortByGender()
     })
 })
 
-
 activityListClose.forEach(activity => {
     activity.addEventListener("click", event => {
         sortByGender()
     })
 })
-
 
 const filterPopular = document.getElementById("popular");
 const filterBestSelling = document.getElementById("best-selling");
@@ -262,213 +259,129 @@ filterBestSelling.addEventListener("click", sortByGender)
 
 // sort array low to high according to gender or not chosen
 
-function priceSortGenderLowFilter() {
+function lowToHighPrice() {
 
-    if (details) {
-        SortPriceLowGender()
+    var lowToHigh = productArray;
+
+    if(!details) {
+        var lowToHigh = productArray;
     } else {
-        SortPriceNoLowGender()
+        var lowToHigh = filteredProductArray;
     }
-}
 
-
-function SortPriceLowGender() {
-
-    let sortedPrice = filteredProductArray.sort(function (x, y) {
+    let lowToHighPrice = lowToHigh.sort(function (x, y) {
         return x.price - y.price;
     });
+    
+    productsContainer.innerHTML = "";
 
-    productsContainer.innerHTML = ""
-
-    sortedPrice.forEach(function (product) {
-        createProductHtml(product)
-        console.log("sort")
+    lowToHighPrice.forEach(function (product) {
+        createProductHtml(product);
     })
-}
 
-
-function SortPriceNoLowGender() {
-
-    let sortedPrice = productArray.sort(function (x, y) {
-        return x.price - y.price;
-    });
-
-    productsContainer.innerHTML = ""
-
-    sortedPrice.forEach(function (product) {
-        createProductHtml(product)
-        console.log("sort")
-    })
 }
 
 
 const filterLowPrice = document.getElementById("low-price")
-
-filterLowPrice.addEventListener("click", priceSortGenderLowFilter)
+filterLowPrice.addEventListener("click", lowToHighPrice)
 
 
 // high to low according to gender or not chosen
 
-function priceSortGenderHighFilter() {
 
-    if (details) {
-        SortPriceHighGender()
+function highToLowPrice() {
+
+    var highToLow = productArray;
+
+    if(!details) {
+        var highToLow = productArray;
     } else {
-        SortPriceNoHighGender()
+        var highToLow = filteredProductArray;
     }
-}
 
-
-function SortPriceHighGender() {
-
-    let sortedPrice = filteredProductArray.sort(function (x, y) {
+    let highLowPrice = highToLow.sort(function (x, y) {
         return y.price - x.price;
     });
+    
+    productsContainer.innerHTML = "";
 
-    productsContainer.innerHTML = ""
-
-    sortedPrice.forEach(function (product) {
-        createProductHtml(product)
-
+    highLowPrice.forEach(function (product) {
+        createProductHtml(product);
     })
+
 }
-
-
-function SortPriceNoHighGender() {
-
-    let sortedPrice = productArray.sort(function (x, y) {
-        return y.price - x.price;
-    });
-
-    productsContainer.innerHTML = ""
-
-    sortedPrice.forEach(function (product) {
-        createProductHtml(product)
-    })
-}
-
 
 const filterHighPrice = document.getElementById("high-price")
-
-filterHighPrice.addEventListener("click", priceSortGenderHighFilter)
+filterHighPrice.addEventListener("click", highToLowPrice)
 
 
 // sorting array from a-z according to gender or not
 
-function priceSortGenderAzFilter() {
 
-    if (details) {
-        SortAzGender()
+function SortAz() {
+
+    var sortAz = productArray;
+
+    if(!details) {
+        var sortAz = productArray;
     } else {
-        SortAzNoGender()
+        var sortAz = filteredProductArray;
     }
-}
 
+    let sortedAz = sortAz.sort(function (x, y) {
 
-function SortAzGender() {
-
-    let sortedAz = filteredProductArray.sort(function (x, y) {
-        
         let a = x.name.toUpperCase(),
-            b = y.name.toUpperCase();
-            if(a == b)
-                return 0;
-            if(a > b)
-                return 1;
-            return -1;
-
+        b = y.name.toUpperCase();
+        if(a == b)
+            return 0;
+        if(a > b)
+            return 1;
+        return -1;
     });
 
     productsContainer.innerHTML = ""
     sortedAz.forEach(function (product) {
         createProductHtml(product)
     })
+
 }
-
-
-function SortAzNoGender() {
-
-    let sortedAz = productArray.sort(function (x, y) {
-        
-        let a = x.name.toUpperCase(),
-            b = y.name.toUpperCase();
-            if(a == b)
-                return 0;
-            if(a > b)
-                return 1;
-            return -1;
-
-    });
-
-    productsContainer.innerHTML = ""
-    sortedAz.forEach(function (product) {
-        createProductHtml(product)
-    })
-}
-
 
 const filterAz = document.getElementById("a-z")
-
-filterAz.addEventListener("click", priceSortGenderAzFilter)
+filterAz.addEventListener("click", SortAz)
 
 
 // sort array from Z - A according to gender or not 
 
-function priceSortGenderZaFilter() {
+function SortZa() {
 
-    if (details) {
-        SortZaGender()
+    var SortZa = productArray;
+
+    if(!details) {
+        var SortZa = productArray;
     } else {
-        SortZaNoGender()
+        var SortZa = filteredProductArray;
     }
-}
 
+    let sortedZa = SortZa.sort(function (x, y) {
 
-function SortZaGender() {
-
-    let sortedZa = filteredProductArray.sort(function (x, y) {
-        
         let a = x.name.toUpperCase(),
-            b = y.name.toUpperCase();
-            if(a == b)
-                return 0;
-            if(a < b)
-                return 1;
-            return -1;
-
+        b = y.name.toUpperCase();
+        if(a == b)
+            return 0;
+        if(a < b)
+            return 1;
+        return -1;
     });
 
     productsContainer.innerHTML = ""
     sortedZa.forEach(function (product) {
         createProductHtml(product)
     })
+
 }
-
-
-function SortZaNoGender() {
-
-    let sortedZa = productArray.sort(function (x, y) {
-        
-        let a = x.name.toUpperCase(),
-            b = y.name.toUpperCase();
-            if(a == b)
-                return 0;
-            if(a < b)
-                return 1;
-            return -1;
-
-    });
-
-    productsContainer.innerHTML = ""
-    sortedZa.forEach(function (product) {
-        createProductHtml(product)
-    })
-}
-
 
 const filterZa = document.getElementById("z-a")
-
-filterZa.addEventListener("click", priceSortGenderZaFilter)
+filterZa.addEventListener("click", SortZa)
 
 
 // creating HTML from product array
