@@ -1,4 +1,26 @@
-import { productArray } from "../products/productlist.js";
+/* import { productArray } from "../products/productlist.js"; */
+const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
+const apiKey = "?consumer_key=ck_03cf65b3b05863487398cfc21cbd3a1f271827db&consumer_secret=cs_8c58b9ba531eaf6f00dfb9c07ed3002b7044ee0d";
+const apiUrl = baseUrl + apiKey;
+
+async function getProducts() {
+
+    try {
+        const response = await fetch(apiUrl);
+        const products = await response.json();
+
+        createProductHtml(products);
+        
+    }
+
+    catch(error) {
+        console.log("something went wrong fetching api");
+    }
+
+}
+
+getProducts()
+
 
 const productsContainer = document.querySelector(".products");
 const queryString = document.location.search;
@@ -8,43 +30,48 @@ const backgroundImgShop = document.querySelector(".background-image-shop");
 
 // creating HTML from product array
 
-function createProductHtml(product) {
+function createProductHtml(products) {
 
-    productsContainer.innerHTML +=
+    products.forEach(function(product){
+
+        productsContainer.innerHTML += 
         `<div class="product" >
-            <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
-                <h2>${product.name}</h2>
-                <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
-                <div class="product-info-text">
-                    <span>${product.description}</span>
-                    <span class="product-price">Price: ${product.price}</span>
-                </div>
-            </a>
-                <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
+        <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <h2>${product.name}</h2>
+            <div style="background-image: url(${product.images[1].src})" aria-label="a ${product.tags[0].name} is wearing a ${product.name}" class="product-image"></div>
+            <div class="product-info-text">
+                <span>${product.short_description}</span>
+                <span class="product-price">Price: ${product.price}</span>
             </div>
-            `
+        </a>
+            <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
+        </div>
+        `
+    })
+
+    console.log(products)
 }
 
 
 // filterfunction to sort products by gender
 
-let filteredProductArray = productArray.filter(function (sortedArray) {
+/* let filteredProductArray = productArray.filter(function (sortedArray) {
     return sortedArray.gender === details;
-});
+}); */
 
 
 //if filterfunction has no value(null) all products are shown
 
-function productArrayHTML() {
+/* function productArrayHTML() {
     if (details) {
         sortedProductsHTML()
     } else {
         allProductsHTML()
     }
 }
-productArrayHTML()
+productArrayHTML() */
 
-// toggle filter menus
+ // toggle filter menus
 
 //size menu
 const sizeToggle = document.getElementById("size");
@@ -142,7 +169,7 @@ document.addEventListener("click", function (e) {
         sortbyList.classList.remove("active")
     }
 });
-
+/*
 
 //change background according to gender or no gender choosen from landingpage
 
@@ -403,3 +430,4 @@ const filterZa = document.getElementById("z-a")
 filterZa.addEventListener("click", SortZa)
 
 
+ */

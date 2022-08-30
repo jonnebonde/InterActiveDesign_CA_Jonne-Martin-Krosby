@@ -1,4 +1,7 @@
-import { productArray } from "./products/productlist.js";
+import { productArray } from "./products/productlist.js";  
+
+
+console.log(productArray)
 
 const productDetails = document.querySelector(".details-container");
 const queryString = document.location.search;
