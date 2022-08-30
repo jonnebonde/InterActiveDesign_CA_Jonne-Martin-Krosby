@@ -10,6 +10,7 @@ async function getProducts() {
         const products = await response.json();
 
         createProductHtml(products);
+        sortByGender(products);
         
     }
 
@@ -55,21 +56,27 @@ function createProductHtml(products) {
 
 // filterfunction to sort products by gender
 
-/* let filteredProductArray = productArray.filter(function (sortedArray) {
-    return sortedArray.gender === details;
-}); */
+function sortByGender(products) {
+
+    console.log(products)
+    let filteredProductArray = products.filter(function (sortedArray) {
+        console.log(sortedArray.tags[0].name)
+    return sortedArray.tags[0].name === details;
+});
 
 
 //if filterfunction has no value(null) all products are shown
 
-/* function productArrayHTML() {
     if (details) {
         sortedProductsHTML()
     } else {
         allProductsHTML()
     }
+
 }
-productArrayHTML() */
+// notat til meg selv> fortsette og sette opp man og woman filter ifra index.html og ifra cta shop.html
+
+
 
  // toggle filter menus
 
@@ -169,7 +176,7 @@ document.addEventListener("click", function (e) {
         sortbyList.classList.remove("active")
     }
 });
-/*
+
 
 //change background according to gender or no gender choosen from landingpage
 
@@ -210,6 +217,7 @@ function toggleActiveLink() {
 }
 toggleActiveLink()
 
+/*
 
 const filterOpenMenu = document.querySelector(".filter-menu-open");
 const filterCloseMenu = document.querySelector(".filter-close-btn");
