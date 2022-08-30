@@ -72,6 +72,8 @@ function sizeFormActions() {
 }
 
 const messages = document.querySelector(".messages");
+
+
 //Function for adding new items to cart.
 
 function AddToCart() {
