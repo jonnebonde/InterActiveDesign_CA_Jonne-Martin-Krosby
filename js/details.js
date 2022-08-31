@@ -1,37 +1,56 @@
-import { productArray } from "./products/productlist.js";  
-
-
-console.log(productArray)
+/* import { productArray } from "./products/productlist.js";   */
 
 const productDetails = document.querySelector(".details-container");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
-const details = params.get("id");
-const itemToShow = productArray.find(item => item.id === details)
+const id = params.get("id");
+
+const url = "https://jonnekrosby.site/wp-json/wc/v3/products/" + id + "?consumer_key=ck_03cf65b3b05863487398cfc21cbd3a1f271827db&consumer_secret=cs_8c58b9ba531eaf6f00dfb9c07ed3002b7044ee0d";
 
 
-function pageTitle() {
+async function getDetails() {
+
+    try {
+        const response = await fetch(url);
+        const product = await response.json();
+        
+        
+        detailsHtml(product)
+        pageTitle(product)
+
+        
+    }
+
+    catch(error) {
+        console.log("something went wrong fetching api");
+    }
+
+}
+
+getDetails()
+
+
+function pageTitle(product) {
 
     const pageTitleDetails = document.querySelector("title");
 
-    pageTitleDetails.innerHTML = `Rainy Days | ${itemToShow.name}`
+    pageTitleDetails.innerHTML = `Rainy Days | ${product.name}`
 }
-pageTitle()
 
 
-function detailsHtml() {
+function detailsHtml(product) {
     productDetails.innerHTML =
         `<div class="details">
             <div>
-                <img src="${itemToShow.big_image}" aria-label="${itemToShow.name}" class="details-product-image">
+                <img src="${product.images[0].src}" aria-label="${product.name}" class="details-product-image">
             </div>
         <div class="details-info">
             <div>
-            <h2>${itemToShow.name}</h2>
-            <p>${itemToShow.long_description}</p>
+            <h2>${product.name}</h2>
+            <p>${product.description}</p>
             </div>
-            <div class="details-product-price"><strong>Price:</strong> ${itemToShow.price}</div>
+            <div class="details-product-price"><strong>Price:</strong> ${product.price}</div>
             <div>
                 <label class="details-select-size-menu" for="select-size">Select Size
                     <select name="select-size" id="details-select-size" required="required">
@@ -44,17 +63,16 @@ function detailsHtml() {
                         <option value="XSmall">XSmall</option>
                     </select>
             </div>
-            <button class="details-product-button" data-product="${itemToShow.id}">Add to cart</button>
+            <button class="details-product-button" data-product="${product.id}">Add to cart</button>
         </div>
     </div>
     `
-}
+} 
 
-detailsHtml()
 
 const button = document.querySelector(".details-product-button");
 
-button.onclick = function () {
+button.onclick = function() {
     sizeFormActions()
 }
 
@@ -111,11 +129,11 @@ function updateCart() {
 
 // Shuffle products on productArray
 
-let shuffled = productArray.sort(() => 0.5 - Math.random());
+/* let shuffled = productArray.sort(() => 0.5 - Math.random()); */
 
 // get the random products frpm  ProductArray
 
-let selected = shuffled.slice(0, 4);
+/* let selected = shuffled.slice(0, 4);
 const popularProductsContainer = document.querySelector(".random-products-container")
 
 selected.forEach(function (product) {
@@ -133,4 +151,4 @@ selected.forEach(function (product) {
                 <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
             </div>
             `
-})
+}) */

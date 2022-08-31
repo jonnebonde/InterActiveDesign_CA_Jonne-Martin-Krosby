@@ -1,22 +1,25 @@
 /* import { productArray } from "../products/productlist.js"; */
-const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
-const apiKey = "?consumer_key=ck_03cf65b3b05863487398cfc21cbd3a1f271827db&consumer_secret=cs_8c58b9ba531eaf6f00dfb9c07ed3002b7044ee0d";
-const apiUrl = baseUrl + apiKey;
+export const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
+export const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+export const apiUrl = baseUrl + apiKey;
 
 async function getProducts() {
 
     try {
         const response = await fetch(apiUrl);
         const products = await response.json();
+        const productArray = products;
 
-        createProductHtml(products);
-        sortByGender(products);
+
+        createProductHtml(productArray);
+        sortByGender(productArray);
         
     }
 
     catch(error) {
         console.log("something went wrong fetching api");
     }
+
 
 }
 
@@ -31,9 +34,9 @@ const backgroundImgShop = document.querySelector(".background-image-shop");
 
 // creating HTML from product array
 
-function createProductHtml(products) {
+function createProductHtml(productArray) {
 
-    products.forEach(function(product){
+    productArray.forEach(function(product){
 
         productsContainer.innerHTML += 
         `<div class="product" >
@@ -50,21 +53,21 @@ function createProductHtml(products) {
         `
     })
 
-    console.log(products)
+    console.log(productArray)
 }
 
 
 // filterfunction to sort products by gender
 
-function sortByGender(products) {
+function sortByGender(productArray) {
 
-    console.log(products)
-    let filteredProductArray = products.filter(function (sortedArray) {
+    let filteredProductArray = productArray.filter(function (sortedArray) {
         console.log(sortedArray.tags[0].name)
     return sortedArray.tags[0].name === details;
 });
 
 
+console.log(filteredProductArray)
 //if filterfunction has no value(null) all products are shown
 
     if (details) {
@@ -74,8 +77,6 @@ function sortByGender(products) {
     }
 
 }
-// notat til meg selv> fortsette og sette opp man og woman filter ifra index.html og ifra cta shop.html
-
 
 
  // toggle filter menus
@@ -217,7 +218,7 @@ function toggleActiveLink() {
 }
 toggleActiveLink()
 
-/*
+
 
 const filterOpenMenu = document.querySelector(".filter-menu-open");
 const filterCloseMenu = document.querySelector(".filter-close-btn");
@@ -273,6 +274,7 @@ function randomGender() {
     });
 }
 
+/* 
 // click event for dummy filters
 
 function sortByGender() {
@@ -436,6 +438,5 @@ function SortZa() {
 
 const filterZa = document.getElementById("z-a")
 filterZa.addEventListener("click", SortZa)
-
 
  */
