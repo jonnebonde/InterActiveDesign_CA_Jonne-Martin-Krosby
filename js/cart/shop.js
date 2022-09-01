@@ -1,6 +1,6 @@
 
-const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&category=17";
 const apiUrl = baseUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
@@ -28,14 +28,14 @@ async function getProducts(url) {
 
 getProducts(apiUrl)
 
-function sortByGender(){
+/* function sortByGender(){
     const newUrl = baseUrl + `/tags=${details}` + apiKey;
     console.log(newUrl)
     getProducts(newUrl)
 
 }
 
-sortByGender()
+sortByGender() */
 
 
 // filterfunction to sort products by gender
@@ -107,7 +107,7 @@ function createProductHtml(products) {
         `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
             <h2>${product.name}</h2>
-            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.tags[0].name} is wearing a ${product.name}" class="product-image"></div>
+            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.name} is wearing a ${product.name}" class="product-image"></div>
             <div class="product-info-text">
                 <span>${product.short_description}</span>
                 <span class="product-price">Price: ${product.price}</span>
