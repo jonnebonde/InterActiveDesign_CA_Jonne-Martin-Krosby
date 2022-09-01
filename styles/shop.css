@@ -139,7 +139,7 @@
 }
 
 .products,
-.random-products-container {
+.popular-products-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -150,7 +150,7 @@
 }
 
 .products a,
-.random-products-container a {
+.popular-products-container a {
     text-decoration: none;
     color: var(--darkgreen);
 }

@@ -6,7 +6,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const url = "https://jonnekrosby.site/wp-json/wc/v3/products/" + id + "?consumer_key=ck_03cf65b3b05863487398cfc21cbd3a1f271827db&consumer_secret=cs_8c58b9ba531eaf6f00dfb9c07ed3002b7044ee0d";
+const url = "https://jonnekrosby.site/wp-json/wc/v3/products/" + id + "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
 
 
 async function getDetails() {
@@ -43,7 +43,7 @@ function detailsHtml(product) {
     productDetails.innerHTML =
         `<div class="details">
             <div>
-                <img src="${product.images[0].src}" aria-label="${product.name}" class="details-product-image">
+                <img src="${product.images[1].src}" aria-label="${product.name}" class="details-product-image">
             </div>
         <div class="details-info">
             <div>
@@ -67,14 +67,18 @@ function detailsHtml(product) {
         </div>
     </div>
     `
+
+    const button = document.querySelector(".details-product-button");
+
+    button.onclick = function() {
+    sizeFormActions()
+}
+
+
 } 
 
 
-const button = document.querySelector(".details-product-button");
 
-button.onclick = function() {
-    sizeFormActions()
-}
 
 
 function sizeFormActions() {

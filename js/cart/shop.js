@@ -1,48 +1,117 @@
-/* import { productArray } from "../products/productlist.js"; */
-export const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
-export const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
-export const apiUrl = baseUrl + apiKey;
 
-async function getProducts() {
-
-    try {
-        const response = await fetch(apiUrl);
-        const products = await response.json();
-        const productArray = products;
-
-
-        createProductHtml(productArray);
-        sortByGender(productArray);
-        
-    }
-
-    catch(error) {
-        console.log("something went wrong fetching api");
-    }
-
-
-}
-
-getProducts()
-
+const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+const apiUrl = baseUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const details = params.get("gender");
 const backgroundImgShop = document.querySelector(".background-image-shop");
+const loader = document.querySelector(".loader");
+
+async function getProducts(url) {
+
+    try {
+        const response = await fetch(url);
+        let products = await response.json();
+
+        console.log(products)
+        createProductHtml(products);
+    }
+
+    catch(error) {
+        console.log("something went wrong fetching api");
+    }
+
+}
+
+getProducts(apiUrl)
+
+function sortByGender(){
+    const newUrl = baseUrl + `/tags=${details}` + apiKey;
+    console.log(newUrl)
+    getProducts(newUrl)
+
+}
+
+sortByGender()
+
+  
+
+
+
+
+// filterfunction to sort products by gender
+
+
+
+/* function sortByGender(products) {
+
+    let filteredProducts = products.filter(function (sortedProducts) {
+        console.table(sortedProducts.tags[0].name)
+    return sortedProducts.tags[0].name === details;
+}); 
+
+console.table(details)
+console.log(filteredProducts) */
+
+//if filterfunction has no value(null) all products are shown
+
+/*     if (details) {
+        console.log(products)
+        let products = filteredProducts;
+        console.log(products)
+        
+
+        sortedProductsHTML(filteredProducts)
+    } else {
+        allProductsHTML()
+    }
+} 
+
+function sortedProductsHTML(filteredProducts) {
+    console.log(filteredProducts)
+    createProductHtml(products)
+} */
+
+/* function allProductsHTML() {
+
+    let shuffledShop = productArray.sort(() => 0.5 - Math.random());
+
+    productsContainer.innerHTML = ""
+    shuffledShop.forEach(function (product) {
+        createProductHtml()
+    });
+} */
+
+
+/* function randomGender() {
+
+    let shuffledShop = filteredProductArray.sort(() => 0.5 - Math.random());
+
+    productsContainer.innerHTML = ""
+    shuffledShop.forEach(function (product) {
+        createProductHtml(product)
+    });
+} */
+
+
+
 
 // creating HTML from product array
 
-function createProductHtml(productArray) {
+function createProductHtml(products) {
+    console.log(products)
+    products.forEach(function(product){
 
-    productArray.forEach(function(product){
-
+        loader.remove();
+        
         productsContainer.innerHTML += 
         `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
             <h2>${product.name}</h2>
-            <div style="background-image: url(${product.images[1].src})" aria-label="a ${product.tags[0].name} is wearing a ${product.name}" class="product-image"></div>
+            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.tags[0].name} is wearing a ${product.name}" class="product-image"></div>
             <div class="product-info-text">
                 <span>${product.short_description}</span>
                 <span class="product-price">Price: ${product.price}</span>
@@ -53,30 +122,10 @@ function createProductHtml(productArray) {
         `
     })
 
-    console.log(productArray)
+    console.log(products)
 }
 
 
-// filterfunction to sort products by gender
-
-function sortByGender(productArray) {
-
-    let filteredProductArray = productArray.filter(function (sortedArray) {
-        console.log(sortedArray.tags[0].name)
-    return sortedArray.tags[0].name === details;
-});
-
-
-console.log(filteredProductArray)
-//if filterfunction has no value(null) all products are shown
-
-    if (details) {
-        sortedProductsHTML()
-    } else {
-        allProductsHTML()
-    }
-
-}
 
 
  // toggle filter menus
@@ -246,33 +295,7 @@ document.addEventListener("click", function (e) {
 });
 
 
-function sortedProductsHTML() {
-    filteredProductArray.forEach(function (product) {
-        createProductHtml(product)
-    });
-}
 
-
-function allProductsHTML() {
-
-    let shuffledShop = productArray.sort(() => 0.5 - Math.random());
-
-    productsContainer.innerHTML = ""
-    shuffledShop.forEach(function (product) {
-        createProductHtml(product)
-    });
-}
-
-
-function randomGender() {
-
-    let shuffledShop = filteredProductArray.sort(() => 0.5 - Math.random());
-
-    productsContainer.innerHTML = ""
-    shuffledShop.forEach(function (product) {
-        createProductHtml(product)
-    });
-}
 
 /* 
 // click event for dummy filters

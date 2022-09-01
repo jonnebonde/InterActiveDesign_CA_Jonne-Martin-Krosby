@@ -6,7 +6,7 @@
     font-size: 1.1rem;
     font-weight: var(--bold);
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 header {
@@ -21,7 +21,6 @@ header {
     align-items: center;
     font-family: var(--tahoma);
     border-bottom: 2px solid var(--darkgreen);
-    width: 100%;
     padding: 10px 30px;
 }
 
@@ -289,3 +288,5 @@ header {
     height: 30px;
     margin: 10px;
 }
+
+
