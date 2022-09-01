@@ -37,10 +37,6 @@ function sortByGender(){
 
 sortByGender()
 
-  
-
-
-
 
 // filterfunction to sort products by gender
 
