@@ -106,7 +106,7 @@ function createProductHtml(products) {
     products.forEach(function(product){
 
         loader.remove();
-        
+
         productsContainer.innerHTML += 
         `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">

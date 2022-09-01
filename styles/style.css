@@ -97,6 +97,11 @@ form {
     display: block;
     width: 80px;
     height: 80px;
+    padding: 144px;
+}
+
+.shoploader {
+    padding: 300px;
 }
 
 .loader:after {
@@ -105,9 +110,9 @@ form {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 10px solid black;
-    border-color: black transparent black transparent;
-    animation: loader 1.3s linear infinite;
+    border: 10px solid var(--darkgreen);
+    border-color: var(--darkgreen) transparent var(--darkgreen) transparent;
+    animation: loader 1.6s linear infinite;
   }
 
 @keyframes loader {
