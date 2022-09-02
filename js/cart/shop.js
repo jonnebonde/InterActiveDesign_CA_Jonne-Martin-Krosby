@@ -1,7 +1,7 @@
 
-const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&category=17";
-const apiUrl = baseUrl + apiKey;
+const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+const baseUrl = apiUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
 const queryString = document.location.search;
@@ -17,7 +17,8 @@ async function getProducts(url) {
         let products = await response.json();
 
         console.log(products)
-        createProductHtml(products);
+        createProductsHtml(products)
+     
     }
 
     catch(error) {
@@ -26,17 +27,56 @@ async function getProducts(url) {
 
 }
 
-getProducts(apiUrl)
 
-/* function sortByGender(){
-    const newUrl = baseUrl + `/tags=${details}` + apiKey;
-    console.log(newUrl)
-    getProducts(newUrl)
+
+
+// creating HTML from product array
+
+
+
+console.log(details)
+
+function sortByGender(){
+    if(!details){
+       
+        let allProductsUrl;
+        allProductsUrl = baseUrl + `&per_page=20`;
+        productsContainer.innerHTML = "";
+        getProducts(allProductsUrl)
+    }
+    else {
+        console.log("hello")
+        let genderUrl;
+        genderUrl = baseUrl + `&category=${details}`
+        productsContainer.innerHTML = "";
+        console.log(genderUrl)
+        getProducts(genderUrl);
+    }
 
 }
 
-sortByGender() */
+sortByGender()   
 
+
+function createProductsHtml(products){
+    products.forEach(function(product){
+
+        loader.remove();
+        productsContainer.innerHTML += 
+        `<div class="product" >
+        <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
+            <h2>${product.name}</h2>
+            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.name} is wearing a ${product.name}" class="product-image"></div>
+            <div class="product-info-text">
+                <span>${product.short_description}</span>
+                <span class="product-price">Price: ${product.price}</span>
+            </div>
+        </a>
+            <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
+        </div>
+        `
+    })
+}
 
 // filterfunction to sort products by gender
 
@@ -95,31 +135,7 @@ function sortedProductsHTML(filteredProducts) {
 
 
 
-// creating HTML from product array
 
-function createProductHtml(products) {
-    console.log(products)
-    products.forEach(function(product){
-
-        loader.remove();
-
-        productsContainer.innerHTML += 
-        `<div class="product" >
-        <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
-            <h2>${product.name}</h2>
-            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.name} is wearing a ${product.name}" class="product-image"></div>
-            <div class="product-info-text">
-                <span>${product.short_description}</span>
-                <span class="product-price">Price: ${product.price}</span>
-            </div>
-        </a>
-            <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
-        </div>
-        `
-    })
-
-    console.log(products)
-}
 
 
 
