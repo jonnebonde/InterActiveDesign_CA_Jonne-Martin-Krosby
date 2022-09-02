@@ -41,14 +41,14 @@ function sortByGender(){
        
         let allProductsUrl;
         allProductsUrl = baseUrl + `&per_page=20`;
-        productsContainer.innerHTML = "";
+       
         getProducts(allProductsUrl)
     }
     else {
         console.log("hello")
         let genderUrl;
         genderUrl = baseUrl + `&category=${details}`
-        productsContainer.innerHTML = "";
+        
         console.log(genderUrl)
         getProducts(genderUrl);
     }
@@ -61,7 +61,7 @@ sortByGender()
 function createProductsHtml(products){
     products.forEach(function(product){
 
-        loader.remove();
+        loader.remove(); 
         productsContainer.innerHTML += 
         `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
@@ -244,14 +244,14 @@ document.addEventListener("click", function (e) {
 
 function changeBackground() {
 
-    if ((details === "man") || (details === "woman") || (!details)) {
+    if ((details === "17") || (details === "23") || (!details)) {
 
-        if (details === "man") {
+        if (details === "17") {
             backgroundImgShop.style.backgroundImage = "url('./images/men_img.jpg')"
             backgroundImgShop.setAttribute("aria-label", "picture of a man on a mountain")
         }
 
-        if (details === "woman") {
+        if (details === "23") {
             backgroundImgShop.style.backgroundImage = "url('./images/women_img.jpg')"
             backgroundImgShop.setAttribute("aria-label", "picture of a woman on a mountain")
         }
