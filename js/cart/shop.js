@@ -10,6 +10,7 @@ const details = params.get("gender");
 const backgroundImgShop = document.querySelector(".background-image-shop");
 const loader = document.querySelector(".loader");
 
+
 async function getProducts(url) {
 
     try {
@@ -91,12 +92,33 @@ function filterPopularProducts(){
     }
 
     const popularUrl = baseUrl + `&category=44&tag=${tagid}&per_page=20`
-    productsContainer.innerHTML = ""
+    productsContainer.innerHTML = "";
+    productsContainer.appendChild(loader)
+    getProducts(popularUrl)
+}
+
+
+function filterBestSellingProducts(){
+    let tagid;
+    if(details === "17" ) {
+        tagid = "46";
+        console.log("yoo")
+    }
+    if(details === "23") {
+        tagid = "45";
+    } 
+    if(!details){
+        tagid = "47"
+    }
+
+    const popularUrl = baseUrl + `&category=43&tag=${tagid}&per_page=20`
+    productsContainer.innerHTML = "";
+    productsContainer.appendChild(loader)
     getProducts(popularUrl)
 }
 
 filterPopular.addEventListener("click", filterPopularProducts);
-filterBestSelling.addEventListener("click", sortByGender)
+filterBestSelling.addEventListener("click", filterBestSellingProducts)
 
 
 // creating HTML from API
@@ -104,7 +126,7 @@ filterBestSelling.addEventListener("click", sortByGender)
 function createProductsHtml(products){
     products.forEach(function(product){
 
-        loader.remove(); 
+        loader.remove();
         productsContainer.innerHTML += 
         `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
