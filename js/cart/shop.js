@@ -42,6 +42,7 @@ async function getProducts(url) {
 // Tags - id
 // Female - 45
 // Male - 46
+// All - 47
 
 
 
@@ -55,7 +56,6 @@ console.log(details)
 
 function sortByGender(){
     if(!details){
-       
         let allProductsUrl;
         allProductsUrl = baseUrl + `&per_page=20`;
         getProducts(allProductsUrl)
@@ -72,7 +72,6 @@ function sortByGender(){
 sortByGender()   
 
 
-
 // Filter products that is popular according to gender or not
 
 const filterPopular = document.getElementById("popular");
@@ -85,22 +84,19 @@ function filterPopularProducts(){
         console.log("yoo")
     }
     if(details === "23") {
-        tagid = "45"
-    }else
-        tagid = "45,46"
+        tagid = "45";
+    } 
+    if(!details){
+        tagid = "47"
+    }
 
-
-    console.log(tagid)
-    console.log(details)
     const popularUrl = baseUrl + `&category=44&tag=${tagid}&per_page=20`
-    console.log("jippi");
     productsContainer.innerHTML = ""
     getProducts(popularUrl)
 }
 
 filterPopular.addEventListener("click", filterPopularProducts);
 filterBestSelling.addEventListener("click", sortByGender)
-
 
 
 // creating HTML from API
