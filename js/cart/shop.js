@@ -29,6 +29,21 @@ async function getProducts(url) {
 
 
 
+// Category - id
+// Bestseller - 43
+// Female - 23
+// Male - 17
+// Popular - 44
+// Skiing - 18
+// Water resistant - 19
+// Waterproof - 20
+// Windproof - 21
+
+// Tags - id
+// Female - 45
+// Male - 46
+
+
 
 
 
@@ -58,10 +73,10 @@ sortByGender()
 
 
 
+// Filter products that is popular according to gender or not
+
 const filterPopular = document.getElementById("popular");
 const filterBestSelling = document.getElementById("best-selling");
-
-
 
 function filterPopularProducts(){
     let tagid;
