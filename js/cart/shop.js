@@ -16,9 +16,9 @@ async function getProducts(url) {
         const response = await fetch(url);
         let products = await response.json();
 
-        console.log(products)
+        console.table(products)
         createProductsHtml(products)
-     
+
     }
 
     catch(error) {
@@ -30,33 +30,65 @@ async function getProducts(url) {
 
 
 
-// creating HTML from product array
+
 
 
 
 console.log(details)
+
+// filter according to gender from cta on index.html and shop.html
 
 function sortByGender(){
     if(!details){
        
         let allProductsUrl;
         allProductsUrl = baseUrl + `&per_page=20`;
-       
         getProducts(allProductsUrl)
     }
     else {
         console.log("hello")
         let genderUrl;
         genderUrl = baseUrl + `&category=${details}`
-        
         console.log(genderUrl)
         getProducts(genderUrl);
     }
 
 }
-
 sortByGender()   
 
+
+
+const filterPopular = document.getElementById("popular");
+const filterBestSelling = document.getElementById("best-selling");
+
+
+
+function filterPopularProducts(){
+    let tagid;
+    if(details === "17" ) {
+        tagid = "46";
+        console.log("yoo")
+    }
+    if(details === "23") {
+        tagid = "45"
+    }else
+        tagid = "45,46"
+
+
+    console.log(tagid)
+    console.log(details)
+    const popularUrl = baseUrl + `&category=44&tag=${tagid}&per_page=20`
+    console.log("jippi");
+    productsContainer.innerHTML = ""
+    getProducts(popularUrl)
+}
+
+filterPopular.addEventListener("click", filterPopularProducts);
+filterBestSelling.addEventListener("click", sortByGender)
+
+
+
+// creating HTML from API
 
 function createProductsHtml(products){
     products.forEach(function(product){
@@ -190,7 +222,7 @@ document.addEventListener("click", function (e) {
 });
 
 
-//activity menu
+//activity menu = feature menu
 
 const activityToggle = document.getElementById("activity");
 const activityList = document.querySelector(".activity-list");
@@ -269,11 +301,11 @@ function toggleActiveLink() {
     const manActive = document.querySelector(".man");
     const womanActive = document.querySelector(".woman");
 
-    if (details === "man") {
+    if (details === "17") {
         manActive.classList.add("active");
     }
 
-    if (details === "woman") {
+    if (details === "23") {
         womanActive.classList.add("active");
     }
 }
@@ -340,12 +372,7 @@ activityListClose.forEach(activity => {
     })
 })
 
-const filterPopular = document.getElementById("popular");
-const filterBestSelling = document.getElementById("best-selling");
 
-
-filterPopular.addEventListener("click", sortByGender);
-filterBestSelling.addEventListener("click", sortByGender)
 
 
 // sort array low to high according to gender or not chosen
