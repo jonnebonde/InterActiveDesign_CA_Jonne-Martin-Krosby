@@ -100,7 +100,6 @@ function genderCheck(details){
         tagid = "47";
         return tagid;
     }
-
 }
 
 
