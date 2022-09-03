@@ -1,6 +1,6 @@
 
 const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&orderby=price&order=asc";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&include=576,487,425";
 const baseUrl = apiUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
@@ -35,6 +35,7 @@ async function getProducts(url) {
 // filter by prices = wp-json/wc/v3/products?orderby=price&order=desc
 // filter alphabetical = 
 // keyword search = /products?filter[q]=search-keyword
+// include specific id = &include=576,487,425;
 
 
 
