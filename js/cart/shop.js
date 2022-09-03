@@ -45,12 +45,6 @@ async function getProducts(url) {
 // Male - 46
 // All - 47
 
-
-
-
-
-
-
 console.log(details)
 
 // filter according to gender from cta on index.html and shop.html
@@ -73,12 +67,15 @@ function sortByGender(){
 sortByGender()   
 
 
-// Filter products that is popular according to gender or not
+// Filter products by category and if gender is checked
 
 const filterPopular = document.getElementById("popular");
 const filterBestSelling = document.getElementById("best-selling");
 
-function filterPopularProducts(event){
+filterPopular.addEventListener("click", filterByCategory);
+filterBestSelling.addEventListener("click", filterByCategory);
+
+function filterByCategory(event){
     let tagid = genderCheck(details);
     let categoryid = event.target.value; 
 
@@ -107,8 +104,7 @@ function genderCheck(details){
 }
 
 
-filterPopular.addEventListener("click", filterPopularProducts);
-filterBestSelling.addEventListener("click", filterPopularProducts);
+
 
 
 
