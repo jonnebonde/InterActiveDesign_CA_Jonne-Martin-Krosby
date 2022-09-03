@@ -56,6 +56,22 @@ async function getProducts(url) {
 // Male - 46
 // All - 47
 
+// Color Attributes - id
+// Army - 29
+// Black - 30
+// Blue - 39
+// Brown - 40
+// Orange - 31
+// Yellow - 32
+
+// Size Attributes - id
+// Small - 37
+// Medium - 26
+// Large - 25
+// Xlarge - 27
+// XXlarge - 28
+
+
 console.log(details)
 
 // filter according to gender from cta on index.html and shop.html
