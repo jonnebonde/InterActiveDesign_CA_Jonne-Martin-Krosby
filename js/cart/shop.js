@@ -52,7 +52,7 @@ console.log(details)
 function sortByGender(){
     if(!details){
         let allProductsUrl;
-        allProductsUrl = baseUrl + `&per_page=20`;
+        allProductsUrl = baseUrl + `&per_page=30`;
         getProducts(allProductsUrl)
     }
     else {
@@ -67,13 +67,26 @@ function sortByGender(){
 sortByGender()   
 
 
-// Filter products by category and if gender is checked
+// const for categories and their addeventlisteners
 
 const filterPopular = document.getElementById("popular");
 const filterBestSelling = document.getElementById("best-selling");
 
+const featureSkiing = document.getElementById("skiing");
+const featureWaterProof = document.getElementById("waterproof")
+const featurewaterResistant = document.getElementById("water_resistant");
+const featureWindproof = document.getElementById("windproof");
+
 filterPopular.addEventListener("click", filterByCategory);
 filterBestSelling.addEventListener("click", filterByCategory);
+
+featureSkiing.addEventListener("click", filterByCategory);
+featureWaterProof.addEventListener("click", filterByCategory);
+featurewaterResistant.addEventListener("click", filterByCategory);
+featureWindproof.addEventListener("click", filterByCategory);
+
+
+// Filter products by category and if gender is checked
 
 function filterByCategory(event){
     let tagid = genderCheck(details);
