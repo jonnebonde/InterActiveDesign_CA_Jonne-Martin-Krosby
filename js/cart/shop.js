@@ -78,47 +78,38 @@ sortByGender()
 const filterPopular = document.getElementById("popular");
 const filterBestSelling = document.getElementById("best-selling");
 
-function filterPopularProducts(){
-    let tagid;
-    if(details === "17" ) {
-        tagid = "46";
-        console.log("yoo")
-    }
-    if(details === "23") {
-        tagid = "45";
-    } 
-    if(!details){
-        tagid = "47"
-    }
+function filterPopularProducts(event){
+    let tagid = genderCheck(details);
+    let categoryid = event.target.value; 
 
-    const popularUrl = baseUrl + `&category=44&tag=${tagid}&per_page=20`
+    const popularUrl = baseUrl + `&category=${categoryid}&tag=${tagid}&per_page=20`
     productsContainer.innerHTML = "";
     productsContainer.appendChild(loader)
     getProducts(popularUrl)
 }
 
 
-function filterBestSellingProducts(){
+function genderCheck(details){
     let tagid;
     if(details === "17" ) {
         tagid = "46";
-        console.log("yoo")
+        return tagid;
     }
     if(details === "23") {
         tagid = "45";
+        return tagid;
     } 
     if(!details){
-        tagid = "47"
+        tagid = "47";
+        return tagid;
     }
 
-    const popularUrl = baseUrl + `&category=43&tag=${tagid}&per_page=20`
-    productsContainer.innerHTML = "";
-    productsContainer.appendChild(loader)
-    getProducts(popularUrl)
 }
+
 
 filterPopular.addEventListener("click", filterPopularProducts);
-filterBestSelling.addEventListener("click", filterBestSellingProducts)
+filterBestSelling.addEventListener("click", filterPopularProducts);
+
 
 
 // creating HTML from API
