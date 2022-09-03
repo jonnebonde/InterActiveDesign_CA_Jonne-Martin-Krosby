@@ -1,6 +1,6 @@
 
 const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&orderby=price&order=asc";
 const baseUrl = apiUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
@@ -18,7 +18,10 @@ async function getProducts(url) {
         let products = await response.json();
 
         console.table(products)
-        createProductsHtml(products)
+        createProductsHtml(products);
+        
+
+    
 
     }
 
@@ -27,6 +30,14 @@ async function getProducts(url) {
     }
 
 }
+
+// filter by attributes = products?attribute=pa_color&attribute_term=50
+// filter by prices = wp-json/wc/v3/products?orderby=price&order=desc
+// filter alphabetical = 
+// keyword search = /products?filter[q]=search-keyword
+
+
+
 
 
 
@@ -116,10 +127,6 @@ function genderCheck(details){
 }
 
 
-
-
-
-
 // creating HTML from API
 
 function createProductsHtml(products){
@@ -130,7 +137,7 @@ function createProductsHtml(products){
         `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
             <h2>${product.name}</h2>
-            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.name} is wearing a ${product.name}" class="product-image"></div>
+            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.tags[1].name} is wearing a ${product.name}" class="product-image"></div>
             <div class="product-info-text">
                 <span>${product.short_description}</span>
                 <span class="product-price">Price: ${product.price}</span>
@@ -219,6 +226,7 @@ sizeToggle.addEventListener("click", () => {
 
 sizeListClose.forEach(function (sizeMenu) {
     sizeMenu.onclick = function () {
+        
         sizeList.classList.remove("active")
     }
 })
