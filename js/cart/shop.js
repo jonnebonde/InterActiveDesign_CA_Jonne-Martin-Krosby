@@ -1,6 +1,6 @@
 
 const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&include=576,487,425";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
 const baseUrl = apiUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
@@ -19,10 +19,6 @@ async function getProducts(url) {
 
         console.table(products)
         createProductsHtml(products);
-        
-
-    
-
     }
 
     catch(error) {
@@ -96,7 +92,7 @@ const sizeXlarge = "27";
 const sizeXxlarge = "28";
 
 
-console.log(details)
+
 
 // filter according to gender from cta on index.html and shop.html
 
@@ -107,10 +103,8 @@ function sortByGender(){
         getProducts(allProductsUrl)
     }
     else {
-        console.log("hello")
         let genderUrl;
         genderUrl = baseUrl + `&category=${details}`
-        console.log(genderUrl)
         getProducts(genderUrl);
     }
 
@@ -152,16 +146,16 @@ function filterByCategory(event){
 
 function genderCheck(details){
     let tagid;
-    if(details === "17" ) {
+    if(details === male ) {
         tagid = "46";
         return tagid;
     }
-    if(details === "23") {
+    if(details === female) {
         tagid = "45";
         return tagid;
     } 
     if(!details){
-        tagid = "47";
+        tagid = tagAll;
         return tagid;
     }
 }
