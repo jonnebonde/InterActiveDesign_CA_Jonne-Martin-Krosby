@@ -47,20 +47,15 @@ async function getProducts(url) {
 // Water resistant - 19
 // Waterproof - 20
 // Windproof - 21
-const bestseller = "43";
+
 const female = "23";
 const male = "17";
-const popular = "44";
-const skiing = "18";
-const waterResistant = "19";
-const waterproof = "20";
-const windproof = "21";
-
 
 // Tags - id
 // Female - 45
 // Male - 46
 // All - 47
+
 const tagFemale = "45";
 const tagMale = "46";
 const tagAll = "47";
@@ -72,12 +67,7 @@ const tagAll = "47";
 // Brown - 40
 // Orange - 31
 // Yellow - 32
-const colorArmy = "29";
-const colorBlack = "30";
-const colorBlue = "39";
-const colorBrown = "40";
-const colorOrange = "31";
-const colorYellow = "32";
+
 
 // Size Attributes - id
 // Small - 37
@@ -85,13 +75,6 @@ const colorYellow = "32";
 // Large - 25
 // Xlarge - 27
 // XXlarge - 28
-const sizeSmall = "37";
-const sizeMedium = "26";
-const sizeLarge = "25";
-const sizeXlarge = "27";
-const sizeXxlarge = "28";
-
-
 
 
 // filter according to gender from cta on index.html and shop.html
@@ -137,10 +120,34 @@ function filterByCategory(event){
     let tagid = genderCheck(details);
     let categoryid = event.target.value; 
 
-    const popularUrl = baseUrl + `&category=${categoryid}&tag=${tagid}&per_page=20`
+    const popularUrl = baseUrl + `&tag=${tagid}&category=${categoryid}`
     productsContainer.innerHTML = "";
     productsContainer.appendChild(loader)
     getProducts(popularUrl)
+}
+
+function filterByColor(event){
+    let tagid = genderCheck(details);
+    let colorId = event.target.value;
+
+    console.log(event.target.value)
+
+    const colorUrl = baseUrl + `&tag=${tagid}&attribute=pa_color&attribute_term=${colorId}`;
+    productsContainer.innerHTML = "";
+    productsContainer.appendChild(loader);
+    getProducts(colorUrl)
+}
+
+function filterBySize(event){
+    let tagid = genderCheck(details);
+    let sizeId = event.target.value;
+
+    console.log(event.target.value)
+
+    const sizeUrl = baseUrl + `&tag=${tagid}&attribute=pa_size&attribute_term=${sizeId}`;
+    productsContainer.innerHTML = "";
+    productsContainer.appendChild(loader);
+    getProducts(sizeUrl)
 }
 
 
@@ -259,8 +266,8 @@ sizeToggle.addEventListener("click", () => {
 })
 
 sizeListClose.forEach(function (sizeMenu) {
-    sizeMenu.onclick = function () {
-        
+    sizeMenu.onclick = function (size) {
+        filterBySize(size)
         sizeList.classList.remove("active")
     }
 })
@@ -284,7 +291,8 @@ colorToggle.addEventListener("click", () => {
 })
 
 colorListClose.forEach(function (colorMenu) {
-    colorMenu.onclick = function () {
+    colorMenu.onclick = function (color) {
+        filterByColor(color)
         colorList.classList.remove("active")
     }
 })
