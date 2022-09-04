@@ -162,3 +162,5 @@ deleteCart.onclick = function deleteCart() {
 function updateCart() {
     localStorage.setItem("cartList", JSON.stringify(cartArray))
 };
+
+
