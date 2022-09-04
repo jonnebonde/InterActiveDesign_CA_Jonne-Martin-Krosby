@@ -34,10 +34,6 @@ async function getProducts(url) {
 // include specific id = &include=576,487,425;
 
 
-
-
-
-
 // Category - id
 // Bestseller - 43
 // Female - 23
