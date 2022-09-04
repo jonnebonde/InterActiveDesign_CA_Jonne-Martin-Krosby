@@ -51,11 +51,23 @@ async function getProducts(url) {
 // Water resistant - 19
 // Waterproof - 20
 // Windproof - 21
+const bestseller = "43";
+const female = "23";
+const male = "17";
+const popular = "44";
+const skiing = "18";
+const waterResistant = "19";
+const waterproof = "20";
+const windproof = "21";
+
 
 // Tags - id
 // Female - 45
 // Male - 46
 // All - 47
+const tagFemale = "45";
+const tagMale = "46";
+const tagAll = "47";
 
 // Color Attributes - id
 // Army - 29
@@ -64,6 +76,12 @@ async function getProducts(url) {
 // Brown - 40
 // Orange - 31
 // Yellow - 32
+const colorArmy = "29";
+const colorBlack = "30";
+const colorBlue = "39";
+const colorBrown = "40";
+const colorOrange = "31";
+const colorYellow = "32";
 
 // Size Attributes - id
 // Small - 37
@@ -71,6 +89,11 @@ async function getProducts(url) {
 // Large - 25
 // Xlarge - 27
 // XXlarge - 28
+const sizeSmall = "37";
+const sizeMedium = "26";
+const sizeLarge = "25";
+const sizeXlarge = "27";
+const sizeXxlarge = "28";
 
 
 console.log(details)
