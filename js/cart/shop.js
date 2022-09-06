@@ -34,6 +34,9 @@ async function getProducts(url) {
 // include specific id = &include=576,487,425;
 
 
+//note to self : fix alphabetical filter and price filter
+
+
 // Category - id
 // Bestseller - 43
 // Female - 23
@@ -150,11 +153,11 @@ function filterBySize(event){
 function genderCheck(details){
     let tagid;
     if(details === male ) {
-        tagid = "46";
+        tagid = tagMale;
         return tagid;
     }
     if(details === female) {
-        tagid = "45";
+        tagid = tagFemale;
         return tagid;
     } 
     if(!details){
