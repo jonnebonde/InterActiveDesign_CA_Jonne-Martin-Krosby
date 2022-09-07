@@ -12,7 +12,6 @@ const loader = document.querySelector(".loader");
 console.log(searchValue);
 const searchButton = document.querySelector("#submit");
 
-
 async function getProducts(url) {
 
     try {
@@ -21,12 +20,13 @@ async function getProducts(url) {
         console.log(products)
         
         createProductsHtml(products);
+        
     }
 
     catch(error) {
         console.log("something went wrong fetching api");
     }
-
+   
 }
 
 // keyword search = /products?filter[q]=search-keyword
