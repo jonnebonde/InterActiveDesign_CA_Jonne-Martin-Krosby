@@ -21,7 +21,7 @@ cartQuantityTotal()
 
 //click event for searchfield
 
-const searchInput = document.getElementById("search");
+/* const searchInput = document.getElementById("search");
 const searchToggleBtn = document.querySelector(".submit-btn");
 const searchContainer = document.querySelector(".search-input")
 
@@ -38,7 +38,7 @@ document.addEventListener("click", function (e) {
         if (!searchContainer.contains(e.target)) {
         searchInput.classList.remove("active")
     }
-});
+}); */
 
 
 // Go back in history button
