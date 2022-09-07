@@ -21,6 +21,16 @@ cartQuantityTotal()
 
 //click event for searchfield
 
+const searchBtn = document.querySelector(".submit-btn");
+
+searchBtn.onclick = function(){
+    const searchInput = document.getElementById("search");
+
+}
+
+
+
+
 /* const searchInput = document.getElementById("search");
 const searchToggleBtn = document.querySelector(".submit-btn");
 const searchContainer = document.querySelector(".search-input")

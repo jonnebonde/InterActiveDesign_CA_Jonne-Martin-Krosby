@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
 
     .checkout-cart {
         max-width: 800px;
@@ -35,9 +35,32 @@
         display: none;
     }
 
+    .search-input-hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submit-btn-hamburger {
+        height: 39px;
+        background-color: var(--white);
+        padding: 0 10px ;
+        font-size: 1.2rem;
+        font-family: var(--tahoma);
+        font-weight: bold;
+    }
+
+    .submit-btn-hamburger:hover {
+        background-color: var(--darkgreen);
+        color: var(--white);
+        transition: 250ms ease-in-out;
+    }
+
     #hamburger-search {
-        display: block;
-        width: auto;
+        display: inline-block;
+        width: 50%;
+        border-right: none;
     }
 
     .hamburger {
@@ -73,7 +96,7 @@
     }
 
     .nav-menu input {
-        margin: 10px;
+        margin: 10px 0;
         height: 25px;
     }
 
@@ -88,7 +111,7 @@
         right: 0;
         width: 100%;
         height: 250px;
-        top: 93px;
+        top: 107px;
         border: 2px solid var(--darkgreen);
     }
 
@@ -480,6 +503,10 @@
         height: 100px;
         width: auto;
         transition: 250ms ease-in-out;
+    }
+
+    .nav-menu.active {
+        top: 97px;
     }
 
 }
