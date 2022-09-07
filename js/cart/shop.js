@@ -16,7 +16,7 @@ async function getProducts(url) {
 
     try {
         const response = await fetch(url);
-        let products = await response.json();
+        const products = await response.json();
         console.log(products)
         
         createProductsHtml(products);
@@ -26,7 +26,6 @@ async function getProducts(url) {
     catch(error) {
         console.log("something went wrong fetching api");
     }
-   
 }
 
 // keyword search = /products?filter[q]=search-keyword
@@ -37,7 +36,7 @@ if(searchValue !== null){
     search()
     searchValue=""
 } else {
-    getProducts()
+    
     sortByGender()   
 }
 
@@ -109,7 +108,6 @@ function sortByGender(){
 }
 
 
-
 // const for categories and their addeventlisteners
 
 const filterPopular = document.getElementById("popular");
@@ -172,11 +170,9 @@ function sortBy(event){
         sortByUrl = baseUrl + `&tag=${tagid}` + zA;
     }
 
-
     productsContainer.innerHTML = "";
     productsContainer.appendChild(loader)
     getProducts(sortByUrl)
-
 }
 
 function filterByCategory(event){
@@ -192,9 +188,6 @@ function filterByCategory(event){
 function filterByColor(event){
     let tagid = genderCheck(details);
     let colorId = event.target.value;
-
-    console.log(event.target.value)
-
     const colorUrl = baseUrl + `&tag=${tagid}&attribute=pa_color&attribute_term=${colorId}`;
     productsContainer.innerHTML = "";
     productsContainer.appendChild(loader);
@@ -205,14 +198,11 @@ function filterBySize(event){
     let tagid = genderCheck(details);
     let sizeId = event.target.value;
 
-    console.log(event.target.value)
-
     const sizeUrl = baseUrl + `&tag=${tagid}&attribute=pa_size&attribute_term=${sizeId}`;
     productsContainer.innerHTML = "";
     productsContainer.appendChild(loader);
     getProducts(sizeUrl)
 }
-
 
 function genderCheck(details){
     let tagid;
