@@ -18,7 +18,7 @@ async function getProducts(url) {
     try {
         const response = await fetch(url);
         let products = await response.json();
-
+        console.log(products)
         
         createProductsHtml(products);
     }
@@ -37,6 +37,7 @@ if(searchValue !== null){
     search()
     searchValue=""
 } else {
+    getProducts()
     sortByGender()   
 }
 
