@@ -1,24 +1,3 @@
-
-// cart item quantity and total price
-let cartItems = JSON.parse(localStorage.getItem("cartList"));
-const numberOfItemsInCart = document.querySelector(".show-cart");
-let cartArray = cartItems || [];
-
-
-function cartQuantityTotal() {
-    console.log()
-    let cartItemsQuantity = 0;
-    let total = 0;
-    for (let i = 0; i < cartArray.length; i++) {
-        total += cartArray[i].price * cartArray[i].quantity;
-        cartItemsQuantity += cartArray[i].quantity;
-        numberOfItemsInCart.innerHTML = `<div class="cart-stats">
-                                            <span aria-label="Cart total item quantity"><i class="fa-solid fa-cart-shopping">${cartItemsQuantity}</i></span>
-                                        </div>`;
-    }
-}
-cartQuantityTotal()
-
 const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
 const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&per_page=30";
 const baseUrl = apiUrl + apiKey;
@@ -56,22 +35,19 @@ let searchUrl
 
 if(searchValue !== null){
     search()
+    searchValue=""
 } else {
     sortByGender()   
 }
 
 function search() {
-    
+
         searchUrl = baseUrl + `&search=${searchValue}`
         console.log(searchUrl)
         productsContainer.innerHTML = "";
         productsContainer.appendChild(loader)
         getProducts(searchUrl)
 }
-
-
-
-
 
 //note to self : fix alphabetical filter and price filter
 
@@ -276,38 +252,7 @@ function createProductsHtml(products){
     })
 }
 
-const backButton = document.querySelectorAll(".back-button");
 
-backButton.forEach(function (back) {
-    back.addEventListener("click", () => {
-        history.back();
-    });
-});
-
-
-// click event for hamburger menu
-
-const toggleButton = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const hideMenu = document.querySelector("main");
-const navContainer = document.querySelector(".navbar")
-
-
-toggleButton.addEventListener("click", () => {
-    toggleButton.classList.toggle("active");
-    navMenu.classList.toggle("active");
-})
-
-hideMenu.addEventListener("click", () => {
-    toggleButton.classList.remove("active");
-    navMenu.classList.remove("active");
-})
-
-document.addEventListener("click", function (e) {
-    if (!navContainer.contains(e.target)) {
-        navMenu.classList.remove("active")
-    }
-});
 
 // filterfunction to sort products by gender
 

@@ -22,17 +22,29 @@ cartQuantityTotal()
 //click event for searchfield
 
 const searchBtn = document.querySelector(".submit-btn");
+const searchBtnHamburger = document.querySelector(".submit-btn-hamburger");
 
 searchBtn.addEventListener("click", searchCheck)
+searchBtnHamburger.addEventListener("click", searchCheckHamburgermenu)
 
 function searchCheck(){
-    const searchInput = document.getElementById("search").value.split(" ");
+    console.log("hi")
+    let searchInput = document.getElementById("search").value.split(" ");
+    console.log(searchBtnHamburger.value)
     if(searchInput == ""){
-        window.location = ""
+        
     } else {
         window.location = `shop.html?search=${searchInput}`
     }
+}
 
+function searchCheckHamburgermenu() {
+    const searchInputHamburger = document.getElementById("hamburger-search").value.split(" ");
+    console.log(searchBtnHamburger.value)
+    if(searchInputHamburger == ""){
+    } else {
+        window.location = `shop.html?search=${searchInputHamburger}`
+    }
 }
 
 /* const searchInput = document.getElementById("search");
