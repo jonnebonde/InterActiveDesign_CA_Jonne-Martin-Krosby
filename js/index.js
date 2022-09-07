@@ -23,13 +23,17 @@ cartQuantityTotal()
 
 const searchBtn = document.querySelector(".submit-btn");
 
-searchBtn.onclick = function(){
-    const searchInput = document.getElementById("search");
+searchBtn.addEventListener("click", searchCheck)
+
+function searchCheck(){
+    const searchInput = document.getElementById("search").value.split(" ");
+    if(searchInput == ""){
+        window.location = ""
+    } else {
+        window.location = `shop.html?search=${searchInput}`
+    }
 
 }
-
-
-
 
 /* const searchInput = document.getElementById("search");
 const searchToggleBtn = document.querySelector(".submit-btn");
