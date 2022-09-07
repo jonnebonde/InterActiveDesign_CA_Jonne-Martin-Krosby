@@ -1,6 +1,6 @@
 
 const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&per_page=30";
 const baseUrl = apiUrl + apiKey;
 
 const productsContainer = document.querySelector(".products");
@@ -17,7 +17,7 @@ async function getProducts(url) {
         const response = await fetch(url);
         let products = await response.json();
 
-        console.table(products)
+        
         createProductsHtml(products);
     }
 
@@ -27,11 +27,7 @@ async function getProducts(url) {
 
 }
 
-// filter by attributes = products?attribute=pa_color&attribute_term=50
-// filter by prices = wp-json/wc/v3/products?orderby=price&order=desc
-// filter alphabetical = 
-// keyword search = /products?filter[q]=search-keyword
-// include specific id = &include=576,487,425;
+
 
 
 //note to self : fix alphabetical filter and price filter
@@ -81,7 +77,7 @@ const tagAll = "47";
 function sortByGender(){
     if(!details){
         let allProductsUrl;
-        allProductsUrl = baseUrl + `&per_page=30`;
+        allProductsUrl = baseUrl;
         getProducts(allProductsUrl)
     }
     else {
@@ -114,6 +110,54 @@ featureWindproof.addEventListener("click", filterByCategory);
 
 
 // Filter products by category and if gender is checked
+
+// filter by attributes = products?attribute=pa_color&attribute_term=50
+// filter by prices = wp-json/wc/v3/products?orderby=price&order=desc
+// filter alphabetical = 
+// keyword search = /products?filter[q]=search-keyword
+// include specific id = &include=576,487,425;
+
+const priceLowHigh = document.getElementById("low-price");
+const priceHighLow = document.getElementById("high-price");
+const fromAtoZ = document.getElementById("a-z");
+const fromZtoA = document.getElementById("z-a");
+
+
+priceLowHigh.addEventListener("click", sortBy);
+priceHighLow.addEventListener("click", sortBy);
+fromAtoZ.addEventListener("click", sortBy);
+fromZtoA.addEventListener("click", sortBy);
+
+function sortBy(event){
+    let tagid = genderCheck(details)
+    const lowHigh = `&orderby=price&order=asc`;
+    const highLow = `&orderby=price&order=desc`;
+    const aZ = `&orderby=title&order=asc`;
+    const zA = `&orderby=title&order=desc`;
+    let sortByUrl = "";
+    let sortValue = event.target.value
+
+    if(sortValue == "1"){
+        sortByUrl = baseUrl + `&tag=${tagid}` + lowHigh;
+        console.log(tagid)
+    }
+    if(sortValue == "2") {
+        sortByUrl = baseUrl + `&tag=${tagid}` + highLow;
+        console.log("hi")
+    }
+    if(sortValue == "3") {
+        sortByUrl = baseUrl + `&tag=${tagid}` + aZ;
+    }
+    if(sortValue == "4"){
+        sortByUrl = baseUrl + `&tag=${tagid}` + zA;
+    }
+
+
+    productsContainer.innerHTML = "";
+    productsContainer.appendChild(loader)
+    getProducts(sortByUrl)
+
+}
 
 function filterByCategory(event){
     let tagid = genderCheck(details);
