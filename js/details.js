@@ -33,7 +33,6 @@ async function getDetails() {
             </div>
         </div>`;
 
-        
     let dropdownSize = document.getElementById("details-select-size");
     dropdownSize.length = 0;
 
