@@ -140,11 +140,9 @@ async function getProducts(url) {
 
         function checkAttribute(event) {
 
-            console.log(event.target.innerHTML)
             let attributeTarget = event.target.value;
             let filterCriteria = event.target.innerHTML;
             const filteredColor = products.filter(product => product.attributes[attributeTarget].options.includes(filterCriteria))
-            console.log(filteredColor)
             filterMessage(attributeTarget, filterCriteria)
             productsContainer.innerHTML = "";
             createProductsHtml(filteredColor)
