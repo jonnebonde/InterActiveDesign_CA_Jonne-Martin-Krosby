@@ -56,6 +56,7 @@ async function getDetails() {
         
             for(let i = 0; i < sizeAttributes.length; i++){
                 let sizes = sizeAttributes[i];
+                console.log(sizes)
                 optionSize = document.createElement("option");
                 optionSize.text = sizes;
                 optionSize.value = sizes;
@@ -81,6 +82,7 @@ function colorSelection() {
 
         for(let i = 0; i < colorAttributes.length; i++) {
             let colors = colorAttributes[i];
+            console.log(colors)
             optionColor = document.createElement("option");
             optionColor.text = colors;
             optionColor.value = colors;
@@ -103,14 +105,23 @@ function sizeFormActions(event) {
     console.log(sizeValue)
     console.log(colorValue)
     let selectedSize = sizeValue.options[sizeValue.selectedIndex].value;
-    let selectedColor = colorValue.options[colorValue.selectIndex].value;
+    let selectedColor = colorValue.options[colorValue.selectedIndex].value;
     console.log(selectedSize)
     console.log(selectedColor)
     if (selectedSize !== "0" && selectedColor !== "0") {
         increaseQuantityCart(event, selectedSize)
         cartQuantityTotal()
-    } else {
+    } 
+
+    // lage message functions for de forskjellige kriteriene
+    if(selectedSize === "0") {
         messageChooseSize()
+    }
+    if(selectedColor === "0") {
+        messageChooseColor()
+    }
+    else {
+        messageChooseColorAndSize()
     }
 
 }
