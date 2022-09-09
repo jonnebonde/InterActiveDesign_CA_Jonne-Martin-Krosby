@@ -1,5 +1,3 @@
-/* import { productArray } from "./products/productlist.js";   */
-
 const productDetails = document.querySelector(".details-container");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -15,12 +13,101 @@ async function getDetails() {
         const response = await fetch(url);
         const product = await response.json();
         
-        
-        detailsHtml(product)
-        pageTitle(product)
+        productDetails.innerHTML =
+        `<div class="details">
+                <div>
+                    <img src="${product.images[1].src}" aria-label="${product.name}" class="details-product-image">
+                </div>
+            <div class="details-info">
+                <div>
+                <h2>${product.name}</h2>
+                <p>${product.description}</p>
+                </div>
+                <div class="details-product-price"><strong>Price:</strong> ${product.price}</div>
+                <div>
+                    <label class="details-select-size-menu" for="select-size">Select Size
+                        <select name="select-size" id="details-select-size" required="required">
+                            <option value="">Choose a size</option>
+                            <option value="XXLarge">XXLarge</option>
+                            <option value="XLarge">XLarge</option>
+                            <option value="Large">Large</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Small">Small</option>
+                            <option value="XSmall">XSmall</option>
+                        </select>
+                </div>
+                <button class="details-product-button" data-product="${product.id}">Add to cart</button>
+            </div>
+        </div>`;
 
+
+    const button = document.querySelector(".details-product-button");
+ 
+
+    button.onclick = function(event) {
+    sizeFormActions(event)
         
+}
+        
+function sizeFormActions(a) {
+
+    const sizeValue = document.querySelector("select");
+    let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
+
+    if (selectedSize) {
+        increaseQuantityCart(a)
+        cartQuantityTotal()
+
+    } else {
+        messageChooseSize()
     }
+
+}
+
+const messages = document.querySelector(".messages");
+
+//Function for adding new items to cart.
+
+function AddToCart(event) {
+    const itemToAdd =  { id: product.id, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description };
+    cartArray.push(itemToAdd);
+    updateCart(cartArray) 
+}
+
+
+//add to cart function that checks the content of array, if duplicate add quantity.
+
+function increaseQuantityCart(event) {
+    console.log(event.target.dataset.product)
+    const duplicateId = cartArray.findIndex((item) => item.id === product.id);
+    console.log(duplicateId)
+
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
+        cartArray[duplicateId].quantity++;
+        updateCart(cartArray);
+        messageAddedToCart(product)
+    } else {
+        AddToCart(event)
+        messageAddedToCart(product)
+    }
+}
+
+//updates items in cart/ local storage
+
+function updateCart() {
+    localStorage.setItem("cartList", JSON.stringify(cartArray))
+
+};
+
+function pageTitle(product) {
+
+    const pageTitleDetails = document.querySelector("title");
+
+    pageTitleDetails.innerHTML = `Rainy Days | ${product.name}`
+}
+pageTitle(product)
+
+}
 
     catch(error) {
         console.log("something went wrong fetching api");
@@ -31,15 +118,9 @@ async function getDetails() {
 getDetails()
 
 
-function pageTitle(product) {
-
-    const pageTitleDetails = document.querySelector("title");
-
-    pageTitleDetails.innerHTML = `Rainy Days | ${product.name}`
-}
 
 
-function detailsHtml(product) {
+/* function detailsHtml(product) {
     productDetails.innerHTML =
         `<div class="details">
             <div>
@@ -76,11 +157,11 @@ function detailsHtml(product) {
 
 
 } 
+ */
 
 
 
-
-
+/* 
 function sizeFormActions() {
 
     const sizeValue = document.querySelector("select");
@@ -129,30 +210,4 @@ function increaseQuantityCart() {
 function updateCart() {
     localStorage.setItem("cartList", JSON.stringify(cartArray))
 
-};
-
-// Shuffle products on productArray
-
-/* let shuffled = productArray.sort(() => 0.5 - Math.random()); */
-
-// get the random products frpm  ProductArray
-
-/* let selected = shuffled.slice(0, 4);
-const popularProductsContainer = document.querySelector(".random-products-container")
-
-selected.forEach(function (product) {
-
-    popularProductsContainer.innerHTML +=
-    `<div class="product" >
-            <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
-                <h2>${product.name}</h2>
-                <div style="background-image: url(${product.image})" aria-label="a ${product.gender} is wearing a ${product.name}" class="product-image"></div>
-                <div class="product-info-text">
-                    <span>${product.description}</span>
-                    <span class="product-price">Price: ${product.price}</span>
-                </div>
-            </a>
-                <a  class="product-button" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">Details</a>
-            </div>
-            `
-}) */
+}; */

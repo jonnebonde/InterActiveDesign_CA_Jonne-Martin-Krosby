@@ -1,4 +1,5 @@
 // cart item quantity and total price
+
 let cartItems = JSON.parse(localStorage.getItem("cartList"));
 const numberOfItemsInCart = document.querySelector(".show-cart");
 let cartArray = cartItems || [];

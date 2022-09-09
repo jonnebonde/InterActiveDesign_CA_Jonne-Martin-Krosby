@@ -71,11 +71,11 @@ function CreateCartHtml(cartElement) {
     //click event for the + quantity button.
 
     increaseQuantity.forEach(function (plusButton) {
-        plusButton.onclick = function () {
-            cartArray.forEach(function () {
+        plusButton.onclick = function (a) {
+            cartArray.forEach(function (a) {
             })
 
-            increaseQuantityCart()
+            increaseQuantityCart(a)
             cartQuantityTotal()
         }
     })
@@ -83,11 +83,11 @@ function CreateCartHtml(cartElement) {
 
     //click event for the - quantity button.
     decreaseQuantity.forEach(function (minusButton) {
-        minusButton.onclick = function () {
-            cartArray.forEach(function () {
+        minusButton.onclick = function (b) {
+            cartArray.forEach(function (b) {
             })
 
-            decreaseQuantityCart()
+            decreaseQuantityCart(b)
             cartQuantityTotal()
         }
     })
@@ -95,10 +95,10 @@ function CreateCartHtml(cartElement) {
 
     //click event for the delete item button
     deleteItemFromCart.forEach(function (deleteButton) {
-        deleteButton.onclick = function () {
-            cartArray.forEach(function () {
+        deleteButton.onclick = function (c) {
+            cartArray.forEach(function (c) {
             })
-            removeFromCart()
+            removeFromCart(c)
         }
     })
 }
@@ -106,9 +106,9 @@ function CreateCartHtml(cartElement) {
 
 //function to remove items from cart.
 
-function removeFromCart() {
+function removeFromCart(event) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
+    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
 
     console.log(duplicateId)
     if (duplicateId !== -1) {
@@ -123,10 +123,10 @@ function removeFromCart() {
 
 //add to cart function that checks the content of array, if duplicate add quantity.
 
-function increaseQuantityCart() {
-
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
-
+function increaseQuantityCart(event) {
+    console.log(event.target.dataset.product)
+    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
+    console.log(duplicateId)
     if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
@@ -138,9 +138,9 @@ function increaseQuantityCart() {
 
 
 //Function to decrement quantity of products in the cart.
-function decreaseQuantityCart() {
+function decreaseQuantityCart(event) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
+    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
 
     if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 1) {
         console.log(cartArray[duplicateId].quantity)

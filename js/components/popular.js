@@ -20,6 +20,8 @@ async function getProducts() {
 
     catch(error) {
         console.log("something went wrong fetching api");
+        popularProductsContainer.innerHTML = "Something went wrong fetching products";
+
     }
 
 }
@@ -31,7 +33,6 @@ function popularProducts(products) {
     popularProductsContainer.innerHTML = "";
 
     for(let i = 0; i < products.length; i++) {
-        console.log(products[i])
 
         if(i === 4){
             break;

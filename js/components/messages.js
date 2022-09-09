@@ -3,6 +3,10 @@ const messages = document.querySelector(".messages");
 const messageLink = document.querySelector(".message-link");
 const viewCartNow = `<a href="cart.html">View cart now</a>`;
 
+function errorMessage(message = "ops! something went wrong") {
+    return `<div class="error">${message}</div>`;
+}
+
 
 function messageAddedToCart(itemToShow) {
 
