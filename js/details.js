@@ -102,18 +102,13 @@ colorSelection()
 function sizeFormActions(event) {
     const sizeValue = document.querySelector("#details-select-size");
     const colorValue = document.querySelector("#details-select-color")
-    console.log(sizeValue)
-    console.log(colorValue)
+    
     let selectedSize = sizeValue.options[sizeValue.selectedIndex].value;
     let selectedColor = colorValue.options[colorValue.selectedIndex].value;
-    console.log(selectedSize)
-    console.log(selectedColor)
-    if (selectedSize !== "0" && selectedColor !== "0") {
-        increaseQuantityCart(event, selectedSize)
-        cartQuantityTotal()
-    } 
 
-    // lage message functions for de forskjellige kriteriene
+    if(selectedColor === "0" && selectedSize === "0") {
+        messageChooseColorAndSize()
+    }
     if(selectedSize === "0") {
         messageChooseSize()
     }
@@ -121,19 +116,20 @@ function sizeFormActions(event) {
         messageChooseColor()
     }
     else {
-        messageChooseColorAndSize()
+        increaseQuantityCart(selectedSize, selectedColor)
+        cartQuantityTotal()
     }
 
 }
 
-const messages = document.querySelector(".messages");
-
+let productIdentication = product.id;
+let productId = productIdentication.toString()
 //Function for adding new items to cart.
 
-function AddToCart(selectedSize) {
-    let productIdentication = product.id;
-    let productId = productIdentication.toString()
-    const itemToAdd = { id: productId, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, Size: selectedSize };
+function AddToCart(selectedSize, selectedColor) {
+   /*  let productIdentication = product.id;
+    let productId = productIdentication.toString() */
+    const itemToAdd = { id: productId, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, Size: selectedSize, Color: selectedColor };
     cartArray.push(itemToAdd);
     updateCart(cartArray) 
 }
@@ -141,20 +137,18 @@ function AddToCart(selectedSize) {
 
 //add to cart function that checks the content of array, if duplicate add quantity.
 
-function increaseQuantityCart(event, selectedSize) {
-    console.log(event.target.dataset.product)
-    console.log(selectedSize)
-    const duplicateId = cartArray.findIndex((item) => item.id == product.id);
-    const duplicateSize = cartArray.findIndex((item) => item.Size == selectedSize)
-    console.log(duplicateId)
-    console.log(duplicateSize)
+function increaseQuantityCart(selectedSize, selectedColor) {
 
-    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99 && duplicateSize !== -1) {
+    const duplicateId = cartArray.findIndex((item) => item.id === productId);
+    const duplicateSize = cartArray.findIndex((item) => item.Size === selectedSize);
+    const duplicateColor = cartArray.findIndex((item) => item.Color === selectedColor);
+
+    if (duplicateColor !== -1 && duplicateSize !== -1 && duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
         messageAddedToCart(product)
     } else {
-        AddToCart(selectedSize)
+        AddToCart(selectedSize, selectedColor)
         messageAddedToCart(product)
     }
 }
@@ -183,98 +177,3 @@ pageTitle(product)
 }
 
 getDetails()
-
-
-
-
-/* function detailsHtml(product) {
-    productDetails.innerHTML =
-        `<div class="details">
-            <div>
-                <img src="${product.images[1].src}" aria-label="${product.name}" class="details-product-image">
-            </div>
-        <div class="details-info">
-            <div>
-            <h2>${product.name}</h2>
-            <p>${product.description}</p>
-            </div>
-            <div class="details-product-price"><strong>Price:</strong> ${product.price}</div>
-            <div>
-                <label class="details-select-size-menu" for="select-size">Select Size
-                    <select name="select-size" id="details-select-size" required="required">
-                        <option value="">Choose a size</option>
-                        <option value="XXLarge">XXLarge</option>
-                        <option value="XLarge">XLarge</option>
-                        <option value="Large">Large</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Small">Small</option>
-                        <option value="XSmall">XSmall</option>
-                    </select>
-            </div>
-            <button class="details-product-button" data-product="${product.id}">Add to cart</button>
-        </div>
-    </div>
-    `
-
-    const button = document.querySelector(".details-product-button");
-
-    button.onclick = function() {
-    sizeFormActions()
-}
-
-
-} 
- */
-
-
-
-/* 
-function sizeFormActions() {
-
-    const sizeValue = document.querySelector("select");
-    let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
-
-    if (selectedSize) {
-        increaseQuantityCart()
-        cartQuantityTotal()
-
-    } else {
-        messageChooseSize()
-    }
-
-}
-
-const messages = document.querySelector(".messages");
-
-
-//Function for adding new items to cart.
-
-function AddToCart() {
-    const itemToAdd = productArray.find(item => item.id === event.target.dataset.product)
-    cartArray.push(itemToAdd);
-    updateCart(cartArray)
-}
-
-
-//add to cart function that checks the content of array, if duplicate add quantity.
-
-function increaseQuantityCart() {
-
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product,);
-
-    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
-        cartArray[duplicateId].quantity++;
-        updateCart(cartArray);
-        messageAddedToCart(itemToShow)
-    } else {
-        AddToCart()
-        messageAddedToCart(itemToShow)
-    }
-}
-
-//updates items in cart/ local storage
-
-function updateCart() {
-    localStorage.setItem("cartList", JSON.stringify(cartArray))
-
-}; */

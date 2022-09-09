@@ -44,7 +44,7 @@ async function getProducts(url) {
     try {
         const response = await fetch(url);
         const products = await response.json();
-        console.log(products)
+        console.table(products)
 
         // sort array low to high 
 
