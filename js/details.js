@@ -41,12 +41,12 @@ async function getDetails() {
         </div>`;
 
 
+
+
     const button = document.querySelector(".details-product-button");
- 
 
     button.onclick = function(event) {
     sizeFormActions(event)
-        
 }
         
 function sizeFormActions(a) {
@@ -69,7 +69,10 @@ const messages = document.querySelector(".messages");
 //Function for adding new items to cart.
 
 function AddToCart(event) {
-    const itemToAdd =  { id: product.id, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description };
+    let productIdentication = product.id;
+    let productId = productIdentication.toString()
+
+    const itemToAdd =  { id: productId, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description };
     cartArray.push(itemToAdd);
     updateCart(cartArray) 
 }

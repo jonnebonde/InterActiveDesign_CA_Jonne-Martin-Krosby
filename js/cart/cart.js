@@ -108,7 +108,7 @@ function CreateCartHtml(cartElement) {
 
 function removeFromCart(event) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
+    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
 
     console.log(duplicateId)
     if (duplicateId !== -1) {
@@ -125,7 +125,7 @@ function removeFromCart(event) {
 
 function increaseQuantityCart(event) {
     console.log(event.target.dataset.product)
-    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
+    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
     console.log(duplicateId)
     if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
         cartArray[duplicateId].quantity++;
@@ -140,7 +140,7 @@ function increaseQuantityCart(event) {
 //Function to decrement quantity of products in the cart.
 function decreaseQuantityCart(event) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
+    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
 
     if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 1) {
         console.log(cartArray[duplicateId].quantity)
