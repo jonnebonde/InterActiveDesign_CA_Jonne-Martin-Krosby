@@ -43,7 +43,7 @@ function CreateCartHtml(cartElement) {
     cartList.innerHTML +=
         `<div class="cart-item">
             <div class="cart-delete-item">
-                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-product="${cartElement.id}"></i></button>
+                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-size="${cartElement.Size}" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-image">
                 <img src="${cartElement.image}" alt="a ${cartElement.gender} wearing a ${cartElement.name}">
@@ -52,11 +52,12 @@ function CreateCartHtml(cartElement) {
                 <h2>${cartElement.name}</h2>
                 <p>${cartElement.description}</p>
                 <span>Price: ${cartElement.price}</span>
+                <span>Size: ${cartElement.Size}</span>
             </div>
             <div class="cart-quantity">
-                <button class="plus-btn" ><i class="fa-solid fa-plus" data-product="${cartElement.id}"></i></button>
+                <button class="plus-btn" ><i class="fa-solid fa-plus" data-size="${cartElement.Size}" data-product="${cartElement.id}"></i></button>
                 <span id="cart-quantity">${cartElement.quantity}</span>
-                <button class="minus-btn" ><i class="fa-solid fa-minus" data-product="${cartElement.id}"></i></button>
+                <button class="minus-btn" ><i class="fa-solid fa-minus" data-size="${cartElement.Size}" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-total">
                 <span>${cartElement.price * cartElement.quantity}</span>
@@ -109,7 +110,6 @@ function CreateCartHtml(cartElement) {
 function removeFromCart(event) {
 
     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
-
     console.log(duplicateId)
     if (duplicateId !== -1) {
         console.log(duplicateId)
@@ -125,10 +125,12 @@ function removeFromCart(event) {
 
 function increaseQuantityCart(event) {
     console.log(event.target.dataset.product)
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
+    console.log(event.target.dataset.size)
+    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
+    const duplicateSize = cartArray.findIndex((item) => item.Size == event.target.dataset.size)
     console.log(duplicateId)
-    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
-        cartArray[duplicateId].quantity++;
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99 && duplicateSize !== -1) {
+        cartArray[duplicateId, duplicateSize].quantity++;
         updateCart(cartArray);
         showCart(cartArray);
     } else {
@@ -139,12 +141,11 @@ function increaseQuantityCart(event) {
 
 //Function to decrement quantity of products in the cart.
 function decreaseQuantityCart(event) {
-
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
-
-    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 1) {
+    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
+    const duplicateSize = cartArray.findIndex((item) => item.Size == event.target.dataset.size)
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 1 && duplicateSize !== -1) {
         console.log(cartArray[duplicateId].quantity)
-        cartArray[duplicateId].quantity--;
+        cartArray[duplicateId, duplicateSize].quantity--;
         updateCart(cartArray);
         showCart(cartArray);
     } else {

@@ -27,19 +27,32 @@ async function getDetails() {
                 <div>
                     <label class="details-select-size-menu" for="select-size">Select Size
                         <select name="select-size" id="details-select-size" required="required">
-                            <option value="">Choose a size</option>
-                            <option value="XXLarge">XXLarge</option>
-                            <option value="XLarge">XLarge</option>
-                            <option value="Large">Large</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Small">Small</option>
-                            <option value="XSmall">XSmall</option>
                         </select>
                 </div>
                 <button class="details-product-button" data-product="${product.id}">Add to cart</button>
             </div>
         </div>`;
 
+        
+    let dropdownSize = document.getElementById("details-select-size");
+    dropdownSize.length = 0;
+
+    let sizeOption = document.createElement("option");
+    sizeOption.text = 'Choose size';
+    sizeOption.value = "0" 
+
+    dropdownSize.add(sizeOption);
+    dropdownSize.selectIndex = 0;
+
+    const sizeAttributes = product.attributes[1].options;
+
+    for(let i = 0; i < sizeAttributes.length; i++){
+        let sizes = sizeAttributes[i];
+        option = document.createElement("option");
+        option.text = sizes;
+        option.value = sizes;
+        dropdownSize.add(option)
+}
 
 
 
@@ -49,15 +62,12 @@ async function getDetails() {
     sizeFormActions(event)
 }
         
-function sizeFormActions(a) {
-
+function sizeFormActions(event) {
     const sizeValue = document.querySelector("select");
     let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
-
-    if (selectedSize) {
-        increaseQuantityCart(a)
+    if (selectedSize !== "0") {
+        increaseQuantityCart(event, selectedSize)
         cartQuantityTotal()
-
     } else {
         messageChooseSize()
     }
@@ -68,11 +78,10 @@ const messages = document.querySelector(".messages");
 
 //Function for adding new items to cart.
 
-function AddToCart(event) {
+function AddToCart(selectedSize) {
     let productIdentication = product.id;
     let productId = productIdentication.toString()
-
-    const itemToAdd =  { id: productId, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description };
+    const itemToAdd = { id: productId, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, Size: selectedSize };
     cartArray.push(itemToAdd);
     updateCart(cartArray) 
 }
@@ -80,17 +89,20 @@ function AddToCart(event) {
 
 //add to cart function that checks the content of array, if duplicate add quantity.
 
-function increaseQuantityCart(event) {
+function increaseQuantityCart(event, selectedSize) {
     console.log(event.target.dataset.product)
-    const duplicateId = cartArray.findIndex((item) => item.id === product.id);
+    console.log(selectedSize)
+    const duplicateId = cartArray.findIndex((item) => item.id == product.id);
+    const duplicateSize = cartArray.findIndex((item) => item.Size == selectedSize)
     console.log(duplicateId)
+    console.log(duplicateSize)
 
-    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
+    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 99 && duplicateSize !== -1) {
         cartArray[duplicateId].quantity++;
         updateCart(cartArray);
         messageAddedToCart(product)
     } else {
-        AddToCart(event)
+        AddToCart(selectedSize)
         messageAddedToCart(product)
     }
 }

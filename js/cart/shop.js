@@ -1,5 +1,5 @@
 const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&per_page=30";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&per_page=20";
 const baseUrl = apiUrl + apiKey;
 
 const productsContainer = document.querySelector(".products"); 

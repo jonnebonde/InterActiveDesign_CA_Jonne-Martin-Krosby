@@ -10,7 +10,6 @@ function errorMessage(message = "ops! something went wrong") {
 
 function messageAddedToCart(itemToShow) {
 
-    console.log(itemToShow.name)
     const addedToCartMessage = `${itemToShow.name} has been added to cart`;
     if (messageContainer.style.display === "none") {
         messageContainer.style.display = "block";
