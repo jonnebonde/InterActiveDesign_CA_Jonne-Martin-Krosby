@@ -25,34 +25,70 @@ async function getDetails() {
                 </div>
                 <div class="details-product-price"><strong>Price:</strong> ${product.price}</div>
                 <div>
+                <div>
                     <label class="details-select-size-menu" for="select-size">Select Size
                         <select name="select-size" id="details-select-size" required="required">
                         </select>
                 </div>
+                <div>
+                    <label class="details-select-size-menu" for="select-size">Select Color
+                    <select name="select-color" id="details-select-color" required="required">
+                    </select>
+                </div>
+                </div>
                 <button class="details-product-button" data-product="${product.id}">Add to cart</button>
             </div>
         </div>`;
+    
+    function sizeSelection() {
+            let dropdownSize = document.getElementById("details-select-size");
 
-    let dropdownSize = document.getElementById("details-select-size");
-    dropdownSize.length = 0;
+            dropdownSize.length = 0;
+        
+            let sizeOption = document.createElement("option");
+            sizeOption.text = 'Choose size';
+            sizeOption.value = "0" 
+            
+            dropdownSize.add(sizeOption);
+            dropdownSize.selectIndex = "0";
+        
+            const sizeAttributes = product.attributes[1].options;
+        
+            for(let i = 0; i < sizeAttributes.length; i++){
+                let sizes = sizeAttributes[i];
+                optionSize = document.createElement("option");
+                optionSize.text = sizes;
+                optionSize.value = sizes;
+                dropdownSize.add(optionSize);
+        }
+    }
+sizeSelection()
 
-    let sizeOption = document.createElement("option");
-    sizeOption.text = 'Choose size';
-    sizeOption.value = "0" 
+function colorSelection() {
+        
+        let dropdownColor = document.getElementById("details-select-color");
 
-    dropdownSize.add(sizeOption);
-    dropdownSize.selectIndex = 0;
+        dropdownColor.length = 0;
 
-    const sizeAttributes = product.attributes[1].options;
+        let coloroption = document.createElement("option");
+        coloroption.text = `Choose color`;
+        coloroption.value = "0";
 
-    for(let i = 0; i < sizeAttributes.length; i++){
-        let sizes = sizeAttributes[i];
-        option = document.createElement("option");
-        option.text = sizes;
-        option.value = sizes;
-        dropdownSize.add(option)
+        dropdownColor.add(coloroption);
+        dropdownColor.selectIndex = "0";
+
+        const colorAttributes = product.attributes[0].options;
+
+        for(let i = 0; i < colorAttributes.length; i++) {
+            let colors = colorAttributes[i];
+            optionColor = document.createElement("option");
+            optionColor.text = colors;
+            optionColor.value = colors;
+            dropdownColor.add(optionColor)
+
+        }
 }
-
+colorSelection()
 
 
     const button = document.querySelector(".details-product-button");
@@ -62,9 +98,15 @@ async function getDetails() {
 }
         
 function sizeFormActions(event) {
-    const sizeValue = document.querySelector("select");
-    let selectedSize = sizeValue.options[sizeValue.selectedIndex].value
-    if (selectedSize !== "0") {
+    const sizeValue = document.querySelector("#details-select-size");
+    const colorValue = document.querySelector("#details-select-color")
+    console.log(sizeValue)
+    console.log(colorValue)
+    let selectedSize = sizeValue.options[sizeValue.selectedIndex].value;
+    let selectedColor = colorValue.options[colorValue.selectIndex].value;
+    console.log(selectedSize)
+    console.log(selectedColor)
+    if (selectedSize !== "0" && selectedColor !== "0") {
         increaseQuantityCart(event, selectedSize)
         cartQuantityTotal()
     } else {
