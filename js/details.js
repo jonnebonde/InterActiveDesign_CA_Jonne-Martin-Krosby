@@ -23,8 +23,8 @@ async function getDetails() {
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 </div>
-                <div class="details-product-price"><strong>Price:</strong> ${product.price}</div>
-                <div>
+                
+                <div class="selection-menu-details">
                 <div>
                     <label class="details-select-size-menu" for="select-size">Select Size
                         <select name="select-size" id="details-select-size" required="required">
@@ -35,9 +35,10 @@ async function getDetails() {
                     <select name="select-color" id="details-select-color" required="required">
                     </select>
                 </div>
-                <div><span>InStock: ${product.stock_quantity}</span>
+                <div><span>Stock: ${product.stock_quantity}</span>
                 </div>
                 </div>
+                <div class="details-product-price"><strong>Price:</strong> ${product.price}</div>
                 <button class="details-product-button" data-product="${product.id}">Add to cart</button>
             </div>
         </div>`;
@@ -121,28 +122,29 @@ function sizeFormActions(event) {
         increaseQuantityCart(selectedSize, selectedColor)
         cartQuantityTotal()
     }
-
 }
 
-let productIdentication = product.id;
-let productId = productIdentication.toString()
+
 //Function for adding new items to cart.
 
 function AddToCart(itemToCheck) {
-    console.log(itemToCheck)
     const itemToAdd = { id: itemToCheck.id, name: product.name, stock: product.stock_quantity, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, size: itemToCheck.size, color: itemToCheck.color };
     cartArray.push(itemToAdd);
     updateCart(cartArray) 
 }
 
-console.log(product)
 //add to cart function that checks the content of array, if duplicate add quantity.
 
 function increaseQuantityCart(selectedSize, selectedColor) {
+    
+    let productIdentication = product.id;
+    let productId = productIdentication.toString()
 
     const itemToCheck = { id: productId, color: selectedColor, size: selectedSize };
+
     const ItemInCart = cartArray.findIndex((item) => {
             return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
+
     if (ItemInCart !== -1 && ItemInCart.quantity !== 99) {
         cartArray[ItemInCart].quantity++;
         updateCart(cartArray);
@@ -152,28 +154,6 @@ function increaseQuantityCart(selectedSize, selectedColor) {
         messageAddedToCart(product)
     }
 }
-
-/* const items = [
-	{ id: 1, color: "red", size: 10, quantity: 1 },
-	{ id: 2, color: "blue", size: 10, quantity: 2 },
-	{ id: 3, color: "blue", size: 11, quantity: 2 },
-];
-
-const newItem = { id: 2, color: "blue", size: 10 };
-
-const existingItemIndex = items.findIndex((item) => {
-	return item.id === newItem.id && item.color === newItem.color && item.size === newItem.size;
-});
-
-console.log(existingItemIndex);
-
-if (existingItemIndex !== -1) {
-	items[existingItemIndex].quantity++;
-} else {
-	items.push({ ...newItem, quantity: 1 });
-}
-
-console.log(items); */
 
 //updates items in cart/ local storage
 
@@ -185,7 +165,6 @@ function updateCart() {
 function pageTitle(product) {
 
     const pageTitleDetails = document.querySelector("title");
-
     pageTitleDetails.innerHTML = `Rainy Days | ${product.name}`
 }
 pageTitle(product)

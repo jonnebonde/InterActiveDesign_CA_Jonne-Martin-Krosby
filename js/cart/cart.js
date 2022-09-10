@@ -52,9 +52,13 @@ function CreateCartHtml(cartElement) {
             <div class="cart-name">
                 <h2>${cartElement.name}</h2>
                 <p>${cartElement.description}</p>
-                <span>Price: ${cartElement.price}</span>
-                <span>Size: ${cartElement.size}</span>
-                <span>Color: ${cartElement.color}</span>
+                <div class="cart-price-size-color-info">
+                    <span>Price: ${cartElement.price}</span>
+                <div class="cart-size-color-details">
+                    <span>Size: ${cartElement.size}</span>
+                    <span>Color: ${cartElement.color}</span>
+                </div>
+                </div>
             </div>
             <div class="cart-quantity">
                 <button class="plus-btn" ><i class="fa-solid fa-plus" data-size="${cartElement.size}" data-stock="${cartElement.stock}" data-quantity="${cartElement.quantity}" data-color="${cartElement.color}" data-product="${cartElement.id}"></i></button>

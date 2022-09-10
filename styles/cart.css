@@ -92,6 +92,22 @@
     font-size: 0.6rem;
 }
 
+.cart-price-size-color-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.cart-size-color-details{
+    display: flex;
+    gap: 3px;
+}
+
+.cart-price-size-color-info span {
+    font-size: 0.7rem;
+}
+
+
 .cart-quantity {
     display: flex;
     gap: 8px;

@@ -488,6 +488,14 @@
         flex: 1 1 10px;
     }
 
+    .cart-price-size-color-info {
+        display: flex;
+    }
+    
+    .cart-size-color-details{
+        flex-direction: column;
+    }
+
     .about-container img {
         max-width: 100%;
         max-height: 100%;
