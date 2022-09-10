@@ -39,13 +39,12 @@ function emptyCartHtml() {
 
 // creates HTML for cart content.
 
-
 function CreateCartHtml(cartElement) {
-    console.log(cartElement.color)
+    console.log(cartElement)
     cartList.innerHTML +=
         `<div class="cart-item">
             <div class="cart-delete-item">
-                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-color="${cartElement.color}" data-size="${cartElement.size}" data-product="${cartElement.id}"></i></button>
+                <button class="delete-item-btn"><i class="fa-solid fa-trash-can" data-color="${cartElement.color}" data-stock="${cartElement.stock}" data-quantity="${cartElement.quantity}" data-size="${cartElement.size}" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-image">
                 <img src="${cartElement.image}" alt="a ${cartElement.gender} wearing a ${cartElement.name}">
@@ -58,9 +57,9 @@ function CreateCartHtml(cartElement) {
                 <span>Color: ${cartElement.color}</span>
             </div>
             <div class="cart-quantity">
-                <button class="plus-btn" ><i class="fa-solid fa-plus" data-size="${cartElement.size}" data-color="${cartElement.color}" data-product="${cartElement.id}"></i></button>
+                <button class="plus-btn" ><i class="fa-solid fa-plus" data-size="${cartElement.size}" data-stock="${cartElement.stock}" data-quantity="${cartElement.quantity}" data-color="${cartElement.color}" data-product="${cartElement.id}"></i></button>
                 <span id="cart-quantity">${cartElement.quantity}</span>
-                <button class="minus-btn" ><i class="fa-solid fa-minus" data-size="${cartElement.size}" data-color="${cartElement.color}" data-product="${cartElement.id}"></i></button>
+                <button class="minus-btn" ><i class="fa-solid fa-minus" data-stock="${cartElement.stock}" data-quantity="${cartElement.quantity}" data-size="${cartElement.size}" data-color="${cartElement.color}" data-product="${cartElement.id}"></i></button>
             </div>
             <div class="cart-total">
                 <span>${cartElement.price * cartElement.quantity}</span>
@@ -112,9 +111,21 @@ function CreateCartHtml(cartElement) {
 
 function removeFromCart(event) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
+    let color = event.target.dataset.color;
+    let size = event.target.dataset.size;
+    let itemId = event.target.dataset.product;
+    let itemStock = event.target.dataset.stock;
+    let itemQuantity = event.target.dataset.quantity;
+
+    console.log(itemQuantity)
+
+    const itemToCheck = { id: itemId, color: color, size: size, stock: itemStock, quantity: itemQuantity};
+
+    const existingItem = cartArray.findIndex((item) => {
+        return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
+
     console.log(duplicateId)
-    if (duplicateId !== -1) {
+    if (existingItem !== -1) {
         console.log(duplicateId)
         cartArray.splice(duplicateId, 1);
         updateCart(cartArray)
@@ -130,19 +141,18 @@ function increaseQuantityCart(event) {
 
     let color = event.target.dataset.color;
     let size = event.target.dataset.size;
-    let itemId = event.target.dataset.product
+    let itemId = event.target.dataset.product;
+    let itemStock = event.target.dataset.stock;
+    let itemQuantity = event.target.dataset.quantity;
 
-/*     const duplicateId = cartArray.findIndex((item) => item.id === event.target.dataset.product);
-    const duplicateSize = cartArray.findIndex((item) => item.Size === event.target.dataset.size);
-    const duplicateColor = cartArray.findIndex((item) => item.Color === event.target.dataset.color); */
+    console.log(itemQuantity)
 
-    const itemToCheck = { id: itemId, color: color, size: size };
+    const itemToCheck = { id: itemId, color: color, size: size, stock: itemStock, quantity: itemQuantity};
 
     const existingItem = cartArray.findIndex((item) => {
         return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
 
-
-    if (existingItem !== -1) {
+    if (existingItem !== -1 && itemToCheck.quantity !== itemToCheck.stock) {
         cartArray[existingItem].quantity++;
         updateCart(cartArray);
         showCart(cartArray);
@@ -177,13 +187,21 @@ console.log(items); */
 
 function decreaseQuantityCart(event) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id == event.target.dataset.product);
-    const duplicateSize = cartArray.findIndex((item) => item.Size == event.target.dataset.size);
-    const duplicateColor = cartArray.findIndex((item) => item.Color == event.target.dataset.color);
+    let color = event.target.dataset.color;
+    let size = event.target.dataset.size;
+    let itemId = event.target.dataset.product;
+    let itemStock = event.target.dataset.stock;
+    let itemQuantity = event.target.dataset.quantity;
 
-    console.log(duplicateColor)
-    if (duplicateId !== -1 && cartArray[duplicateId].quantity !== 1 && duplicateSize !== -1 && duplicateColor !== -1) {
-        cartArray[duplicateId, duplicateSize, duplicateColor].quantity--;
+    console.log(itemQuantity)
+
+    const itemToCheck = { id: itemId, color: color, size: size, stock: itemStock, quantity: itemQuantity};
+
+    const existingItem = cartArray.findIndex((item) => {
+        return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
+    
+    if (existingItem !== -1 && itemToCheck.quantity !== "1") {
+        cartArray[existingItem].quantity--;
         updateCart(cartArray);
         showCart(cartArray);
     } else {

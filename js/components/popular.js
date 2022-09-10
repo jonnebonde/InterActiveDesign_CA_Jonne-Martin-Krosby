@@ -5,23 +5,17 @@ const apiUrl = baseUrl + apiKey;
 
 const popularProductsContainer = document.querySelector(".popular-products-container");
 
-
 async function getProducts() {
 
     try {
         const response = await fetch(apiUrl);
         const popular = await response.json();
 
-        console.log(popular)
         popularProducts(popular)
-
-
     }
-
     catch(error) {
         console.log("something went wrong fetching api");
         popularProductsContainer.innerHTML = "Something went wrong fetching products";
-
     }
 
 }
@@ -51,8 +45,5 @@ function popularProducts(products) {
             <a  class="product-button" href="details.html?id=${products[i].id}&name=${products[i].pname}" data-product="${products[i].id}">Details</a>
         </div>
                 `
-
     }
-}
-
-
+};

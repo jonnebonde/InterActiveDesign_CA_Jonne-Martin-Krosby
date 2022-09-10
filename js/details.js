@@ -130,29 +130,20 @@ let productId = productIdentication.toString()
 
 function AddToCart(itemToCheck) {
     console.log(itemToCheck)
-   /*  let productIdentication = product.id;
-    let productId = productIdentication.toString() */
-    const itemToAdd = { id: itemToCheck.id, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, size: itemToCheck.size, color: itemToCheck.color };
+    const itemToAdd = { id: itemToCheck.id, name: product.name, stock: product.stock_quantity, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, size: itemToCheck.size, color: itemToCheck.color };
     cartArray.push(itemToAdd);
     updateCart(cartArray) 
 }
 
-
+console.log(product)
 //add to cart function that checks the content of array, if duplicate add quantity.
 
 function increaseQuantityCart(selectedSize, selectedColor) {
 
-   /*  const duplicateId = cartArray.findIndex((item) => item.id === productId);
-    const duplicateSize = cartArray.findIndex((item) => item.Size === selectedSize);
-    const duplicateColor = cartArray.findIndex((item) => item.Color === selectedColor); */
-
     const itemToCheck = { id: productId, color: selectedColor, size: selectedSize };
-
     const ItemInCart = cartArray.findIndex((item) => {
             return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
-        console.log(cartArray[ItemInCart.id].quantity)
-        
-    if (ItemInCart !== -1) {
+    if (ItemInCart !== -1 && ItemInCart.quantity !== 99) {
         cartArray[ItemInCart].quantity++;
         updateCart(cartArray);
         messageAddedToCart(product)
@@ -203,6 +194,7 @@ pageTitle(product)
 
     catch(error) {
         console.log("something went wrong fetching api");
+        productDetails.innerHTML = "Something went wrong fetching products";
     }
 
 }

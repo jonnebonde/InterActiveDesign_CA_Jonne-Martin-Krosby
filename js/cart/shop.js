@@ -2,15 +2,15 @@ const apiUrl = "https://jonnekrosby.site/wp-json/wc/v3/products/";
 const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&per_page=20";
 const baseUrl = apiUrl + apiKey;
 
-const productsContainer = document.querySelector(".products"); 
+const productsContainer = document.querySelector(".products");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const details = params.get("gender");
 let searchValue = params.get("search");
 
-const backgroundImgShop = document.querySelector(".background-image-shop"); 
-const loader = document.querySelector(".loader"); 
-const searchButton = document.querySelector("#submit"); 
+const backgroundImgShop = document.querySelector(".background-image-shop");
+const loader = document.querySelector(".loader");
+const searchButton = document.querySelector("#submit");
 
 const sortbyToggle = document.getElementById("sortby");
 const sortbyList = document.querySelector(".sortby-list");
@@ -37,7 +37,6 @@ const filterBestSelling = document.getElementById("best-selling");
 
 const resetFilter = document.getElementById("reset-filter");
 const filterStatus = document.querySelector(".filter-status");
-
 
 async function getProducts(url) {
 
@@ -115,26 +114,25 @@ async function getProducts(url) {
         filterAz.addEventListener("click", SortAz)
 
 
-
         // filter products
 
-        function filterMessage(attributeTarget, filterCriteria){
-                console.log(attributeTarget, filterCriteria)
-                let attributeText = "";
-                if(attributeTarget == "0") {
-                    attributeText = "Color";
-                }
-                if(attributeTarget == "1") {
-                    attributeText = "Size";
-                }
-                if(attributeTarget == "2") {
-                    attributeText = "Activity";
-                }
-                if(attributeTarget == "3") {
-                    attributeText = "Sortby";
-                }
-                
-                filterStatus.innerHTML = `Filter: ${attributeText} - ${filterCriteria}`
+        function filterMessage(attributeTarget, filterCriteria) {
+            console.log(attributeTarget, filterCriteria)
+            let attributeText = "";
+            if (attributeTarget == "0") {
+                attributeText = "Color";
+            }
+            if (attributeTarget == "1") {
+                attributeText = "Size";
+            }
+            if (attributeTarget == "2") {
+                attributeText = "Activity";
+            }
+            if (attributeTarget == "3") {
+                attributeText = "Sortby";
+            }
+
+            filterStatus.innerHTML = `Filter: ${attributeText} - ${filterCriteria}`
         }
 
 
@@ -328,13 +326,16 @@ changeBackground()
 function toggleActiveLink() {
     const manActive = document.querySelector(".man");
     const womanActive = document.querySelector(".woman");
+    const allActive = document.querySelector(".all");
 
     if (details === "17") {
         manActive.classList.add("active");
     }
-
     if (details === "23") {
         womanActive.classList.add("active");
+    }
+    if (!details) {
+        allActive.classList.add("active")
     }
 }
 toggleActiveLink()
