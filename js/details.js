@@ -35,6 +35,8 @@ async function getDetails() {
                     <select name="select-color" id="details-select-color" required="required">
                     </select>
                 </div>
+                <div><span>InStock: ${product.stock_quantity}</span>
+                </div>
                 </div>
                 <button class="details-product-button" data-product="${product.id}">Add to cart</button>
             </div>
@@ -126,10 +128,11 @@ let productIdentication = product.id;
 let productId = productIdentication.toString()
 //Function for adding new items to cart.
 
-function AddToCart(selectedSize, selectedColor) {
+function AddToCart(itemToCheck) {
+    console.log(itemToCheck)
    /*  let productIdentication = product.id;
     let productId = productIdentication.toString() */
-    const itemToAdd = { id: productId, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, Size: selectedSize, Color: selectedColor };
+    const itemToAdd = { id: itemToCheck.id, name: product.name, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, size: itemToCheck.size, color: itemToCheck.color };
     cartArray.push(itemToAdd);
     updateCart(cartArray) 
 }
@@ -139,19 +142,47 @@ function AddToCart(selectedSize, selectedColor) {
 
 function increaseQuantityCart(selectedSize, selectedColor) {
 
-    const duplicateId = cartArray.findIndex((item) => item.id === productId);
+   /*  const duplicateId = cartArray.findIndex((item) => item.id === productId);
     const duplicateSize = cartArray.findIndex((item) => item.Size === selectedSize);
-    const duplicateColor = cartArray.findIndex((item) => item.Color === selectedColor);
+    const duplicateColor = cartArray.findIndex((item) => item.Color === selectedColor); */
 
-    if (duplicateColor !== -1 && duplicateSize !== -1 && duplicateId !== -1 && cartArray[duplicateId].quantity !== 99) {
-        cartArray[duplicateId].quantity++;
+    const itemToCheck = { id: productId, color: selectedColor, size: selectedSize };
+
+    const ItemInCart = cartArray.findIndex((item) => {
+            return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
+        console.log(cartArray[ItemInCart.id].quantity)
+        
+    if (ItemInCart !== -1) {
+        cartArray[ItemInCart].quantity++;
         updateCart(cartArray);
         messageAddedToCart(product)
     } else {
-        AddToCart(selectedSize, selectedColor)
+        AddToCart(itemToCheck)
         messageAddedToCart(product)
     }
 }
+
+/* const items = [
+	{ id: 1, color: "red", size: 10, quantity: 1 },
+	{ id: 2, color: "blue", size: 10, quantity: 2 },
+	{ id: 3, color: "blue", size: 11, quantity: 2 },
+];
+
+const newItem = { id: 2, color: "blue", size: 10 };
+
+const existingItemIndex = items.findIndex((item) => {
+	return item.id === newItem.id && item.color === newItem.color && item.size === newItem.size;
+});
+
+console.log(existingItemIndex);
+
+if (existingItemIndex !== -1) {
+	items[existingItemIndex].quantity++;
+} else {
+	items.push({ ...newItem, quantity: 1 });
+}
+
+console.log(items); */
 
 //updates items in cart/ local storage
 
