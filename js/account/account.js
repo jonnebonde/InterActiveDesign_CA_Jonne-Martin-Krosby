@@ -5,13 +5,14 @@ const apiUrl = baseUrl + apiKey;
 
 const popularProductsContainer = document.querySelector(".popular-products-container");
 const myordersList = document.querySelector(".account-orders");
+const loader = document.querySelector(".loader");
 
 async function getProducts() {
 
     try {
         const response = await fetch(apiUrl);
         const myOrders = await response.json();
-        
+
         
         for(let i = 0; i < myOrders.length; i++) {
             
@@ -19,6 +20,7 @@ async function getProducts() {
                 break
             }
 
+            loader.remove();
             myordersList.innerHTML += `
             <div class="order-item">
             <a href="details.html?id=${myOrders[i].id}&name=${myOrders[i].name}&gender=${myOrders[i].gender}" data-product="${myOrders[i].id}">
@@ -29,11 +31,6 @@ async function getProducts() {
             </div>
         `
         }
-
-
-         
-        
-
 
     }
 
