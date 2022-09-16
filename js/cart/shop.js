@@ -38,13 +38,13 @@ const filterBestSelling = document.getElementById("best-selling");
 const resetFilter = document.getElementById("reset-filter");
 const filterStatus = document.querySelector(".filter-status");
 
-console.log(baseUrl)
+
 async function getProducts(url) {
 
     try {
         const response = await fetch(url);
         const products = await response.json();
-        console.table(products)
+        console.log(products)
 
         // sort array low to high 
 
@@ -141,7 +141,8 @@ async function getProducts(url) {
 
             let attributeTarget = event.target.value;
             let filterCriteria = event.target.innerHTML;
-            const filteredColor = products.filter(product => product.attributes[attributeTarget].options.includes(filterCriteria))
+            const filteredColor = products.filter(product => product.attributes[attributeTarget].options.includes(filterCriteria));
+            console.log(filteredColor)
             filterMessage(attributeTarget, filterCriteria)
             productsContainer.innerHTML = "";
             createProductsHtml(filteredColor)
@@ -289,7 +290,7 @@ function createProductsHtml(products) {
             `<div class="product" >
         <a tabindex="-1" href="details.html?id=${product.id}&name=${product.name}" data-product="${product.id}">
             <h2>${product.name}</h2>
-            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.tags[1].name} is wearing a ${product.name}" class="product-image"></div>
+            <div style="background-image: url(${product.images[0].src})" aria-label="a ${product.tags[0].name} is wearing a ${product.name}" class="product-image"></div>
             <div class="product-info-text">
                 <span>${product.short_description}</span>
                 <span class="product-price">Price: ${product.price}</span>

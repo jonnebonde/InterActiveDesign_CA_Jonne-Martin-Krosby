@@ -13,7 +13,7 @@ async function getProducts() {
         const popular = await response.json();
 
         console.log(popular)
-       /*  popularProducts(popular) */
+        popularProducts(popular)
 
 
     }

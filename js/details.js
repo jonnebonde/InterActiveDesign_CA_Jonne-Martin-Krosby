@@ -4,7 +4,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const url = "https://www.jonnekrosby.site/rainy-days/wp-json/wc/v3/products" + id + "?consumer_key=ck_a135ca53d9aa4293171a02639f7dffa463564a41&consumer_secret=cs_3c14b08cb535b642e9861df27f83a37d08d2ce48";
+const url = "https://www.jonnekrosby.site/rainy-days/wp-json/wc/v3/products/" + id + "?consumer_key=ck_a135ca53d9aa4293171a02639f7dffa463564a41&consumer_secret=cs_3c14b08cb535b642e9861df27f83a37d08d2ce48";
 
 
 async function getDetails() {
@@ -12,6 +12,8 @@ async function getDetails() {
     try {
         const response = await fetch(url);
         const product = await response.json();
+
+        console.log(product)
         
         productDetails.innerHTML =
         `<div class="details">
