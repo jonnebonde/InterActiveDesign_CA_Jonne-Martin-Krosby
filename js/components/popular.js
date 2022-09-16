@@ -1,19 +1,19 @@
 
-const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
-const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23&category=44";
-const apiUrl = baseUrl + apiKey;
+const apiUrl = "https://www.jonnekrosby.site/rainy-days/wp-json/wc/v3/products";
+const apiKey = "?consumer_key=ck_a135ca53d9aa4293171a02639f7dffa463564a41&consumer_secret=cs_3c14b08cb535b642e9861df27f83a37d08d2ce48";
+const baseUrl = apiUrl + apiKey;
+
 
 const popularProductsContainer = document.querySelector(".popular-products-container");
-
 
 async function getProducts() {
 
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(baseUrl);
         const popular = await response.json();
 
         console.log(popular)
-        popularProducts(popular)
+       /*  popularProducts(popular) */
 
 
     }
