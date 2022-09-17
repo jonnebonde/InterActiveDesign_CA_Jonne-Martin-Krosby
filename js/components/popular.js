@@ -1,6 +1,6 @@
 
 const apiUrl = "https://www.jonnekrosby.site/rainy-days/wp-json/wc/v3/products";
-const apiKey = "?consumer_key=ck_a135ca53d9aa4293171a02639f7dffa463564a41&consumer_secret=cs_3c14b08cb535b642e9861df27f83a37d08d2ce48";
+const apiKey = "?consumer_key=ck_a135ca53d9aa4293171a02639f7dffa463564a41&consumer_secret=cs_3c14b08cb535b642e9861df27f83a37d08d2ce48&category=43";
 const baseUrl = apiUrl + apiKey;
 
 
