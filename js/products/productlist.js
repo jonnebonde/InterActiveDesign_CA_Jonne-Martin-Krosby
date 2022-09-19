@@ -1,3 +1,5 @@
+/* The list of products used the first time doing this assignment, later the products where fetched from an api */
+
 export const productArray = [
     {
         name: "Jacket",

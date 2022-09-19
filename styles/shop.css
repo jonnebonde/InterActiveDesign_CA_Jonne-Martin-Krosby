@@ -138,6 +138,12 @@
     cursor: pointer;
 }
 
+.filter-status {
+    padding: 10px;
+    margin: 0 auto; 
+    width: fit-content;
+}
+
 .products,
 .popular-products-container {
     display: flex;

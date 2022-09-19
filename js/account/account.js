@@ -1,4 +1,48 @@
-import { productArray } from "../products/productlist.js";
+
+const baseUrl = "https://jonnekrosby.site/wp-json/wc/v3/products";
+const apiKey = "?consumer_key=ck_d4557879258e9171c81b0b5a97746e037b2a79e3&consumer_secret=cs_def48d5d2ec05afdcb68e9f67eac0bc39af1aa23";
+const apiUrl = baseUrl + apiKey;
+
+const popularProductsContainer = document.querySelector(".popular-products-container");
+const myordersList = document.querySelector(".account-orders");
+const loader = document.querySelector(".loader");
+
+async function getProducts() {
+
+    try {
+        const response = await fetch(apiUrl);
+        const myOrders = await response.json();
+
+        
+        for(let i = 0; i < myOrders.length; i++) {
+            
+            if(i === 4){
+                break
+            }
+
+            loader.remove();
+            myordersList.innerHTML += `
+            <div class="order-item">
+            <a href="details.html?id=${myOrders[i].id}&name=${myOrders[i].name}&gender=${myOrders[i].gender}" data-product="${myOrders[i].id}">
+            <img src="${myOrders[i].images[1].src}">
+            <span>${myOrders[i].name}</span>
+            <span>${myOrders[i].price}</span>
+            </a>
+            </div>
+        `
+        }
+
+    }
+
+    catch(error) {
+        console.log("something went wrong fetching api");
+        myordersList.innerHTML = "Something went wrong fetching products";
+
+    }
+
+}
+
+getProducts()
 
 const accountSignUp = document.getElementById("account-signup");
 const accountLogin = document.getElementById("account-login");
@@ -182,27 +226,6 @@ function logOutOfAccount() {
 }
 
 accountLogOut.addEventListener("click", logOutOfAccount);
-
-
-// Shuffle products on productArray
-
-let shuffled = productArray.sort(() => 0.5 - Math.random());
-const myordersList = document.querySelector(".account-orders");
-let myorders = shuffled.slice(0, 4);
-
-myorders.forEach(function (myorder) {
-
-    myordersList.innerHTML += `
-        <div class="order-item">
-        <a href="details.html?id=${myorder.id}&name=${myorder.name}&gender=${myorder.gender}" data-product="${myorder.id}">
-        <img src="${myorder.image}">
-        <span>${myorder.name}</span>
-        <span>${myorder.price}</span>
-        </a>
-        </div>
-    `
-})
-
 
 // Terms and privacy events
 

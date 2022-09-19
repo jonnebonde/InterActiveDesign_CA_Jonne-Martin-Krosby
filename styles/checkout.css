@@ -69,13 +69,12 @@
     margin: 20px auto;
     background-color: var(--white);
     gap: 5px;
-    width: 80%;
 }
 
 .checkout-header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+
     border-bottom: 2px solid var(--darkgreen);
     padding: 3px 0;
 }
@@ -83,7 +82,6 @@
 .checkout-items {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 3px;
 }
 
@@ -102,7 +100,7 @@
 
 .checkout-form-container {
     max-width: 800px;
-    width: 100%;
+ 
     color: var(--darkgreen);
     margin: 0 auto;
     padding: 20px;
@@ -135,14 +133,13 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 100%;
     padding-top: 20px;
 }
 
 .checkout-billing-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+
     padding: 20px;
     border-left: 2px solid var(--darkgreen);
 }

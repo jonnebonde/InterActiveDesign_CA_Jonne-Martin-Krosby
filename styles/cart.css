@@ -92,6 +92,22 @@
     font-size: 0.6rem;
 }
 
+.cart-price-size-color-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.cart-size-color-details{
+    display: flex;
+    gap: 3px;
+}
+
+.cart-price-size-color-info span {
+    font-size: 0.7rem;
+}
+
+
 .cart-quantity {
     display: flex;
     gap: 8px;
@@ -152,9 +168,7 @@
     text-decoration: none;
     width: 180px;
     height: 40px;
-    border: none;
     background-color: var(--darkgreen);
-    border: none;
     color: var(--white);
     font-size: 1rem;
     transition: 250ms ease-in-out;
@@ -168,7 +182,6 @@
 .cart-checkout:hover {
     transition: 250ms ease-in-out;
     color: var(--darkgreen);
-    border: 2px solid var(--darkgreen);
     background-color: var(--white);
     box-shadow: var(--white) 3px 1px 8px 0px, var(--darkgreen) -3px -1px 8px 0px;
 }

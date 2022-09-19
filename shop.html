@@ -12,7 +12,7 @@
     <link href="./styles/Style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b32e365c8c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="fix-footer">
     <header>
         <div class="top-info">
             <span class="credibility">LifeTime Warranty</span>
@@ -62,12 +62,17 @@
     <main>
         <div class="background-image-shop">
             <ul class="shop-cta-shop">
+                <li><a class="all" id="shop-cta-all" href="shop.html" aria-label="show all products">All products</a></li>
+            <div class="cta-shop">
                 <li><a class="man" href="shop.html?gender=17" aria-label="show products for man">Man</a></li>
+                <li><a class="all" id="cta-all-shop" href="shop.html" aria-label="show all products">All products</a></li>
                 <li><a class="woman" href="shop.html?gender=23" aria-label="show products for woman">Woman</a></li>
+            </div>
+                
             </ul>
         </div>
         <div class="back-button">
-            <button class="fa-solid fa-arrow-left-long"> Back</button>
+            <button class="fa-solid fa-arrow-left-long">Back</button>
         </div>
         <div class="shop-title">
             <h1>Pushing the Comfort Zone</h1>
@@ -78,31 +83,31 @@
                 <div class="size-container">
                     <button id="size" class="filter-button">Size <i class="fa fa-caret-down"></i></button>
                     <ul class="size-list">
-                        <li value="28">XXLarge</li>
-                        <li value="27">XLarge</li>
-                        <li value="25">Large</li>
-                        <li value="26">Medium</li>
-                        <li value="37">Small</li>
+                        <li value="1">XXLarge</li>
+                        <li value="1">XLarge</li>
+                        <li value="1">Large</li>
+                        <li value="1">Medium</li>
+                        <li value="1">Small</li>
                     </ul>
                 </div>
                 <div class="color-container">
                     <button id="color" class="filter-button">Color <i class="fa fa-caret-down"></i></button>
                     <ul class="color-list">
-                        <li value="29">Army</li>
-                        <li value="30">Black</li>
-                        <li value="39">Blue</li>
-                        <li value="40">Brown</li>
-                        <li value="31">Orange</li>
-                        <li value="32">Yellow</li>
+                        <li value="0">Army</li>
+                        <li value="0">Black</li>
+                        <li value="0">Blue</li>
+                        <li value="0">Brown</li>
+                        <li value="0">Orange</li>
+                        <li value="0">Yellow</li>
                     </ul>
                 </div>
                 <div class="activity-container">
                     <button id="activity" class="filter-button">Feature <i class="fa fa-caret-down"></i></button>
                     <ul class="activity-list">
-                        <li id="skiing" value="18">Skiing</li>
-                        <li id="waterproof" value="20">Waterproof</li>
-                        <li id="water_resistant" value="19">Water Resistant</li>
-                        <li id="windproof" value="21">Windproof</li>
+                        <li id="skiing" value="2">Skiing</li>
+                        <li id="waterproof" value="2">Waterproof</li>
+                        <li id="water_resistant" value="2">Water resistant</li>
+                        <li id="windproof" value="2">Windproof</li>
                     </ul>
                 </div>
                 <div class="sortby-container">
@@ -112,13 +117,15 @@
                         <li id="high-price" value="2">Price high/low</li>
                         <li id="a-z" value="3">From A - Z</li>
                         <li id="z-a" value="4">From Z - A</li>
-                        <li id="popular" value="44">Popular</li>
-                        <li id="best-selling" value="43">Best Selling</li>
+                        <li id="popular" value="3">Popular</li>
+                        <li id="best-selling" value="3">Best Selling</li>
                     </ul>
                 </div>
+                <button id="reset-filter" class="filter-button">Reset Filter</button>
             </div>
             <button class="filter-button filter-menu-open">Filter <i class="fa fa-caret-down"></i></button>
         </div>
+        <div class="filter-status filter-button">Filter: none</div>
         <div class="products">
             <div class="loader shoploader"></div>
         </div>

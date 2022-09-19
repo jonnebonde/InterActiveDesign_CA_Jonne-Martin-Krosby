@@ -170,11 +170,30 @@ header {
     color: var(--darkgreen);
 }
 
-.shop-cta,
-.shop-cta-shop {
+.shop-cta {
     list-style: none;
     display: flex;
     gap: 60px;
+}
+
+.shop-cta-shop {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#shop-cta-all {
+    display: none;
+}
+
+
+
+.cta-shop {
+    display: flex;
+    gap: 40px;
 }
 
 .shop-cta a,

@@ -32,7 +32,6 @@
     display: flex;
     justify-content: center;
     padding: 20px;
-    width: 100%;
 }
 
 .details {
@@ -48,16 +47,34 @@
     padding: 0 30px 0 0;
 }
 
+.details-product-price{
+    font-size: 1.4rem;
+}
+
 .details-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     max-width: 400px;
     gap: 30px;
 }
 
 .details-info p {
-    padding: 10px 0;
+    padding: 2px 10px;
+}
+
+.details-info h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.selection-menu-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items:flex-start;
 }
 
 .details-product-button {

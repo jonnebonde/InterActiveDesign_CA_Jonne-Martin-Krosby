@@ -125,6 +125,7 @@
 
     .shop-cta,
     .shop-cta-shop {
+
         gap: 30px;
     }
 
@@ -273,14 +274,6 @@
     .cart-cta-container {
         gap: 30px;
         margin-top: 30px;
-    }
-
-    .checkout-form-container {
-        width: 100%;
-    }
-
-    .checkout-billing-container {
-        border: none;
     }
 
     .checkout-input-container {
@@ -488,6 +481,14 @@
         flex: 1 1 10px;
     }
 
+    .cart-price-size-color-info {
+        display: flex;
+    }
+    
+    .cart-size-color-details{
+        flex-direction: column;
+    }
+
     .about-container img {
         max-width: 100%;
         max-height: 100%;
@@ -503,6 +504,15 @@
         height: 100px;
         width: auto;
         transition: 250ms ease-in-out;
+    }
+
+    #shop-cta-all {
+        display:flex;
+        text-align: center;
+    }
+    
+    #cta-all-shop {
+        display: none
     }
 
     .nav-menu.active {
