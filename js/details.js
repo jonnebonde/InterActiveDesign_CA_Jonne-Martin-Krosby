@@ -58,6 +58,7 @@ async function getDetails() {
             dropdownSize.selectIndex = "0";
         
             const sizeAttributes = product.attributes[1].options;
+            console.log(sizeAttributes)
         
             for(let i = 0; i < sizeAttributes.length; i++){
                 let sizes = sizeAttributes[i];
