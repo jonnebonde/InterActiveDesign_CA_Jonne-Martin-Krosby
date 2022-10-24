@@ -4,14 +4,14 @@ const apiUrl = baseUrl + apiKey;
 
 async function getProducts() {
 
-    try {
-        const response = await fetch(apiUrl);
-        const products = await response.json();
-        apiResult(products)
-    }
-    catch(error) {
-        console.log("something went wrong fetching api");
-    }
+  try {
+    const response = await fetch(apiUrl);
+    const products = await response.json();
+    apiResult(products)
+  }
+  catch (error) {
+    console.log("something went wrong fetching api");
+  }
 
 
 }
@@ -20,6 +20,6 @@ getProducts()
 
 function apiResult(product) {
 
-    console.log(product)
+  console.log(product)
 }
 

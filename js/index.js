@@ -5,16 +5,16 @@ const numberOfItemsInCart = document.querySelector(".show-cart");
 let cartArray = cartItems || [];
 
 function cartQuantityTotal() {
-    console.log()
-    let cartItemsQuantity = 0;
-    let total = 0;
-    for (let i = 0; i < cartArray.length; i++) {
-        total += cartArray[i].price * cartArray[i].quantity;
-        cartItemsQuantity += cartArray[i].quantity;
-        numberOfItemsInCart.innerHTML = `<div class="cart-stats">
+  console.log()
+  let cartItemsQuantity = 0;
+  let total = 0;
+  for (let i = 0; i < cartArray.length; i++) {
+    total += cartArray[i].price * cartArray[i].quantity;
+    cartItemsQuantity += cartArray[i].quantity;
+    numberOfItemsInCart.innerHTML = `<div class="cart-stats">
                                             <span aria-label="Cart total item quantity"><i class="fa-solid fa-cart-shopping">${cartItemsQuantity}</i></span>
                                         </div>`;
-    }
+  }
 }
 cartQuantityTotal()
 
@@ -27,24 +27,24 @@ const searchBtnHamburger = document.querySelector(".submit-btn-hamburger");
 searchBtn.addEventListener("click", searchCheck)
 searchBtnHamburger.addEventListener("click", searchCheckHamburgermenu)
 
-function searchCheck(){
-    console.log("hi")
-    let searchInput = document.getElementById("search").value.split(" ");
-    console.log(searchBtnHamburger.value)
-    if(searchInput == ""){
-        
-    } else {
-        window.location = `shop.html?search=${searchInput}`
-    }
+function searchCheck() {
+  console.log("hi")
+  let searchInput = document.getElementById("search").value.split(" ");
+  console.log(searchBtnHamburger.value)
+  if (searchInput == "") {
+
+  } else {
+    window.location = `shop.html?search=${searchInput}`
+  }
 }
 
 function searchCheckHamburgermenu() {
-    const searchInputHamburger = document.getElementById("hamburger-search").value.split(" ");
-    console.log(searchBtnHamburger.value)
-    if(searchInputHamburger == ""){
-    } else {
-        window.location = `shop.html?search=${searchInputHamburger}`
-    }
+  const searchInputHamburger = document.getElementById("hamburger-search").value.split(" ");
+  console.log(searchBtnHamburger.value)
+  if (searchInputHamburger == "") {
+  } else {
+    window.location = `shop.html?search=${searchInputHamburger}`
+  }
 }
 
 /* const searchInput = document.getElementById("search");
@@ -72,9 +72,9 @@ document.addEventListener("click", function (e) {
 const backButton = document.querySelectorAll(".back-button");
 
 backButton.forEach(function (back) {
-    back.addEventListener("click", () => {
-        history.back();
-    });
+  back.addEventListener("click", () => {
+    history.back();
+  });
 });
 
 
@@ -85,12 +85,12 @@ const navMenu = document.querySelector(".nav-menu");
 const navContainer = document.querySelector(".navbar")
 
 toggleButton.addEventListener("click", () => {
-    toggleButton.classList.toggle("active");
-    navMenu.classList.toggle("active");
+  toggleButton.classList.toggle("active");
+  navMenu.classList.toggle("active");
 })
 
 document.addEventListener("click", function (e) {
-    if (!navContainer.contains(e.target)) {
-        navMenu.classList.remove("active")
-    }
+  if (!navContainer.contains(e.target)) {
+    navMenu.classList.remove("active")
+  }
 });

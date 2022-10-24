@@ -8,38 +8,38 @@ const popularProductsContainer = document.querySelector(".popular-products-conta
 
 async function getProducts() {
 
-    try {
-        const response = await fetch(baseUrl);
-        const popular = await response.json();
+  try {
+    const response = await fetch(baseUrl);
+    const popular = await response.json();
 
-        console.log(popular)
-        popularProducts(popular)
+    console.log(popular)
+    popularProducts(popular)
 
 
-    }
+  }
 
-    catch(error) {
-        console.log("something went wrong fetching api");
-        popularProductsContainer.innerHTML = "Something went wrong fetching products";
+  catch (error) {
+    console.log("something went wrong fetching api");
+    popularProductsContainer.innerHTML = "Something went wrong fetching products";
 
-    }
+  }
 
 }
 
 getProducts()
 
 function popularProducts(products) {
-    
-    popularProductsContainer.innerHTML = "";
 
-    for(let i = 0; i < products.length; i++) {
+  popularProductsContainer.innerHTML = "";
 
-        if(i === 4){
-            break;
-        }
-        
-        popularProductsContainer.innerHTML +=
-        `<div class="product" >
+  for (let i = 0; i < products.length; i++) {
+
+    if (i === 4) {
+      break;
+    }
+
+    popularProductsContainer.innerHTML +=
+      `<div class="product" >
         <a tabindex="-1" href="details.html?id=${products[i].id}&name=${products[i].name}" data-product="${products[i].id}">
             <h2>${products[i].name}</h2>
             <div style="background-image: url(${products[i].images[0].src})" aria-label="a ${products[i].tags[0].name} is wearing a ${products[i].name}" class="product-image"></div>
@@ -52,7 +52,7 @@ function popularProducts(products) {
         </div>
                 `
 
-    }
+  }
 }
 
 

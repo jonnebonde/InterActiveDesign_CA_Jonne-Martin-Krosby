@@ -3,24 +3,24 @@ const checkoutCart = document.querySelector(".checkout-items");
 const checkoutCartTotal = document.querySelector(".checkout-total");
 
 function checkoutCartItems() {
-    let total = 0;
+  let total = 0;
 
-    cartArray.forEach(function (checkout) {
-        total += checkout.price * checkout.quantity;
+  cartArray.forEach(function (checkout) {
+    total += checkout.price * checkout.quantity;
 
-        checkoutCart.innerHTML +=
-            `<div class="checkout-info">
+    checkoutCart.innerHTML +=
+      `<div class="checkout-info">
                 <span>${checkout.quantity}</span>
                 <span>${checkout.name}</span>
                 <span>${checkout.price * checkout.quantity}</span>
             </div>`
 
-        checkoutCartTotal.innerHTML =
-            `<div>
+    checkoutCartTotal.innerHTML =
+      `<div>
                 <span>Total</span>
                 <span>${total}</span>
             </div>`
-    })
+  })
 }
 checkoutCartItems()
 
@@ -77,133 +77,133 @@ let personalInfo = false;
 let cardInfo = false
 
 function ValidatePersonal(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const fullName = checkLength(fullNameInput.value, 7);
-    const email = validateEmail(emailInput.value);
-    const address = checkLength(addressInput.value, 9);
-    const city = checkLength(cityInput.value, 1);
-    const country = checkLength(countryInput.value, 1);
-    const zip = checkLength(zipInput.value, 1);
+  const fullName = checkLength(fullNameInput.value, 7);
+  const email = validateEmail(emailInput.value);
+  const address = checkLength(addressInput.value, 9);
+  const city = checkLength(cityInput.value, 1);
+  const country = checkLength(countryInput.value, 1);
+  const zip = checkLength(zipInput.value, 1);
 
 
-    if (zip) {
-        zipError.style.display = "none";
-        zipValid.style.color = "#7C9A3C";
-    } else {
-        zipError.style.display = "block";
-        zipValid.style.color = "black";
-    }
+  if (zip) {
+    zipError.style.display = "none";
+    zipValid.style.color = "#7C9A3C";
+  } else {
+    zipError.style.display = "block";
+    zipValid.style.color = "black";
+  }
 
-    if (country) {
-        countryError.style.display = "none";
-        countryValid.style.color = "#7C9A3C";
-    } else {
-        countryError.style.display = "block";
-        countryValid.style.color = "black";
-    }
+  if (country) {
+    countryError.style.display = "none";
+    countryValid.style.color = "#7C9A3C";
+  } else {
+    countryError.style.display = "block";
+    countryValid.style.color = "black";
+  }
 
-    if (fullName) {
-        nameError.style.display = "none";
-        fullNameValid.style.color = "#7C9A3C";
-    } else {
-        nameError.style.display = "block";
-        fullNameValid.style.color = "black";
-    }
+  if (fullName) {
+    nameError.style.display = "none";
+    fullNameValid.style.color = "#7C9A3C";
+  } else {
+    nameError.style.display = "block";
+    fullNameValid.style.color = "black";
+  }
 
-    if (email) {
-        emailError.style.display = "none";
-        emailValid.style.color = "#7C9A3C";
-    } else {
-        emailError.style.display = "block";
-        emailValid.style.color = "black";
-    }
+  if (email) {
+    emailError.style.display = "none";
+    emailValid.style.color = "#7C9A3C";
+  } else {
+    emailError.style.display = "block";
+    emailValid.style.color = "black";
+  }
 
-    if (address) {
-        addressError.style.display = "none";
-        addressValid.style.color = "#7C9A3C";
-    } else {
-        addressError.style.display = "block";
-        addressValid.style.color = "black";
-    }
+  if (address) {
+    addressError.style.display = "none";
+    addressValid.style.color = "#7C9A3C";
+  } else {
+    addressError.style.display = "block";
+    addressValid.style.color = "black";
+  }
 
-    if (city) {
-        cityError.style.display = "none";
-        cityValid.style.color = "#7C9A3C";
-    } else {
-        cityError.style.display = "block";
-        cityValid.style.color = "black";
-    }
+  if (city) {
+    cityError.style.display = "none";
+    cityValid.style.color = "#7C9A3C";
+  } else {
+    cityError.style.display = "block";
+    cityValid.style.color = "black";
+  }
 
-    if (fullName && email && address && city && country && zip) {
-        personalInfo = true
-        checkOrderForm(personalInfo)
-    }
+  if (fullName && email && address && city && country && zip) {
+    personalInfo = true
+    checkOrderForm(personalInfo)
+  }
 
 }
 
 
 function validateCardInfo(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const cardName = checkLength(cardNameInput.value, 7);
-    const cardNumber = checkLength(cardNumberInput.value, 1);
-    const expDate = checkLength(expDateInput.value, 1);
-    const expYear = checkLength(expYearInput.value, 1);
-    const cvv = checkLength(cvvInput.value, 1);
+  const cardName = checkLength(cardNameInput.value, 7);
+  const cardNumber = checkLength(cardNumberInput.value, 1);
+  const expDate = checkLength(expDateInput.value, 1);
+  const expYear = checkLength(expYearInput.value, 1);
+  const cvv = checkLength(cvvInput.value, 1);
 
-    if (cvv) {
-        cvvError.style.display = "none";
-        cvvValid.style.color = "#7C9A3C";
-    } else {
-        cvvError.style.display = "block";
-        cvvValid.style.color = "black";
-    }
+  if (cvv) {
+    cvvError.style.display = "none";
+    cvvValid.style.color = "#7C9A3C";
+  } else {
+    cvvError.style.display = "block";
+    cvvValid.style.color = "black";
+  }
 
-    if (expYear) {
-        expYearError.style.display = "none";
-        expYearValid.style.color = "#7C9A3C";
-    } else {
-        expYearError.style.display = "block";
-        expYearValid.style.color = "black";
-    }
+  if (expYear) {
+    expYearError.style.display = "none";
+    expYearValid.style.color = "#7C9A3C";
+  } else {
+    expYearError.style.display = "block";
+    expYearValid.style.color = "black";
+  }
 
-    if (expDate) {
-        expDateError.style.display = "none";
-        expDateValid.style.color = "#7C9A3C";
-    } else {
-        expDateError.style.display = "block";
-        expDateValid.style.color = "black";
-    }
+  if (expDate) {
+    expDateError.style.display = "none";
+    expDateValid.style.color = "#7C9A3C";
+  } else {
+    expDateError.style.display = "block";
+    expDateValid.style.color = "black";
+  }
 
-    if (cardNumber) {
-        cardNumberError.style.display = "none";
-        cardNumberValid.style.color = "#7C9A3C";
-    } else {
-        cardNumberError.style.display = "block";
-        cardNumberValid.style.color = "black";
-    }
+  if (cardNumber) {
+    cardNumberError.style.display = "none";
+    cardNumberValid.style.color = "#7C9A3C";
+  } else {
+    cardNumberError.style.display = "block";
+    cardNumberValid.style.color = "black";
+  }
 
-    if (cardName) {
-        cardNameError.style.display = "none";
-        cardNameValid.style.color = "#7C9A3C";
-    } else {
-        cardNameError.style.display = "block";
-        cardNameValid.style.color = "black";
-    }
+  if (cardName) {
+    cardNameError.style.display = "none";
+    cardNameValid.style.color = "#7C9A3C";
+  } else {
+    cardNameError.style.display = "block";
+    cardNameValid.style.color = "black";
+  }
 
-    if(cardName && cardNumber && expDate && expYear && cvv) {
-        cardInfo = true
-        checkOrderForm(cardInfo)
-    }
+  if (cardName && cardNumber && expDate && expYear && cvv) {
+    cardInfo = true
+    checkOrderForm(cardInfo)
+  }
 }
 
 
 function checkOrderForm() {
 
-    if(personalInfo === true && cardInfo === true) {
-        submitOrderModalContent()
-    }
+  if (personalInfo === true && cardInfo === true) {
+    submitOrderModalContent()
+  }
 }
 
 
@@ -212,16 +212,16 @@ submitForm.addEventListener("submit", validateCardInfo);
 
 
 function checkLength(value, len) {
-    if (value.trim().length > len) {
-        return true;
-    }
+  if (value.trim().length > len) {
+    return true;
+  }
 }
 
 
 function validateEmail(email) {
-    const regEx = /\S+@\S+\.\S+/;
-    const patternMatches = regEx.test(email);
-    return patternMatches;
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(email);
+  return patternMatches;
 }
 
 
@@ -235,12 +235,12 @@ const submitOrderForm = document.getElementById("checkout-form");
 
 function submitOrderModalContent() {
 
-    const footer = document.querySelector("footer");
-    localStorage.removeItem("cartList");
-    footer.style.display = "none";
-    submitModal.style.display = "flex";
-    submitModalContent.innerHTML =
-        `<h1>Thanks for your purchase</h1>
+  const footer = document.querySelector("footer");
+  localStorage.removeItem("cartList");
+  footer.style.display = "none";
+  submitModal.style.display = "flex";
+  submitModalContent.innerHTML =
+    `<h1>Thanks for your purchase</h1>
         <p>A confirmation of your order is sent to your email</p>
         <span>${emailInput.value}</span>
         <a class="modal-link" href="shop.html">Back to shop</a>`

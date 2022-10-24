@@ -9,14 +9,14 @@ const url = "https://www.jonnekrosby.site/rainy-days/wp-json/wc/v3/products/" + 
 
 async function getDetails() {
 
-    try {
-        const response = await fetch(url);
-        const product = await response.json();
+  try {
+    const response = await fetch(url);
+    const product = await response.json();
 
-        console.log(product)
-        
-        productDetails.innerHTML =
-        `<div class="details">
+    console.log(product)
+
+    productDetails.innerHTML =
+      `<div class="details">
                 <div>
                     <img src="${product.images[1].src}" aria-label="${product.name}" class="details-product-image">
                 </div>
@@ -44,140 +44,152 @@ async function getDetails() {
                 <button class="details-product-button" data-product="${product.id}">Add to cart</button>
             </div>
         </div>`;
-    
+
     function sizeSelection() {
-            let dropdownSize = document.getElementById("details-select-size");
+      let dropdownSize = document.getElementById("details-select-size");
 
-            dropdownSize.length = 0;
-        
-            let sizeOption = document.createElement("option");
-            sizeOption.text = 'Choose size';
-            sizeOption.value = "0" 
-            
-            dropdownSize.add(sizeOption);
-            dropdownSize.selectIndex = "0";
-        
-            const sizeAttributes = product.attributes[1].options;
-            console.log(sizeAttributes)
-        
-            for(let i = 0; i < sizeAttributes.length; i++){
-                let sizes = sizeAttributes[i];
-                console.log(sizes)
-                optionSize = document.createElement("option");
-                optionSize.text = sizes;
-                optionSize.value = sizes;
-                dropdownSize.add(optionSize);
-        }
+      dropdownSize.length = 0;
+
+      let sizeOption = document.createElement("option");
+      sizeOption.text = 'Choose size';
+      sizeOption.value = "0"
+
+      dropdownSize.add(sizeOption);
+      dropdownSize.selectIndex = "0";
+
+      const sizeAttributes = product.attributes[1].options;
+      console.log(sizeAttributes)
+
+      for (let i = 0; i < sizeAttributes.length; i++) {
+        let sizes = sizeAttributes[i];
+        console.log(sizes)
+        optionSize = document.createElement("option");
+        optionSize.text = sizes;
+        optionSize.value = sizes;
+        dropdownSize.add(optionSize);
+      }
     }
-sizeSelection()
+    sizeSelection()
 
-function colorSelection() {
-        
-        let dropdownColor = document.getElementById("details-select-color");
+    function colorSelection() {
 
-        dropdownColor.length = 0;
+      let dropdownColor = document.getElementById("details-select-color");
 
-        let coloroption = document.createElement("option");
-        coloroption.text = `Choose color`;
-        coloroption.value = "0";
+      dropdownColor.length = 0;
 
-        dropdownColor.add(coloroption);
-        dropdownColor.selectIndex = "0";
+      let coloroption = document.createElement("option");
+      coloroption.text = `Choose color`;
+      coloroption.value = "0";
 
-        const colorAttributes = product.attributes[0].options;
+      dropdownColor.add(coloroption);
+      dropdownColor.selectIndex = "0";
 
-        for(let i = 0; i < colorAttributes.length; i++) {
-            let colors = colorAttributes[i];
-            console.log(colors)
-            optionColor = document.createElement("option");
-            optionColor.text = colors;
-            optionColor.value = colors;
-            dropdownColor.add(optionColor)
+      const colorAttributes = product.attributes[0].options;
 
-        }
-}
-colorSelection()
+      for (let i = 0; i < colorAttributes.length; i++) {
+        let colors = colorAttributes[i];
+        console.log(colors)
+        optionColor = document.createElement("option");
+        optionColor.text = colors;
+        optionColor.value = colors;
+        dropdownColor.add(optionColor)
+
+      }
+    }
+    colorSelection()
 
 
     const button = document.querySelector(".details-product-button");
 
-    button.onclick = function(event) {
-    sizeFormActions(event)
-}
-        
-function sizeFormActions(event) {
-    const sizeValue = document.querySelector("#details-select-size");
-    const colorValue = document.querySelector("#details-select-color")
-    
-    let selectedSize = sizeValue.options[sizeValue.selectedIndex].value;
-    let selectedColor = colorValue.options[colorValue.selectedIndex].value;
+    button.onclick = function (event) {
+      sizeFormActions(event)
+    }
 
-    if(selectedColor === "0" && selectedSize === "0") {
+    function sizeFormActions(event) {
+      const sizeValue = document.querySelector("#details-select-size");
+      const colorValue = document.querySelector("#details-select-color")
+
+      let selectedSize = sizeValue.options[sizeValue.selectedIndex].value;
+      let selectedColor = colorValue.options[colorValue.selectedIndex].value;
+
+      if (selectedColor === "0" && selectedSize === "0") {
         messageChooseColorAndSize()
-    }
-    if(selectedSize === "0") {
+      }
+      if (selectedSize === "0") {
         messageChooseSize()
-    }
-    if(selectedColor === "0") {
+      }
+      if (selectedColor === "0") {
         messageChooseColor()
-    }
-    else {
+      } else {
         increaseQuantityCart(selectedSize, selectedColor)
         cartQuantityTotal()
+      }
     }
-}
 
 
-//Function for adding new items to cart.
+    //Function for adding new items to cart.
 
-function AddToCart(itemToCheck) {
-    const itemToAdd = { id: itemToCheck.id, name: product.name, stock: product.stock_quantity, image: product.images[0].src, quantity: 1, price: product.price, description: product.short_description, size: itemToCheck.size, color: itemToCheck.color };
-    cartArray.push(itemToAdd);
-    updateCart(cartArray) 
-}
+    function AddToCart(itemToCheck) {
+      const itemToAdd = {
+        id: itemToCheck.id,
+        name: product.name,
+        stock: product.stock_quantity,
+        image: product.images[0].src,
+        quantity: 1,
+        price: product.price,
+        description: product.short_description,
+        size: itemToCheck.size,
+        color: itemToCheck.color
+      };
+      cartArray.push(itemToAdd);
+      updateCart(cartArray)
+    }
 
-//add to cart function that checks the content of array, if duplicate add quantity.
+    //add to cart function that checks the content of array, if duplicate add quantity.
 
-function increaseQuantityCart(selectedSize, selectedColor) {
-    
-    let productIdentication = product.id;
-    let productId = productIdentication.toString()
+    function increaseQuantityCart(selectedSize, selectedColor) {
 
-    const itemToCheck = { id: productId, color: selectedColor, size: selectedSize };
+      let productIdentication = product.id;
+      let productId = productIdentication.toString()
 
-    const ItemInCart = cartArray.findIndex((item) => {
-            return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size });
+      const itemToCheck = {
+        id: productId,
+        color: selectedColor,
+        size: selectedSize
+      };
 
-    if (ItemInCart !== -1 && ItemInCart.quantity !== 99) {
+      const ItemInCart = cartArray.findIndex((item) => {
+        return item.id === itemToCheck.id && item.color === itemToCheck.color && item.size === itemToCheck.size
+      });
+
+      if (ItemInCart !== -1 && ItemInCart.quantity !== 99) {
         cartArray[ItemInCart].quantity++;
         updateCart(cartArray);
         messageAddedToCart(product)
-    } else {
+      } else {
         AddToCart(itemToCheck)
         messageAddedToCart(product)
+      }
     }
-}
 
-//updates items in cart/ local storage
+    //updates items in cart/ local storage
 
-function updateCart() {
-    localStorage.setItem("cartList", JSON.stringify(cartArray))
+    function updateCart() {
+      localStorage.setItem("cartList", JSON.stringify(cartArray))
 
-};
+    };
 
-function pageTitle(product) {
+    function pageTitle(product) {
 
-    const pageTitleDetails = document.querySelector("title");
-    pageTitleDetails.innerHTML = `Rainy Days | ${product.name}`
-}
-pageTitle(product)
-
-}
-
-    catch(error) {
-        console.log("something went wrong fetching api");
-        productDetails.innerHTML = "Something went wrong fetching products";
+      const pageTitleDetails = document.querySelector("title");
+      pageTitleDetails.innerHTML = `Rainy Days | ${product.name}`
     }
+    pageTitle(product)
+
+  } catch (error) {
+    console.log("something went wrong fetching api");
+    productDetails.innerHTML = "Something went wrong fetching products";
+  }
 
 }
 
