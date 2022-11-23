@@ -64,4 +64,3 @@ This is where you can leave your social links for people to contact you, such as
 ## License
 
 This project is licensed under the Creative Commons license.
-Please remember to credit this project if used in other projects.![rainydaysScreenshot](https://user-images.githubusercontent.com/71976475/203555391-02725d0a-c69f-4425-ace8-d7e06d5acec9.png)
