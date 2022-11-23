@@ -50,7 +50,7 @@ git clone git@github.com:jonnebonde/InterActiveDesign_CA_Jonne-Martin-Krosby.git
 If all files are cloned and runned live on your prefered live host or on localhost, the site should work and receive products from the E-commerce CMS.
 
 ## Feedback
-If u have any useful feedback about the site let me know through one of my contact methods.
+If u have any useful feedback about the site let me know through one of my contact methods written below.
 
 ## Contact
 
