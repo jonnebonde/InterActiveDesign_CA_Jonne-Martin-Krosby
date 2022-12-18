@@ -219,10 +219,6 @@
         height: auto;
     }
 
-    .about-container {
-        padding: 5px;
-    }
-
     .about_section1,
     .about_section2 {
         flex: 1 1 400px;
