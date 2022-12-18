@@ -219,6 +219,10 @@
         height: auto;
     }
 
+    .about-container {
+        width: 90%;
+    }
+
     .about_section1,
     .about_section2 {
         flex: 1 1 400px;
