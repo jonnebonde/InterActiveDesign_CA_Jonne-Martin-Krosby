@@ -1,0 +1,16 @@
+{
+  "name": "interactivedesign_ca_jonne-martin-krosby",
+  "version": "1.0.0",
+  "description": "e-commerce site",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "e-commerce",
+    "rainy",
+    "days"
+  ],
+  "author": "jonne",
+  "license": "ISC"
+}
