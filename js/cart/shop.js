@@ -41,9 +41,12 @@ const filterStatus = document.querySelector(".filter-status");
 
 async function getProducts(url) {
 
+  console.log(url)
+
   try {
     const response = await fetch(url);
     const products = await response.json();
+
     console.log(products)
 
     // sort array low to high 

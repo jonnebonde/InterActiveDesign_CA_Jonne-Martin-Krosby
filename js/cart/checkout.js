@@ -8,22 +8,19 @@ function checkoutCartItems() {
   cartArray.forEach(function (checkout) {
     total += checkout.price * checkout.quantity;
 
-    checkoutCart.innerHTML +=
-      `<div class="checkout-info">
+    checkoutCart.innerHTML += `<div class="checkout-info">
                 <span>${checkout.quantity}</span>
                 <span>${checkout.name}</span>
                 <span>${checkout.price * checkout.quantity}</span>
-            </div>`
+            </div>`;
 
-    checkoutCartTotal.innerHTML =
-      `<div>
+    checkoutCartTotal.innerHTML = `<div>
                 <span>Total</span>
                 <span>${total}</span>
-            </div>`
-  })
+            </div>`;
+  });
 }
-checkoutCartItems()
-
+checkoutCartItems();
 
 // click event for submit order button
 
@@ -31,7 +28,7 @@ const submitForm = document.getElementById("checkout-form");
 
 const fullNameValid = document.querySelector(".full-name");
 const fullNameInput = document.getElementById("full-name");
-const fullNameError = document.getElementById("nameError")
+const fullNameError = document.getElementById("nameError");
 
 const emailValid = document.querySelector(".email");
 const emailInput = document.getElementById("email");
@@ -74,7 +71,7 @@ const cvvInput = document.getElementById("cvv");
 const cvvError = document.getElementById("cvvError");
 
 let personalInfo = false;
-let cardInfo = false
+let cardInfo = false;
 
 function ValidatePersonal(event) {
   event.preventDefault();
@@ -85,7 +82,6 @@ function ValidatePersonal(event) {
   const city = checkLength(cityInput.value, 1);
   const country = checkLength(countryInput.value, 1);
   const zip = checkLength(zipInput.value, 1);
-
 
   if (zip) {
     zipError.style.display = "none";
@@ -136,12 +132,10 @@ function ValidatePersonal(event) {
   }
 
   if (fullName && email && address && city && country && zip) {
-    personalInfo = true
-    checkOrderForm(personalInfo)
+    personalInfo = true;
+    checkOrderForm(personalInfo);
   }
-
 }
-
 
 function validateCardInfo(event) {
   event.preventDefault();
@@ -193,23 +187,19 @@ function validateCardInfo(event) {
   }
 
   if (cardName && cardNumber && expDate && expYear && cvv) {
-    cardInfo = true
-    checkOrderForm(cardInfo)
+    cardInfo = true;
+    checkOrderForm(cardInfo);
   }
 }
-
 
 function checkOrderForm() {
-
   if (personalInfo === true && cardInfo === true) {
-    submitOrderModalContent()
+    submitOrderModalContent();
   }
 }
-
 
 submitForm.addEventListener("submit", ValidatePersonal);
 submitForm.addEventListener("submit", validateCardInfo);
-
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
@@ -217,13 +207,11 @@ function checkLength(value, len) {
   }
 }
 
-
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
-
 
 //modal event for submitted form
 
@@ -232,17 +220,13 @@ const submitModal = document.querySelector(".checkout-modal");
 const submitModalContent = document.querySelector(".checkout-modal-content");
 const submitOrderForm = document.getElementById("checkout-form");
 
-
 function submitOrderModalContent() {
-
   const footer = document.querySelector("footer");
   localStorage.removeItem("cartList");
   footer.style.display = "none";
   submitModal.style.display = "flex";
-  submitModalContent.innerHTML =
-    `<h1>Thanks for your purchase</h1>
+  submitModalContent.innerHTML = `<h1>Thanks for your purchase</h1>
         <p>A confirmation of your order is sent to your email</p>
         <span>${emailInput.value}</span>
-        <a class="modal-link" href="shop.html">Back to shop</a>`
-
+        <a class="modal-link" href="shop.html">Back to shop</a>`;
 }
